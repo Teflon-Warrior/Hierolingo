@@ -1,0 +1,461 @@
+/* apply a natural box layout model to all elements */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* RWD tag to visually indicate media query breaks */
+#tag {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    background-color: #CC0000;
+}
+
+/* PAGE THEME COLORS - PLEASE USE */
+:root {
+    --menu-color: gold;
+    --iu-red: rgb(153, 0, 0);
+    --iu-grey: rgb(237, 235, 235);
+    --iu-black: rgb(69, 56, 43);
+}
+
+/* Extra small devices (phones, less than 768px) */
+
+/* 
+    GENERAL
+*/
+body {
+    margin: 0;
+    background-color: #fff;
+}
+
+
+
+h1 {
+
+    /* also adjust padding and font weight */
+    /* adjust H1 size in the media queries */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 3.0rem;
+}
+
+h1 span {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+}
+
+/*
+    HEADER
+*/
+header h1, .container {
+    /* should stretch up to 800px wide and center on the screen */
+    width: 800px;
+    display: flex;
+    justify-content: center;
+
+}
+
+header {
+    background-color: var(--iu-red);
+    height: 150px;
+
+}
+
+/*
+    MAP
+*/
+#map {
+    /* adjust map height in the media queries  */
+    height: 280px;
+}
+
+/* Main */
+
+/* apply a natural box layout model to all elements */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* General */
+
+/* Navigation */
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 500,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+.openbtn {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.openbtn:hover {
+    color: var(--menu-color);
+    cursor: pointer
+}
+
+.menu-button {
+    font-size: 36px !important;
+    position: relative;
+    top: 6px;
+    left: -4px;
+}
+
+.menu-text {
+    font-size: 12px;
+    display: block;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* The side navigation menu */
+.all-over-bkg {
+    display: none;
+}
+
+.is-visible {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 9999;
+    display: block;
+}
+
+#mySidenav {
+    z-index: 10000;
+}
+
+.sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+    background-color: rgb(237, 214, 177);
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--iu-grey);
+    display: block;
+    transition: 0.3s;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: var(--iu-red);
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+main {
+    transition: margin-left .5s;
+    padding: 0;
+}
+
+/* Media queries */
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 12px;
+    }
+}
+
+
+.racing-stripes {
+    /* https://css-tricks.com/stripes-css/ */
+    background: repeating-linear-gradient(-55deg,
+            #ececec,
+            #ececec 10px,
+            #dcdcdc 10px,
+            #dcdcdc 20px);
+    height: 20px;
+}
+
+article {
+    padding: 2.0rem, 2.0rem, 2.0rem, 2.0rem;
+
+    /* add padding */
+}
+
+/* Add additional page styles here */
+.project{
+    padding-top: 2.0rem;
+    padding-bottom: 2.0rem;
+    padding-right: 2.0rem;
+    padding-left: 2.0rem;
+}
+.project h2 {
+    display: flex;
+    justify-content: center;
+}
+.project-about {
+    padding-top: 2.0rem;
+    padding-bottom: 2.0rem;
+    padding-right: 2.0rem;
+    padding-left: 2.0rem;
+}
+.project-about h2{
+    color: var(--iu-red);
+}
+.sustain {
+    padding-top: 2.0rem;
+    padding-bottom: 2.0rem;
+    padding-right: 2.0rem;
+    padding-left: 2.0rem;
+    background: var(--iu-grey);
+    width: 100%;
+}
+.sustain h2{
+    color: var(--iu-red);
+}
+.aidan {
+    padding-top: 2.0rem;
+    padding-bottom: 2.0rem;
+    padding-right: 2.0rem;
+    padding-left: 2.0rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.aidan img {
+    height: 250px;
+    width: 250px;
+    margin-right: 20px;
+}
+.aidan h2 {
+    color: var(--iu-red);
+    font-size: 30px;
+    padding: 0.2rem;
+}
+.aidan-p p{
+    flex: 1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    margin-top: 0;
+}
+.luke {
+    padding-top: 2.0rem;
+    padding-bottom: 2.0rem;
+    padding-right: 2.0rem;
+    padding-left: 2.0rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.luke img {
+    height: 250px;
+    width: 250px;
+    margin-right: 20px;
+}
+.luke h2 {
+    color: var(--iu-red);
+    font-size: 30px;
+    padding: 0.2rem;
+}
+.luke-p p{
+    flex: 1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    margin-top: 0;
+}
+.max {
+    padding-top: 2.0rem;
+    padding-bottom: 2.0rem;
+    padding-right: 2.0rem;
+    padding-left: 2.0rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.max img {
+    height: 250px;
+    width: 250px;
+    margin-right: 20px;
+}
+.max h2 {
+    color: var(--iu-red);
+    font-size: 30px;
+    padding: 0.2rem;
+}
+.max-p p{
+    flex: 1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    margin-top: 0;
+}
+.jeff {
+    padding-top: 2.0rem;
+    padding-bottom: 2.0rem;
+    padding-right: 2.0rem;
+    padding-left: 2.0rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.jeff img {
+    height: 250px;
+    width: 250px;
+    margin-right: 20px;
+}
+.jeff h2 {
+    color: var(--iu-red);
+    font-size: 30px;
+    padding: 0.2rem;
+}
+.jeff-p p{
+    flex: 1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    margin-top: 0;
+}
+
+/* Buttons */
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap row;
+    justify-content: center;
+}
+.button {
+    background-color: var(--iu-red);
+    border: 2px solid var(--iu-red);
+    border-radius: 30px;
+    color: white;
+    padding: 1.0em 5.0em;
+    margin: 1.0em 2.0em 0 0;
+    display: inline-block;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: background-color .2s ease-out, color .2s ease-out, border-color .18s ease-out;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.button:hover {
+    background-color: transparent;
+    color: var(--iu-red);
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*
+    MEDIA QUERIES
+*/
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+    #tag {
+        background-color: #FF9900;
+    }
+
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+    #tag {
+        background-color: #00AA88;
+    }
+
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+    #tag {
+        background-color: #674EA7;
+    }
+
+
+}
