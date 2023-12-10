@@ -10,3 +10,5 @@ function openNav() {
   
   document.querySelector('.openbtn').addEventListener('click', openNav);
   document.querySelector('.closebtn').addEventListener('click', closeNav);
+
+  /* Javascript for side menu is from Project 5 Starter from Web Design I360 */

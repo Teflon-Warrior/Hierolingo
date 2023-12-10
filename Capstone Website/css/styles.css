@@ -1,4 +1,4 @@
-/* apply a natural box layout model to all elements */
+
 html {
     box-sizing: border-box;
 }
@@ -9,7 +9,7 @@ html {
     box-sizing: inherit;
 }
 
-/* RWD tag to visually indicate media query breaks */
+
 #tag {
     position: fixed;
     top: 0;
@@ -19,15 +19,14 @@ html {
     background-color: #CC0000;
 }
 
-/* PAGE THEME COLORS - PLEASE USE */
 :root {
+    /* Colors from I360 */
     --menu-color: gold;
     --iu-red: rgb(153, 0, 0);
     --iu-grey: rgb(237, 235, 235);
     --iu-black: rgb(69, 56, 43);
 }
 
-/* Extra small devices (phones, less than 768px) */
 
 /* 
     GENERAL
@@ -41,8 +40,6 @@ body {
 
 h1 {
 
-    /* also adjust padding and font weight */
-    /* adjust H1 size in the media queries */
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0 auto;
     display: flex;
@@ -73,11 +70,8 @@ p {
     font-size: 17px;
 }
 
-/*
-    HEADER
-*/
 header h1, .container {
-    /* should stretch up to 800px wide and center on the screen */
+
     width: 800px;
     display: flex;
     justify-content: center;
@@ -90,37 +84,11 @@ header {
 
 }
 
-/*
-    MAP
-*/
-#map {
-    /* adjust map height in the media queries  */
-    height: 280px;
-}
-
-/* Main */
-
-/* apply a natural box layout model to all elements */
 html {
     box-sizing: border-box;
 }
 
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
-
-/* General */
-
-/* Navigation */
-.material-symbols-outlined {
-    font-variation-settings:
-        'FILL' 0,
-        'wght' 500,
-        'GRAD' 0,
-        'opsz' 48
-}
+/* Menu styling code from I360 */
 
 .openbtn {
     position: absolute;
@@ -156,7 +124,6 @@ li {
     list-style-type: none;
 }
 
-/* The side navigation menu */
 .all-over-bkg {
     display: none;
 }
@@ -178,43 +145,32 @@ li {
 
 .sidenav {
     height: 100%;
-    /* 100% Full-height */
     width: 0;
-    /* 0 width - change this with JavaScript */
     position: fixed;
-    /* Stay in place */
     z-index: 1;
-    /* Stay on top */
     top: 0;
-    /* Stay at the top */
     left: 0;
     overflow-x: hidden;
-    /* Disable horizontal scroll */
     padding-top: 60px;
-    /* Place content 60px from the top */
     transition: 0.5s;
-    /* 0.5 second transition effect to slide in the sidenav */
     background-color: rgb(237, 214, 177);
 }
 
-/* The navigation menu links */
+/* Sidenav code from I365 */
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: var(--iu-grey);
     display: block;
     transition: 0.3s;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
 
-/* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
     color: var(--iu-red);
 }
 
-/* Position and style the close button (top right corner) */
 .sidenav .closebtn {
     position: absolute;
     top: 0;
@@ -224,22 +180,9 @@ li {
     cursor: pointer;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 main {
     transition: margin-left .5s;
     padding: 0;
-}
-
-/* Media queries */
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
-    }
-
-    .sidenav a {
-        font-size: 12px;
-    }
 }
 
 
@@ -256,10 +199,8 @@ main {
 article {
     padding: 2.0rem, 2.0rem, 2.0rem, 2.0rem;
 
-    /* add padding */
 }
 
-/* Add additional page styles here */
 .project{
     padding-top: 2.0rem;
     padding-bottom: 2.0rem;
@@ -395,8 +336,6 @@ article {
     margin-top: 0;
 }
 
-/* Buttons */
-
 .buttons {
     display: flex;
     flex-wrap: wrap row;
@@ -427,35 +366,7 @@ a:visited {
     font-weight: bold;
 }
 
-/*
-    MEDIA QUERIES
-*/
-/* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-
-    #tag {
-        background-color: #FF9900;
-    }
-
-
-}
-
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-
-    #tag {
-        background-color: #00AA88;
-    }
-
-
-}
-
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-
-    #tag {
-        background-color: #674EA7;
-    }
-
-
+.video {
+    display: flex;
+    justify-content: center;
 }
