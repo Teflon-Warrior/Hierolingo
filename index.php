@@ -58,9 +58,9 @@
 	</div>
 
 	<div class="buttons">
-		<a class="button" href="project.html">Project</a>
-		<a class="button" href="team.html">Team</a>
-		<a class="button" href="video.html">Video</a>
+		<a class="button" href="project.php">Project</a>
+		<a class="button" href="team.php">Team</a>
+		<a class="button" href="video.php">Video</a>
 	</div>
 
 	<script src="js/nav.js"></script>
