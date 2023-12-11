@@ -21,10 +21,10 @@
 	<nav id="mySidenav" class="sidenav">
 		<ul>
 			<li><a class="closebtn">&times;</a></li>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="project.html">Project</a></li>
-			<li><a href="team.html">Team</a></li>
-			<li><a href="video.html">Video</a></li>
+			<li><a href="index.php">Home</a></li>
+			<li><a href="project.php">Project</a></li>
+			<li><a href="team.php">Team</a></li>
+			<li><a href="video.php">Video</a></li>
 		</ul>
 	</nav>
 
