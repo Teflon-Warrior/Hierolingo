@@ -1,0 +1,22 @@
+.flash {
+        margin: auto;
+        margin-top: 15%;
+        border: solid 5px red;
+        height: 400px;
+        width: 400px;
+}
+
+img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+}
+
+.flashText{
+        text-align: center;
+        font-size: 40px;
+}
+
+.flashImg {
+
+}
