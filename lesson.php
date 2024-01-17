@@ -11,7 +11,7 @@
   <div class="flash" onclick="termClick();" id="term">
                 
         
-        <img src="./img/shr.svg">
+        <img src="./img/L2/shr.svg">
         
   </div>
 
