@@ -47,10 +47,11 @@ CREATE TABLE resources(
 --Dictionary
 CREATE TABLE dictionary(
   id int auto_increment,
-  def varchar(20),
+  pos varchar (60),
+  def varchar(60),
   filepath varchar(100),
   access int,
-  primary key (ID)
+  primary key (id)
   );
 
 
@@ -86,4 +87,25 @@ username varchar(30),
 foreign key (ID) references dictionary(id),
 foreign key (username) references User(username)
 );
+--insert into statements for dictionary entries.
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ('special', 'this is a factual statement', 'img/L1/iw.svg', 1);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ('Adverb', 'Here; there; therein', 'img/L1/im.svg', 1);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ('Masculine Noun', 'place', 'img/L1/bw.svg', 1);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ('Demonstrative adjective', 'This That', 'img/L1/pn.svg', 1);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ('Preposition', 'in, (from) within', 'img/L1/m.svg', 1);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ('Preposition', 'To,for,because of', 'img/L1/n.svg', 1);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ('Preposition', 'Towards, concerning', 'img/L1/r.svg', 1);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ('Divine', 'Ra', 'img/L1/R.svg', 1);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ('Masculine Noun', 'Name', 'img/L1/rn.svg', 1);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ('Preposition', 'Together with', 'img/L1/hn.svg', 1);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ('Feminine Noun', 'Thing', 'img/L1/ht.svg', 1);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ('Masculine Noun', 'House Home', 'img/L1/pr.svg', 1);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ('Masculine Noun', 'Man,human being', 'img/L1/s.svg', 1);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ('verb', 'To Hear', 'img/L1/sdm.svg', 1);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ('Masculine Noun (special)', 'Another', 'img/L1/ky.svg', 1);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ('Feminine Noun (special)', 'Another', 'img/L1/kt.svg', 1);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ('verb', 'To speak, to mention', 'img/L1/dd.svg', 1);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ('Feminine Demonstrative', 'This,that (feminine usage)', 'img/L1/tn.svg', 1);
+
+
 
