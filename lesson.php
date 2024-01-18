@@ -16,7 +16,7 @@
   </div>
 
   <div class="flash" hidden onclick="definitionClick();" id="definition">
-        <p class="flashText"> Definition Goes Here</p>
+        <p class="flashText"> Plan, Idea, Advice</p>
   </div>
 
 </body>
