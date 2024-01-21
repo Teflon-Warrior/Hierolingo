@@ -108,4 +108,40 @@ INSERT INTO dictionary (pos, def, filepath, access) VALUES ('verb', 'To speak, t
 INSERT INTO dictionary (pos, def, filepath, access) VALUES ('Feminine Demonstrative', 'This,that (feminine usage)', 'img/L1/tn.svg', 1);
 
 
+--lesson 4
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\dw2.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\eating.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\flat.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\h3.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\hm.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\hm2.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\hm3.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\ib.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\in.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\iqr.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\jar.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\mi.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\mr.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\mri.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\nb.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\nhm.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\nsw.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\ntr.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\ntr2.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\ph.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\phty.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\S.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\'s3.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\sw.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\wet.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\bit.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\bit2.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\bnri.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\bread.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\di.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\di2.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("N/A", "N/A", "\img\L4\dpt.svg", 4);
+
+
+
 
