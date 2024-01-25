@@ -1,12 +1,12 @@
 /* Style the tab */
-.buttons {
+.tabs {
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
 }
 
 /* Style the buttons that are used to open the tab content */
-.buttons button {
+.tabs button {
   background-color: inherit;
   float: left;
   border: none;
@@ -14,15 +14,16 @@
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 /* Change background color of buttons on hover */
-.buttons button:hover {
+.tabs button:hover {
   background-color: #ddd;
 }
 
 /* Create an active/current tablink class */
-.buttons button.active {
+.tabs button.active {
   background-color: #ccc;
 }
 
@@ -30,6 +31,6 @@
 .lessonContent {
   display: none;
   padding: 6px 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #ccc;	
   border-top: none;
 }

@@ -51,13 +51,6 @@
 	
 	?>
 	
-	<div class="buttons">
-		<a class="button" href="project.php">Project</a>
-		<a class="button" href="team.php">Team</a>
-		<a class="button" href="video.php">Video</a>
-		<a class="button" href="dictionary.php">Dictionary</a>
-		<a class="button" href="studysets.php">Study Sets</a>
-	</div>
 	<script src="js/nav.js"></script>
 	
 	<!-- Here set up the tabs for lessons. All, 1, 2, 3, 4. If a lesson is blank, display a message along the lines of "No words unlocked yet... Unlock more in Lessons!" with a link to lessons. -->
