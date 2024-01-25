@@ -21,6 +21,8 @@
 			<li><a href="project.php">Project</a></li>
 			<li><a href="team.php">Team</a></li>
 			<li><a href="video.php">Video</a></li>
+			<li><a href="dictionary.php">Dictionary</a></li>
+			<li><a href="studysets.php">Study Sets</a></li>
 		</ul>
 	</nav>
 	
@@ -37,14 +39,14 @@
 	
 	<!--PHP Connectio & Queries -->
 	<?php 
-	$con = mysqli_connect(db.luddy.indiana.edu ,i494f23_team11,i494f23_team11,i494f23_team11);
+	$con = mysqli_connect("db.luddy.indiana.edu" ,"i494f23_team11","my+sql=i494f23_team11","i494f23_team11");
 		if (mysqli_connect_errno())
 			{ die("Failed to connect to MySQL: " . mysqli_connect_error()); }
 		else
 			{}
 	
 	//This query will pull wordIDs for lesson access levels for the user
-	$setWordsQuery = "";
+	$setWordsQuery = "SELECT * FROM Dictionary WHERE User.userlevel <= Dictionary.access AND User.username = 'andy' FULL JOIN User";
 	
 	?>
 	
