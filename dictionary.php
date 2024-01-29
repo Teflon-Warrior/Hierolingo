@@ -37,7 +37,7 @@
 	</header>
 	<div class="racing-stripes"></div>
 	
-	<!--PHP Connectio & Queries -->
+	<!--PHP Connection & Queries -->
 	<?php 
 	$con = mysqli_connect("db.luddy.indiana.edu" ,"i494f23_team11","my+sql=i494f23_team11","i494f23_team11");
 		if (mysqli_connect_errno())
@@ -45,9 +45,19 @@
 		else
 			{}
 	
-	//This query will pull wordIDs for lesson access levels for the user
-	//As of development this will be hard coded for one user; once login integration is implemented this will be changed
-	$setWordsQuery = "SELECT * FROM Dictionary WHERE User.userlevel <= Dictionary.access AND User.username = 'andy' FULL JOIN User";
+	//This query will pull the given users access level for use in a later query.
+	//Currently hardcoded to test user "andy". Once login API is developed, change this to login token and such.
+	$userAccessLevelQuery = "SELECT userlevel FROM User WHERE User.username = 'andy';";
+	
+	//This query will pull all words that the user has access to
+	$allWordsQuery = "SELECT * FROM Dictionary WHERE Dictionary.access <= ".$userAccessLevel.";";
+	
+	//These queries will pull the vocabulary relevant to the specified level
+	$lesson1WordsQuery = "SELECT * FROM Dictionary where Dictionary.access = 1;";
+	$lesson2WordsQuery = "SELECT * FROM Dictionary where Dictionary.access = 2;";
+	$lesson3WordsQuery = "SELECT * FROM Dictionary where Dictionary.access = 3;";
+	$lesson4WordsQuery = "SELECT * FROM Dictionary where Dictionary.access = 4;";
+	
 	
 	?>
 	

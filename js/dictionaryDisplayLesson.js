@@ -1,6 +1,6 @@
 function displayLesson(evt, lessonNumber) {
   // Declare variables
-  var i, lessonContent, lessonTabs;
+  var i, lessonContent, lessontab;
 
   // Get all elements with class="lessonContent" and hide
   lessonContent = document.getElementsByClassName("lessonContent");
@@ -8,10 +8,11 @@ function displayLesson(evt, lessonNumber) {
     lessonContent[i].style.display = "none";
   }
 
-  // Get all elements with class="lessonTabs" and remove the class "active"
-  lessonTabs = document.getElementsByClassName("lessonTabs");
-  for (i = 0; i < lessonTabs.length; i++) {
-    lessonTabs[i].className = lessonTabs[i].className.replace(" active", "");
+  // Get all elements with class="lessontab" and remove the class "active"
+  lessontab = document.getElementsByClassName("lessontab");
+  for (i = 0; i < lessontab.length; i++) {
+    lessontab[i].className = lessontab[i].className.replace(" active", "");
+	console.log(lessontab[i].className);
   }
 
   // Show the current tab, and add an "active" class to the button that opened the tab
