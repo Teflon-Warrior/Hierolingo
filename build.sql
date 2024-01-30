@@ -26,7 +26,7 @@ username varchar(30),
 userhandle varchar(30),
 userlevel int,
 hotstreak int,
-primary key (username));
+primary key (id));
 
 --userfriends needed to link friends together in the app.
 CREATE TABLE userfriends(
@@ -66,10 +66,11 @@ CREATE TABLE questions(
 
 
 CREATE TABLE points (
-  user VARCHAR(20),
+  user INT,
   points INT,
   FOREIGN KEY (user) REFERENCES User(id)
 );
+
 
 
 CREATE TABLE notifications (
