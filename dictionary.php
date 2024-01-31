@@ -49,15 +49,22 @@
 	//Currently hardcoded to test user "andy". Once login API is developed, change this to login token and such.
 	$userAccessLevelQuery = "SELECT userlevel FROM User WHERE User.username = 'andy';";
 	
-	//This query will pull all words that the user has access to
-	$allWordsQuery = "SELECT * FROM Dictionary WHERE Dictionary.access <= ".$userAccessLevel.";";
-	
 	//These queries will pull the vocabulary relevant to the specified level
-	$lesson1WordsQuery = "SELECT * FROM Dictionary where Dictionary.access = 1;";
-	$lesson2WordsQuery = "SELECT * FROM Dictionary where Dictionary.access = 2;";
-	$lesson3WordsQuery = "SELECT * FROM Dictionary where Dictionary.access = 3;";
-	$lesson4WordsQuery = "SELECT * FROM Dictionary where Dictionary.access = 4;";
+	$lesson1WordsQuery = "SELECT * FROM dictionary where dictionary.access = 1;";
+	$lesson2WordsQuery = "SELECT * FROM dictionary where dictionary.access = 2;";
+	$lesson3WordsQuery = "SELECT * FROM dictionary where dictionary.access = 3;";
+	$lesson4WordsQuery = "SELECT * FROM dictionary where dictionary.access = 4;";
 	
+	//Query Results
+	//This process makes $userAccessLevelQueryResult an integer for use in forloops and if statements
+	$userAccessLevelQueryResult = mysqli_query($con, $userAccessLevelQuery);
+	$userAccessLevelQueryResult = mysqli_fetch_array($userAccessLevelQueryResult, MYSQLI_NUM);
+	$userAccessLevelQueryResult = $userAccessLevelQueryResult[0];
+	
+	$lesson1WordsQueryResult = mysqli_query($con, $lesson1WordsQuery);
+	$lesson2WordsQueryResult = mysqli_query($con, $lesson2WordsQuery);
+	$lesson3WordsQueryResult = mysqli_query($con, $lesson3WordsQuery);
+	$lesson4WordsQueryResult = mysqli_query($con, $lesson4WordsQuery);
 	
 	?>
 	
@@ -76,22 +83,30 @@
 	<!-- Tab content -->
 	<div id="All" class="lessonContent">
 		<h3>All Words</h3>
+		<?php echo '<p> '.$userAccessLevelQueryResult.' </p>'; ?>
 	</div>
 
 	<div id="1" class="lessonContent">
 		<h3>Lesson 1</h3>
+		<!-- if statement to see if access is high enough 
+			 if yes then for loop each word in lesson
+			 if no print a "unlock more in lessons"-esque message-->
+		
 	</div>
 	
 	<div id="2" class="lessonContent">
 		<h3>Lesson 2</h3>
+		<!-- as in L1 -->
 	</div>
 	
 	<div id="3" class="lessonContent">
 		<h3>Lesson 3</h3>
+		<!-- as in L1 -->
 	</div>
 	
 	<div id="4" class="lessonContent">
 		<h3>Lesson 4</h3>
+		<!-- as in L1 --> 
 	</div>
 	
 	<div class ="dictionary-words"></div>
