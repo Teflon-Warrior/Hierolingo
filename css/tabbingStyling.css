@@ -37,11 +37,25 @@
   to {opacity: 1;}
 }
 
-
 /* Style the tab content */	
 .lessonContent {
   display: none;
   padding: 6px 12px;
   border: 1px solid #ccc;	
   border-top: none;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding-left: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }

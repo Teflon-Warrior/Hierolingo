@@ -110,14 +110,29 @@
 		<?php
 			switch ($userAccessLevelQueryResult){
 				case 4:
-					echo "<h3> Lesson 4 </h3>";
-					displayQueryResults($lesson4WordsQueryResult);
-				case 3:
-					echo "<h3> Lesson 3 </h3>";
-					displayQueryResults($lesson3WordsQueryResult);
-				case 2:
+					echo "<h3> Lesson 1 </h3>";
+					displayQueryResults($lesson1WordsQueryResult);
 					echo "<h3> Lesson 2 </h3>";
 					displayQueryResults($lesson2WordsQueryResult);
+					echo "<h3> Lesson 3 </h3>";
+					displayQueryResults($lesson3WordsQueryResult);
+					echo "<h3> Lesson 4 </h3>";
+					displayQueryResults($lesson4WordsQueryResult);
+					break;
+				case 3:
+					echo "<h3> Lesson 1 </h3>";
+					displayQueryResults($lesson1WordsQueryResult);
+					echo "<h3> Lesson 2 </h3>";
+					displayQueryResults($lesson2WordsQueryResult);
+					echo "<h3> Lesson 3 </h3>";
+					displayQueryResults($lesson3WordsQueryResult);
+					break;
+				case 2:
+					echo "<h3> Lesson 1 </h3>";
+					displayQueryResults($lesson1WordsQueryResult);
+					echo "<h3> Lesson 2 </h3>";
+					displayQueryResults($lesson2WordsQueryResult);
+					break;
 				case 1:		
 					echo "<h3> Lesson 1 </h3>";
 					displayQueryResults($lesson1WordsQueryResult);
