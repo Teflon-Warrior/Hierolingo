@@ -76,7 +76,8 @@ CREATE TABLE notifications (
   stat BOOLEAN,
   method VARCHAR(5),
   timeofday TIME,
-  dayofweek ENUM('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'),
+  /* days of the week will be order 0-6 where sunday=0, monday=1, etc*/
+  dayofweek int,
   user VARCHAR(30),
   FOREIGN KEY (user) REFERENCES User(username)
 );
