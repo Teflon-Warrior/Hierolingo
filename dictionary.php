@@ -60,12 +60,36 @@
 	$userAccessLevelQueryResult = mysqli_query($con, $userAccessLevelQuery);
 	$userAccessLevelQueryResult = mysqli_fetch_array($userAccessLevelQueryResult, MYSQLI_NUM);
 	$userAccessLevelQueryResult = $userAccessLevelQueryResult[0];
+	$userAccessLevelQueryResult = intval($userAccessLevelQueryResult);
 	
 	$lesson1WordsQueryResult = mysqli_query($con, $lesson1WordsQuery);
 	$lesson2WordsQueryResult = mysqli_query($con, $lesson2WordsQuery);
 	$lesson3WordsQueryResult = mysqli_query($con, $lesson3WordsQuery);
 	$lesson4WordsQueryResult = mysqli_query($con, $lesson4WordsQuery);
 	
+	// Function for displaying query results easy
+	// Parameter $queryResultIn takes a query result 
+	function displayQueryResults($queryResultIn){	
+		if ($queryResultIn->num_rows > 0) {
+				mysqli_data_seek($queryResultIn, 0);
+				echo "<table border = '1'>
+				<tr>
+					<th>Heiroglyph</th>
+					<th>Definition </th>
+					<th>Part of Speech</th>
+				</tr>";
+				while ($row = mysqli_fetch_array($queryResultIn)) {  
+					echo "
+					<tr>
+						<td><img src = ".$row[3]." width='200' height='200' /> </td> 
+						<td>".$row[2]."</td> 					
+						<td>".$row[1]."</td>
+					</tr>";
+				}		
+			
+				echo "</table>";
+			}
+	}
 	?>
 	
 	<script src="js/nav.js"></script>
@@ -83,34 +107,75 @@
 	<!-- Tab content -->
 	<div id="All" class="lessonContent">
 		<h3>All Words</h3>
-		<?php echo '<p> '.$userAccessLevelQueryResult.' </p>'; ?>
+		<?php
+			switch ($userAccessLevelQueryResult){
+				case 4:
+					echo "<h3> Lesson 4 </h3>";
+					displayQueryResults($lesson4WordsQueryResult);
+				case 3:
+					echo "<h3> Lesson 3 </h3>";
+					displayQueryResults($lesson3WordsQueryResult);
+				case 2:
+					echo "<h3> Lesson 2 </h3>";
+					displayQueryResults($lesson2WordsQueryResult);
+				case 1:		
+					echo "<h3> Lesson 1 </h3>";
+					displayQueryResults($lesson1WordsQueryResult);
+					break;					
+				default: 
+					echo "<h3> No words unlocked. </h3>
+						<p> Head over to lessons and unlock new words! </p>";
+			}
+		?>
 	</div>
 
 	<div id="1" class="lessonContent">
 		<h3>Lesson 1</h3>
-		<!-- if statement to see if access is high enough 
-			 if yes then for loop each word in lesson
-			 if no print a "unlock more in lessons"-esque message-->
+			<?php 
+				if ($userAccessLevelQueryResult >= 1) {	
+					displayQueryResults($lesson1WordsQueryResult);
+				} else {
+					echo "<h3> No words unlocked. </h3>
+						<p> Head over to lessons and unlock new words! </p>";
+				}			
+			?>
 		
 	</div>
 	
 	<div id="2" class="lessonContent">
 		<h3>Lesson 2</h3>
-		<!-- as in L1 -->
+			<?php 
+				if ($userAccessLevelQueryResult >= 2) {	
+					displayQueryResults($lesson2WordsQueryResult);
+				} else {
+					echo "<h3> No words unlocked. </h3>
+						<p> Head over to lessons and unlock new words! </p>";
+				}				
+			?>
 	</div>
 	
 	<div id="3" class="lessonContent">
 		<h3>Lesson 3</h3>
-		<!-- as in L1 -->
+			<?php 
+				if ($userAccessLevelQueryResult >= 3) {	
+					displayQueryResults($lesson3WordsQueryResult);
+				} else {
+					echo "<h3> No words unlocked. </h3>
+						<p> Head over to lessons and unlock new words! </p>";
+				}			
+			?>
 	</div>
 	
 	<div id="4" class="lessonContent">
 		<h3>Lesson 4</h3>
-		<!-- as in L1 --> 
+			<?php 
+				if ($userAccessLevelQueryResult >= 4) {	
+					displayQueryResults($lesson4WordsQueryResult);
+				} else {
+					echo "<h3> No words unlocked. </h3>
+						<p> Head over to lessons and unlock new words! </p>";
+				}	
+			?>
 	</div>
-	
-	<div class ="dictionary-words"></div>
-	<!-- For all, display each lesson's words(HPOSD), but broken up by lesson through headers. On a specific tab, display a header, followed by the words
-		 The button to add a specific word to a list would go after HPOSD-->
 </body>
 </html>
