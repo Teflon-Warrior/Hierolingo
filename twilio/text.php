@@ -57,7 +57,7 @@ while ($row = mysqli_fetch_assoc($result)) {
       $num,
       [
         'from' => $twilio_number,
-        'body' => 'Don't forget to complete your weekly lesson! -Dataglyph.'
+        'body' => 'Don\'t forget to complete your weekly lesson! -Dataglyph.'
       ]
     );
   }
