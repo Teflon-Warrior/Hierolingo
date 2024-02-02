@@ -3,20 +3,7 @@
 <head>
   <link href="./css/lessoncss.css" rel="stylesheet" type="text/css">
   <script type="text/javascript" src="./js/lessonjs.js"></script>
-  <style>
-        .flashcards {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 300px;
-            margin: auto;
-        }
 
-        .flashcard {
-            display: none;
-            text-align: center;
-        }
-    </style>
 
 </head>
 
@@ -46,12 +33,13 @@
 
         // Set <img> tag with the filepath
          echo "<h1 align='center'> Lesson 1 <h1>";
-         echo "<div class='flash' onclick='termClick($id);' id='term$id'>";
+         echo "<div class='flash' onclick='termClick($id);' id='term'>";
          //echo $filepath;
         echo "<img src='$filepath'>";
+        echo "$id";
         echo "</div>";
 
-        echo "<div class='flash' hidden onclick='definitionClick($id);' id='definition$id'>";
+        echo "<div class='flash' hidden onclick='definitionClick($id);' id='definition'>";
         echo "<p class='flashText'>$def</p>";
         echo "</div>";
     }
