@@ -1,41 +1,67 @@
+body {
+    background-color: #F4DF9C;
+}
+.bars {
+    margin-bottom: 5px;
+}
 .profile-header header {
     background-color: #F4DF9C;
     height: 150px;
     font-size: xx-large;
     padding-top: 2.0rem;
 }
+
 .profile-page {
     background: #F4DF9C;
     padding: 2.0rem;
     padding-top: 1.5rem;
     text-align: center;
 }
+
 .profile-page .pfp {
     display: flex;
     margin: 0 auto;
     border-radius: 50%;
 }
+
 .profile-page h1 {
     color: rgb(20, 20, 20);
     margin-top: 0;
     margin-bottom: 0.5rem;
-
 }
+
 .profile-page h3 {
     color: #828282;
     padding-bottom: 4.0rem;
     margin-top: 0;
     margin-bottom: 1.5rem;
 }
+
 .profile-page .bars {
     display: flex;
-    justify-content: space-around;
-    
+    justify-content: space-between;
 }
-.profile-page .bars .rect1, .rect2, .rect3, .rect4 {
-    width: 300px;
+
+.profile-page .bar-div {
+    flex: 1;
+}
+
+.profile-page .bars .rect1,
+.profile-page .bars .rect2,
+.profile-page .bars .rect3,
+.profile-page .bars .rect4 {
+    width: 100%;
     height: 30px;
-    border: 1px solid #2D2C31;
+    border: 2px solid #2D2C31;
     border-radius: 10%;
     background-color: #f7f7f7;
+    padding: 35px;
+    margin-top: 30px;
+}
+
+.profile-page .bars .rect1 p,
+.profile-page .bars .rect2 p,
+.profile-page .bars .rect3 p,
+.profile-page .bars .rect4 p {
+    margin: 0 auto;
 }
