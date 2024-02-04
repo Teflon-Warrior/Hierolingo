@@ -45,6 +45,17 @@
   border-top: none;
 }
 
+.submissionForm {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;	
+  border-top: none;
+}
+
+.submissionForm{
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
@@ -58,4 +69,20 @@ table {
     font-family: sans-serif;
     min-width: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.add {
+  background-color: #f1f1f1;
+  float: left;
+  border: none;
+  outline: 1px;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.All:hover + .hide {
+	display: block;
+	color: red;
 }
