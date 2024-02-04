@@ -78,7 +78,6 @@
 				</tr>";
 				for ($i = 0; $i < count($wordsIn); $i++ ){
 					$printQuery = "SELECT * FROM dictionary WHERE id = ".$wordsIn[$i].";";
-					echo $printQuery;
 					$results = mysqli_fetch_array(mysqli_query($con, $printQuery), MYSQLI_NUM);
 					echo "
 					<tr>
