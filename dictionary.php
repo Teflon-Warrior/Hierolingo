@@ -39,7 +39,7 @@
 	
 	<!--PHP Connection & Queries -->
 	<?php 
-	$con = mysqli_connect("db.luddy.indiana.edu" ,"i494f23_team11","my+sql=i494f23_team11","i494f23_team11");
+	$con = mysqli_connect("db.luddy.indiana.edu" ,"i494f23_jefhochg","my+sql=i494f23_jefhochg","i494f23_jefhochg");
 		if (mysqli_connect_errno())
 			{ die("Failed to connect to MySQL: " . mysqli_connect_error()); }
 		else
@@ -67,9 +67,11 @@
 	$lesson3WordsQueryResult = mysqli_query($con, $lesson3WordsQuery);
 	$lesson4WordsQueryResult = mysqli_query($con, $lesson4WordsQuery);
 	
+	
+	
 	// Function for displaying query results easy
 	// Parameter $queryResultIn takes a query result 
-	function displayQueryResults($queryResultIn){	
+	function displayQueryResults($queryResultIn, $tabNames){	
 		if ($queryResultIn->num_rows > 0) {
 				mysqli_data_seek($queryResultIn, 0);
 				echo "<table border = '1'>
@@ -77,20 +79,34 @@
 					<th>Heiroglyph</th>
 					<th>Definition </th>
 					<th>Part of Speech</th>
+					<th>Add to Study Set </th>
 				</tr>";
 				while ($row = mysqli_fetch_array($queryResultIn)) {  
-					echo "
+					echo "					
 					<tr>
 						<td><img src = ".$row[3]." width='200' height='200' /> </td> 
 						<td>".$row[2]."</td> 					
 						<td>".$row[1]."</td>
-					</tr>";
-				}		
-			
+						<script type = 'text/javascript' src = 'js/displaySubmissionFields.js'></script>
+						<td>
+							<button onclick ='displaySubmit(event, ".$row[0].");' id = 'submit".$row[0]."' class = 'addButton'>Add to Vocab List?</button>
+							<form action = 'addToStudySet.js' class = 'submissionForm' id = 'submissionForm".$row[0]."'>
+								<label for = 'studyset'> Choose a study set </label>
+									<select name = 'studyset' id = 'studyset'>";
+										for ($i = 0; $i < count($tabNames); $i++){
+											echo "<option value = ".$tabNames[$i].">".$tabNames[$i]."</option>";
+										}										
+								echo "</select>";
+							
+							echo "<input type = 'submit' value = 'Add'>";
+							echo "</form>
+						</td>
+					</tr>
+					";
+				}					
 				echo "</table>";
 			}
-	}
-	?>
+	} ?>
 	
 	<script src="js/nav.js"></script>
 	
@@ -108,34 +124,39 @@
 	<div id="All" class="lessonContent">
 		<h3>All Words</h3>
 		<?php
+			//For set options when adding to a studyset
+			//Fix when sessions are implemented
+			$setTabsQuery = "SELECT setName FROM vocablist WHERE userID = 2;";
+			$setTabsResult = mysqli_fetch_array(mysqli_query($con, $setTabsQuery), MYSQLI_NUM);
+			
 			switch ($userAccessLevelQueryResult){
 				case 4:
 					echo "<h3> Lesson 1 </h3>";
-					displayQueryResults($lesson1WordsQueryResult);
+					displayQueryResults($lesson1WordsQueryResult, $setTabsResult);
 					echo "<h3> Lesson 2 </h3>";
-					displayQueryResults($lesson2WordsQueryResult);
+					displayQueryResults($lesson2WordsQueryResult, $setTabsResult);
 					echo "<h3> Lesson 3 </h3>";
-					displayQueryResults($lesson3WordsQueryResult);
+					displayQueryResults($lesson3WordsQueryResult, $setTabsResult);
 					echo "<h3> Lesson 4 </h3>";
-					displayQueryResults($lesson4WordsQueryResult);
+					displayQueryResults($lesson4WordsQueryResult, $setTabsResult);
 					break;
 				case 3:
 					echo "<h3> Lesson 1 </h3>";
-					displayQueryResults($lesson1WordsQueryResult);
+					displayQueryResults($lesson1WordsQueryResult, $setTabsResult);
 					echo "<h3> Lesson 2 </h3>";
-					displayQueryResults($lesson2WordsQueryResult);
+					displayQueryResults($lesson2WordsQueryResult, $setTabsResult);
 					echo "<h3> Lesson 3 </h3>";
-					displayQueryResults($lesson3WordsQueryResult);
+					displayQueryResults($lesson3WordsQueryResult, $setTabsResult);
 					break;
 				case 2:
 					echo "<h3> Lesson 1 </h3>";
-					displayQueryResults($lesson1WordsQueryResult);
+					displayQueryResults($lesson1WordsQueryResult, $setTabsResult);
 					echo "<h3> Lesson 2 </h3>";
-					displayQueryResults($lesson2WordsQueryResult);
+					displayQueryResults($lesson2WordsQueryResult, $setTabsResult);
 					break;
 				case 1:		
 					echo "<h3> Lesson 1 </h3>";
-					displayQueryResults($lesson1WordsQueryResult);
+					displayQueryResults($lesson1WordsQueryResult, $setTabsResult);
 					break;					
 				default: 
 					echo "<h3> No words unlocked. </h3>
@@ -148,7 +169,7 @@
 		<h3>Lesson 1</h3>
 			<?php 
 				if ($userAccessLevelQueryResult >= 1) {	
-					displayQueryResults($lesson1WordsQueryResult);
+					displayQueryResults($lesson1WordsQueryResult, $setTabsResult);
 				} else {
 					echo "<h3> No words unlocked. </h3>
 						<p> Head over to lessons and unlock new words! </p>";
@@ -161,7 +182,7 @@
 		<h3>Lesson 2</h3>
 			<?php 
 				if ($userAccessLevelQueryResult >= 2) {	
-					displayQueryResults($lesson2WordsQueryResult);
+					displayQueryResults($lesson2WordsQueryResult, $setTabsResult);
 				} else {
 					echo "<h3> No words unlocked. </h3>
 						<p> Head over to lessons and unlock new words! </p>";
@@ -173,7 +194,7 @@
 		<h3>Lesson 3</h3>
 			<?php 
 				if ($userAccessLevelQueryResult >= 3) {	
-					displayQueryResults($lesson3WordsQueryResult);
+					displayQueryResults($lesson3WordsQueryResult, $setTabsResult);
 				} else {
 					echo "<h3> No words unlocked. </h3>
 						<p> Head over to lessons and unlock new words! </p>";
@@ -185,7 +206,7 @@
 		<h3>Lesson 4</h3>
 			<?php 
 				if ($userAccessLevelQueryResult >= 4) {	
-					displayQueryResults($lesson4WordsQueryResult);
+					displayQueryResults($lesson4WordsQueryResult, $setTabsResult);
 				} else {
 					echo "<h3> No words unlocked. </h3>
 						<p> Head over to lessons and unlock new words! </p>";
