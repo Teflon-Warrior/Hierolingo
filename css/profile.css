@@ -1,20 +1,15 @@
 body {
     background-color: #F4DF9C;
 }
-.bars {
-    margin-bottom: 5px;
-}
 .profile-header header {
-    background-color: #F4DF9C;
+    background-color: #cebc83;
     height: 150px;
     font-size: xx-large;
-    padding-top: 2.0rem;
 }
 
 .profile-page {
     background: #F4DF9C;
     padding: 2.0rem;
-    padding-top: 1.5rem;
     text-align: center;
 }
 
@@ -37,31 +32,27 @@ body {
     margin-bottom: 1.5rem;
 }
 
-.profile-page .bars {
+.bar-div {
+    background-color: #06023d;
+    border: 2px solid #444077;
+    border-radius: 30px;
+    color: white;
+    padding: 1.0em 5.0em;
+    margin: 0 auto;
+    display: inline-block;
+    font-size: 15px;
+    letter-spacing: 1px;
+    transition: background-color .2s ease-out, color .2s ease-out, border-color .18s ease-out;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+}
+.profile-page .bar-div {
     display: flex;
     justify-content: space-between;
 }
-
-.profile-page .bar-div {
-    flex: 1;
-}
-
-.profile-page .bars .rect1,
-.profile-page .bars .rect2,
-.profile-page .bars .rect3,
-.profile-page .bars .rect4 {
-    width: 100%;
-    height: 30px;
-    border: 2px solid #2D2C31;
-    border-radius: 10%;
-    background-color: #f7f7f7;
-    padding: 35px;
-    margin-top: 30px;
-}
-
-.profile-page .bars .rect1 p,
-.profile-page .bars .rect2 p,
-.profile-page .bars .rect3 p,
-.profile-page .bars .rect4 p {
-    margin: 0 auto;
+.profile-page .bar-div:hover {
+    background-color: #444077;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
