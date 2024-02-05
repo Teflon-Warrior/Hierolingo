@@ -33,13 +33,6 @@ $con = mysqli_connect("db.luddy.indiana.edu" ,"i494f23_team11","my+sql=i494f23_t
 
         <header>
 
-            <div class="openbtn">
-                <span class="material-symbols-outlined menu-button">menu</span>
-                <span class="menu-text">menu</span>
-            </div>
-
-            <div class="all-over-bkg"></div>
-
             <h1>Profile</h1>
 
         </header>
@@ -48,9 +41,22 @@ $con = mysqli_connect("db.luddy.indiana.edu" ,"i494f23_team11","my+sql=i494f23_t
 
 
     <div class="profile-page">
-        <img class="pfp" src="img/defaultpfp.png" width="150" height="150">
-        <h1>Aidan Smith</h1>
-        <h3>@aidanaidanaidan</h3>
+
+        <!-- PFP, name, and username -->
+        <div class="profile">
+            <img class="pfp" src="img/defaultpfp.png" width="150" height="150">
+            <h1>Aidan Smith</h1>
+            <h3>@aidanaidanaidan</h3>
+        </div>
+
+        <!-- Level -->
+        <div class="profile-level">
+            <div class="level-display">
+                <h2>Level 2</h2>
+            </div>
+        </div>
+
+        <!-- Nav Buttons -->
         <div class="buttons">
             <a href="https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php" class="bar-div">
                 <div class="profile-button">
