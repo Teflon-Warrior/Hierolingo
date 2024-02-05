@@ -54,7 +54,6 @@ body {
 .profile-page .bar-div:hover {
     background-color: #444077;
     color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .profile-page .level-display {
     width: 800px;
