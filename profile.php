@@ -1,11 +1,3 @@
-<!-- PHP connection & Queries
-<?php 
-$con = mysqli_connect("db.luddy.indiana.edu" ,"i494f23_team11","my+sql=i494f23_team11","i494f23_team11");
-	if (mysqli_connect_errno())
-		{ die("Failed to connect to MySQL: " . mysqli_connect_error()); }
-	else
-		{} -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,6 +13,13 @@ $con = mysqli_connect("db.luddy.indiana.edu" ,"i494f23_team11","my+sql=i494f23_t
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <?php 
+    $con = mysqli_connect("db.luddy.indiana.edu" ,"i494f23_team11","my+sql=i494f23_team11","i494f23_team11");
+        if (mysqli_connect_errno())
+            { die("Failed to connect to MySQL: " . mysqli_connect_error()); }
+        else
+            {} ?>
 
 </head>
 
