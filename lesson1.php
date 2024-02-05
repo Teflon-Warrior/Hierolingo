@@ -48,17 +48,5 @@
 
 
 ?>
-  <!--
-  <h1 align="center"> Lesson # <h1>
-
-  <div class="flash" onclick="termClick();" id="term">
-        
-        <img src="/img/L2/shr.svg">
-        
-  </div>
-
-  <div class="flash" hidden onclick="definitionClick();" id="definition">
-        <p class="flashText"> Plan, Idea, Advice</p>
-  </div>
--->
 </body>
+</html>
