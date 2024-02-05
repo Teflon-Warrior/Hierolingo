@@ -32,7 +32,7 @@
         $id = $row['id'];
 
         // Set <img> tag with the filepath
-        echo "<h1 align='center'> Lesson 1 <h1>";
+        echo "<h1 align='center'> Lesson 4 <h1>";
         echo "<div class='flash' onclick='termClick($id);' id='term_$id'>";
         //echo $filepath;
         echo "<img src='$filepath'>";
