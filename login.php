@@ -50,7 +50,7 @@ session_start();
      data-client_id="13731763374-b6li94ja9m8m6drhlksbjkgi4bpf4f4o.apps.googleusercontent.com"
      data-context="signin"
      data-ux_mode="redirect"
-     data-login_uri="https://cgi.luddy.indiana.edu/~team11/team-11/dictionary.php"
+     data-login_uri="https://cgi.luddy.indiana.edu/~team11/team-11/profile.php"
      data-auto_prompt="false">
 </div>
 
