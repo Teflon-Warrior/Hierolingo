@@ -2,109 +2,72 @@
 
 <head>
 
-<!-- google client ID-->
-<meta name="google-signin-client_id" content="13731763374-b6li94ja9m8m6drhlksbjkgi4bpf4f4o.apps.googleusercontent.com">
 
 <!-- bootstrap css-->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 <!-- individual default adjustments-->
-<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+<link rel="stylesheet" type="text/css" href="css/general.css"/>
+<link rel="stylesheet" href="js/session.js">
+
   <!--Google API login connection-->
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+
 </head>
 
 <body>
-
-<?php
-session_start(); 
-// Check if the 'fname' session variable is set
-if (!isset($_SESSION['fname'])) {
-    // If set, change the href to 'home.php'
-    $hrefValue = 'home.php';
-    $logphp = 'login.php';
-    $log = 'Sign in';
-} else {
-    // If not set, keep the href as 'private.php'
-    $hrefValue = 'private.php';
-    $log = 'Log Out';
-    $logphp = 'logout.php';
-}
-?>
 
 <nav class="navbar navbar-expand-sm bg-dark">
     <ul class="navbar-nav">
         <li class="nav-item">
             <a class="nav-link" style="color:white;" href="home.php">Home</a>
         </li>
+        <?php
+        
+        if (isset($_SESSION['loggedin'])) {
+        echo '<li class="nav-item">';
+        echo '<a class="nav-link" style="color:white;" href="lesson.php">Lesson</a>';
+        echo '</li>';
+        echo '<li class="nav-item">';
+        echo '<a class="nav-link" style="color:white;" href="resource.php">Resource</a>';
+        echo '</li>';
+        echo '<li class="nav-item">';
+        echo '<a class="nav-link" style="color:white;" href="about.php">About</a>';
+        echo '</li>';
+        }
+        ?>
         <li class="nav-item">
-            <a class="nav-link" style="color:white;" href="lesson.php">Lesson</a>
+            <a class="nav-link" style="color:white;" href="<?php echo $logphp ?>"><?php echo $log ?></a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" style="color:white;" href="resource.php">Resource</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" style="color:white;" href="about.php">About</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" style="color:white;" href="logout.php">Logout</a>
-        </li>
+    </ul>
     </ul>
 </nav>
 <body>
-<div class="container">
-  <!-- center content horizontelly-->
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-      <form action="verification.php" method="POST">
-        <div class="form-group" style="background-color: #96705B; padding: 20px;">
-          <form action="verification.php" method="POST">
-          Email: <input type="text" name="email" class="form-control"><br>
-          Password: <input type="text" name="password" class='form-control'><br>
-          <input type="submit" class="btn btn-Dark">
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div class="g-signin2" data-onsuccess="onSignIn"></div>
-
+<!--A PHP session will begin once logged in-->
 <?php
+session_start();
 
-
-if (isset($_SESSION['errorMessages'])) {
-    $errorMessages = $_SESSION['errorMessages'];
-    unset($_SESSION['errorMessages']);
-}
-
-if (!empty($errorMessages)) {
-    echo '<div class="alert alert-danger">';
-    echo '<ul>';
-    foreach ($errorMessages as $errorMessages) {
-        echo '<li>' . $errorMessages . '</li>';
-    }
-    echo '</ul>';
-    echo '</div>';
-}else{
-
-if (isset($_SESSION['add_message'])) {
-    $add_message = $_SESSION['add_message'];
-    unset($_SESSION['add_message']);
-}
-
-if(!empty($add_message)){
-    echo '<div class="alert alert-primary">';
-    echo '<ul>';
-    foreach ($errorMessages as $errorMessage) {
-        echo '<li>' . $errorMessage . '</li>';
-    }
-    echo '</ul>';
-    echo '</div>';
-}
-}
-
+// Set session variable to false initially
+$_SESSION['loggedin'] = false;
 ?>
 
+<div id="g_id_onload"
+     data-client_id="13731763374-b6li94ja9m8m6drhlksbjkgi4bpf4f4o.apps.googleusercontent.com"
+     data-context="signin"
+     data-ux_mode="redirect"
+     data-login_uri="https://cgi.luddy.indiana.edu/~team11/team-11/dictionary.php"
+     data-auto_prompt="false">
+</div>
+
+<div class="g_id_signin"
+     data-type="standard"
+     data-shape="rectangular"
+     data-theme="filled_blue"
+     data-text="continue_with"
+     data-size="large"
+     data-locale="en-US"
+     data-logo_alignment="left">
+</div>
 </body>
 </html>
 
