@@ -61,8 +61,9 @@ body {
     background-color: #444077;
     border: 3px solid #06023d;
     border-radius: 10px;
-    margin: 0 auto;
     display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .profile-page .profile-level .level-display h2{
     color: #f4f4f4;
