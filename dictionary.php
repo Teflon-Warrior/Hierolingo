@@ -39,7 +39,7 @@
 	
 	<!--PHP Connection & Queries -->
 	<?php 
-	$con = mysqli_connect("db.luddy.indiana.edu" ,"i494f23_jefhochg","my+sql=i494f23_jefhochg","i494f23_jefhochg");
+	$con = mysqli_connect("db.luddy.indiana.edu" ,"i494f23_team11","my+sql=i494f23_team11","i494f23_team11");
 		if (mysqli_connect_errno())
 			{ die("Failed to connect to MySQL: " . mysqli_connect_error()); }
 		else
