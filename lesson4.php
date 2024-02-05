@@ -1,7 +1,11 @@
 <html>
 
 <head>
+    <!-- bootstrap css-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
   <link href="./css/lessoncss.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="css/general.css"/>
   <script type="text/javascript" src="./js/lessonjs.js"></script>
 
 
@@ -14,13 +18,13 @@
   <nav class="navbar navbar-expand-sm bg-dark">
     <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" style="color:white;" href="home.php">Home</a>
+            <a class="nav-link" style="color:white;" href="profile.php">Profile</a>
         </li>
         <?php
         
         if (isset($_SESSION['loggedin'])) {
         echo '<li class="nav-item">';
-        echo '<a class="nav-link" style="color:white;" href="lesson.php">Lesson</a>';
+        echo '<a class="nav-link" style="color:white;" href="lesson1.php">Lesson</a>';
         echo '</li>';
         echo '<li class="nav-item">';
         echo '<a class="nav-link" style="color:white;" href="resource.php">Resource</a>';
@@ -77,4 +81,5 @@
 
 
 ?>
+<a class="btn" href="Lesson3.php">Previous</a>
 </body>
