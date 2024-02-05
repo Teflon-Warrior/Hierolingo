@@ -9,6 +9,35 @@
 
 <body>
 <?php
+  session_start();
+  ?>
+  <nav class="navbar navbar-expand-sm bg-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" style="color:white;" href="home.php">Home</a>
+        </li>
+        <?php
+        
+        if (isset($_SESSION['loggedin'])) {
+        echo '<li class="nav-item">';
+        echo '<a class="nav-link" style="color:white;" href="lesson.php">Lesson</a>';
+        echo '</li>';
+        echo '<li class="nav-item">';
+        echo '<a class="nav-link" style="color:white;" href="resource.php">Resource</a>';
+        echo '</li>';
+        echo '<li class="nav-item">';
+        echo '<a class="nav-link" style="color:white;" href="about.php">About</a>';
+        echo '</li>';
+        }
+        ?>
+        <li class="nav-item">
+            <a class="nav-link" style="color:white;" href="login.php">Log In</a>
+        </li>
+    </ul>
+    </ul>
+</nav>
+<?php
+
   //login credentials
   $host = "db.luddy.indiana.edu";
   $username = "i494f23_team11";

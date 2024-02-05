@@ -15,7 +15,10 @@
 </head>
 
 <body>
-
+<?php
+session_start();
+ $_SESSION['log'] = "False";
+?>
 <nav class="navbar navbar-expand-sm bg-dark">
     <ul class="navbar-nav">
         <li class="nav-item">
@@ -23,7 +26,7 @@
         </li>
         <?php
         
-        if (isset($_SESSION['loggedin'])) {
+        if ($_SESSION['log'] == "True") {
         echo '<li class="nav-item">';
         echo '<a class="nav-link" style="color:white;" href="lesson.php">Lesson</a>';
         echo '</li>';
@@ -36,20 +39,12 @@
         }
         ?>
         <li class="nav-item">
-            <a class="nav-link" style="color:white;" href="<?php echo $logphp ?>"><?php echo $log ?></a>
+            <a class="nav-link" style="color:white;" href="login.php">Log IN</a>
         </li>
     </ul>
     </ul>
 </nav>
 <body>
-
-<!--A PHP session will begin once logged in-->
-<?php
-session_start();
-
-// Set session variable to false initially
-$_SESSION['loggedin'] = false;
-?>
 
 <div id="g_id_onload"
      data-client_id="13731763374-b6li94ja9m8m6drhlksbjkgi4bpf4f4o.apps.googleusercontent.com"
@@ -68,6 +63,9 @@ $_SESSION['loggedin'] = false;
      data-locale="en-US"
      data-logo_alignment="left">
 </div>
+<?php
+echo $_SESSION["log"];
+?>
 </body>
 </html>
 
