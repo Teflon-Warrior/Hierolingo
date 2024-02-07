@@ -25,3 +25,11 @@ function nextbuttonClicked(curr) {
         var num = curr+1;
         location.replace("https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php?curr=" + num);
 }
+
+
+//function for lesson nav bar
+function lessonnavClicked(i) {
+        var i = i;
+        location.replace("https://cgi.luddy.indiana.edu/~team11/team-11/lessonTest.php?curr=" + i);
+
+}
