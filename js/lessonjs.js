@@ -15,3 +15,13 @@ function definitionClick(id) {
 }
 
 //forward and backwards button
+
+function prevbuttonClicked(curr) {
+        var num = curr-1;
+        location.replace("https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php?curr=" + num);
+}
+
+function nextbuttonClicked(curr) {
+        var num = curr+1;
+        location.replace("https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php?curr=" + num);
+}
