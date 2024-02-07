@@ -52,6 +52,27 @@
   if (!$con)
   {die("Failed to connect to MySQL: " . mysqli_connect_error()); }
 
+  $curr = 1;
+  if(isset($_GET["curr"])) {
+        $curr = ($_GET["curr"]);
+  }
+
+$rowQuery = "select id  from dictionary where access = 1";
+$rowResult = mysqli_query($con, $rowQuery);
+$rowCount = mysqli_num_rows($rowResult);
+
+  if ($curr==1) {
+        echo "<button class='nextButton' onclick='nextbuttonClicked($curr);'> next </button>";
+  }else if ($curr == $rowCount) {
+        echo "<button class='prevButton' onclick='prevbuttonClicked($curr);'> prev </button>";
+  } else {
+ echo "
+<button class='prevButton' onclick='prevbuttonClicked($curr);'> prev </button>
+<button class='nextButton' onclick='nextbuttonClicked($curr);'> next </button>
+";
+  }
+$temp = $curr-1;
+
 $query = "select filepath,def,id from dictionary where access = 1 limit $temp,1;";
 $result = mysqli_query($con, $query);
 $row = mysqli_fetch_assoc($result);
