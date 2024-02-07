@@ -95,7 +95,12 @@ echo "<div class='flash' hidden onclick='definitionClick($id);' id='definition_$
 echo "<p class='flashText'>'$def'</p>";
 echo "</div>";
 
+$i = 0;
 
+for ($i=1; $i<=$rowCount; $i++) {
+        echo "<button class='prevButton' onclick='lessonnavClicked($i);'> $i </button>";
+
+}
 
 ?>
 <!--
