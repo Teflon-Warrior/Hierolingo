@@ -1,17 +1,25 @@
 <?php
-require 'config.php';if(isset($_SESSION['login_id'])){
-    header('Location: home.php');
-    exit;
-}require 'google-api/vendor/autoload.php';// Creating new google client instance
-$client = new Google_Client();// Enter your Client ID
+require 'config.php';
+if(isset($_SESSION['login_id'])){
+    header('Location: https://cgi.luddy.indiana.edu/~team11/team-11/login.php');
+
+}require 'google-api/vendor/autoload.php';
+// Creating new google client instance
+$client = new Google_Client();
+// Enter your Client ID
 $client->setClientId('13731763374-b6li94ja9m8m6drhlksbjkgi4bpf4f4o.apps.googleusercontent.com');
 // Enter your Client Secrect
 $client->setClientSecret('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');
 // Enter the Redirect URL
-$client->setRedirectUri('https://cgi.luddy.indiana.edu/~team11/team-11/login.php');// Adding those scopes which we want to get (email & profile Information)
+$client->setRedirectUri('https://cgi.luddy.indiana.edu/~team11/team-11/login.php');
+// Adding those scopes which we want to get (email & profile Information)
 $client->addScope("email");
 $client->addScope("profile");
-if(isset($_GET['code'])):    $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);    if(!isset($token["error"])){        $client->setAccessToken($token['access_token']);        // getting profile information
+if(isset($_GET['code'])):    
+    $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);    
+    if(!isset($token["error"])){       
+         $client->setAccessToken($token['access_token']);        
+         // getting profile information
         $google_oauth = new Google_Service_Oauth2($client);
         $google_account_info = $google_oauth->userinfo->get();
     
@@ -21,17 +29,28 @@ if(isset($_GET['code'])):    $token = $client->fetchAccessTokenWithAuthCode($_GE
         $email = mysqli_real_escape_string($db_connection, $google_account_info->email);
         $profile_pic = mysqli_real_escape_string($db_connection, $google_account_info->picture);        // checking user already exists or not
         $get_user = mysqli_query($db_connection, "SELECT `google_id` FROM `users` WHERE `google_id`='$id'");
-        if(mysqli_num_rows($get_user) > 0){            $_SESSION['login_id'] = $id; 
-            header('Location: home.php');
-            exit;        }
-        else{            // if user not exists we will insert the user
-            $insert = mysqli_query($db_connection, "INSERT INTO `users`(`google_id`,`name`,`email`,`profile_image`) VALUES('$id','$full_name','$email','$profile_pic')");            if($insert){
+        echo "ID".$ID;
+
+        //if a user already exists
+        if(mysqli_num_rows($get_user) > 0){            
+            $_SESSION['login_id'] = $id; 
+        
+            $profile = mysqli_query($db_connection, "SELECT p.id AS id, p.fName, p.lName FROM s_Profiles AS p
+            JOIN s_Users AS u ON u.id = p.user_id
+            WHERE p.user_id = '$id'");
+        
+        }
+        else{            
+            // if user not exists we will insert the user
+            $insert = mysqli_query($db_connection, "INSERT INTO `users`(`google_id`,`name`,`email`,`profile_image`) VALUES('$id','$full_name','$email','$profile_pic')");            
+            if($insert){
                 $_SESSION['login_id'] = $id; 
                 header('Location: home.php');
                 exit;
             }
             else{
-                echo "Sign up failed!(Something went wrong).";
+                echo "ID".$ID;
+                echo "Sign up failed!.";
             }        }    }
     else{
         header('Location: login.php');
@@ -46,7 +65,7 @@ else:
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login - LaravelTuts</title>
+    <title>Dataglyph login</title>
     <style>
         *,
         *::before,
