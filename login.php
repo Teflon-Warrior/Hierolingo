@@ -28,8 +28,7 @@ if(isset($_GET['code'])):
         $full_name = mysqli_real_escape_string($db_connection, trim($google_account_info->name));
         $email = mysqli_real_escape_string($db_connection, $google_account_info->email);
         $profile_pic = mysqli_real_escape_string($db_connection, $google_account_info->picture);        // checking user already exists or not
-        $get_user = mysqli_query($db_connection, "SELECT `google_id` FROM `users` WHERE `google_id`='$id'");
-        echo "ID".$ID;
+        $get_user = mysqli_query($db_connection, "SELECT `google_id` FROM `User` WHERE `google_id`='$id'");
 
         //if a user already exists
         if(mysqli_num_rows($get_user) > 0){            
@@ -42,7 +41,7 @@ if(isset($_GET['code'])):
         }
         else{            
             // if user not exists we will insert the user
-            $insert = mysqli_query($db_connection, "INSERT INTO `users`(`google_id`,`name`,`email`,`profile_image`) VALUES('$id','$full_name','$email','$profile_pic')");            
+            $insert = mysqli_query($db_connection, "INSERT INTO `User`(`google_id`,`name`,`email`,`profile_image`) VALUES('$id','$full_name','$email','$profile_pic')");            
             if($insert){
                 $_SESSION['login_id'] = $id; 
                 header('Location: home.php');
