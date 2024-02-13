@@ -11,7 +11,7 @@ $client->setClientId('13731763374-b6li94ja9m8m6drhlksbjkgi4bpf4f4o.apps.googleus
 // Enter your Client Secrect
 $client->setClientSecret('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');
 // Enter the Redirect URL
-$client->setRedirectUri('https://cgi.luddy.indiana.edu/~team11/team-11/login.php');
+$client->setRedirectUri('https://cgi.luddy.indiana.edu/~team11/team-11/home.php');
 // Adding those scopes which we want to get (email & profile Information)
 $client->addScope("email");
 $client->addScope("profile");
@@ -29,6 +29,13 @@ if(isset($_GET['code'])):
         $email = mysqli_real_escape_string($db_connection, $google_account_info->email);
         $profile_pic = mysqli_real_escape_string($db_connection, $google_account_info->picture);        // checking user already exists or not
         $get_user = mysqli_query($db_connection, "SELECT google_id FROM User WHERE google_id='$id'");
+
+        //test variables hold information
+        echo var_dump($id);
+        echo var_dump($full_name);
+        echo var_dump($email);
+        echo var_dump($profile_pic);
+
 
 
 
