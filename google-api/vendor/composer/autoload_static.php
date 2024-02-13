@@ -4,29 +4,26 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitf4d1a427d9ee01217ccf8dd65ee36eea
+class ComposerStaticInit0497330eebc0ab2a0da76ff81ed37417
 {
     public static $files = array (
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
-        '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
+        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
+        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
-        '1f87db08236948d07391152dccb70f04' => __DIR__ . '/..' . '/google/apiclient-services/autoload.php',
         'decc78cc4436b1292c6c0d151b19445c' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/bootstrap.php',
-        'a8d3953fd9959404dd22d3dfcd0a79f0' => __DIR__ . '/../..' . '/src/aliases.php',
     );
 
     public static $prefixLengthsPsr4 = array (
         'p' => 
         array (
-            'phpseclib3\\' => 11,
+            'phpseclib\\' => 10,
         ),
         'P' => 
         array (
             'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
-            'Psr\\Http\\Client\\' => 16,
             'Psr\\Cache\\' => 10,
-            'ParagonIE\\ConstantTime\\' => 23,
         ),
         'M' => 
         array (
@@ -37,9 +34,7 @@ class ComposerStaticInitf4d1a427d9ee01217ccf8dd65ee36eea
             'GuzzleHttp\\Psr7\\' => 16,
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
-            'Google\\Service\\' => 15,
             'Google\\Auth\\' => 12,
-            'Google\\' => 7,
         ),
         'F' => 
         array (
@@ -48,7 +43,7 @@ class ComposerStaticInitf4d1a427d9ee01217ccf8dd65ee36eea
     );
 
     public static $prefixDirsPsr4 = array (
-        'phpseclib3\\' => 
+        'phpseclib\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib',
         ),
@@ -59,19 +54,10 @@ class ComposerStaticInitf4d1a427d9ee01217ccf8dd65ee36eea
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
-        ),
-        'Psr\\Http\\Client\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/http-client/src',
         ),
         'Psr\\Cache\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/cache/src',
-        ),
-        'ParagonIE\\ConstantTime\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/paragonie/constant_time_encoding/src',
         ),
         'Monolog\\' => 
         array (
@@ -89,17 +75,9 @@ class ComposerStaticInitf4d1a427d9ee01217ccf8dd65ee36eea
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
-        'Google\\Service\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/google/apiclient-services/src',
-        ),
         'Google\\Auth\\' => 
         array (
             0 => __DIR__ . '/..' . '/google/auth/src',
-        ),
-        'Google\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
         ),
         'Firebase\\JWT\\' => 
         array (
@@ -107,36 +85,32 @@ class ComposerStaticInitf4d1a427d9ee01217ccf8dd65ee36eea
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'G' => 
+        array (
+            'Google_Service_' => 
+            array (
+                0 => __DIR__ . '/..' . '/google/apiclient-services/src',
+            ),
+            'Google_' => 
+            array (
+                0 => __DIR__ . '/../..' . '/src',
+            ),
+        ),
+    );
+
     public static $classMap = array (
-        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'Google_AccessToken_Revoke' => __DIR__ . '/../..' . '/src/aliases.php',
-        'Google_AccessToken_Verify' => __DIR__ . '/../..' . '/src/aliases.php',
-        'Google_AuthHandler_AuthHandlerFactory' => __DIR__ . '/../..' . '/src/aliases.php',
-        'Google_AuthHandler_Guzzle6AuthHandler' => __DIR__ . '/../..' . '/src/aliases.php',
-        'Google_AuthHandler_Guzzle7AuthHandler' => __DIR__ . '/../..' . '/src/aliases.php',
-        'Google_Client' => __DIR__ . '/../..' . '/src/aliases.php',
-        'Google_Collection' => __DIR__ . '/../..' . '/src/aliases.php',
-        'Google_Exception' => __DIR__ . '/../..' . '/src/aliases.php',
-        'Google_Http_Batch' => __DIR__ . '/../..' . '/src/aliases.php',
-        'Google_Http_MediaFileUpload' => __DIR__ . '/../..' . '/src/aliases.php',
-        'Google_Http_REST' => __DIR__ . '/../..' . '/src/aliases.php',
-        'Google_Model' => __DIR__ . '/../..' . '/src/aliases.php',
-        'Google_Service' => __DIR__ . '/../..' . '/src/aliases.php',
-        'Google_Service_Exception' => __DIR__ . '/../..' . '/src/aliases.php',
-        'Google_Service_Resource' => __DIR__ . '/../..' . '/src/aliases.php',
-        'Google_Task_Composer' => __DIR__ . '/../..' . '/src/aliases.php',
-        'Google_Task_Exception' => __DIR__ . '/../..' . '/src/aliases.php',
-        'Google_Task_Retryable' => __DIR__ . '/../..' . '/src/aliases.php',
-        'Google_Task_Runner' => __DIR__ . '/../..' . '/src/aliases.php',
-        'Google_Utils_UriTemplate' => __DIR__ . '/../..' . '/src/aliases.php',
+        'Google_Service_Exception' => __DIR__ . '/../..' . '/src/Google/Service/Exception.php',
+        'Google_Service_Resource' => __DIR__ . '/../..' . '/src/Google/Service/Resource.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitf4d1a427d9ee01217ccf8dd65ee36eea::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitf4d1a427d9ee01217ccf8dd65ee36eea::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitf4d1a427d9ee01217ccf8dd65ee36eea::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit0497330eebc0ab2a0da76ff81ed37417::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit0497330eebc0ab2a0da76ff81ed37417::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit0497330eebc0ab2a0da76ff81ed37417::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit0497330eebc0ab2a0da76ff81ed37417::$classMap;
 
         }, null, ClassLoader::class);
     }

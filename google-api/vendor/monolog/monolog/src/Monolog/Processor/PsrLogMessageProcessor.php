@@ -41,7 +41,8 @@ class PsrLogMessageProcessor implements ProcessorInterface
     }
 
     /**
-     * {@inheritDoc}
+     * @param  array $record
+     * @return array
      */
     public function __invoke(array $record): array
     {
@@ -66,12 +67,10 @@ class PsrLogMessageProcessor implements ProcessorInterface
                 } else {
                     $replacements[$placeholder] = $val->format($this->dateFormat ?: static::SIMPLE_DATE);
                 }
-            } elseif ($val instanceof \UnitEnum) {
-                $replacements[$placeholder] = $val instanceof \BackedEnum ? $val->value : $val->name;
             } elseif (is_object($val)) {
                 $replacements[$placeholder] = '[object '.Utils::getClass($val).']';
             } elseif (is_array($val)) {
-                $replacements[$placeholder] = 'array'.Utils::jsonEncode($val, null, true);
+                $replacements[$placeholder] = 'array'.@json_encode($val);
             } else {
                 $replacements[$placeholder] = '['.gettype($val).']';
             }
