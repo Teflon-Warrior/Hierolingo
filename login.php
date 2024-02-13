@@ -28,21 +28,21 @@ if(isset($_GET['code'])):
         $full_name = mysqli_real_escape_string($db_connection, trim($google_account_info->name));
         $email = mysqli_real_escape_string($db_connection, $google_account_info->email);
         $profile_pic = mysqli_real_escape_string($db_connection, $google_account_info->picture);        // checking user already exists or not
-        $get_user = mysqli_query($db_connection, "SELECT `google_id` FROM `User` WHERE `google_id`='$id'");
-        echo "ID: ".$id;
+        $get_user = mysqli_query($db_connection, "SELECT google_id FROM User WHERE google_id='$id'");
+
+
 
         //if a user already exists
         if(mysqli_num_rows($get_user) > 0){            
             $_SESSION['login_id'] = $id; 
         
-            $profile = mysqli_query($db_connection, "SELECT p.id AS id, p.fName, p.lName FROM s_Profiles AS p
-            JOIN s_Users AS u ON u.id = p.user_id
+            $profile = mysqli_query($db_connection, "SELECT id, username, profile_image,userlevel FROM User
             WHERE p.user_id = '$id'");
         
         }
         else{            
             // if user not exists we will insert the user
-            $insert = mysqli_query($db_connection, "INSERT INTO User (google_id, name, email, profile_image) VALUES ('$id', '$full_name', '$email', '$profile_pic')");         
+            $insert = mysqli_query($db_connection, "INSERT INTO User (google_id, username, email, profile_image) VALUES ('$id', '$full_name', '$email', '$profile_pic')");         
             if($insert){
                 $_SESSION['login_id'] = $id; 
                 header('Location: home.php');
