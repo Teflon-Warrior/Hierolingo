@@ -14,7 +14,6 @@
 <body>
   <?php
   session_start();
-  session_start();
   $les = 1;
   if(isset($_GET["les"])) {
         $les = ($_GET["les"]);
@@ -67,13 +66,13 @@ $rowResult = mysqli_query($con, $rowQuery);
 $rowCount = mysqli_num_rows($rowResult);
 
   if ($curr==1) {
-        echo "<button class='nextButton' onclick='nextbuttonClicked($les, $curr);'> next </button>";
+        echo "<button class='nextButton' onclick='nextbuttonClicked($les, $curr);'> next term</button>";
   }else if ($curr == $rowCount) {
-        echo "<button class='prevButton' onclick='prevbuttonClicked($les, $curr);'> prev </button>";
+        echo "<button class='prevButton' onclick='prevbuttonClicked($les, $curr);'> prev term</button>";
   } else {
  echo "
-<button class='prevButton' onclick='prevbuttonClicked($les, $curr);'> prev </button>
-<button class='nextButton' onclick='nextbuttonClicked($les, $curr);'> next </button>
+<button class='prevButton' onclick='prevbuttonClicked($les, $curr);'> prev term</button>
+<button class='nextButton' onclick='nextbuttonClicked($les, $curr);'> next term</button>
 ";
   }
 $temp = $curr-1;
@@ -106,13 +105,15 @@ for ($i=1; $i<=$rowCount; $i++) {
         echo "<button class='prevButton' onclick='lessonnavClicked($les, $i);'> $i </button>";
 
 }
+echo "<br><br>";
 
+if ($les == 1) {
+        echo "<button class='btn' onclick='nextlessonClicked($les);'> Next Lesson </button>";
+} else {
+        echo "<button class='btn' onclick='prevlessonClicked($les);'> Previous Lesson </button>";
+        echo "<button class='btn' onclick='nextlessonClicked($les);'> Next Lesson </button>";
+}
 ?>
-<!--
-<a class="btn" href="Lesson2.php">Next</a>
--->
-
-
 
 </body>
 </html>
