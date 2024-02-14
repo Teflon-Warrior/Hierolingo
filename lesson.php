@@ -14,6 +14,10 @@
 <body>
   <?php
   session_start();
+  $les = 1;
+  if(isset($_GET["les"])) {
+        $les = ($_GET["les"]);
+  }
   ?>
   <nav class="navbar navbar-expand-sm bg-dark">
     <ul class="navbar-nav">
@@ -57,23 +61,23 @@
         $curr = ($_GET["curr"]);
   }
 
-$rowQuery = "select id  from dictionary where access = 1";
+$rowQuery = "select id from dictionary where access = $les";
 $rowResult = mysqli_query($con, $rowQuery);
 $rowCount = mysqli_num_rows($rowResult);
 
   if ($curr==1) {
-        echo "<button class='nextButton' onclick='nextbuttonClicked($curr);'> next </button>";
+        echo "<button class='nextButton' onclick='nextbuttonClicked($les, $curr);'> next term</button>";
   }else if ($curr == $rowCount) {
-        echo "<button class='prevButton' onclick='prevbuttonClicked($curr);'> prev </button>";
+        echo "<button class='prevButton' onclick='prevbuttonClicked($les, $curr);'> prev term</button>";
   } else {
  echo "
-<button class='prevButton' onclick='prevbuttonClicked($curr);'> prev </button>
-<button class='nextButton' onclick='nextbuttonClicked($curr);'> next </button>
+<button class='prevButton' onclick='prevbuttonClicked($les, $curr);'> prev term</button>
+<button class='nextButton' onclick='nextbuttonClicked($les, $curr);'> next term</button>
 ";
   }
 $temp = $curr-1;
 
-$query = "select filepath,def,id from dictionary where access = 1 limit $temp,1;";
+$query = "select filepath,def,id from dictionary where access = $les limit $temp,1;";
 $result = mysqli_query($con, $query);
 $row = mysqli_fetch_assoc($result);
 
@@ -84,7 +88,7 @@ $id = $row['id'];
 
 
 // Set <img> tag with the filepath
-echo "<h1 align='center'> Lesson 1 <h1>";
+echo "<h1 align='center'> Lesson " . $les . " <h1>";
 echo "<div class='flash' onclick='termClick($id);' id='term_$id'>";
 //echo $filepath;
 echo "<img src='$filepath'>";
@@ -98,16 +102,18 @@ echo "</div>";
 $i = 0;
 
 for ($i=1; $i<=$rowCount; $i++) {
-        echo "<button class='prevButton' onclick='lessonnavClicked($i);'> $i </button>";
+        echo "<button class='prevButton' onclick='lessonnavClicked($les, $i);'> $i </button>";
 
 }
+echo "<br><br>";
 
+if ($les == 1) {
+        echo "<button class='btn' onclick='nextlessonClicked($les);'> Next Lesson </button>";
+} else {
+        echo "<button class='btn' onclick='prevlessonClicked($les);'> Previous Lesson </button>";
+        echo "<button class='btn' onclick='nextlessonClicked($les);'> Next Lesson </button>";
+}
 ?>
-<!--
-<a class="btn" href="Lesson2.php">Next</a>
--->
-
-
 
 </body>
 </html>

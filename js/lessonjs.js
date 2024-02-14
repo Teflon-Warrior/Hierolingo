@@ -16,20 +16,36 @@ function definitionClick(id) {
 
 //forward and backwards button
 
-function prevbuttonClicked(curr) {
+function prevbuttonClicked(les, curr) {
         var num = curr-1;
-        location.replace("https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php?curr=" + num);
+	var les = les;
+        location.replace("https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php?les=" + les + "&curr=" + num);
 }
 
-function nextbuttonClicked(curr) {
+function nextbuttonClicked(les, curr) {
         var num = curr+1;
-        location.replace("https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php?curr=" + num);
+	var les = les;
+        location.replace("https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php?les=" + les + "&curr=" + num);
 }
 
 
 //function for lesson nav bar
-function lessonnavClicked(i) {
+function lessonnavClicked(les, i) {
         var i = i;
-        location.replace("https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php?curr=" + i);
+	var les = les;
+        location.replace("https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php?les=" + les + "&curr=" + i);
 
 }
+
+//Next and previous lesson buttons
+function prevlessonClicked(les) {
+        var les = les-1;
+        location.replace("https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php?les=" + les);
+}
+
+function nextlessonClicked(les) {
+        var les = les+1;
+        location.replace("https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php?les=" + les);
+}
+
+
