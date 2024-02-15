@@ -8,7 +8,7 @@ $username = "i494f23_team11";
 $password = "my+sql=i494f23_team11";
 $database = "i494f23_team11";
 
-$dbconnection = mysqli_connect($host, $username, $password, $database);
+$db_connection = mysqli_connect($host, $username, $password, $database);
 
 if(mysqli_connect_errno()){
   echo "Connection Failed".mysqli_connect_error();
