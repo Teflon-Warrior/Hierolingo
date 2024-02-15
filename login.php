@@ -48,7 +48,7 @@ if(isset($_GET['code'])):
         
             $profile = mysqli_query($db_connection, "SELECT id, username, profile_image,userlevel FROM User
             WHERE p.user_id = '$id'");
-        
+       	    header('Location: dictionary.php'); 
         }
         else{            
             // if user not exists we will insert the user
