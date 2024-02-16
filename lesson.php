@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <link href="./css/lessoncss.css" rel="stylesheet" type="text/css">
+  <link href="./css/lesson.css" rel="stylesheet" type="text/css">
   <script type="text/javascript" src="./js/lessonjs.js"></script>
 
 
