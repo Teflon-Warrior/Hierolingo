@@ -39,6 +39,7 @@
 	
 	<!--PHP Connection & Queries -->
 	<?php 
+	session_start();
 	$con = mysqli_connect("db.luddy.indiana.edu" ,"i494f23_team11","my+sql=i494f23_team11","i494f23_team11");
 		if (mysqli_connect_errno())
 			{ die("Failed to connect to MySQL: " . mysqli_connect_error()); }
@@ -47,8 +48,7 @@
 	
 	//This query will pull the given users access level for use in a later query.
 	//Currently hardcoded to test user "andy". Once login API is developed, change this to login token and such.
-	$userAccessLevelQuery = "SELECT userlevel FROM User WHERE User.username = 'andy';";
-	
+	$userAccessLevelQuery = "SELECT userlevel FROM User WHERE User.google_id = ".$_SESSION['login_id'].";";	
 	//These queries will pull the vocabulary relevant to the specified level
 	$lesson1WordsQuery = "SELECT * FROM dictionary where dictionary.access = 1;";
 	$lesson2WordsQuery = "SELECT * FROM dictionary where dictionary.access = 2;";
