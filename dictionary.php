@@ -8,6 +8,7 @@
 	<title>Home</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/dictionary.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 	<link rel="stylesheet" href="css/tabbingStyling.css" />
 </head>
@@ -35,7 +36,6 @@
 		<div class="all-over-bkg"></div>
 		<h1>Dictionary</h1>
 	</header>
-	<div class="racing-stripes"></div>
 	
 	<!--PHP Connection & Queries -->
 	<?php 
