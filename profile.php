@@ -57,7 +57,7 @@
 
         <!-- Nav Buttons -->
         <div class="buttons">
-            <a href="https://cgi.luddy.indiana.edu/~team11/team-11/lesson1.php" class="bar-div">
+            <a href="https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php" class="bar-div">
                 <div class="profile-button">
                     <h2>Lessons</h2>
                 </div>
