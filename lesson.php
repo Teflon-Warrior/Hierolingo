@@ -88,7 +88,52 @@ $id = $row['id'];
 
 
 // Set <img> tag with the filepath
-echo "<h1 align='center'> Lesson " . $les . " <h1>";
+echo "<h1 align='center'> Lesson " . $les . " </h1>";
+
+//progress bar
+
+$width = 455/$rowCount;
+
+echo "<div style='display:inline-block;margin-left:auto;margin-right:auto;>'";
+echo "<div style:'margin-right: 20px;padding-top: 15px;'>1    </div>";
+$j = 1;
+for ($j = 1; $j <= $rowCount; $j++) {
+if ($j==1) {
+        echo "<div class='progress' style='width:$width;height:25px;border-right:none;background-color:#659df7;'>";
+        if ($j == $curr) {
+                echo "$j";
+        }
+        echo "</div>";
+}elseif ($j == $rowCount) {
+        if ($curr != $rowCount) {
+                echo "<div class='progress' style='width:$width;height:25px;border-left:none;'>";
+        } else {
+                echo "<div class='progress' style='width:$width;height:25px;border-left:none;background-color:#659df7;'>";
+        }
+        if ($j == $curr) {
+                echo "$j";
+        }
+        echo "</div>";
+}else {
+        if ($j <= $curr ) {
+        echo "<div class='progress' style='width:$width;height:25px;border-left:none;border-right:none;background-color:#659df7;'>";
+        if ($j == $curr) {
+                echo "$j";
+        }
+        echo "</div>";
+
+        } else {
+        echo "<div class='progress' style='width:$width;height:25px;border-left:none;border-right:none;'>";
+        echo "</div>";
+        }
+        }
+}
+
+echo $rowCount;
+
+echo "</div>";
+
+
 echo "<div class='flash' onclick='termClick($id);' id='term_$id'>";
 //echo $filepath;
 echo "<img src='$filepath'>";
