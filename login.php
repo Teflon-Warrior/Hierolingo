@@ -1,7 +1,7 @@
 <?php
 require 'config.php';
 if(isset($_SESSION['login_id'])){
-    header('Location: https://cgi.luddy.indiana.edu/~team11/team-11/home.php');
+    header('Location: https://cgi.luddy.indiana.edu/~team11/team-11/profile.php');
 
 }require 'google-api/vendor/autoload.php';
 // Creating new google client instance
@@ -15,29 +15,28 @@ $client->setRedirectUri('https://cgi.luddy.indiana.edu/~team11/team-11/login.php
 // Adding those scopes which we want to get (email & profile Information)
 $client->addScope("email");
 $client->addScope("profile");
+
+//retriving code
 if(isset($_GET['code'])):    
-	$token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
-
+    $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);    
     if(!isset($token["error"])){       
-	$client->setAccessToken($token['access_token']);
-
+         $client->setAccessToken($token['access_token']);        
          // getting profile information
-	$google_oauth = new Google_Service_Oauth2($client);
-	$google_account_info = $google_oauth->userinfo->get();
+        $google_oauth = new Google_Service_Oauth2($client);
+        $google_account_info = $google_oauth->userinfo->get();
     
         // Storing data into database
-	
-	$id = mysqli_real_escape_string($db_connection, $google_account_info->id);
+        $id = mysqli_real_escape_string($db_connection, $google_account_info->id);
         $full_name = mysqli_real_escape_string($db_connection, trim($google_account_info->name));
         $email = mysqli_real_escape_string($db_connection, $google_account_info->email);
         $profile_pic = mysqli_real_escape_string($db_connection, $google_account_info->picture);        // checking user already exists or not
         $get_user = mysqli_query($db_connection, "SELECT google_id FROM User WHERE google_id='$id'");
 
         //test variables hold information
-        //echo var_dump($id);
-        //echo var_dump($full_name);
-        //echo var_dump($email);
-        //echo var_dump($profile_pic);
+        //echo $id;
+        //echo $full_name;
+        //echo $email;
+        //echo $profile_pic;
 
 
 
@@ -48,14 +47,14 @@ if(isset($_GET['code'])):
         
             $profile = mysqli_query($db_connection, "SELECT id, username, profile_image,userlevel FROM User
             WHERE p.user_id = '$id'");
-       	    header('Location: dictionary.php'); 
+        
         }
         else{            
             // if user not exists we will insert the user
-            $insert = mysqli_query($db_connection, "INSERT INTO User (google_id, username, email, profile_image) VALUES ('$id', '$full_name', '$email', '$profile_pic')");         
+            $insert = mysqli_query($db_connection, "INSERT INTO User (google_id, username, email, profile_image, userlevel) VALUES ('$id', '$full_name', '$email', '$profile_pic',1,)");         
             if($insert){
                 $_SESSION['login_id'] = $id; 
-                header('Location: login.php');
+                header('Location: home.php');
                 exit;
             }
             else{
