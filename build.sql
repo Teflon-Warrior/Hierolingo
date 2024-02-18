@@ -85,10 +85,9 @@ CREATE TABLE notifications (
 
 
 Create TABLE vocablist(
-ID int,
-username varchar(30),
-foreign key (ID) references dictionary(id),
-foreign key (username) references User(id)
+  ID int,
+  filepath varchar(60),
+  foreign key (ID) references User(id),
 );
 --insert into statements for dictionary entries.
 INSERT INTO dictionary (pos, def, filepath, access) VALUES ('special', 'this is a factual statement', 'img/L1/iw.svg', 1);
