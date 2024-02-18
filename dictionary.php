@@ -58,7 +58,6 @@
 	$userAccessLevelQueryResult = mysqli_fetch_array($userAccessLevelQueryResult, MYSQLI_NUM);
 	$userAccessLevelQueryResult = $userAccessLevelQueryResult[0];
 	$userAccessLevelQueryResult = intval($userAccessLevelQueryResult);
-	echo $userAccessLevelQueryResult;
 	
 	$lesson1WordsQueryResult = mysqli_query($con, $lesson1WordsQuery);
 	$lesson2WordsQueryResult = mysqli_query($con, $lesson2WordsQuery);
