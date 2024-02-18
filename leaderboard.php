@@ -48,9 +48,11 @@
   $userPointsQuery = "SELECT User.username,points.points from points JOIN User on User.id = points.user ORDER BY points DESC LIMIT 5;";
 //Results for userPointQuery
   $result = mysqli_query($con, $userPointsQuery);
- 
+ echo "<h1>Leaderboards</h1>";
   if ($result->num_rows > 0){
-	  echo "<table border = '1'>
+	  echo "<h3>Top 5 Users<h3>";
+	  echo "<p>These 5 users have accumlated the most points!</p>";	  
+echo "<table border = '1'>
 		  <tr>
 			<th>User</th>
 		        <th>Points</th>
