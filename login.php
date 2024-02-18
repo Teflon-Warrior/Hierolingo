@@ -47,7 +47,11 @@ if(isset($_GET['code'])):
             $_SESSION['login_id'] = $id; 
         
             $profile = mysqli_query($db_connection, "SELECT id, username, profile_image,userlevel FROM User
-            WHERE p.user_id = '$id'");
+	    WHERE p.user_id = '$id'");
+	    $row = mysqli_fetch_array($profile, MYSQLI_NUM);
+
+	    $_SESSION['userID'] = $row[1];
+
        	    header('Location: dictionary.php'); 
         }
         else{            

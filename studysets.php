@@ -39,7 +39,8 @@
 	<div class="racing-stripes"></div>
 	
 	<!-- PHP connection & Queries -->
-	<?php 
+	<?php
+	session_start();
 	$con = mysqli_connect("db.luddy.indiana.edu" ,"i494f23_jefhochg","my+sql=i494f23_jefhochg","i494f23_jefhochg");
 		if (mysqli_connect_errno())
 			{ die("Failed to connect to MySQL: " . mysqli_connect_error()); }
@@ -48,12 +49,12 @@
 	
 	//This query will pull the relevant JSON objects for getting the title and wordIDs for each study set.
 	//Needs to be updated once sessions are set up.
-	$setTabsQuery = "SELECT setName FROM vocablist WHERE userID = 2;";
+	$setTabsQuery = "SELECT setName FROM vocablist WHERE userID = ".$_SESSION['userID'].";";
 	
 	//Used to take wordIDs from JSON objects
 	//CopyPaste Query, Inbetween the empty single quotes is where tab names will go within loops and whatnot
 	//Needs to be updated once sessions are set up.
-	$setWordsQuery = "SELECT jsonLocation FROM vocablist WHERE setName = '' and userID = '2';";
+	$setWordsQuery = "SELECT jsonLocation FROM vocablist WHERE setName = '' and userID = ".$_SESSION['userID'].";";
 	
 
 	//Result section
