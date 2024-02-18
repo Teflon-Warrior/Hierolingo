@@ -81,18 +81,17 @@ CREATE TABLE notifications (
   stat BOOLEAN,
   method VARCHAR(5),
   timeofday TIME,
-  /* days of the week will be order 0-6 where sunday=0, monday=1, etc*/
   dayofweek int,
-  user varchar(30),
-  FOREIGN KEY (user) REFERENCES User(username)
+  user int,
+  FOREIGN KEY (user) REFERENCES User(id)
 );
 
 
 Create TABLE vocablist(
 ID int,
-username varchar(30),
+userid INT,
 foreign key (ID) references dictionary(id),
-foreign key (username) references User(id)
+foreign key (userid) references User(id)
 );
 --insert into statements for dictionary entries.
 INSERT INTO dictionary (pos, def, filepath, access) VALUES ('special', 'this is a factual statement', 'img/L1/iw.svg', 1);
