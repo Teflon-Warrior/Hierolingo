@@ -19,4 +19,7 @@ $preparedQuery -> bindParam(':name', $filePath);
 //Execute
 $stmt->execute();
 
+//Make new file by the same name
+$newFile = fopen($filepath, "a");
+
 ?>
