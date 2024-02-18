@@ -26,6 +26,10 @@ username varchar(30),
 userhandle varchar(30),
 userlevel int,
 hotstreak int,
+email varchar(50),
+profile_image text,
+google_id varchar(150),
+points int,
 primary key (id));
 
 --userfriends needed to link friends together in the app.
@@ -79,7 +83,7 @@ CREATE TABLE notifications (
   timeofday TIME,
   /* days of the week will be order 0-6 where sunday=0, monday=1, etc*/
   dayofweek int,
-  user VARCHAR(30),
+  user varchar(30),
   FOREIGN KEY (user) REFERENCES User(username)
 );
 
