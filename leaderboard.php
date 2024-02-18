@@ -3,7 +3,7 @@
 <meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Home</title>
+	<title>Leaderboard</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -11,7 +11,7 @@
 </head>
 
 <body>
-	<script src="js/nav.js"></script>
+
 	<!-- NAVIGATION -->
 	<nav id="mySidenav" class="sidenav">
 		<ul>
@@ -32,7 +32,7 @@
 			<span class="menu-text">menu</span>
 		</div>
 		<div class="all-over-bkg"></div>
-		<h1>Dictionary</h1>
+		<h1>Leaderboard</h1>
 	</header>
 	<div class="racing-stripes"></div>
 <?php
@@ -67,6 +67,7 @@ echo "<table border = '1'>
     	echo "</table>";
    }
 ?>
+<script src="js/nav.js"></script>
 
 </body>
 </html>
