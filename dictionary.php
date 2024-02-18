@@ -39,16 +39,13 @@
 	
 	<!--PHP Connection & Queries -->
 	<?php 
+	require 'config.php';
 	session_start();
-	$con = mysqli_connect("db.luddy.indiana.edu" ,"i494f23_team11","my+sql=i494f23_team11","i494f23_team11");
-		if (mysqli_connect_errno())
-			{ die("Failed to connect to MySQL: " . mysqli_connect_error()); }
-		else
-			{}
+	$con = $db_connection;
 	
 	//This query will pull the given users access level for use in a later query.
 	//Currently hardcoded to test user "andy". Once login API is developed, change this to login token and such.
-	$userAccessLevelQuery = "SELECT userlevel FROM User WHERE User.google_id = ".$_SESSION['login_id'].";";	
+	$userAccessLevelQuery = "SELECT userlevel FROM User WHERE User.google_id = ".$_SESSION['login_id'].";";
 	//These queries will pull the vocabulary relevant to the specified level
 	$lesson1WordsQuery = "SELECT * FROM dictionary where dictionary.access = 1;";
 	$lesson2WordsQuery = "SELECT * FROM dictionary where dictionary.access = 2;";
@@ -61,6 +58,7 @@
 	$userAccessLevelQueryResult = mysqli_fetch_array($userAccessLevelQueryResult, MYSQLI_NUM);
 	$userAccessLevelQueryResult = $userAccessLevelQueryResult[0];
 	$userAccessLevelQueryResult = intval($userAccessLevelQueryResult);
+	echo $userAccessLevelQueryResult;
 	
 	$lesson1WordsQueryResult = mysqli_query($con, $lesson1WordsQuery);
 	$lesson2WordsQueryResult = mysqli_query($con, $lesson2WordsQuery);
@@ -126,7 +124,7 @@
 		<?php
 			//For set options when adding to a studyset
 			//Fix when sessions are implemented
-			$setTabsQuery = "SELECT setName FROM vocablist WHERE userID = 2;";
+			$setTabsQuery = "SELECT setName FROM vocablist WHERE userID = ".$_SESSION['userID'].";";
 			$setTabsResult = mysqli_fetch_array(mysqli_query($con, $setTabsQuery), MYSQLI_NUM);
 			
 			switch ($userAccessLevelQueryResult){
