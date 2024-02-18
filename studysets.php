@@ -40,12 +40,9 @@
 	
 	<!-- PHP connection & Queries -->
 	<?php
+	require 'config.php';
 	session_start();
-	$con = mysqli_connect("db.luddy.indiana.edu" ,"i494f23_jefhochg","my+sql=i494f23_jefhochg","i494f23_jefhochg");
-		if (mysqli_connect_errno())
-			{ die("Failed to connect to MySQL: " . mysqli_connect_error()); }
-		else
-			{}
+	$con = $db_connection;
 	
 	//This query will pull the relevant JSON objects for getting the title and wordIDs for each study set.
 	$setTabsQuery = "SELECT setName FROM vocablist WHERE userID = ".$_SESSION['userID'].";";
