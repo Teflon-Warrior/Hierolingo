@@ -36,17 +36,6 @@
 		<div class="all-over-bkg"></div>
 		<h1>Dictionary</h1>
 	</header>
-
-	<div class="navbar">
-		<ul>
-			<li><a href="https://cgi.luddy.indiana.edu/~team11/team-11/profile.php">Profile</a></li>
-			<li><a href="https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php">Lessons</a></li>
-			<li><a href="https://cgi.luddy.indiana.edu/~team11/team-11/dictionary.php">Dictionary</a></li>
-			<li><a href="https://cgi.luddy.indiana.edu/~team11/team-11/studysets.php">Study Sets</a></li>
-			<li><a href="https://cgi.luddy.indiana.edu/~team11/team-11/logout.php">Log Out</a></li>
-		</ul>
-
-	</div>
 	
 	<!--PHP Connection & Queries -->
 	<?php 
