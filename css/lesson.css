@@ -193,7 +193,7 @@ img {
 }
 
 .flashImg {
-
+        padding: 0;
 }
 
 .progress {        
@@ -203,8 +203,7 @@ img {
         vertical-align: top;
 }
 .flash {
-        margin: auto;
-        margin-top: 15%;
+        margin: 0 auto;
         border: solid 5px black;
         height: 400px;
         width: 400px;
