@@ -149,12 +149,12 @@ li {
     font-size: 25px;
     display: block;
     transition: 0.3s;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
 }
 
 .sidenav a:hover {
-    color: #cebc83;;
+    color: #cebc83;
 }
 
 .sidenav .closebtn {
