@@ -1,5 +1,4 @@
 Fix SideNav - Profile, Lessons, Leaderboard, Study Sets, Dictionary, Log Out
 Fix Lessons Css
-Add sidenav to profile and remove buttons
 Fix welcome page Css
 Leaderboard CSS
