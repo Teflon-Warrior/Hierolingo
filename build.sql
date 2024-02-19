@@ -26,6 +26,10 @@ username varchar(30),
 userhandle varchar(30),
 userlevel int,
 hotstreak int,
+email varchar(50),
+profile_image text,
+google_id varchar(150),
+points int,
 primary key (id));
 
 --userfriends needed to link friends together in the app.
@@ -77,18 +81,17 @@ CREATE TABLE notifications (
   stat BOOLEAN,
   method VARCHAR(5),
   timeofday TIME,
-  /* days of the week will be order 0-6 where sunday=0, monday=1, etc*/
   dayofweek int,
-  user VARCHAR(30),
-  FOREIGN KEY (user) REFERENCES User(username)
+  user int,
+  FOREIGN KEY (user) REFERENCES User(id)
 );
 
 
 Create TABLE vocablist(
-ID int,
-username varchar(30),
-foreign key (ID) references dictionary(id),
-foreign key (username) references User(id)
+  ID int,
+  filepath varchar(60),
+  listname varchar(60),
+  foreign key (ID) references User(id)
 );
 --insert into statements for dictionary entries.
 INSERT INTO dictionary (pos, def, filepath, access) VALUES ('special', 'this is a factual statement', 'img/L1/iw.svg', 1);
