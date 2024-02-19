@@ -9,7 +9,6 @@ html {
     box-sizing: inherit;
 }
 
-
 #tag {
     position: fixed;
     top: 0;
@@ -27,8 +26,6 @@ body {
     margin: 0;
     background-color: #F4DF9C;
 }
-
-
 
 h1 {
 
@@ -74,6 +71,8 @@ header {
     background-color: #cebc83;
     height: 150px;
     font-size: xx-large;
+    margin: 0;
+    padding: 0;
 
 }
 
