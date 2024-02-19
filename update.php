@@ -1,7 +1,7 @@
 <?php
 session_start();
 //establish connection to database
-$con = mysqli_connect("db.luddy.indiana.edu", "i494f23_johaharr","my+sql=i494f23_johaharr", "i494f23_johaharr");
+$con = mysqli_connect("db.luddy.indiana.edu", "i494f23_team11","my+sql=i494f23_team11", "i494f23_team11");
 //I removed the error message we were tought to add in I308 nothing 
 if (!$con)
 { echo "connection failed";
