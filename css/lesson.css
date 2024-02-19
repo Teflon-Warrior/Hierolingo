@@ -172,15 +172,15 @@ html {
     .number-buttons {
         display: flex;
         flex-wrap: wrap row;
-        justify-content: center;
+
     }
     .number-buttons .btn {
         background-color: #cebc83;
         border: 2px solid #a09365;
         border-radius: 10px;
         color: white;
-        padding: 1.0em 5.0em;
-        margin: 1.0em 2.0em 0 0;
+        padding: 0.5em 1.5em;
+        margin: 0.5em;
         font-size: 12px;
         letter-spacing: 1px;
         transition: background-color .2s ease-out, color .2s ease-out, border-color .18s ease-out;
