@@ -104,7 +104,8 @@
 									<select name = 'studyset' id = 'studyset'>";
 										while ($tab = mysqli_fetch_array($tabNames)){
 											echo "<option value = ".$tab[0].">".$tab[0]."</option>";
-										}										
+										}
+										mysqli_data_seek($tabNames, 0);										
 								echo "</select>";
 							echo "<input type = 'hidden' name = 'word' value = ".$row[0].">";
 							//Change once sessions are integrated
@@ -123,7 +124,7 @@
 	
 	<!-- Here set up the tabs for lessons. All, 1, 2, 3, 4. If a lesson is blank, display a message along the lines of "No words unlocked yet... Unlock more in Lessons!" with a link to lessons. -->
 	<script type="text/javascript" src="js/dictionaryDisplayLesson.js"></script>
-	<div class="tabs">
+	<div class="tabs" style = 'padding-top :20px; padding-bottom: 20px;'>
 		<button class="lessontab" onclick="displayLesson(event, 'All');">All</button>
 		<button class="lessontab" onclick="displayLesson(event, '1');">Lesson 1</button>
 		<button class="lessontab" onclick="displayLesson(event, '2');">Lesson 2</button>
