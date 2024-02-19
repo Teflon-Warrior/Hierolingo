@@ -19,6 +19,7 @@ if (!$con)
     //make sure the data is being imported from post
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+        echo $name. '<br>';
         $handle = filter_input(INPUT_POST, 'handle', FILTER_SANITIZE_STRING);
         $image = filter_input(INPUT_POST, 'image', FILTER_SANITIZE_STRING);
         $id = $_SESSION['login_id'];
@@ -29,6 +30,7 @@ if (!$con)
             $name = trim($name);
             $name = $nname;
         }
+        echo $name. '<br>';
     
         if (!empty($handle)) {
             $handle = trim($handle);
