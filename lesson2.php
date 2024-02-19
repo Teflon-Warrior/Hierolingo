@@ -104,4 +104,5 @@
 ?>
 <a class="btn" href="Lesson1.php">Previous</a>
 <a class="btn" href="Lesson3.php">Next</a>
+<script src="js/nav.js"></script>
 </body>
