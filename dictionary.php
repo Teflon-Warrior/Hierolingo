@@ -15,6 +15,17 @@
 </head>
 <body>
 	
+	<!-- NAVIGATION -->
+	<nav id="mySidenav" class="sidenav">
+		<ul>
+			<li><a class="closebtn">&times;</a></li>
+			<li><a href="profile.php">Profile</a></li>
+			<li><a href="dictionary.php">Dictionary</a></li>
+			<li><a href="studysets.php">Study Sets</a></li>
+			<li><a href="project.php">About</a></li>
+		</ul>
+	</nav>
+	
 	<!-- MAIN CONTENT -->
 	<header>
 		<div class="openbtn">
