@@ -356,7 +356,7 @@ article {
 
 .button:hover {
     background-color: transparent;
-    color: var(--iu-red);
+    color: #cebc83;
 }
 
 a:link,
