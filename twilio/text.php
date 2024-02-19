@@ -47,8 +47,29 @@ switch ($day) {
 $sql = "Select user from notifications where stat = 1 AND dayofweek = $day";
 
 $result = mysqli_query($con, $sql);
-
+//looping through returned id's
 while ($row = mysqli_fetch_assoc($result)) {
+  //getting emails from that id
+  $query2 = "select email from User where id = $row";
+  $result2 = mysqli_query($con, $query2);
+  $result2 = mysqli_fetch_array($result2);
+  $email = $result2['email'];
+
+  //using emails to grab phone number from profile;
+  $query3 = "select phone from profile where email = '$email'";
+  $result3 = mysqli_query($con, $query3);
+  $result3 = mysqli_fetch_array($result3);
+  $phone = $result3['phone'];
+  $num = '+1' . (string)$phone;
+      $client->messages->create(
+      $num,
+      [
+        'from' => $twilio_number,
+        'body' => 'Don\'t forget to complete your weekly lesson! -Dataglyph.'
+      ]
+    );
+  
+/*
   $sql2 = "Select phone from profile where username = $row";
   $result2 = mysqli_query($con, $sql2);
   while ($row2 = mysqli_fetch_assoc($result2)) {
@@ -61,6 +82,7 @@ while ($row = mysqli_fetch_assoc($result)) {
       ]
     );
   }
+*/
 }
 //messages will be sent to each individual on the day requested. Just need to edit the crontab file so that this script is ran once a day.
 

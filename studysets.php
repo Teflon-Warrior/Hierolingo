@@ -44,23 +44,22 @@
 	session_start();
 	$con = $db_connection;
 	
-	//This query will pull the relevant JSON objects for getting the title and wordIDs for each study set.
-	$setTabsQuery = "SELECT setName FROM vocablist WHERE userID = ".$_SESSION['userID'].";";
-	
-	//Used to take wordIDs from JSON objects
-	//CopyPaste Query, Inbetween the empty single quotes is where tab names will go within loops and whatnot
-	//$setWordsQuery = "SELECT jsonLocation FROM vocablist WHERE setName = '' and userID = ".$_SESSION['userID'].";";
-	
+	//get userID
+ 	$userIDQuery = "SELECT id FROM User where google_id = ".$_SESSION['login_id'].";";
+        $userIDResult = mysqli_fetch_array(mysqli_query($db_connection, $userIDQuery), MYSQLI_NUM);
+        $userID = $userIDResult[0];
+
+        //This query will pull the relevant JSON objects for getting the title and wordIDs for each study set.
+        $setTabsQuery = "SELECT listname FROM vocablist WHERE ID = ".$userID.";";	
 
 	//Result section
-	$setTabsResult = mysqli_fetch_array(mysqli_query($con, $setTabsQuery), MYSQLI_NUM);
+	$setTabsResult = mysqli_query($con, $setTabsQuery);
 	//Defined here, used elsewhere
 	$setWordsResult = "";
 	//Number of tabs for forloop
 	$numTabs = count($setTabsResult);
 	
-	function displayQueryResults($wordsIn){	
-		$con = mysqli_connect("db.luddy.indiana.edu" ,"i494f23_jefhochg","my+sql=i494f23_jefhochg","i494f23_jefhochg");
+	function displayQueryResults($wordsIn, $con){	
 		if (mysqli_connect_errno())
 			{ die("Failed to connect to MySQL: " . mysqli_connect_error()); }
 		else
@@ -96,8 +95,8 @@
 	<div class="tabs">
 	<?php
 		//Set up tab headers
-		for ($i = 0; $i < count($setTabsResult); $i++){
-			echo "<button class='lessontab' onclick='displayLesson(event, \"".$setTabsResult[$i]."\");'>".$setTabsResult[$i]."</button>\n";
+		while  ($setTabs =  mysqli_fetch_array($setTabsResult, MYSQLI_NUM)){
+			echo "<button class='lessontab' onclick='displayLesson(event, \"".$setTabs[0]."\");'>".$setTabs[0]."</button>\n";
 		}
 		//Add header
 		echo "<button class='lessontab' onclick='displayLesson(event, \"Add\");'>Add New Set</button>";
@@ -105,15 +104,16 @@
 	</div>
 	
 	<!-- This will set the tabs to display each word within a user list. -->
-	<?php 
-	for ($i = 0; $i < count($setTabsResult); $i++){
-		echo "<div id = '".$setTabsResult[$i]."' class = 'lessonContent'>";
+<?php 
+	mysqli_data_seek($setTabsResult, 0);	
+	while  ($setTabs =  mysqli_fetch_array($setTabsResult, MYSQLI_NUM))	{
+		echo "<div id = '".$setTabs[0]."' class = 'lessonContent'>";
 	
-		$setWordsQuery = "SELECT jsonLocation FROM vocablist WHERE setName = '".$setTabsResult[$i]."' and userID = ".$_SESSION['userID'].";";
-		$setWordsResult = mysqli_fetch_array(mysqli_query($con, $setWordsQuery), MYSQLI_NUM);
+		$setWordsQuery = "SELECT filepath FROM vocablist WHERE listname = '".$setTabs[0]."' and ID = ".$userID.";";
+		$setWordsResult = mysqli_fetch_array(mysqli_query($db_connection, $setWordsQuery), MYSQLI_NUM);
 		$words = file_get_contents($setWordsResult[0]);
 		$words = json_decode($words);
-		displayQueryResults($words);
+		displayQueryResults($words, $db_connection);
 		echo "</div>";
 	}
 	
