@@ -8,12 +8,6 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/welcome.css">
-    <style>
-        body {
-            background-image: url('img/hieroglyph.jpg');
-            background-size: cover;
-        }
-    </style>
 </head>
 
 <body>
