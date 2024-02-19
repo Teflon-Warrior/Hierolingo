@@ -33,18 +33,14 @@ $email = $result['email'];
 
 ?>
 
-<form action="settings.php" method="POST">
-<h3> Profile </h3>
-<h4 Full Name </h4>
+<form action="test.php" method="POST">
+<h3> Full Name </h3>
 <input type="text" name="fullname" value="<?php echo $username; ?>" required>
-<br>
-
-<h4> User Handle </h4>
-<input type="text" name="handle" value="<?php if ($userhandle != 'NA') {echo $userhandle;}?>" placeholder="<?php if ($userhandle == 'NA') {echo "Nickname";} ?>">
-<br>
-<h4> Profile Image </h4>
 <br><br>
-<hr>
+
+<h3> User Handle </h3>
+<input type="text" name="handle" value="<?php if ($userhandle != 'NA') {echo $userhandle;}?>">
+<br><br>
 
 <h3> Notifications </h3>
 Would you like to receive sms notifications?
@@ -70,10 +66,8 @@ $query="select phone from profile where email = '$email'";
 $result = mysqli_query($con, $query);
 $result = mysqli_fetch_array($result);
 $phone = $result['phone'];
-if ($phone != null) {
 $phone = substr($phone, 0, 3) . "-" . substr($phone, 3);
 $phone = substr($phone, 0, 7) . "-" . substr($phone, 7);
-}
 ?>
 <br>
 If yes, enter or edit your phone number (format: 123-123-1234)
@@ -99,7 +93,6 @@ Select the day of the week you would like to receive notifications <br>
 <option <?php if($day==6){echo "selected";} ?> value="saturday">Saturday</option>
 </select>
 <br><br>
-<hr>
 <h3> Styling </h3>
 
 
@@ -163,26 +156,15 @@ $result = mysqli_fetch_array($result);
 $test = $result['user'];
 if ($test != null) {
         //For altering existing
-        
-        $query = "Update notifications set stat='$formnotif', dayofweek='$formday' where user = $id";
-        mysqli_query($con, $query);
-
-        $query = "UPDATE User set username='$formname', userhandle='$formhandle' where id = $id";
-        mysqli_query($con, $query);
-
-        //Cant update profile yet
 
 } else {
         //For inputing new user
-
-        $query = "INSERT INTO notifications (stat, method, timeofday, dayofweek, user) VALUES ($formnotif, 'phone', '00:00:00', $formday, $id)";
+        $query = "INSERT INTO notifications (stat, method, timeofday, dayofweek, user) VALUES ($notif, 'phone', '00:00:00', $day, $id)";
+  mysqli_query($con, $query);
+        /*
+        $query = "UPDATE User set username='$formname' AND userhandle='$formhandle' where id = $id";
         mysqli_query($con, $query);
-        
-        
-        $query = "UPDATE User set username='$formname', userhandle='$formhandle' where id = $id";
-        mysqli_query($con, $query);
-
-        //NEED to insert into profile table        
+        */
 }
 
 ?>

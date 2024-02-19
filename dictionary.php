@@ -100,8 +100,8 @@
 							<form action = 'writeToFile.php' method = 'post' class = 'submissionForm' id = 'submissionForm".$row[0]."'>
 								<label for = 'studyset'> Choose a study set </label>
 									<select name = 'studyset' id = 'studyset'>";
-										for ($i = 0; $i < count($tabNames); $i++){
-											echo "<option value = ".$tabNames[$i].">".$tabNames[$i]."</option>";
+										while ($tab = mysqli_fetch_array($tabNames)){
+											echo "<option value = ".$tab[0].">".$tab[0]."</option>";
 										}										
 								echo "</select>";
 							echo "<input type = 'hidden' name = 'word' value = ".$row[0].">";
@@ -134,9 +134,13 @@
 		<h3>All Words</h3>
 		<?php
 			//For set options when adding to a studyset
-			//Fix when sessions are implemented
-			$setTabsQuery = "SELECT setName FROM vocablist WHERE userID = ".$_SESSION['userID'].";";
-			$setTabsResult = mysqli_fetch_array(mysqli_query($con, $setTabsQuery), MYSQLI_NUM);
+			$userIDQuery = "SELECT id FROM User where google_id = ".$_SESSION['login_id'].";";
+        		$userIDResult = mysqli_fetch_array(mysqli_query($db_connection, $userIDQuery), MYSQLI_NUM);
+        		$userID = $userIDResult[0];
+
+
+			$setTabsQuery = "SELECT listname FROM vocablist WHERE ID = ".$userID.";";
+			$setTabsResult = mysqli_query($db_connection, $setTabsQuery);
 			
 			switch ($userAccessLevelQueryResult){
 				case 4:

@@ -44,8 +44,7 @@
 	session_start();
 	$con = $db_connection;
 	
-	//This query will pull the relevant JSON objects for getting the title and wordIDs for each study set.
-	$setTabsQuery = "SELECT setName FROM vocablist WHERE google_id = ".$_SESSION['login-id'].";";
+	//get userID
  	$userIDQuery = "SELECT id FROM User where google_id = ".$_SESSION['login_id'].";";
         $userIDResult = mysqli_fetch_array(mysqli_query($db_connection, $userIDQuery), MYSQLI_NUM);
         $userID = $userIDResult[0];
@@ -110,8 +109,8 @@
 	while  ($setTabs =  mysqli_fetch_array($setTabsResult, MYSQLI_NUM))	{
 		echo "<div id = '".$setTabs[0]."' class = 'lessonContent'>";
 	
-		$setWordsQuery = "SELECT jsonLocation FROM vocablist WHERE setName = '".$setTabs[0]."' and userID = ".$userID.";";
-		$setWordsResult = mysqli_fetch_array(mysqli_query($con, $setWordsQuery), MYSQLI_NUM);
+		$setWordsQuery = "SELECT filepath FROM vocablist WHERE listname = '".$setTabs[0]."' and ID = ".$userID.";";
+		$setWordsResult = mysqli_fetch_array(mysqli_query($db_connection, $setWordsQuery), MYSQLI_NUM);
 		$words = file_get_contents($setWordsResult[0]);
 		$words = json_decode($words);
 		displayQueryResults($words, $db_connection);

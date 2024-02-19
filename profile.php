@@ -94,7 +94,7 @@
                 <h2>Level <?php echo $level ?></h2>
             </div>
         </div>
-
+     </div>
         <!-- Nav Buttons -->
         <div class="buttons">
             <a href="https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php" class="bar-div">
