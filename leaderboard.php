@@ -14,8 +14,6 @@
 	<link rel="stylesheet" href="css/tabbingStyling.css" />
 </head>
 
-<body>
-
 	<!-- NAVIGATION -->
 	<nav id="mySidenav" class="sidenav">
 		<ul>
@@ -37,6 +35,8 @@
 		<div class="all-over-bkg"></div>
 		<h1>Leaderboards</h1>
 	</header>
+	
+<body>
 
 	<?php
 	$host = "db.luddy.indiana.edu";
