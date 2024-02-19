@@ -21,7 +21,7 @@ if (!$con)
         $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
         $handle = filter_input(INPUT_POST, 'handle', FILTER_SANITIZE_STRING);
         $image = filter_input(INPUT_POST, 'image', FILTER_SANITIZE_STRING);
-        $id = $_POST['id'];
+        $id = $_SESSION['login_id'];
         $errorMessages = array();
     
         //get rid of trailing white space
@@ -61,17 +61,15 @@ if (!$con)
         return $input;
     }
     
-    
+    //sanitze name, handle, image incase it isn't picked up by the error messages
 
-
-    //sanitze description and name
-
-    $charsToReplace = ['<', '>', '{', '}', '(', ')', ';'];
-    $ddescription = str_replace($charsToReplace, '', $ddescription);
-    $dname = str_replace($charsToReplace,'',$dname);
+    $charsToReplace = ['<', '>', ';'];
+    $name = str_replace($charsToReplace, '', $name);
+    $handle = str_replace($charsToReplace, '', $handle);
+    $image = str_replace($charsToReplace, '', $image);
 
     //update statement
-    $sql = "UPDATE menu SET name='$dname',price='$dprice',description = '$ddescription' where id = $id";
+    $sql = "UPDATE User SET name='$name',userhandle='$handle',image = '$image' where google_id = $id";
     echo $sql;
     //update diet statement
     //$msql = "UPDATE diet SET where id=$id";
@@ -85,33 +83,9 @@ if (!$con)
     } else {
         echo "Error updating record: " . mysqli_error($con);
     }
-//delete 
-    $delete = "DELETE FROM diet where MenuID = '$id'";
-    echo $delete;
-//delete values 
-    $result = mysqli_query($con, $delete);
-
-
-    //check to see if the record is uplodaing.
-    if ($result) {
-        echo "Record deleted sucessfully.";
-    } else {
-        echo "Error deleting record: " . mysqli_error($con);
-    }
-//print the values of each item in $dtype
-    foreach ($dtype as $value) {
-        $update = "INSERT INTO diet (MenuID,diet) values ('$id','$value')";
-        $result = mysqli_query($con, $update);
-        if ($result) {
-            echo "Record deleted sucessfully.";
-        } else {
-            echo "Error deleting record: " . mysqli_error($con);
-        }
-    }
-
     //close the connection
     mysqli_close($con);
 
     //exit and redirect back to public.php
-    header("Location:profile.php");
-    exit();
+    //header("Location:profile.php");
+    //exit();
