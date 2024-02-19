@@ -1,3 +1,2 @@
 Fix Lessons Css
-Fix welcome page Css
-Leaderboard CSS
+Leaderboard CSS -------
