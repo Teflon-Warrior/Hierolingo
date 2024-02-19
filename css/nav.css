@@ -2,7 +2,6 @@
     display: inline;
 }
 .navbar li a {
-    display: block;
     color: rgb(243, 243, 243);
     text-align: center;
     padding: 3.0rem;
@@ -13,7 +12,7 @@
 }
 .navbar ul {
     list-style-type: none;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     background-color: #b0a171;
   }
