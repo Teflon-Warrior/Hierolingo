@@ -2,11 +2,11 @@
 <header>
 <?php
 session_start();
-/*
+
 if (isset($_SESSION['login_id']) == null) {
         header( 'Location: https://cgi.luddy.indiana.edu/~team11/team-11/login.php');
 }
-*/
+
 $google_id = $_SESSION['login_id'];
 $con = mysqli_connect("db.luddy.indiana.edu" ,"i494f23_team11","my+sql=i494f23_team11","i494f23_team11");
 
