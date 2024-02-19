@@ -135,8 +135,14 @@
 		<?php
 			//For set options when adding to a studyset
 			//Fix when sessions are implemented
-			$setTabsQuery = "SELECT setName FROM vocablist WHERE userID = ".$_SESSION['userID'].";";
-			$setTabsResult = mysqli_fetch_array(mysqli_query($con, $setTabsQuery), MYSQLI_NUM);
+			//get userID
+        		$userIDQuery = "SELECT id FROM User where google_id = ".$_SESSION['login_id'].";";
+       			$userIDResult = mysqli_fetch_array(mysqli_query($db_connection, $userIDQuery), MYSQLI_NUM);
+       			$userID = $userIDResult[0];
+
+        		//This query will pull the relevant JSON objects for getting the title and wordIDs for each study set.
+		        $setTabsQuery = "SELECT listname FROM vocablist WHERE ID = ".$userID.";";
+			$setTabsResult = mysqli_query($db_connection, $setTabsQuery);
 			
 			switch ($userAccessLevelQueryResult){
 				case 4:
