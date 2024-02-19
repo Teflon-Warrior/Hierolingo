@@ -45,7 +45,7 @@
 	$con = $db_connection;
 	
 	//This query will pull the relevant JSON objects for getting the title and wordIDs for each study set.
-	$setTabsQuery = "SELECT setName FROM vocablist WHERE userID = ".$_SESSION['userID'].";";
+	$setTabsQuery = "SELECT setName FROM vocablist WHERE google_id = ".$_SESSION['login-id'].";";
 	
 	//Used to take wordIDs from JSON objects
 	//CopyPaste Query, Inbetween the empty single quotes is where tab names will go within loops and whatnot
@@ -59,8 +59,7 @@
 	//Number of tabs for forloop
 	$numTabs = count($setTabsResult);
 	
-	function displayQueryResults($wordsIn){	
-		$con = mysqli_connect("db.luddy.indiana.edu" ,"i494f23_jefhochg","my+sql=i494f23_jefhochg","i494f23_jefhochg");
+	function displayQueryResults($wordsIn, $con){	
 		if (mysqli_connect_errno())
 			{ die("Failed to connect to MySQL: " . mysqli_connect_error()); }
 		else
@@ -113,7 +112,7 @@
 		$setWordsResult = mysqli_fetch_array(mysqli_query($con, $setWordsQuery), MYSQLI_NUM);
 		$words = file_get_contents($setWordsResult[0]);
 		$words = json_decode($words);
-		displayQueryResults($words);
+		displayQueryResults($words, $db_connection);
 		echo "</div>";
 	}
 	
