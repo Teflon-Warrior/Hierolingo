@@ -171,17 +171,6 @@ main {
     padding: 0;
 }
 
-
-.racing-stripes {
-    /* https://css-tricks.com/stripes-css/ */
-    background: repeating-linear-gradient(-55deg,
-            #ececec,
-            #ececec 10px,
-            #dcdcdc 10px,
-            #dcdcdc 20px);
-    height: 20px;
-}
-
 article {
     padding: 2.0rem, 2.0rem, 2.0rem, 2.0rem;
 
