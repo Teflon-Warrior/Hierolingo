@@ -158,6 +158,11 @@ html {
         padding: 2.0rem, 2.0rem, 2.0rem, 2.0rem;
     
     }
+    .progress-bar {
+        display: flex;
+        justify-content: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
     
     .term-buttons {
         display: flex;
