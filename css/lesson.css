@@ -164,6 +164,11 @@ html {
         flex-wrap: wrap row;
         justify-content: center;
     }
+    .number-buttons {
+        display: flex;
+        flex-wrap: wrap row;
+        justify-content: center;
+    }
     .btn {
         background-color: #cebc83;
         border: 2px solid #a09365;
