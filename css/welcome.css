@@ -20,8 +20,8 @@ html {
 }
 
 body {
-    margin: 0;
-    background-image: url(img/Hieroglpyh.jpg);
+    background-image: url('img/hieroglyph.jpg');
+    background-size: cover;
 }
 
 h1 {
