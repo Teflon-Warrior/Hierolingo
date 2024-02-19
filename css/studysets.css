@@ -85,7 +85,7 @@ html {
 }
 
 .openbtn:hover {
-    color: var(--menu-color);
+    color: #cebc83;
     cursor: pointer
 }
 

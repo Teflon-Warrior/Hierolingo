@@ -19,12 +19,12 @@
 	<nav id="mySidenav" class="sidenav">
 		<ul>
 			<li><a class="closebtn">&times;</a></li>
-			<li><a href="index.php">Home</a></li>
-			<li><a href="project.php">Project</a></li>
-			<li><a href="team.php">Team</a></li>
-			<li><a href="video.php">Video</a></li>
+			<li><a href="index.php">Profile</a></li>
+			<li><a href="lesson.php">Lessons</a></li>			
 			<li><a href="dictionary.php">Dictionary</a></li>
 			<li><a href="studysets.php">Study Sets</a></li>
+			<li><a href="leaderboard.php">Leaderboard</a></li>
+			<li><a href="logout.php">Log Out</a></li>			
 		</ul>
 	</nav>
 	
