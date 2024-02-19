@@ -96,10 +96,9 @@
         echo "<h1 align='center'> Lesson " . $les . " </h1>";
 
         //progress bar
-        echo "<div class='progress-bar'>";
         
         $width = 455 / $rowCount;
-
+        echo "<div class='progress-bar'>";
         echo "<div style='display:inline-block;margin-left:auto;margin-right:auto;>'";
         echo "<div style:'margin-right: 20px;padding-top: 15px;'>1    </div>";
         $j = 1;
