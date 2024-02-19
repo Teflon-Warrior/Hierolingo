@@ -80,6 +80,8 @@ header h1, .container {
 header {
     background-color: var(--iu-red);
     height: 150px;
+    margin: 0;
+    padding: 0;
 
 }
 
