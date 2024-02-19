@@ -1,25 +1,27 @@
-<?php 
+<?php
 require 'config.php';
 session_start();
 
 //prepared statement to insert user's Study set name and the corresponding filepath.
-$preparedQuery = $dbh->prepare("INSERT INTO StudySets (id, filepath) VALUES (:id, :filepath)");
-$userNameQuery = "SELECT username FROM User WHERE User.id = ".$_SESSION['userID'].";";
+$preparedQuery = $db_connection->prepare("INSERT INTO vocablist (ID, filepath) VALUES (? , ?)");
 
-//Getting user's name for use in filepath
-$userNameQueryResult = mysqli_fetch_array(mysqli_query($db_connection, $userNameQuery), MYSQLI_NUM);
+if ($preparedQuery){
+        $preparedQuery->bind_param('is', $userID, $filePath );
+}
 
-//Building filepath to insert
-$filePath = "json/".$userNameQueryResult[0].$_POST['studySetName'];
+//get UserID for insert statement
+$userIDQuery = "SELECT id FROM User where google_id = ".$_SESSION['login_id'].";";
+$userIDResult = mysqli_fetch_array(mysqli_query($db_connection, $userIDQuery), MYSQLI_NUM);
+$userID = $userIDResult[0];
 
-//Binding parameters
-$preparedQuery -> bindParam(':id', $_SESSION['userID']);
-$preparedQuery -> bindParam(':name', $filePath);
+//Build filepath for insert
+$filePath = "json/".$userID.$_POST['studySetName'];
 
 //Execute
-$stmt->execute();
+$preparedQuery->execute();
+echo $preparedQuery->error;
 
-//Make new file by the same name
-$newFile = fopen($filepath, "a");
-
+header('Location: studysets.php');
+exit;
 ?>
+
