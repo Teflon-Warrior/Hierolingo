@@ -117,6 +117,11 @@
                     <h2>Log Out</h2>
                 </div>
             </a>
+            <a href="https://cgi.luddy.indiana.edu/~team11/team-11/edit.php" class="bar-div">
+                <div class="profile-button">
+                    <h2>Edit profile</h2>
+                </div>
+            </a>
         </div>
     </div>
 
