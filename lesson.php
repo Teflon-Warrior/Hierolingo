@@ -134,18 +134,17 @@
                 }
         }
 
+        echo $rowCount;
+
+        echo "</div>";
+
         echo "
         <div class='term-buttons'>
         <button class='btn' onclick='prevbuttonClicked($les, $curr);'> prev term</button>
         <button class='btn' onclick='nextbuttonClicked($les, $curr);'> next term</button>
         </div>
         ";
-
-        echo $rowCount;
-
-        echo "</div>";
-
-
+        
         echo "<div class='flash' onclick='termClick($id);' id='term_$id'>";
         //echo $filepath;
         echo "<img src='$filepath'>";
