@@ -159,7 +159,7 @@ html {
     
     }
     
-    .buttons {
+    .term-buttons {
         display: flex;
         flex-wrap: wrap row;
         justify-content: center;
@@ -171,8 +171,6 @@ html {
         color: white;
         padding: 1.0em 5.0em;
         margin: 1.0em 2.0em 0 0;
-        display: flex;
-        justify-content: center;
         font-size: 18px;
         letter-spacing: 1px;
         transition: background-color .2s ease-out, color .2s ease-out, border-color .18s ease-out;
