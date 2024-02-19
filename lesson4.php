@@ -6,6 +6,9 @@
 -->
   <link href="./css/lessoncss.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" href="css/general.css"/>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/lesson.css">
   <script type="text/javascript" src="./js/lessonjs.js"></script>
 
 
