@@ -46,14 +46,15 @@
 	
 	//This quert will pull the relevant JSON objects for getting the title and wordIDs for each study set.
 	$setTabsQuery = "SELECT setName FROM vocablist WHERE google_id = ".$_SESSION['login-id'].";";
-	
-	//Used to take wordIDs from JSON objects
-	//CopyPaste Query, Inbetween the empty single quotes is where tab names will go within loops and whatnot
-	//$setWordsQuery = "SELECT jsonLocation FROM vocablist WHERE setName = '' and userID = ".$_SESSION['userID'].";";
-	
+ 	$userIDQuery = "SELECT id FROM User where google_id = ".$_SESSION['login_id'].";";
+        $userIDResult = mysqli_fetch_array(mysqli_query($db_connection, $userIDQuery), MYSQLI_NUM);
+        $userID = $userIDResult[0];
+
+        //This query will pull the relevant JSON objects for getting the title and wordIDs for each study set.
+        $setTabsQuery = "SELECT listname FROM vocablist WHERE ID = ".$userID.";";	
 
 	//Result section
-	$setTabsResult = mysqli_fetch_array(mysqli_query($con, $setTabsQuery), MYSQLI_NUM);
+	$setTabsResult = mysqli_query($con, $setTabsQuery);
 	//Defined here, used elsewhere
 	$setWordsResult = "";
 	//Number of tabs for forloop
@@ -95,8 +96,8 @@
 	<div class="tabs">
 	<?php
 		//Set up tab headers
-		for ($i = 0; $i < count($setTabsResult); $i++){
-			echo "<button class='lessontab' onclick='displayLesson(event, \"".$setTabsResult[$i]."\");'>".$setTabsResult[$i]."</button>\n";
+		while  ($setTabs =  mysqli_fetch_array($setTabsResult, MYSQLI_NUM)){
+			echo "<button class='lessontab' onclick='displayLesson(event, \"".$setTabs[0]."\");'>".$setTabs[0]."</button>\n";
 		}
 		//Add header
 		echo "<button class='lessontab' onclick='displayLesson(event, \"Add\");'>Add New Set</button>";
@@ -104,11 +105,12 @@
 	</div>
 	
 	<!-- This will set the tabs to display each word within a user list. -->
-	<?php 
-	for ($i = 0; $i < count($setTabsResult); $i++){
-		echo "<div id = '".$setTabsResult[$i]."' class = 'lessonContent'>";
+<?php 
+	mysqli_data_seek($setTabsResult, 0);	
+	while  ($setTabs =  mysqli_fetch_array($setTabsResult, MYSQLI_NUM))	{
+		echo "<div id = '".$setTabs[0]."' class = 'lessonContent'>";
 	
-		$setWordsQuery = "SELECT jsonLocation FROM vocablist WHERE setName = '".$setTabsResult[$i]."' and userID = ".$_SESSION['userID'].";";
+		$setWordsQuery = "SELECT jsonLocation FROM vocablist WHERE setName = '".$setTabs[0]."' and userID = ".$userID.";";
 		$setWordsResult = mysqli_fetch_array(mysqli_query($con, $setWordsQuery), MYSQLI_NUM);
 		$words = file_get_contents($setWordsResult[0]);
 		$words = json_decode($words);
