@@ -370,3 +370,15 @@ a:visited {
     display: flex;
     justify-content: center;
 }
+
+.profile-page {
+    background: #F4DF9C;
+    padding: 2.0rem;
+    text-align: center;
+}
+
+.profile-page .pfp {
+    display: flex;
+    margin: 0 auto;
+    border-radius: 50%;
+}
