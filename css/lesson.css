@@ -180,6 +180,11 @@ html {
         transition: background-color .2s ease-out, color .2s ease-out, border-color .18s ease-out;
         font-family: Arial, Helvetica, sans-serif;
     }
+    .lesson-buttons {
+        display: flex;
+        flex-wrap: wrap row;
+        justify-content: center; 
+    }
     .btn {
         background-color: #cebc83;
         border: 2px solid #a09365;

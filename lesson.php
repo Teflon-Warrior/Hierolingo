@@ -168,6 +168,7 @@
         echo "<br><br>";
 
         echo "</div>";
+        echo "<div class='lesson-buttons'>";
 
         if ($les == 1) {
                 echo "<button class='btn' onclick='nextlessonClicked($les);'> Next Lesson </button>";
@@ -175,6 +176,7 @@
                 echo "<button class='btn' onclick='prevlessonClicked($les);'> Previous Lesson </button>";
                 echo "<button class='btn' onclick='nextlessonClicked($les);'> Next Lesson </button>";
         }
+        echo "</div>";
         ?>
 
 </body>
