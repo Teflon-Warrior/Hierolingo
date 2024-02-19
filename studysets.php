@@ -44,7 +44,7 @@
 	session_start();
 	$con = $db_connection;
 	
-	//This query will pull the relevant JSON objects for getting the title and wordIDs for each study set.
+	//This quert will pull the relevant JSON objects for getting the title and wordIDs for each study set.
 	$setTabsQuery = "SELECT setName FROM vocablist WHERE google_id = ".$_SESSION['login-id'].";";
 	
 	//Used to take wordIDs from JSON objects
