@@ -25,7 +25,6 @@ html {
 body {
     margin: 0;
     background-color: #F4DF9C;
-    padding: 2.0rem;
 }
 
 
@@ -46,15 +45,9 @@ h1 span {
     font-weight: bold;
 }
 
-h2 {
+h2 h3 h4 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
-}
-
-h3 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
-
 }
 
 p {
@@ -158,8 +151,8 @@ main {
     padding: 0;
 }
 
-article {
-    padding: 2.0rem, 2.0rem, 2.0rem, 2.0rem;
+.leaderboard-content {
+    padding: 2.0rem;
 
 }
 
