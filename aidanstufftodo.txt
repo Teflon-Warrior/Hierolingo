@@ -1,4 +1,3 @@
-Fix SideNav - Profile, Lessons, Leaderboard, Study Sets, Dictionary, Log Out
 Fix Lessons Css
 Fix welcome page Css
 Leaderboard CSS
