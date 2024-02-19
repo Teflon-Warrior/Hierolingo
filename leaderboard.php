@@ -55,7 +55,6 @@
 	if ($result->num_rows > 0) {
 		echo "<div class='leaderboard-content'>";
 		echo "<h3>Top 5 Users<h3>";
-		echo "<p>These 5 users have accumlated the most points!</p>";
 		echo "<table border = '1'>
 		  <tr>
 			<th>User</th>
@@ -69,6 +68,7 @@
 
 		}
 		echo "</table>";
+		echo "<p>These 5 users have accumlated the most points!</p>";
 		echo "</div>";
 	}
 	?>
