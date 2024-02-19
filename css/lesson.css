@@ -180,8 +180,7 @@ html {
     }
     
     .btn:hover {
-        background-color: transparent;
-        color: var(--iu-red);
+        background-color: #726948;
     }
 
 img {

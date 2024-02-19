@@ -155,7 +155,7 @@
         $i = 0;
 
         for ($i = 1; $i <= $rowCount; $i++) {
-                echo "<button class='prevButton' onclick='lessonnavClicked($les, $i);'> $i </button>";
+                echo "<button class='btn' onclick='lessonnavClicked($les, $i);'> $i </button>";
 
         }
         echo "<br><br>";
