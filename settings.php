@@ -35,7 +35,7 @@ $email = $result['email'];
 
 <form action="settings.php" method="POST">
 <h3> Profile </h3>
-<h4 Full Name </h4>
+<h4> Full Name </h4>
 <input type="text" name="fullname" value="<?php echo $username; ?>" required>
 <br>
 
