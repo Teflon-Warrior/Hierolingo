@@ -161,6 +161,7 @@ html {
     .progress-bar {
         display: flex;
         justify-content: center;
+        align-items: center;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
     
