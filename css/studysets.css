@@ -142,30 +142,6 @@ li {
     background-color: rgb(237, 214, 177);
 }
 
-/* Sidenav code from I360 */
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    display: block;
-    transition: 0.3s;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: white;
-}
-
-.sidenav a:hover {
-    color: #cebc83;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-    cursor: pointer;
-}
-
 main {
     transition: margin-left .5s;
     padding: 0;
