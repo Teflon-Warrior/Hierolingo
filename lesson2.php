@@ -26,6 +26,14 @@
 			<li><a href="logout.php">Log Out</a></li>			
 		</ul>
 	</nav>
+  <header>
+		<div class="openbtn">
+			<span class="material-symbols-outlined menu-button">menu</span>
+			<span class="menu-text">menu</span>
+		</div>
+		<div class="all-over-bkg"></div>
+		<h1>Lesson</h1>
+	</header>
 <?php
   session_start();
   ?>

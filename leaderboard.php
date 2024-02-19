@@ -15,20 +15,26 @@
 
 <body>
 
+	<!-- NAVIGATION -->
+	<nav id="mySidenav" class="sidenav">
+		<ul>
+			<li><a class="closebtn">&times;</a></li>
+			<li><a href="profile.php">Profile</a></li>
+			<li><a href="lesson.php">Lessons</a></li>
+			<li><a href="dictionary.php">Dictionary</a></li>
+			<li><a href="studysets.php">Study Sets</a></li>
+			<li><a href="leaderboard.php">Leaderboard</a></li>
+			<li><a href="logout.php">Log Out</a></li>
+		</ul>
+	</nav>
 
 	<header>
-		<!-- NAVIGATION -->
-		<nav id="mySidenav" class="sidenav">
-			<ul>
-				<li><a class="closebtn">&times;</a></li>
-				<li><a href="profile.php">Profile</a></li>
-				<li><a href="lesson.php">Lessons</a></li>
-				<li><a href="dictionary.php">Dictionary</a></li>
-				<li><a href="studysets.php">Study Sets</a></li>
-				<li><a href="leaderboard.php">Leaderboard</a></li>
-				<li><a href="logout.php">Log Out</a></li>
-			</ul>
-		</nav>
+		<div class="openbtn">
+			<span class="material-symbols-outlined menu-button">menu</span>
+			<span class="menu-text">menu</span>
+		</div>
+		<div class="all-over-bkg"></div>
+		<h1>Leaderboard</h1>
 	</header>
 
 	<?php
