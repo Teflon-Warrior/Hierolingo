@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Home</title>
+	<title>Study Sets</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/studysets.css">
 	<link rel="stylesheet" href="css/nav.css">
@@ -39,21 +39,17 @@
 	</header>
 	
 	<!-- PHP connection & Queries -->
-	<?php 
-	$con = mysqli_connect("db.luddy.indiana.edu" ,"i494f23_jefhochg","my+sql=i494f23_jefhochg","i494f23_jefhochg");
-		if (mysqli_connect_errno())
-			{ die("Failed to connect to MySQL: " . mysqli_connect_error()); }
-		else
-			{}
+	<?php
+	require 'config.php';
+	session_start();
+	$con = $db_connection;
 	
 	//This query will pull the relevant JSON objects for getting the title and wordIDs for each study set.
-	//Needs to be updated once sessions are set up.
-	$setTabsQuery = "SELECT setName FROM vocablist WHERE userID = 2;";
+	$setTabsQuery = "SELECT setName FROM vocablist WHERE userID = ".$_SESSION['userID'].";";
 	
 	//Used to take wordIDs from JSON objects
 	//CopyPaste Query, Inbetween the empty single quotes is where tab names will go within loops and whatnot
-	//Needs to be updated once sessions are set up.
-	$setWordsQuery = "SELECT jsonLocation FROM vocablist WHERE setName = '' and userID = '2';";
+	//$setWordsQuery = "SELECT jsonLocation FROM vocablist WHERE setName = '' and userID = ".$_SESSION['userID'].";";
 	
 
 	//Result section
@@ -112,9 +108,8 @@
 	<?php 
 	for ($i = 0; $i < count($setTabsResult); $i++){
 		echo "<div id = '".$setTabsResult[$i]."' class = 'lessonContent'>";
-		
-		//Fix once sessions are set up
-		$setWordsQuery = "SELECT jsonLocation FROM vocablist WHERE setName = '".$setTabsResult[$i]."' and userID = 2;";
+	
+		$setWordsQuery = "SELECT jsonLocation FROM vocablist WHERE setName = '".$setTabsResult[$i]."' and userID = ".$_SESSION['userID'].";";
 		$setWordsResult = mysqli_fetch_array(mysqli_query($con, $setWordsQuery), MYSQLI_NUM);
 		$words = file_get_contents($setWordsResult[0]);
 		$words = json_decode($words);
@@ -123,7 +118,11 @@
 	}
 	
 	echo "<div id = 'Add' class = 'lessonContent'>";
-	echo "<p>In progress</p>";
+	echo "<h3>Add a new Study Set</h3>";
+	echo "<form action = 'addStudySet.php' method = 'post'>
+		What would you like to name your study set? <input type = 'text' name = 'studySetName'><br>
+		<input type = 'submit'>	
+	     </form>";
 	echo "</div>";
 	?>
 	
