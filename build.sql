@@ -90,6 +90,7 @@ CREATE TABLE notifications (
 Create TABLE vocablist(
   ID int,
   filepath varchar(60),
+  listname varchar(60),
   foreign key (ID) references User(id)
 );
 --insert into statements for dictionary entries.
