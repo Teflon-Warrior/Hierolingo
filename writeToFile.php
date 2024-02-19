@@ -23,12 +23,18 @@
         $file = fopen($filepath, "a") or die("Unable to open file");
         //grab array from file
 	$contents = json_decode(file_get_contents($filepath));
-        fclose($file);
+	fclose($file);
+
+	if (count($contents) == 0){
+		$contents = [];
+	}
         //add word id into array
         array_push($contents, intval($word));
-	echo count($contents);
 
-        file_put_contents($filepath, json_encode($contents));
+	file_put_contents($filepath, json_encode($contents));
+
+	header('Location: dictionary.php');
+	exit;
 ?>
 
 </body>
