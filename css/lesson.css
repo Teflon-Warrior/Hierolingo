@@ -172,6 +172,7 @@ html {
     .number-buttons {
         display: flex;
         flex-wrap: wrap row;
+        justify-content: center;
     }
     .number-buttons .btn {
         background-color: #cebc83;
