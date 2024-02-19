@@ -204,6 +204,8 @@ img {
 }
 .flash {
         margin: 0 auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
         border: solid 5px black;
         height: 400px;
         width: 400px;
