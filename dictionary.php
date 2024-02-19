@@ -45,7 +45,7 @@
 	
 	//This query will pull the given users access level for use in a later query.
 	//Currently hardcoded to test user "andy". Once login API is developed, change this to login token and such.
-	$userAccessLevelQuery = "SELECT userlevel FROM User WHERE User.google_id = ".$_SESSION['login_id'].";";
+	$userAccessLevelQuery = "SELECT userlevel FROM User WHERE google_id = ".$_SESSION['login_id'].";";
 	//These queries will pull the vocabulary relevant to the specified level
 	$lesson1WordsQuery = "SELECT * FROM dictionary where dictionary.access = 1;";
 	$lesson2WordsQuery = "SELECT * FROM dictionary where dictionary.access = 2;";
@@ -58,7 +58,6 @@
 	$userAccessLevelQueryResult = mysqli_fetch_array($userAccessLevelQueryResult, MYSQLI_NUM);
 	$userAccessLevelQueryResult = $userAccessLevelQueryResult[0];
 	$userAccessLevelQueryResult = intval($userAccessLevelQueryResult);
-	echo $userAccessLevelQueryResult;
 	
 	$lesson1WordsQueryResult = mysqli_query($con, $lesson1WordsQuery);
 	$lesson2WordsQueryResult = mysqli_query($con, $lesson2WordsQuery);
