@@ -44,8 +44,7 @@
 	session_start();
 	$con = $db_connection;
 	
-	//This quert will pull the relevant JSON objects for getting the title and wordIDs for each study set.
-	$setTabsQuery = "SELECT setName FROM vocablist WHERE google_id = ".$_SESSION['login-id'].";";
+	//get userID
  	$userIDQuery = "SELECT id FROM User where google_id = ".$_SESSION['login_id'].";";
         $userIDResult = mysqli_fetch_array(mysqli_query($db_connection, $userIDQuery), MYSQLI_NUM);
         $userID = $userIDResult[0];
