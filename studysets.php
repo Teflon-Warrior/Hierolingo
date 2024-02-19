@@ -19,7 +19,7 @@
 	<nav id="mySidenav" class="sidenav">
 		<ul>
 			<li><a class="closebtn">&times;</a></li>
-			<li><a href="index.php">Profile</a></li>
+			<li><a href="profile.php">Profile</a></li>
 			<li><a href="lesson.php">Lessons</a></li>			
 			<li><a href="dictionary.php">Dictionary</a></li>
 			<li><a href="studysets.php">Study Sets</a></li>

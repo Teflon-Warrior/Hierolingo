@@ -16,14 +16,14 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-    <?php 
+    <?php
     //config.php includes information where we open the database
     session_start();
     require 'config.php';
-    if(isset($_SESSION['login_id'])) {
+    if (isset($_SESSION['login_id'])) {
         // Assuming you have already established a database connection
         $query = "SELECT username, userhandle, userlevel, profile_image FROM User WHERE google_id = '{$_SESSION['login_id']}'";
-    
+
         // Execute your query here...
     } else {
         // Handle the case where $_SESSION['login_id'] is not set
@@ -34,21 +34,23 @@
 
     if (mysqli_num_rows($result) > 0) {
         if (mysqli_num_rows($result) > 0) {
-          while ($row = mysqli_fetch_assoc($result)) {
+            while ($row = mysqli_fetch_assoc($result)) {
 
-            $username = $row['username'];
-            $userhandle = $row['userhandle'];
-            $level = $row['userlevel'];
-            $image = $row['profile_image'];
-            //echo $image;
-
+                $username = $row['username'];
+                $userhandle = $row['userhandle'];
+                $level = $row['userlevel'];
+                $image = $row['profile_image'];
+                //echo $image;
+    
+            }
+        } else {
+            echo "no results";
         }
-    } else {echo "no results";}
-}
+    }
 
     //$row = mysqli_fetch_assoc($result);
-
-   //$image = $row['profile_image'];
+    
+    //$image = $row['profile_image'];
     ?>
 </head>
 
@@ -57,16 +59,17 @@
 
     <!-- MAIN CONTENT -->
 
-    <!-- Side Nav -->
     <nav id="mySidenav" class="sidenav">
-		<ul>
-			<li><a class="closebtn">&times;</a></li>
-			<li><a href="profile.php">Profile</a></li>
-			<li><a href="dictionary.php">Dictionary</a></li>
-			<li><a href="studysets.php">Study Sets</a></li>
-			<li><a href="project.php">About</a></li>
-		</ul>
-	</nav>
+        <ul>
+            <li><a class="closebtn">&times;</a></li>
+            <li><a href="profile.php">Profile</a></li>
+            <li><a href="lesson.php">Lessons</a></li>
+            <li><a href="dictionary.php">Dictionary</a></li>
+            <li><a href="studysets.php">Study Sets</a></li>
+            <li><a href="leaderboard.php">Leaderboard</a></li>
+            <li><a href="logout.php">Log Out</a></li>
+        </ul>
+    </nav>
 
     <div class="profile-header">
 
@@ -83,46 +86,52 @@
 
         <!-- PFP, name, and username -->
         <div class="profile-info">
-            <img class="pfp" src="<?php echo $image?>" width="150" height="150">
-            <h1><?php echo $username ?></h1>
-            <h3>@<?php echo $userhandle ?></h3>
+            <img class="pfp" src="<?php echo $image ?>" width="150" height="150">
+            <h1>
+                <?php echo $username ?>
+            </h1>
+            <h3>@
+                <?php echo $userhandle ?>
+            </h3>
         </div>
 
         <!-- Level -->
         <div class="profile-level">
             <div class="level-display">
-                <h2>Level <?php echo $level ?></h2>
+                <h2>Level
+                    <?php echo $level ?>
+                </h2>
             </div>
         </div>
-     </div>
-        <!-- Nav Buttons -->
-        <div class="buttons">
-            <a href="https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php" class="bar-div">
-                <div class="profile-button">
-                    <h2>Lessons</h2>
-                </div>
-            </a>
-            <a href="https://cgi.luddy.indiana.edu/~team11/team-11/studysets.php" class="bar-div">
-                <div class="profile-button">
-                    <h2>Study Sets</h2>
-                </div>
-            </a>
-            <a href="https://cgi.luddy.indiana.edu/~team11/team-11/dictionary.php" class="bar-div">
-                <div class="profile-button">
-                    <h2>Dictionary</h2>
-                </div>
-            </a>
-            <a href="https://cgi.luddy.indiana.edu/~team11/team-11/logout.php" class="bar-div">
-                <div class="profile-button">
-                    <h2>Log Out</h2>
-                </div>
-            </a>
-            <a href="https://cgi.luddy.indiana.edu/~team11/team-11/edit.php" class="bar-div">
-                <div class="profile-button">
-                    <h2>Edit profile</h2>
-                </div>
-            </a>
-        </div>
+    </div>
+    <!-- Nav Buttons -->
+    <div class="buttons">
+        <a href="https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php" class="bar-div">
+            <div class="profile-button">
+                <h2>Lessons</h2>
+            </div>
+        </a>
+        <a href="https://cgi.luddy.indiana.edu/~team11/team-11/studysets.php" class="bar-div">
+            <div class="profile-button">
+                <h2>Study Sets</h2>
+            </div>
+        </a>
+        <a href="https://cgi.luddy.indiana.edu/~team11/team-11/dictionary.php" class="bar-div">
+            <div class="profile-button">
+                <h2>Dictionary</h2>
+            </div>
+        </a>
+        <a href="https://cgi.luddy.indiana.edu/~team11/team-11/logout.php" class="bar-div">
+            <div class="profile-button">
+                <h2>Log Out</h2>
+            </div>
+        </a>
+        <a href="https://cgi.luddy.indiana.edu/~team11/team-11/edit.php" class="bar-div">
+            <div class="profile-button">
+                <h2>Edit profile</h2>
+            </div>
+        </a>
+    </div>
     </div>
 
     <script src="js/nav.js"></script>
