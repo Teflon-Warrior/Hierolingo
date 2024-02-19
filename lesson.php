@@ -96,6 +96,7 @@
         echo "<h1 align='center'> Lesson " . $les . " </h1>";
 
         //progress bar
+        echo "<div class='progress-bar'>";
         
         $width = 455 / $rowCount;
 
@@ -137,6 +138,7 @@
         echo $rowCount;
 
         echo "</div>";
+        echo "</div>";
 
         echo "
         <div class='term-buttons'>
@@ -144,7 +146,7 @@
         <button class='btn' onclick='nextbuttonClicked($les, $curr);'> next term</button>
         </div>
         ";
-        
+
         echo "<div class='flash' onclick='termClick($id);' id='term_$id'>";
         //echo $filepath;
         echo "<img src='$filepath'>";
@@ -157,11 +159,15 @@
 
         $i = 0;
 
+        echo "<div class='number-buttons'>";
+
         for ($i = 1; $i <= $rowCount; $i++) {
                 echo "<button class='btn' onclick='lessonnavClicked($les, $i);'> $i </button>";
 
         }
         echo "<br><br>";
+
+        echo "</div>";
 
         if ($les == 1) {
                 echo "<button class='btn' onclick='nextlessonClicked($les);'> Next Lesson </button>";
