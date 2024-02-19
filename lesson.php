@@ -2,6 +2,7 @@
 
 <head>
   <link href="./css/lesson.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/nav.css">
   <script type="text/javascript" src="./js/lessonjs.js"></script>
 
 

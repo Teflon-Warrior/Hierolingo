@@ -9,23 +9,11 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="css/dictionary.css">
+	<link rel="stylesheet" href="css/nav.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 	<link rel="stylesheet" href="css/tabbingStyling.css" />
 </head>
 <body>
-	
-	<!-- NAVIGATION -->
-	<nav id="mySidenav" class="sidenav">
-		<ul>
-			<li><a class="closebtn">&times;</a></li>
-			<li><a href="index.php">Home</a></li>
-			<li><a href="project.php">Project</a></li>
-			<li><a href="team.php">Team</a></li>
-			<li><a href="video.php">Video</a></li>
-			<li><a href="dictionary.php">Dictionary</a></li>
-			<li><a href="studysets.php">Study Sets</a></li>
-		</ul>
-	</nav>
 	
 	<!-- MAIN CONTENT -->
 	<header>
@@ -36,6 +24,17 @@
 		<div class="all-over-bkg"></div>
 		<h1>Dictionary</h1>
 	</header>
+
+	<div class="navbar">
+		<ul>
+			<li><a href="https://cgi.luddy.indiana.edu/~team11/team-11/profile.php">Profile</a></li>
+			<li><a href="https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php">Lessons</a></li>
+			<li><a href="https://cgi.luddy.indiana.edu/~team11/team-11/dictionary.php">Dictionary</a></li>
+			<li><a href="https://cgi.luddy.indiana.edu/~team11/team-11/studysets.php">Study Sets</a></li>
+			<li><a href="https://cgi.luddy.indiana.edu/~team11/team-11/logout.php">Log Out</a></li>
+		</ul>
+
+	</div>
 	
 	<!--PHP Connection & Queries -->
 	<?php 
