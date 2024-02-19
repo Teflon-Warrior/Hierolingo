@@ -61,6 +61,10 @@ p {
     font-size: 17px;
 }
 
+th td {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
+}
+
 header h1, .container {
 
     width: 800px;
