@@ -50,7 +50,7 @@
                 $les = ($_GET["les"]);
         }
         ?>
-        
+
         <?php
         //login credentials
         $host = "db.luddy.indiana.edu";
@@ -79,8 +79,8 @@
                 echo "<button class='prevButton' onclick='prevbuttonClicked($les, $curr);'> prev term</button>";
         } else {
                 echo "
-<button class='prevButton' onclick='prevbuttonClicked($les, $curr);'> prev term</button>
-<button class='nextButton' onclick='nextbuttonClicked($les, $curr);'> next term</button>
+<button class='btn' onclick='prevbuttonClicked($les, $curr);'> prev term</button>
+<button class='btn' onclick='nextbuttonClicked($les, $curr);'> next term</button>
 ";
         }
         $temp = $curr - 1;
