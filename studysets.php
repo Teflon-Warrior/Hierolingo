@@ -12,6 +12,26 @@
 	<link rel="stylesheet"
 		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 	<link rel="stylesheet" href="css/tabbingStyling.css" />
+
+<?php
+        require 'config.php';
+        session_start();
+        $con = $db_connection;
+if (isset($_SESSION['login_id']) == null) {
+        header( 'Location: https://cgi.luddy.indiana.edu/~team11/team-11/login.php');
+}
+
+$google_id = $_SESSION['login_id'];
+$con = mysqli_connect("db.luddy.indiana.edu" ,"i494f23_team11","my+sql=i494f23_team11","i494f23_team11");
+
+$query = "Select userlevel from User where google_id = $google_id";
+$result = mysqli_query($con, $query);
+$result = mysqli_fetch_array($result);
+
+$les = $result['userlevel'];
+
+?>
+
 </head>
 <body>
 	
@@ -20,7 +40,7 @@
 		<ul>
 			<li><a class="closebtn">&times;</a></li>
 			<li><a href="profile.php">Profile</a></li>
-			<li><a href="lesson.php">Lessons</a></li>			
+			<li><a href="lesson.php<?php echo"?les=$les";?>">Lessons</a></li>			
 			<li><a href="dictionary.php">Dictionary</a></li>
 			<li><a href="studysets.php">Study Sets</a></li>
 			<li><a href="leaderboard.php">Leaderboard</a></li>
@@ -40,9 +60,6 @@
 	
 	<!-- PHP connection & Queries -->
 	<?php
-	require 'config.php';
-	session_start();
-	$con = $db_connection;
 	
 	//get userID
  	$userIDQuery = "SELECT id FROM User where google_id = ".$_SESSION['login_id'].";";
