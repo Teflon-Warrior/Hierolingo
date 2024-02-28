@@ -111,7 +111,14 @@
     </div>
 
     <script src="js/nav.js"></script>
+    <script src="js/profile.js"></script>
 
+<!-- profile page buttons -->
+        <button type="button" class="profbtn" onclick="lessClicked(<?php echo"$level"; ?>)">Lessons</button>
+<button type="button" class="profbtn" onclick="dictClicked()">Dictionary</button>
+<button type="button" class="profbtn" onclick="studClicked()">Study Sets</button>
+<button type="button" class="profbtn" onclick="leadClicked()">Leaderboard</button>
+<button type="button" class="profbtn" onclick="editClicked()">Edit</button>
 </body>
 
 </html>

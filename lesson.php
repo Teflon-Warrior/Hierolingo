@@ -85,13 +85,7 @@ $les = $result['userlevel'];
         $rowResult = mysqli_query($con, $rowQuery);
         $rowCount = mysqli_num_rows($rowResult);
 
-        if ($curr == 1) {
-                echo "<button class='nextButton' onclick='nextbuttonClicked($les, $curr);'> next term</button>";
-        } else if ($curr == $rowCount) {
-                echo "<button class='prevButton' onclick='prevbuttonClicked($les, $curr);'> prev term</button>";
-        } else {
-
-        }
+        
         $temp = $curr - 1;
 
         $query = "select filepath,def,id from dictionary where access = $les limit $temp,1;";
@@ -111,7 +105,7 @@ $les = $result['userlevel'];
         
         $width = 455 / $rowCount;
         echo "<div class='progress-bar'>";
-        echo "<div style='display:inline-block;margin-left:auto;margin-right:auto;>'";
+        echo "<div style='display:inline-block;>'";
         echo "<div style:'margin-right: 20px;padding-top: 15px;'>1    </div>";
         $j = 1;
         for ($j = 1; $j <= $rowCount; $j++) {
