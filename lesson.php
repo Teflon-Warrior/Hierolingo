@@ -16,6 +16,7 @@ $result = mysqli_fetch_array($result);
 
 $les = $result['userlevel'];
 
+?>
 
 </header>
 
