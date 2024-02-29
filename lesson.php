@@ -1,4 +1,24 @@
 <html>
+<header>
+<?php
+session_start();
+
+if (isset($_SESSION['login_id']) == null) {
+        header( 'Location: https://cgi.luddy.indiana.edu/~team11/team-11/login.php');
+}
+
+$google_id = $_SESSION['login_id'];
+$con = mysqli_connect("db.luddy.indiana.edu" ,"i494f23_team11","my+sql=i494f23_team11","i494f23_team11");
+
+$query = "Select userlevel from User where google_id = $google_id";
+$result = mysqli_query($con, $query);
+$result = mysqli_fetch_array($result);
+
+$les = $result['userlevel'];
+
+?>
+
+</header>
 
 <head>
         <!-- bootstrap css-->
@@ -27,7 +47,7 @@
                 <ul>
                         <li><a class="closebtn">&times;</a></li>
                         <li><a href="profile.php">Profile</a></li>
-                        <li><a href="lesson.php">Lessons</a></li>
+                        <li><a href="lesson.php<?php echo"?les=$les";?>">Lessons</a></li>
                         <li><a href="dictionary.php">Dictionary</a></li>
                         <li><a href="studysets.php">Study Sets</a></li>
                         <li><a href="leaderboard.php">Leaderboard</a></li>
@@ -42,14 +62,6 @@
                 <div class="all-over-bkg"></div>
                 <h1>Lesson</h1>
         </header>
-
-        <?php
-        session_start();
-        $les = 1;
-        if (isset($_GET["les"])) {
-                $les = ($_GET["les"]);
-        }
-        ?>
 
         <?php
         //login credentials
@@ -73,13 +85,7 @@
         $rowResult = mysqli_query($con, $rowQuery);
         $rowCount = mysqli_num_rows($rowResult);
 
-        if ($curr == 1) {
-                echo "<button class='nextButton' onclick='nextbuttonClicked($les, $curr);'> next term</button>";
-        } else if ($curr == $rowCount) {
-                echo "<button class='prevButton' onclick='prevbuttonClicked($les, $curr);'> prev term</button>";
-        } else {
-
-        }
+        
         $temp = $curr - 1;
 
         $query = "select filepath,def,id from dictionary where access = $les limit $temp,1;";
@@ -99,7 +105,7 @@
         
         $width = 455 / $rowCount;
         echo "<div class='progress-bar'>";
-        echo "<div style='display:inline-block;margin-left:auto;margin-right:auto;>'";
+        echo "<div style='display:inline-block;>'";
         echo "<div style:'margin-right: 20px;padding-top: 15px;'>1    </div>";
         $j = 1;
         for ($j = 1; $j <= $rowCount; $j++) {
