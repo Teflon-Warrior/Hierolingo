@@ -35,12 +35,8 @@ $color = $result['color'];
 
 ?>
 
-<<<<<<< HEAD
-<form action="profile.php" method="POST">
-=======
 <form action="settings.php?s=1" method="POST">
 <!--
->>>>>>> max-edit
 <h3> Full Name </h3>
 <input type="text" name="fullname" value="<?php echo $username; ?>" required>
 <br><br>
