@@ -1,2 +1,5 @@
-Fix Lessons Css
-Leaderboard CSS -------
+Notes
+--If theres not a study set there, create new set should be there. Dont make user go back and look for the words again
+--Change table style, use bootstrap, make look better
+--Add content to welcome page
+--Explain points
