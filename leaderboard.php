@@ -12,7 +12,10 @@
 	<link rel="stylesheet"
 		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 	<link rel="stylesheet" href="css/tabbingStyling.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
+
 <body>
 
 	<!-- NAVIGATION -->
@@ -55,19 +58,23 @@
 	if ($result->num_rows > 0) {
 		echo "<div class='leaderboard-content'>";
 		echo "<h3>Top 5 Users<h3>";
-		echo "<table border = '1'>
+		echo "<table class='table table-hover' border = '1'>
+		  <thead>
 		  <tr>
-			<th>User</th>
-		        <th>Points</th>
-		</tr>";
+			<th scope='col'>User</th>
+		    <th scope='col'>Points</th>
+		</tr>
+		</thead>";
 		while ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
-			echo "<tr>
+			echo "<tbody>
+			<tr>
 			<td>" . $row[0] . "</td>
 		        <td>" . $row[1] . "</td>
 		      <tr>";
 
 		}
-		echo "</table>";
+		echo "</tbody>
+			  </table>";
 		echo "<p>These 5 users have accumlated the most points!</p>";
 		echo "</div>";
 	}
