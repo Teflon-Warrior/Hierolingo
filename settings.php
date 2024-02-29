@@ -34,7 +34,7 @@ $color = $result['color'];
 
 ?>
 
-<form action="test.php" method="POST">
+<form action="profile.php" method="POST">
 <h3> Full Name </h3>
 <input type="text" name="fullname" value="<?php echo $username; ?>" required>
 <br><br>
