@@ -2,15 +2,15 @@
 <header>
 <?php
 session_start();
-
+/*
 if (isset($_SESSION['login_id']) == null) {
         header( 'Location: https://cgi.luddy.indiana.edu/~team11/team-11/login.php');
 }
-
+*/
 $google_id = $_SESSION['login_id'];
 $con = mysqli_connect("db.luddy.indiana.edu" ,"i494f23_team11","my+sql=i494f23_team11","i494f23_team11");
 
-$query = "Select id,username,userhandle,email from User where google_id = $google_id";
+$query = "Select id,username,userhandle,email,color from User where google_id = $google_id";
 $result = mysqli_query($con, $query);
 
 $result = mysqli_fetch_array($result);
@@ -18,6 +18,7 @@ $id = $result['id'];
 $username = $result['username'];
 $userhandle = $result['userhandle'];
 $email = $result['email'];
+$color = $result['color'];
 
 ?>
 
@@ -33,18 +34,14 @@ $email = $result['email'];
 
 ?>
 
-<form action="settings.php" method="POST">
-<h3> Profile </h3>
-<h4> Full Name </h4>
+<form action="test.php" method="POST">
+<h3> Full Name </h3>
 <input type="text" name="fullname" value="<?php echo $username; ?>" required>
-<br>
-
-<h4> User Handle </h4>
-<input type="text" name="handle" value="<?php if ($userhandle != 'NA') {echo $userhandle;}?>" placeholder="<?php if ($userhandle == 'NA') {echo "Nickname";} ?>">
-<br>
-<h4> Profile Image </h4>
 <br><br>
-<hr>
+
+<h3> User Handle </h3>
+<input type="text" name="handle" value="<?php if (!$userhandle== null) {echo $userhandle;}?>">
+<br><br>
 
 <h3> Notifications </h3>
 Would you like to receive sms notifications?
@@ -70,10 +67,8 @@ $query="select phone from profile where email = '$email'";
 $result = mysqli_query($con, $query);
 $result = mysqli_fetch_array($result);
 $phone = $result['phone'];
-if ($phone != null) {
 $phone = substr($phone, 0, 3) . "-" . substr($phone, 3);
 $phone = substr($phone, 0, 7) . "-" . substr($phone, 7);
-}
 ?>
 <br>
 If yes, enter or edit your phone number (format: 123-123-1234)
@@ -99,9 +94,10 @@ Select the day of the week you would like to receive notifications <br>
 <option <?php if($day==6){echo "selected";} ?> value="saturday">Saturday</option>
 </select>
 <br><br>
-<hr>
 <h3> Styling </h3>
 
+<label for ="progresscolor" name="progcolor"> Progress Bar Color: </label>
+<input type="color" id="profresscolor" value="<?php echo"$color";?>">
 
 <br><br>
 <input type="submit" id="edit" value="Save Changes">
@@ -115,11 +111,7 @@ $formhandle = $_POST['handle'];
 $formnotif = $_POST['notif'];
 $formphone = $_POST['phone'];
 $formday = $_POST['day'];
-echo $formname . "<br>";
-echo $formhandle . "<br>";
-echo $formnotif . "<br>";
-echo $formphone . "<br>";
-echo $formday;
+$formcolor = $_POST['progcolor'];
 
 switch ($formnotif) {
 case 'yes':
@@ -163,30 +155,31 @@ $result = mysqli_fetch_array($result);
 $test = $result['user'];
 if ($test != null) {
         //For altering existing
-        
-        $query = "Update notifications set stat='$formnotif', dayofweek='$formday' where user = $id";
-        mysqli_query($con, $query);
 
-        $query = "UPDATE User set username='$formname', userhandle='$formhandle' where id = $id";
-        mysqli_query($con, $query);
+	$query="Update notifications set stat='$formnotif' AND dayofweek='$formday' where id=$id";
+	mysqli_query($con, $query);
 
-        //Cant update profile yet
+	$query = "Update User set color='$formcolor' where id=$id";
+	mysqli_query($con, $query);
+
+	$query = "Update profile set phone='$formphone' where email='$email'";
 
 } else {
         //For inputing new user
-
         $query = "INSERT INTO notifications (stat, method, timeofday, dayofweek, user) VALUES ($formnotif, 'phone', '00:00:00', $formday, $id)";
+	mysqli_query($con, $query);
+	
+	$query = "Update User set color='$formcolor' where id='$id";
         mysqli_query($con, $query);
-        
-        
-        $query = "UPDATE User set username='$formname', userhandle='$formhandle' where id = $id";
+	
+	
+        /*
+        $query = "UPDATE User set username='$formname' AND userhandle='$formhandle' where id = $id";
         mysqli_query($con, $query);
-
-        //NEED to insert into profile table        
+        */
 }
 
 ?>
 
 </body>
 </html>
-

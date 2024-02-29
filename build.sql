@@ -28,6 +28,7 @@ userlevel int,
 hotstreak int,
 email varchar(50),
 profile_image text,
+color varchar(10) DEFAULT '#659df7',
 google_id varchar(150),
 points int,
 primary key (id));
@@ -78,10 +79,10 @@ CREATE TABLE points (
 
 
 CREATE TABLE notifications (
-  stat BOOLEAN,
+  stat BOOLEAN default 1,
   method VARCHAR(5),
   timeofday TIME,
-  dayofweek int,
+  dayofweek int DEFAULT 0,
   user int,
   FOREIGN KEY (user) REFERENCES User(id)
 );
