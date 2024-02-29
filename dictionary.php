@@ -6,6 +6,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Dictionary</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="css/dictionary.css">
@@ -87,15 +89,17 @@ $les = $result['userlevel'];
 	function displayQueryResults($queryResultIn, $tabNames){	
 		if ($queryResultIn->num_rows > 0) {
 				mysqli_data_seek($queryResultIn, 0);
-				echo "<table border = '1'>
+				echo "<table class='table table-hover' border = '1'>
+				<thead>
 				<tr>
 					<th>Heiroglyph</th>
 					<th>Definition </th>
 					<th>Part of Speech</th>
 					<th>Add to Study Set </th>
-				</tr>";
+				</tr>
+				</thead>";
 				while ($row = mysqli_fetch_array($queryResultIn)) {  
-					echo "					
+					echo "<tbody>					
 					<tr>
 						<td><img src = ".$row[3]." width='200' height='200' /> </td> 
 						<td>".$row[2]."</td> 					
@@ -120,7 +124,8 @@ $les = $result['userlevel'];
 					</tr>
 					";
 				}					
-				echo "</table>";
+				echo "</tbody>
+				</table>";
 			}
 	} ?>
 	
