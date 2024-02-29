@@ -156,7 +156,7 @@ $test = $result['user'];
 if ($test != null) {
         //For altering existing
 
-	$query="Update notifications set stat='$formnotif' AND dayofweek='$formday' where id=$id;
+	$query="Update notifications set stat='$formnotif' AND dayofweek='$formday' where id=$id";
 	mysqli_query($con, $query);
 
 	$query = "Update User set color='$formcolor' where id=$id";
@@ -183,4 +183,3 @@ if ($test != null) {
 
 </body>
 </html>
-
