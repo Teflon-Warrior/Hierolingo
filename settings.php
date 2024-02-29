@@ -2,11 +2,12 @@
 <header>
 <?php
 session_start();
-/*
+
+
 if (isset($_SESSION['login_id']) == null) {
         header( 'Location: https://cgi.luddy.indiana.edu/~team11/team-11/login.php');
 }
-*/
+
 $google_id = $_SESSION['login_id'];
 $con = mysqli_connect("db.luddy.indiana.edu" ,"i494f23_team11","my+sql=i494f23_team11","i494f23_team11");
 
@@ -34,7 +35,8 @@ $color = $result['color'];
 
 ?>
 
-<form action="profile.php" method="POST">
+<form action="settings.php?s=1" method="POST">
+<!--
 <h3> Full Name </h3>
 <input type="text" name="fullname" value="<?php echo $username; ?>" required>
 <br><br>
@@ -42,6 +44,7 @@ $color = $result['color'];
 <h3> User Handle </h3>
 <input type="text" name="handle" value="<?php if (!$userhandle== null) {echo $userhandle;}?>">
 <br><br>
+--!>
 
 <h3> Notifications </h3>
 Would you like to receive sms notifications?
@@ -69,6 +72,7 @@ $result = mysqli_fetch_array($result);
 $phone = $result['phone'];
 $phone = substr($phone, 0, 3) . "-" . substr($phone, 3);
 $phone = substr($phone, 0, 7) . "-" . substr($phone, 7);
+
 ?>
 <br>
 If yes, enter or edit your phone number (format: 123-123-1234)
@@ -77,7 +81,7 @@ If yes, enter or edit your phone number (format: 123-123-1234)
 <br>
 
 <?php
-$query="select dayofweek from notifications where user = $username";
+$query="select dayofweek from notifications where user = $id";
 $result = mysqli_query($con, $query);
 $result = mysqli_fetch_array($result);
 $day = $result['dayofweek'];
@@ -96,22 +100,22 @@ Select the day of the week you would like to receive notifications <br>
 <br><br>
 <h3> Styling </h3>
 
-<label for ="progresscolor" name="progcolor"> Progress Bar Color: </label>
-<input type="color" id="profresscolor" value="<?php echo"$color";?>">
+<label for="progcolor"> Progress Bar Color: </label>
+<input type="color" name="progcolor" id="progcolor" value="<?php echo $color; ?>" />
 
 <br><br>
 <input type="submit" id="edit" value="Save Changes">
 
-
 <?php
 
 //form handling
-$formname = $_POST['fullname'];
-$formhandle = $_POST['handle'];
+//$formname = $_POST['fullname'];
+//$formhandle = $_POST['handle'];
 $formnotif = $_POST['notif'];
 $formphone = $_POST['phone'];
 $formday = $_POST['day'];
 $formcolor = $_POST['progcolor'];
+
 
 switch ($formnotif) {
 case 'yes':
@@ -153,33 +157,40 @@ $query = "select user from notifications where user = $id";
 $result = mysqli_query($con, $query);
 $result = mysqli_fetch_array($result);
 $test = $result['user'];
+if($_GET['s'] > 0) {
 if ($test != null) {
-        //For altering existing
+        //For altering existing;
 
-	$query="Update notifications set stat='$formnotif' AND dayofweek='$formday' where id=$id";
-	mysqli_query($con, $query);
+        $query="Update notifications set stat='$formnotif', dayofweek='$formday' where user=$id";
+        mysqli_query($con, $query);
 
-	$query = "Update User set color='$formcolor' where id=$id";
-	mysqli_query($con, $query);
+        $query = "Update User set color='$formcolor' where id=$id";
+        mysqli_query($con, $query);
 
-	$query = "Update profile set phone='$formphone' where email='$email'";
+        $query = "Update profile set phone='$formphone' where email='$email'";
+        mysqli_query($con, $query);
 
+        header( 'Location: https://cgi.luddy.indiana.edu/~team11/team-11/settings.php');
 } else {
         //For inputing new user
-        $query = "INSERT INTO notifications (stat, method, timeofday, dayofweek, user) VALUES ($formnotif, 'phone', '00:00:00', $formday, $id)";
-	mysqli_query($con, $query);
-	
-	$query = "Update User set color='$formcolor' where id='$id";
-        mysqli_query($con, $query);
-	
-	
-        /*
-        $query = "UPDATE User set username='$formname' AND userhandle='$formhandle' where id = $id";
-        mysqli_query($con, $query);
-        */
-}
 
+        $query = "INSERT INTO notifications (stat, method, timeofday, dayofweek, user) VALUES ($formnotif, 'phone', '00:00:00', $formday, $id)";
+        mysqli_query($con, $query);
+
+
+        $query = "Update User set color='$formcolor' where id=$id";
+        mysqli_query($con, $query);
+
+        $query = "Update profile set phone='$formphone' where email='$email'";
+        mysqli_query($con, $query);
+
+        header( 'Location: https://cgi.luddy.indiana.edu/~team11/team-11/settings.php');
+
+
+}
+}
 ?>
+
 
 </body>
 </html>

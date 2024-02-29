@@ -10,12 +10,12 @@ if (isset($_SESSION['login_id']) == null) {
 $google_id = $_SESSION['login_id'];
 $con = mysqli_connect("db.luddy.indiana.edu" ,"i494f23_team11","my+sql=i494f23_team11","i494f23_team11");
 
-$query = "Select userlevel from User where google_id = $google_id";
+$query = "Select userlevel,color from User where google_id = $google_id";
 $result = mysqli_query($con, $query);
 $result = mysqli_fetch_array($result);
 
 $les = $result['userlevel'];
-
+$color = $result['color'];
 ?>
 
 </header>
@@ -110,7 +110,7 @@ $les = $result['userlevel'];
         $j = 1;
         for ($j = 1; $j <= $rowCount; $j++) {
                 if ($j == 1) {
-                        echo "<div class='progress' style='width:$width;height:25px;border-right:none;background-color:#659df7;'>";
+                        echo "<div class='progress' style='width:$width;height:25px;border-right:none;background-color:$color;'>";
                         if ($j == $curr) {
                                 echo "$j";
                         }
@@ -119,7 +119,7 @@ $les = $result['userlevel'];
                         if ($curr != $rowCount) {
                                 echo "<div class='progress' style='width:$width;height:25px;border-left:none;'>";
                         } else {
-                                echo "<div class='progress' style='width:$width;height:25px;border-left:none;background-color:#659df7;'>";
+                                echo "<div class='progress' style='width:$width;height:25px;border-left:none;background-color:$color;'>";
                         }
                         if ($j == $curr) {
                                 echo "$j";
@@ -127,7 +127,7 @@ $les = $result['userlevel'];
                         echo "</div>";
                 } else {
                         if ($j <= $curr) {
-                                echo "<div class='progress' style='width:$width;height:25px;border-left:none;border-right:none;background-color:#659df7;'>";
+                                echo "<div class='progress' style='width:$width;height:25px;border-left:none;border-right:none;background-color:$color;'>";
                                 if ($j == $curr) {
                                         echo "$j";
                                 }
