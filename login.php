@@ -50,14 +50,14 @@ if(isset($_GET['code'])):
                 $row = mysqli_fetch_array($profile, MYSQLI_NUM);
 
                 $_SESSION['userID'] = $row[1];
-       	    header('Location: dictionary.php'); 
+       	    header('Location: profile.php'); 
         }
         else{            
             // if user not exists we will insert the user
             $insert = mysqli_query($db_connection, "INSERT INTO User (google_id, username, email, profile_image, userlevel) VALUES ('$id', '$full_name', '$email', '$profile_pic',1)");         
             if($insert){
                 $_SESSION['login_id'] = $id; 
-                header('Location: home.php');
+                header('Location: profile.php');
                 exit;
             }
             else{
@@ -140,6 +140,8 @@ else:
             cursor: not-allowed;
         }
     </style>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="_container">
