@@ -3,3 +3,9 @@ Notes
 --Change table style, use bootstrap, make look better
 --Add content to welcome page
 --Explain points
+
+-- Fix leaderboard CSS, bootstrap table
+-- Fix color of sidenav hover, looks like shit
+-- Change buttons and table on Dictionary
+-- Change textfield and buttons on Study Sets
+-- Add content to welcome landing page
