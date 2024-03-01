@@ -124,10 +124,9 @@ $les = $result['userlevel'];
 							</form>
 						</td>
 					</tr>
-					";
+					</tbody>";
 				}					
-				echo "</tbody>
-				</table>";
+				echo "</table>";
 			}
 	} ?>
 	
