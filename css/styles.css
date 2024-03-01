@@ -91,13 +91,11 @@ html {
 
 td {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flex;
 }
 
 th {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
-    display: flex;
 }
 
 /* Menu styling code from I360 */
