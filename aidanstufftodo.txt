@@ -4,8 +4,7 @@ Notes
 --Add content to welcome page
 --Explain points
 
--- Fix leaderboard CSS, bootstrap table
--- Fix color of sidenav hover, looks like shit
--- Change buttons and table on Dictionary
+-- Fix leaderboard CSS, bootstrap table (was sort of working, then table dissapeared? ask ab this tomorrow)
+-- Change buttons and table on Dictionary (almost there, gotta do submit button)
 -- Change textfield and buttons on Study Sets (tried)
--- Add content to welcome landing page
+-- Add content to welcome landing page (gotta do)
