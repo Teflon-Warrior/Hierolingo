@@ -1,10 +1,9 @@
 Notes
 --If theres not a study set there, create new set should be there. Dont make user go back and look for the words again
---Change table style, use bootstrap, make look better
 --Add content to welcome page
 --Explain points
 
 -- Fix leaderboard CSS, bootstrap table (was sort of working, then table dissapeared? ask ab this tomorrow)
--- Bring up adding remove and edit buttons for study sets
+-- Bring up adding remove and edit buttons for study sets (added, need to link PHP)
 -- Add content to welcome landing page (gotta do)
 -- Fix padding on bottom of Lesson page

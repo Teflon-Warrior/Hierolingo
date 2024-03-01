@@ -195,6 +195,7 @@ html {
         display: flex;
         flex-wrap: wrap row;
         justify-content: center; 
+        padding-bottom: 2.0rem;
     }
     .btn {
         background-color: #cebc83;
