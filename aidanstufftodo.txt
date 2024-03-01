@@ -5,6 +5,6 @@ Notes
 --Explain points
 
 -- Fix leaderboard CSS, bootstrap table (was sort of working, then table dissapeared? ask ab this tomorrow)
--- Change textfield and buttons on Study Sets (almost there, gotta do textfield)
-    -- Bring up adding remove and edits buttons for study sets
+-- Bring up adding remove and edit buttons for study sets
 -- Add content to welcome landing page (gotta do)
+-- Fix padding on bottom of Lesson page

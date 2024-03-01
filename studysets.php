@@ -90,6 +90,7 @@ $les = $result['userlevel'];
 					<th>Heiroglyph</th>
 					<th>Definition </th>
 					<th>Part of Speech</th>
+					<th>Remove Word</th>
 				</tr>
 				</thead>";
 				for ($i = 0; $i < count($wordsIn); $i++ ){
@@ -100,6 +101,7 @@ $les = $result['userlevel'];
 						<td><img src = ".$results[3]." width='200' height='200' /> </td> 
 						<td>".$results[2]."</td> 					
 						<td>".$results[1]."</td>
+						<td><button type = 'remove' value='remove' class='btn btn-danger'>Remove Word</button>
 					</tr>";
 				}		
 			
