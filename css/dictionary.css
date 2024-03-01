@@ -185,4 +185,5 @@ article {
 
 .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
     background-color: #cebc83 !important;
+    border-color: #cebc83 !important;
 }
