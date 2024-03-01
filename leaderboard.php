@@ -63,10 +63,11 @@
 			<th scope='col'>User</th>
 		    <th scope='col'>Points</th>
 		</tr>
-		</thead>";
+		</thead>
+		<tbody>";
 		while ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
-			echo "<tbody>
-			<tr>
+			echo
+			"<tr>
 			<td>" . $row[0] . "</td>
 		        <td>" . $row[1] . "</td>
 		      <tr>";
