@@ -106,7 +106,11 @@ $les = $result['userlevel'];
 				}		
 			
 				echo "</tbody>
-				</table>";
+				</table>
+				
+				
+				<button type = 'edit' value='edit' class='btn btn-success'>Edit Name</button>
+				<button type = 'remove' value='removeSet' class='btn btn-danger'>Delete Set</button>";
 			}
 	}
 	?>
