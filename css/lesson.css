@@ -158,7 +158,8 @@ html {
         padding: 2.0rem, 2.0rem, 2.0rem, 2.0rem;
     
     }
-    .lesson-number-text{
+    .lesson-number-text h1{
+        padding-bottom: 2.0rem;
         
     }
     .progress-bar {
