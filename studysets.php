@@ -142,8 +142,8 @@ $les = $result['userlevel'];
 	echo "<div id = 'Add' class = 'lessonContent'>";
 	echo "<h3>Add a new Study Set</h3>";
 	echo "<form action = 'addStudySet.php' method = 'post'>
-		What would you like to name your study set? <input type = 'text' name = 'studySetName'><br>
-		<input type = 'submit'>	
+		What would you like to name your study set? <input type = 'text' name = 'studySetName'>
+		<button type = 'submit' class='btn btn-primary'>Submit</button>	
 	     </form>";
 	echo "</div>";
 	?>
