@@ -99,7 +99,7 @@ $color = $result['color'];
 
         // Set <img> tag with the filepath
 
-        echo "<div class=''lesson-number-text''>
+        echo "<div class='lesson-number-text'>
         <h1 align='center'> Lesson " . $les . " </h1>
         </div>";
 
