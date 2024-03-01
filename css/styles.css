@@ -370,6 +370,11 @@ article {
     color: #cebc83;
 }
 
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #cebc83 !important;
+    border-color: #cebc83 !important;
+}
+
 a:link,
 a:visited {
     text-decoration: none;

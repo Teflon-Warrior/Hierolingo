@@ -182,8 +182,3 @@ article {
     background-color: transparent;
     color: var(--iu-red);
 }
-
-.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-    background-color: #cebc83 !important;
-    border-color: #cebc83 !important;
-}
