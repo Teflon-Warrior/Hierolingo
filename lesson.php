@@ -98,7 +98,7 @@ $color = $result['color'];
 
 
         // Set <img> tag with the filepath
-        echo "<h1 align='center'> Lesson " . $les . " </h1>";
+        echo "<h1 align='center' class='lesson-number-text'> Lesson " . $les . " </h1>";
 
         //progress bar
         

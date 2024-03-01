@@ -158,6 +158,9 @@ html {
         padding: 2.0rem, 2.0rem, 2.0rem, 2.0rem;
     
     }
+    .lesson-number-text{
+        padding-top: 1.0rem;
+    }
     .progress-bar {
         display: flex;
         justify-content: center;
