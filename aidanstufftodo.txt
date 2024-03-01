@@ -7,5 +7,5 @@ Notes
 -- Fix leaderboard CSS, bootstrap table
 -- Fix color of sidenav hover, looks like shit
 -- Change buttons and table on Dictionary
--- Change textfield and buttons on Study Sets
+-- Change textfield and buttons on Study Sets (tried)
 -- Add content to welcome landing page
