@@ -108,8 +108,9 @@ $les = $result['userlevel'];
 						<td>
 							<button type='button' class='btn btn-primary' onclick = 'displaySubmit(event, ".$row[0].");' id = 'submit".$row[0]."' class = 'addButton'>Add to Vocab List?</button>
 							<form action = 'writeToFile.php' method = 'post' class = 'submissionForm' id = 'submissionForm".$row[0]."'>
+							<div class='form-group'>
 								<label for = 'studyset'> Choose a study set </label>
-									<select name = 'studyset' id = 'studyset'>";
+									<select class='form-control form-control-sm' name = 'studyset' id = 'studyset'>";
 										while ($tab = mysqli_fetch_array($tabNames)){
 											echo "<option value = ".$tab[0].">".$tab[0]."</option>";
 										}
@@ -119,7 +120,8 @@ $les = $result['userlevel'];
 							//Change once sessions are integrated
 							echo "<input type = 'hidden' name = 'username' value = 'Andy' >";
 							echo "<input type = 'submit' value = 'submit'>";
-							echo "</form>
+							echo "</div>
+							</form>
 						</td>
 					</tr>
 					";
