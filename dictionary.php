@@ -92,10 +92,10 @@ $les = $result['userlevel'];
 				echo "<table class='table table-hover' border = '1'>
 				<thead>
 				<tr>
-					<th>Heiroglyph</th>
-					<th>Definition </th>
-					<th>Part of Speech</th>
-					<th>Add to Study Set </th>
+					<th scope='col'>Heiroglyph</th>
+					<th scope='col'>Definition </th>
+					<th scope='col'>Part of Speech</th>
+					<th scope='col'>Add to Study Set </th>
 				</tr>
 				</thead>";
 				while ($row = mysqli_fetch_array($queryResultIn)) {  
