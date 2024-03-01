@@ -82,16 +82,18 @@ $les = $result['userlevel'];
 		else
 			{}
 		if (count($wordsIn) > 0) {
-				echo "<table border = '1'>
+				echo "<table class='table table-hover' border = '1'>
+				<thead>
 				<tr>
 					<th>Heiroglyph</th>
 					<th>Definition </th>
 					<th>Part of Speech</th>
-				</tr>";
+				</tr>
+				</thead>";
 				for ($i = 0; $i < count($wordsIn); $i++ ){
 					$printQuery = "SELECT * FROM dictionary WHERE id = ".$wordsIn[$i].";";
 					$results = mysqli_fetch_array(mysqli_query($con, $printQuery), MYSQLI_NUM);
-					echo "
+					echo "<tbody>
 					<tr>
 						<td><img src = ".$results[3]." width='200' height='200' /> </td> 
 						<td>".$results[2]."</td> 					
@@ -99,7 +101,8 @@ $les = $result['userlevel'];
 					</tr>";
 				}		
 			
-				echo "</table>";
+				echo "</tbody>
+				</table>";
 			}
 	}
 	?>
