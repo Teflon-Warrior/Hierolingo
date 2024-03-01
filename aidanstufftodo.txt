@@ -5,6 +5,6 @@ Notes
 --Explain points
 
 -- Fix leaderboard CSS, bootstrap table (was sort of working, then table dissapeared? ask ab this tomorrow)
--- Change buttons and table on Dictionary (almost there, gotta do submit button)
--- Change textfield and buttons on Study Sets (almost there, gotta do submit button)
+-- Change textfield and buttons on Study Sets (almost there, gotta do textfield)
+    -- Bring up adding remove and edits buttons for study sets
 -- Add content to welcome landing page (gotta do)
