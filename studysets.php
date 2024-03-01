@@ -77,6 +77,9 @@ $les = $result['userlevel'];
 	$setWordsResult = "";
 	//Number of tabs for forloop
 	$numTabs = count($setTabsResult);
+
+	echo "<button type = 'edit' value='edit' class='btn btn-success'>Edit Name</button>
+	<button type = 'remove' value='removeSet' class='btn btn-danger'>Delete Set</button>";
 	
 	function displayQueryResults($wordsIn, $con){	
 		if (mysqli_connect_errno())
@@ -106,11 +109,8 @@ $les = $result['userlevel'];
 				}		
 			
 				echo "</tbody>
-				</table>
+				</table>";
 				
-				
-				<button type = 'edit' value='edit' class='btn btn-success'>Edit Name</button>
-				<button type = 'remove' value='removeSet' class='btn btn-danger'>Delete Set</button>";
 			}
 	}
 	?>
