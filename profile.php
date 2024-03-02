@@ -99,7 +99,7 @@
     <div class="profile-page">
 
         <!-- PFP, name, and username -->
-        <div class="profile-info">
+        <div class="profile-info" style="display: inline-block;">
             <img class="pfp" src="<?php echo $image ?>" width="150" height="150">
             <h1>
                 <?php echo $username ?>
