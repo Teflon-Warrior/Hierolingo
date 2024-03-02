@@ -9,7 +9,6 @@
         require 'config.php';
         //get post variables
         $setName = $_POST['studyset'];
-        $userName = $_POST['username'];
         $word = $_POST['word'];
 
         //get userID for filepath
