@@ -107,7 +107,7 @@ $les = $result['userlevel'];
 						<td>".$row[1]."</td>
 						<script type = 'text/javascript' src = 'js/displaySubmissionFields.js'></script>
 						<td>
-							<button type='button' class='btn btn-primary' onclick = 'displaySubmit(event, ".$row[0].");' id = 'submit".$row[0]."' class = 'addButton'>Add to Vocab List?</button>
+							<button type='button' class='btn btn-primary' onclick = 'displaySubmit(event, ".$row[0].");' id = 'submit".$row[0]."' class = 'addButton'>Add</button>
 							<form action = 'writeToFile.php' method = 'post' class = 'submissionForm' id = 'submissionForm".$row[0]."'>
 							<div class='form-group'>
 								<label for = 'studyset'> Choose a study set </label>
@@ -118,10 +118,18 @@ $les = $result['userlevel'];
 										mysqli_data_seek($tabNames, 0);										
 								echo "</select>";
 							echo "<input type = 'hidden' name = 'word' value = ".$row[0].">";
-							//Change once sessions are integrated
 							echo "<button type = 'submit' value='submit' class='btn btn-primary'>Submit</button>";
-							echo "</div>
-							</form>
+							echo "</div>";
+							
+							echo "</form>
+							<form action = 'writeToFile.php' method = 'post' class = 'submissionForm' id = 'submissionForm".$row[0]."'>
+								<input type = 'text' name = 'studyset' id = 'studyset'>
+							"
+							echo "<input type = 'hidden' name = 'word' value = ".$row[0].">";
+							echo "<button type = 'submit' value='submit' class='btn btn-primary'>Submit</button>";
+							echo "</div>";
+							
+							echo "</form>
 						</td>
 					</tr>
 					</tbody>";
