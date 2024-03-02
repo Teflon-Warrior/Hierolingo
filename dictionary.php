@@ -119,7 +119,6 @@ $les = $result['userlevel'];
 								echo "</select>";
 							echo "<input type = 'hidden' name = 'word' value = ".$row[0].">";
 							//Change once sessions are integrated
-							echo "<input type = 'hidden' name = 'username' value = 'Andy' >";
 							echo "<button type = 'submit' value='submit' class='btn btn-primary'>Submit</button>";
 							echo "</div>
 							</form>
