@@ -50,6 +50,7 @@ $color = $result['color'];
                         <li><a href="dictionary.php">Dictionary</a></li>
                         <li><a href="studysets.php">Study Sets</a></li>
                         <li><a href="leaderboard.php">Leaderboard</a></li>
+			<li><a href="settings.php">Settings</a></li>
                         <li><a href="logout.php">Log Out</a></li>
                 </ul>
         </nav>
