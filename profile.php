@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
 
+    <script type="text/javascript" src="./js/profile.js"></script>
+
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/profile.css">
@@ -20,6 +22,12 @@
     <?php
     //config.php includes information where we open the database
     session_start();
+
+    //Sending to login if not already logged in
+    if (isset($_SESSION['login_id']) == null) {
+        header( 'Location: https://cgi.luddy.indiana.edu/~team11/team-11/login.php');
+    }
+
     require 'config.php';
     if (isset($_SESSION['login_id'])) {
         // Assuming you have already established a database connection
@@ -99,6 +107,10 @@
             <h3>@
                 <?php echo $userhandle ?>
             </h3>
+        </div>
+
+        <div class="edit-button" onclick="editClick();" style="display: inline-block; position: relative; padding-left: 40px;">
+            <img src="./img/Edit.png" width="40" height="40">
         </div>
 
         <!-- Level -->
