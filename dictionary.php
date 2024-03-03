@@ -116,12 +116,11 @@ $les = $result['userlevel'];
 											echo "<option value = ".$tab[0].">".$tab[0]."</option>";
 										}
 										mysqli_data_seek($tabNames, 0);										
-								echo "</select>";
-							echo "<input type = 'text' name = 'studyset' id = 'studyset'>";
-							echo "<input type = 'hidden' name = 'word' value = ".$row[0].">";
-							echo "<button type = 'submit' value='submit' class='btn btn-primary'>Submit</button>";
-							echo "</div>";
-							
+								echo "</select>
+								<input type = 'text' name = 'studyset' id = 'studyset'>
+								<input type = 'hidden' name = 'word' value = ".$row[0].">
+								<button type = 'submit' value='submit' class='btn btn-primary'>Submit</button>
+								</div>";
 							echo "</form>
 						</td>
 					</tr>
