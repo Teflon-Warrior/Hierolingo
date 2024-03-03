@@ -237,3 +237,21 @@ INSERT INTO userfriends (user,friend) VALUES (4,2);
 INSERT INTO userfriends (user,friend) VALUES (4,3);
 INSERT INTO userfriends (user,friend) VALUES (5,2);
 INSERT INTO userfriends (user,friend) VALUES (5,3);
+
+--insert data for quizzes
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("Question", "Another Human", "/img/Quiz-1/Question_1.svg", 1);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("Question", "Another Thing ", "/img/Quiz-1/Question_2.svg", 1);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("Question", "That Human", "/img/Quiz-1/Question_3.svg", 1);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("Question", "Another Thing", "/img/Quiz-1/Question_4.svg", 1);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("Question", "With Humans", "/img/Quiz-1/Question_5.svg", 1);
+
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("Question", "Leave the temple in Thebse child", "/img/Quiz-2/Question_1.svg", 2);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("Question", " ", "/img/Quiz-2/Question_2.svg", 2);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("Question", " ", "/img/Quiz-2/Question_3.svg", 2);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("Question", " ", "/img/Quiz-2/Question_4.svg", 2);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("Question", " ", "/img/Quiz-2/Question_5.svg", 2);
+
+
+
+
+
