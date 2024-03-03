@@ -117,7 +117,7 @@ $les = $result['userlevel'];
 										}
 										mysqli_data_seek($tabNames, 0);										
 								echo "</select>";
-							<input type = 'text' name = 'studyset' id = 'studyset'>
+							echo "<input type = 'text' name = 'studyset' id = 'studyset'>";
 							echo "<input type = 'hidden' name = 'word' value = ".$row[0].">";
 							echo "<button type = 'submit' value='submit' class='btn btn-primary'>Submit</button>";
 							echo "</div>";
