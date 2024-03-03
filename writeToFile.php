@@ -10,7 +10,7 @@
         //get post variables
 		//Check to see if the user wanted to make a new studyset, if so use that instead of the selected one
         if ($_POST['newStudyset']){
-			$setName = $_POST['newStudyset']
+			$setName = $_POST['newStudyset'];
 		} else {
 		$setName = $_POST['studyset'];
 		}
