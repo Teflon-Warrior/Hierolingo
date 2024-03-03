@@ -8,8 +8,14 @@
         session_start();
         require 'config.php';
         //get post variables
-        $setName = $_POST['studyset'];
-        $word = $_POST['word'];
+		//Check to see if the user wanted to make a new studyset, if so use that instead of the selected one
+        if ($_POST['newStudyset']){
+			$setName = $_POST['newStudyset']
+		} else {
+		$setName = $_POST['studyset'];
+		}
+        //word to be added
+		$word = $_POST['word'];
 
         //get userID for filepath
         $userIDQuery = "SELECT id FROM User WHERE google_id = ".$_SESSION['login_id'].";";
