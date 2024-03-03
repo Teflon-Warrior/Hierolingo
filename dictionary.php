@@ -110,21 +110,14 @@ $les = $result['userlevel'];
 							<button type='button' class='btn btn-primary' onclick = 'displaySubmit(event, ".$row[0].");' id = 'submit".$row[0]."' class = 'addButton'>Add</button>
 							<form action = 'writeToFile.php' method = 'post' class = 'submissionForm' id = 'submissionForm".$row[0]."'>
 							<div class='form-group'>
-								<label for = 'studyset'> Choose a study set </label>
+								<label for = 'studyset'> Choose a study set or make a new one! </label>
 									<select class='form-control form-control-sm' name = 'studyset' id = 'studyset'>";
 										while ($tab = mysqli_fetch_array($tabNames)){
 											echo "<option value = ".$tab[0].">".$tab[0]."</option>";
 										}
 										mysqli_data_seek($tabNames, 0);										
 								echo "</select>";
-							echo "<input type = 'hidden' name = 'word' value = ".$row[0].">";
-							echo "<button type = 'submit' value='submit' class='btn btn-primary'>Submit</button>";
-							echo "</div>";
-							
-							echo "</form>
-							<form action = 'writeToFile.php' method = 'post' class = 'submissionForm' id = 'submissionForm".$row[0]."'>
-								<input type = 'text' name = 'studyset' id = 'studyset'>
-							";
+							<input type = 'text' name = 'studyset' id = 'studyset'>
 							echo "<input type = 'hidden' name = 'word' value = ".$row[0].">";
 							echo "<button type = 'submit' value='submit' class='btn btn-primary'>Submit</button>";
 							echo "</div>";
