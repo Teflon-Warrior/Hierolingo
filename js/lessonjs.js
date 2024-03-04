@@ -48,4 +48,7 @@ function nextlessonClicked(les) {
         location.replace("https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php?les=" + les);
 }
 
-
+//Take quiz button
+function quizClicked(les) {
+	location.replace("https://cgi.luddy.indiana.edu/~team11/team-11/quiz" + les + ".php");
+}
