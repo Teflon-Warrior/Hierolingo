@@ -16,7 +16,8 @@ $query = "Select userlevel,color from User where google_id = $google_id";
 $result = mysqli_query($con, $query);
 $result = mysqli_fetch_array($result);
 
-$les = $result['userlevel'];
+$les = $_GET["les"];
+$level = $result['userlevel'];
 $color = $result['color'];
 ?>
 
