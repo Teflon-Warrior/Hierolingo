@@ -122,8 +122,8 @@
                         <br>
                         <p>If yes, enter or edit your phone number (format: 123-123-1234)</p>
                         <br>
-                        <div class="form-group">
-                                <label for="exampleFormControlInput1">Email address</label>
+                        <div class="form-group w-50">
+                                <label for="exampleFormControlInput1">Phone Number</label>
                                 <input type="tel" name="phone" class="form-control" id="exampleFormControlInput1"
                                         placeholder="123-456-7890" value="<?php if ($phone != null) {
                                 echo $phone;
