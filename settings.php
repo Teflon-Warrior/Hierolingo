@@ -86,7 +86,6 @@
                 <div class="settings-form">
                         <h3> Notifications </h3>
                         <p>Would you like to receive SMS notifications?</p>
-                        <br>
 
                         <?php
 
@@ -107,7 +106,6 @@
                                 } ?>>
            <label for="no">No</label>
                         </div>
-                        <br>
 
 
                         <?php
@@ -119,9 +117,7 @@
                         $phone = substr($phone, 0, 7) . "-" . substr($phone, 7);
 
                         ?>
-                        <br>
                         <p>If yes, enter or edit your phone number (format: 123-123-1234)</p>
-                        <br>
                         <div class="form-group w-50">
                                 <label for="exampleFormControlInput1">Phone Number</label>
                                 <input type="tel" name="phone" class="form-control" id="exampleFormControlInput1"
@@ -131,8 +127,6 @@
                                  echo "ex. 012-345-6789";
                          } ?>">
                         </div>
-
-                        <br>
 
                         <?php
                         $query = "select dayofweek from notifications where user = $id";
