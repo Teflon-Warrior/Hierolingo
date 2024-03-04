@@ -85,7 +85,7 @@
 
                 <div class="settings-form">
                         <h3> Notifications </h3>
-                        Would you like to receive SMS notifications?
+                        <p>Would you like to receive SMS notifications?</p>
                         <br>
 
                         <?php
@@ -99,13 +99,13 @@
                                 <input class="form-check-input" type="radio" id="yes" name="notif" value="yes" <?php if ($status == 1) {
                                         echo "checked";
                                 } ?>>
-                   <label for="yes">Yes</label>
+     <label for="yes">Yes</label>
                         </div>
                         <div class="form-check">
-                        <input class="form-check-input" type="radio" id="no" name="notif" value="no" <?php if ($status == 0) {
-                                echo "checked";
-                        } ?>>
-                        <label for="no">No</label>
+                                <input class="form-check-input" type="radio" id="no" name="notif" value="no" <?php if ($status == 0) {
+                                        echo "checked";
+                                } ?>>
+           <label for="no">No</label>
                         </div>
                         <br>
 
@@ -120,13 +120,18 @@
 
                         ?>
                         <br>
-                        If yes, enter or edit your phone number (format: 123-123-1234)
+                        <p>If yes, enter or edit your phone number (format: 123-123-1234)</p>
                         <br>
-                        <input type="tel" name="phone" value="<?php if ($phone != null) {
+                        <div class="form-group">
+                                <label for="exampleFormControlInput1">Email address</label>
+                                <input type="tel" name="phone" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="123-456-7890" value="<?php if ($phone != null) {
                                 echo $phone;
                         } ?>" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="<?php if ($phone == null) {
                                  echo "ex. 012-345-6789";
                          } ?>">
+                        </div>
+
                         <br>
 
                         <?php
