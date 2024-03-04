@@ -70,36 +70,26 @@ if (!$con)
 
     //$charsToReplace = ['<', '>', '{', '}', '(', ')', ';'];
     //$ddescription = str_replace($charsToReplace, '', $ddescription);
-    //$dname = str_replace($charsToReplace,'',$dname);
-
-
-    $sql="SELECT def FROM dictionary WHERE pos='Question' AND filepath LIKE '%Quiz-1%'";
-    
-
-    $result = mysqli_query($con, $sql) or die("Query Failed!");
-
-    if (mysqli_num_rows($result) > 0) {
-      while ($row = mysqli_fetch_array($result)) {
-        $def = $row['def'];
-
+    //$dname = str_replace($charsToReplace,'',$dname)
+    if(!preg_match('/another\s(?:human|man)/', $A1)){
+        $errorMessages[] = "Question 1 is incorrect";
     }
-}
-    
-    $count = mysqli_query($con,"select max(id) from menu");
-    
-    $kms = mysqli_fetch_row($count);
-    $kms = $kms[0];
-    echo $kms;
-    
-    foreach($dtype as $item){
-        $sql = "INSERT INTO diet(Menuid,diet) VALUES($kms,'$item')";
-        if (mysqli_query($con,$sql)){
-            $add_message[] =  "diet succesfully submited to diet";
-          
-          }else{
-              echo "diet not added correctly. try again.";
-          }
-        }
+    if(!preg_match('/another\s+thing/', $A2)){
+        $errorMessages[] = "Question 2 is incorrect";
+    }
+    if(!preg_match('/(?:that|this)\s+(?:human|man)/', $A3)){
+        $errorMessages[] = "Question 3 is incorrect";
+    }
+    if(!preg_match('/another\s+thing/', $A4)){
+        $errorMessages[] = "Question 4 is incorrect";
+    }
+    if(!preg_match('/(?:with|together)\s+(?:human|people)/', $A5)){
+        $errorMessages[] = "Question 5 is incorrect";
+    }
+
+    if(!empty($errorMessages)){
+        
+    }
     mysqli_close($con);
     //redirect back to the form page
     //header("Location:public.php");
