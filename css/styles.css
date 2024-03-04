@@ -370,9 +370,13 @@ article {
     color: #cebc83;
 }
 
-.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+.btn-primary, .btn-primary:active, .btn-primary:visited {
     background-color: #cebc83 !important;
     border-color: #cebc83 !important;
+}
+
+.btn-primary:hover {
+    background-color: #817550 !important;
 }
 
 a:link,
