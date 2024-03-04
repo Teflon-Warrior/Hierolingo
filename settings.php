@@ -99,14 +99,14 @@
                                 <input class="form-check-input" type="radio" id="yes" name="notif" value="yes" <?php if ($status == 1) {
                                         echo "checked";
                                 } ?>>
-                   <label for="yes">yes</label>
+                   <label for="yes">Yes</label>
                         </div>
-                        <input type="radio" id="no" name="notif" value="no" <?php if ($status == 0) {
+                        <input class="form-check-input" type="radio" id="no" name="notif" value="no" <?php if ($status == 0) {
                                 echo "checked";
                         } ?>>
-                        <label for="no">no</label>
+                        <label for="no">No</label>
                         <br>
-                </div>
+                         </div>
 
 
                         <?php
