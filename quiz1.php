@@ -60,11 +60,13 @@
       echo "<div class='row justify-content-center'>";
         echo "<div class='col-md-6'>";
           echo "<form action='Lesson_result.php' method='POST'>";
+           $d = 1;
             while ($row = mysqli_fetch_array($result)) {
               $filepath = $row['filepath'];
               echo "<img src='$filepath'>";
-              echo "<input type=input name='answer' id ='answer'>";
+              echo "<input type=input name='answer$d'>";
               echo "<hr>";
+              $d++;
             }
             echo "<input type='submit' class='btn btn-Dark'>";
           echo "</form>";

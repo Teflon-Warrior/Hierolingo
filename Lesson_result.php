@@ -11,19 +11,31 @@ if (!$con)
         
     }
 //establish variables to store form data
-    $dname = null;
-    $dprice = null;
-    $ddescription = null;
-    $dtype = null;
+    $A1 = null;
+    $A2 = null;
+    $A3 = null;
+    $A4 = null;
+    $A5 = null;
+
+    //variable used to hold error messages
+    $errorMessages = array();
 
     //make sure the data is being imported from post
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $dname = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
-        $dprice = filter_input(INPUT_POST, 'price', FILTER_SANITIZE_NUMBER_FLOAT,FILTER_FLAG_ALLOW_FRACTION);
-        $ddescription = filter_input(INPUT_POST, 'Description', FILTER_SANITIZE_STRING);
-        $dtype = $_POST['diet[]'];
+        //filter sanitize string 
+        if (empty($a1) || empty($a2) || empty($a3) || empty($a4) || empty($a5)) {
+            $errorMessages[] = "All Questions must be answered.";
+            header("Location:lesson.php");
+            exit();
+        }
+
+        $A1 = filter_input(INPUT_POST, 'answer1', FILTER_SANITIZE_STRING);
+        $A2 = filter_input(INPUT_POST, 'answer2', FILTER_SANITIZE_STRING);
+        $A3 = filter_input(INPUT_POST, 'answer3', FILTER_SANITIZE_STRING);
+        $A4 = filter_input(INPUT_POST, 'answer4', FILTER_SANITIZE_STRING);
+        $A5 = filter_input(INPUT_POST, 'answer5', FILTER_SANITIZE_STRING);
     
-        $errorMessages = array();
+        
     
         if (!empty($dname)) {
             
@@ -132,3 +144,5 @@ if (!$con)
     header("Location:public.php");
     exit();
  ?>
+
+ //bm
