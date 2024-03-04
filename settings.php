@@ -100,6 +100,8 @@
                                         echo "checked";
                                 } ?>>
                    <label for="yes">Yes</label>
+                        </div>
+                        <div class="form-check">
                         <input class="form-check-input" type="radio" id="no" name="notif" value="no" <?php if ($status == 0) {
                                 echo "checked";
                         } ?>>
