@@ -19,48 +19,48 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
-    <?php
-    //config.php includes information where we open the database
-    session_start();
+<?php
+//config.php includes information where we open the database
+session_start();
 
-    //Sending to login if not already logged in
-    if (isset($_SESSION['login_id']) == null) {
-        header( 'Location: https://cgi.luddy.indiana.edu/~team11/team-11/login.php');
-    }
+//Sending to login if not already logged in
+if (isset($_SESSION['login_id']) == null) {
+    header('Location: https://cgi.luddy.indiana.edu/~team11/team-11/login.php');
+}
 
-    require 'config.php';
-    if (isset($_SESSION['login_id'])) {
-        // Assuming you have already established a database connection
-        $query = "SELECT username, userhandle, userlevel, profile_image FROM User WHERE google_id = '{$_SESSION['login_id']}'";
+require 'config.php';
+if (isset($_SESSION['login_id'])) {
+    // Assuming you have already established a database connection
+    $query = "SELECT username, userhandle, userlevel, profile_image FROM User WHERE google_id = '{$_SESSION['login_id']}'";
 
-        // Execute your query here...
-    } else {
-        // Handle the case where $_SESSION['login_id'] is not set
-        echo "Error: login_id not set in session.";
-    }
-    //$query = "SELECT username, userhandle, userlevel, profile_image From User where google_id = 103617818573862353894";
-    $result = mysqli_query($db_connection, $query) or die("Query Failed!");
+    // Execute your query here...
+} else {
+    // Handle the case where $_SESSION['login_id'] is not set
+    echo "Error: login_id not set in session.";
+}
+//$query = "SELECT username, userhandle, userlevel, profile_image From User where google_id = 103617818573862353894";
+$result = mysqli_query($db_connection, $query) or die("Query Failed!");
 
+if (mysqli_num_rows($result) > 0) {
     if (mysqli_num_rows($result) > 0) {
-        if (mysqli_num_rows($result) > 0) {
-            while ($row = mysqli_fetch_assoc($result)) {
+        while ($row = mysqli_fetch_assoc($result)) {
 
-                $username = $row['username'];
-                $userhandle = $row['userhandle'];
-                $level = $row['userlevel'];
-                $image = $row['profile_image'];
-                //echo $image;
-    
-            }
-        } else {
-            echo "no results";
+            $username = $row['username'];
+            $userhandle = $row['userhandle'];
+            $level = $row['userlevel'];
+            $image = $row['profile_image'];
+            //echo $image;
+
         }
+    } else {
+        echo "no results";
     }
+}
 
-    //$row = mysqli_fetch_assoc($result);
-    
-    //$image = $row['profile_image'];
-    ?>
+//$row = mysqli_fetch_assoc($result);
+
+//$image = $row['profile_image'];
+?>
 </head>
 
 <body>
@@ -75,11 +75,11 @@
                 <ul>
                     <li><a class="closebtn">&times;</a></li>
                     <li><a href="profile.php">Profile</a></li>
-                    <li><a href="lesson.php<?php echo"?les=$level";?>">Lessons</a></li>
+                    <li><a href="lesson.php<?php echo "?les=$level"; ?>">Lessons</a></li>
                     <li><a href="dictionary.php">Dictionary</a></li>
                     <li><a href="studysets.php">Study Sets</a></li>
                     <li><a href="leaderboard.php">Leaderboard</a></li>
-		    <li><a href="settings.php">Settings</a></li>
+                    <li><a href="settings.php">Settings</a></li>
                     <li><a href="logout.php">Log Out</a></li>
                 </ul>
             </nav>
@@ -89,9 +89,9 @@
                     <span class="menu-text">menu</span>
                 </div>
                 <div class="all-over-bkg"></div>
-            <h1>Profile</h1>
+                <h1>Profile</h1>
 
-        </header>
+            </header>
 
     </div>
 
@@ -101,16 +101,15 @@
         <!-- PFP, name, and username -->
         <div class="profile-info" style="display: inline-block;">
             <img class="pfp" src="<?php echo $image ?>" width="150" height="150">
+            <div class="edit-button" onclick="editClick();">
+                <img src="./img/Edit.png" width="40" height="40">
+            </div>
             <h1>
                 <?php echo $username ?>
             </h1>
             <h3>@
                 <?php echo $userhandle ?>
             </h3>
-        </div>
-
-        <div class="edit-button" onclick="editClick();">
-            <img src="./img/Edit.png" width="40" height="40">
         </div>
 
         <!-- Level -->
