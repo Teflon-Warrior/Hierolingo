@@ -1,5 +1,5 @@
 <html>
-<header>
+<head>
 <meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +8,11 @@
 		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/styles.css">
-	<link rel="stylesheet" href="css/studysets.css">
+	<link rel="stylesheet" href="css/settings.css">
 	<link rel="stylesheet"
 		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 	<link rel="stylesheet" href="css/tabbingStyling.css" />
-</header>
+
 <?php
 session_start();
 
@@ -35,14 +35,34 @@ $email = $result['email'];
 $color = $result['color'];
 
 ?>
-
-<div style="display: flex; justify-content: center;"> <h1> Settings </h1> </div>
-</header>
+</head>
 
 
 
 
 <body>
+
+	<!-- NAVIGATION -->
+	<nav id="mySidenav" class="sidenav">
+		<ul>
+			<li><a class="closebtn">&times;</a></li>
+			<li><a href="profile.php">Profile</a></li>
+			<li><a href="lesson.php<?php echo"?les=$les";?>">Lessons</a></li>			
+			<li><a href="dictionary.php">Dictionary</a></li>
+			<li><a href="studysets.php">Study Sets</a></li>
+			<li><a href="leaderboard.php">Leaderboard</a></li>
+			<li><a href="settings.php">Settings</a></li>
+			<li><a href="logout.php">Log Out</a></li>			
+		</ul>
+	</nav>
+        <header>
+		<div class="openbtn">
+			<span class="material-symbols-outlined menu-button">menu</span>
+			<span class="menu-text">menu</span>
+		</div>
+		<div class="all-over-bkg"></div>
+		<h1>Settings</h1>
+	</header>
 
 <?php
 
@@ -57,7 +77,7 @@ $color = $result['color'];
 <h3> User Handle </h3>
 <input type="text" name="handle" value="<?php if (!$userhandle== null) {echo $userhandle;}?>">
 <br><br>
---!>
+-->
 
 <h3> Notifications </h3>
 Would you like to receive sms notifications?
