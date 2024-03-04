@@ -39,13 +39,20 @@ function lessonnavClicked(les, i) {
 
 //Next and previous lesson buttons
 function prevlessonClicked(les) {
+        //ensures that the user can't keep going backwards
+        if (!(les <= 1)) {
         var les = les-1;
         location.replace("https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php?les=" + les);
+        }
+        else{
+                les = 1
+                location.replace("https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php?les=" + les);
+        }
 }
 
 function nextlessonClicked(les) {
         var les = les+1;
-        location.replace("https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php?les=" + les);
+        location.replace("https://cgi.luddy.indiana.edu/~team11/team-11/quiz" + les + ".php");
 }
 
 
