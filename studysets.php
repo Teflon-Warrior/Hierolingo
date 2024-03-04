@@ -80,12 +80,21 @@ $les = $result['userlevel'];
 	$numTabs = count($setTabsResult);
 	
 	function displayQueryResults($wordsIn, $con){	
+		$i = 0
 		if (mysqli_connect_errno())
 			{ die("Failed to connect to MySQL: " . mysqli_connect_error()); }
 		else
 			{}
 		if (count($wordsIn) > 0) {
-				echo "<button type = 'edit' value='edit' class='btn btn-success'>Edit Name</button>
+				echo "
+				<script src = 'js/displaySubmissionFields.js'></script>
+				<button type = 'edit' value='edit' onclick = 'displaySubmit(event, ".$i.");' class='btn btn-success' class = 'addButton' >Edit Name</button>
+				<form action = 'editStudySet.php' method = 'post' class = 'submissionForm' id = 'submissionForm".$i."'>
+					<div class='form-group'>
+                    <input type = 'text' name = 'newStudysetName' id = 'newStudysetName'>
+                    <button type = 'submit' value='submit' class='btn btn-primary'>Submit</button>
+                    </div>
+                </form>
 				<button type = 'remove' value='removeSet' class='btn btn-danger'>Delete Set</button>
 				
 				<table class='table table-hover' border = '1'>
@@ -97,6 +106,7 @@ $les = $result['userlevel'];
 					<th>Remove Word</th>
 				</tr>
 				</thead>";
+				$i = $i + 1;
 				for ($i = 0; $i < count($wordsIn); $i++ ){
 					$printQuery = "SELECT * FROM dictionary WHERE id = ".$wordsIn[$i].";";
 					$results = mysqli_fetch_array(mysqli_query($con, $printQuery), MYSQLI_NUM);
