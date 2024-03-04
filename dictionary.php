@@ -87,7 +87,8 @@ $les = $result['userlevel'];
 	
 	// Function for displaying query results easy
 	// Parameter $queryResultIn takes a query result 
-	function displayQueryResults($queryResultIn, $tabNames){	
+	// Uniq is to separate the ids by which tab they are in
+	function displayQueryResults($queryResultIn, $tabNames, $uniq){	
 		if ($queryResultIn->num_rows > 0) {
 				mysqli_data_seek($queryResultIn, 0);
 				echo "<table class='table table-hover' border = '1'>
@@ -107,8 +108,8 @@ $les = $result['userlevel'];
 						<td>".$row[1]."</td>
 						<script type = 'text/javascript' src = 'js/displaySubmissionFields.js'></script>
 						<td>
-							<button type='button' class='btn btn-primary' onclick = 'displaySubmit(event, ".$row[0].");' id = 'submit".$row[0]."' class = 'addButton'>Add</button>
-							<form action = 'writeToFile.php' method = 'post' class = 'submissionForm' id = 'submissionForm".$row[0]."'>
+							<button type='button' class='btn btn-primary' onclick = 'displaySubmit(event, ".$row[0]."l".$uniq.");' id = 'submit".$row[0]."' class = 'addButton'>Add</button>
+							<form action = 'writeToFile.php' method = 'post' class = 'submissionForm' id = 'submissionForm".$row[0]."l".$uniq."'>
 							<div class='form-group'>
 								<label for = 'studyset'> Choose a study set or make a new one! </label>
 									<select class='form-control form-control-sm' name = 'studyset' id = 'studyset'>";
@@ -158,31 +159,31 @@ $les = $result['userlevel'];
 			switch ($userAccessLevelQueryResult){
 				case 4:
 					echo "<h3> Lesson 1 </h3>";
-					displayQueryResults($lesson1WordsQueryResult, $setTabsResult);
+					displayQueryResults($lesson1WordsQueryResult, $setTabsResult, 0);
 					echo "<h3> Lesson 2 </h3>";
-					displayQueryResults($lesson2WordsQueryResult, $setTabsResult);
+					displayQueryResults($lesson2WordsQueryResult, $setTabsResult, 0);
 					echo "<h3> Lesson 3 </h3>";
-					displayQueryResults($lesson3WordsQueryResult, $setTabsResult);
+					displayQueryResults($lesson3WordsQueryResult, $setTabsResult, 0);
 					echo "<h3> Lesson 4 </h3>";
-					displayQueryResults($lesson4WordsQueryResult, $setTabsResult);
+					displayQueryResults($lesson4WordsQueryResult, $setTabsResult, 0);
 					break;
 				case 3:
 					echo "<h3> Lesson 1 </h3>";
-					displayQueryResults($lesson1WordsQueryResult, $setTabsResult);
+					displayQueryResults($lesson1WordsQueryResult, $setTabsResult, 0);
 					echo "<h3> Lesson 2 </h3>";
-					displayQueryResults($lesson2WordsQueryResult, $setTabsResult);
+					displayQueryResults($lesson2WordsQueryResult, $setTabsResult, 0);
 					echo "<h3> Lesson 3 </h3>";
-					displayQueryResults($lesson3WordsQueryResult, $setTabsResult);
+					displayQueryResults($lesson3WordsQueryResult, $setTabsResult, 0);
 					break;
 				case 2:
 					echo "<h3> Lesson 1 </h3>";
-					displayQueryResults($lesson1WordsQueryResult, $setTabsResult);
+					displayQueryResults($lesson1WordsQueryResult, $setTabsResult, 0);
 					echo "<h3> Lesson 2 </h3>";
-					displayQueryResults($lesson2WordsQueryResult, $setTabsResult);
+					displayQueryResults($lesson2WordsQueryResult, $setTabsResult, 0);
 					break;
 				case 1:		
 					echo "<h3> Lesson 1 </h3>";
-					displayQueryResults($lesson1WordsQueryResult, $setTabsResult);
+					displayQueryResults($lesson1WordsQueryResult, $setTabsResult, 0);
 					break;					
 				default: 
 					echo "<h3> No words unlocked. </h3>
@@ -195,7 +196,7 @@ $les = $result['userlevel'];
 		<h3>Lesson 1</h3>
 			<?php 
 				if ($userAccessLevelQueryResult >= 1) {	
-					displayQueryResults($lesson1WordsQueryResult, $setTabsResult);
+					displayQueryResults($lesson1WordsQueryResult, $setTabsResult, 1);
 				} else {
 					echo "<h3> No words unlocked. </h3>
 						<p> Head over to lessons and unlock new words! </p>";
@@ -208,7 +209,7 @@ $les = $result['userlevel'];
 		<h3>Lesson 2</h3>
 			<?php 
 				if ($userAccessLevelQueryResult >= 2) {	
-					displayQueryResults($lesson2WordsQueryResult, $setTabsResult);
+					displayQueryResults($lesson2WordsQueryResult, $setTabsResult, 2);
 				} else {
 					echo "<h3> No words unlocked. </h3>
 						<p> Head over to lessons and unlock new words! </p>";
@@ -220,7 +221,7 @@ $les = $result['userlevel'];
 		<h3>Lesson 3</h3>
 			<?php 
 				if ($userAccessLevelQueryResult >= 3) {	
-					displayQueryResults($lesson3WordsQueryResult, $setTabsResult);
+					displayQueryResults($lesson3WordsQueryResult, $setTabsResult, 3);
 				} else {
 					echo "<h3> No words unlocked. </h3>
 						<p> Head over to lessons and unlock new words! </p>";
@@ -232,7 +233,7 @@ $les = $result['userlevel'];
 		<h3>Lesson 4</h3>
 			<?php 
 				if ($userAccessLevelQueryResult >= 4) {	
-					displayQueryResults($lesson4WordsQueryResult, $setTabsResult);
+					displayQueryResults($lesson4WordsQueryResult, $setTabsResult, 4);
 				} else {
 					echo "<h3> No words unlocked. </h3>
 						<p> Head over to lessons and unlock new words! </p>";
