@@ -148,12 +148,14 @@ $color = $result['color'];
         echo "</div>";
         echo "</div>";
 
-        echo "
-        <div class='term-buttons'>
-        <button class='btn' onclick='prevbuttonClicked($les, $curr);'> prev term</button>
-        <button class='btn' onclick='nextbuttonClicked($les, $curr);'> next term</button>
-        </div>
-        ";
+        echo "<div class='term-buttons'>";
+        if ($curr > 1) {
+        echo "<button class='btn' onclick='prevbuttonClicked($les, $curr);'> prev term</button>";
+        }
+        if ($curr != $rowCount) {
+        echo "<button class='btn' onclick='nextbuttonClicked($les, $curr);'> next term</button>";
+        }
+        echo "</div>";
 
         echo "<div class='flash' onclick='termClick($id);' id='term_$id'>";
         //echo $filepath;
@@ -178,12 +180,20 @@ $color = $result['color'];
         echo "</div>";
         echo "<div class='lesson-buttons'>";
 
+        if ($level == $les) {
+                echo "<button class='btn' onclick='quizClicked($les);'> Take Quiz </button>";
+        }       
+        echo "<br>";
         if ($les == 1) {
+                if ($level > 1 ) {
                 echo "<button class='btn' onclick='nextlessonClicked($les);'> Next Lesson </button>";
+                }              
         } else {
                 echo "<button class='btn' onclick='prevlessonClicked($les);'> Previous Lesson </button>";
+                if ($level > $les) {
                 echo "<button class='btn' onclick='nextlessonClicked($les);'> Next Lesson </button>";
-        }
+                } 
+	}
         echo "</div>";
         ?>
 
