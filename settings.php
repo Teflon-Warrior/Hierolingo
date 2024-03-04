@@ -166,7 +166,7 @@
                         <input type="color" name="progcolor" id="progcolor" value="<?php echo $color; ?>" />
 
                         <br><br>
-                        <input type="submit" id="edit" value="Save Changes">
+                        <button type="submit" id="edit" value="Save Changes">
                 </div>
                 <?php
 

@@ -47,6 +47,17 @@ body {
     display: flex;
     align-items: center;
 }
+.profile-page {
+    background: #F4DF9C;
+    padding: 2.0rem;
+    text-align: center;
+}
+
+.profile-page .pfp {
+    display: flex;
+    margin: 0 auto;
+    border-radius: 50%;
+}
 .profile-page .bar-div {
     display: flex;
     justify-content: space-between;
@@ -67,4 +78,8 @@ body {
 }
 .profile-page .profile-level .level-display h2{
     color: #f4f4f4;
+}
+
+.edit-button {
+    border-radius: 50%;
 }

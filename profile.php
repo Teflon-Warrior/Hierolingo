@@ -109,7 +109,7 @@
             </h3>
         </div>
 
-        <div class="edit-button" onclick="editClick();" style="display: inline-block; position: relative; padding-left: 40px;">
+        <div class="edit-button" onclick="editClick();">
             <img src="./img/Edit.png" width="40" height="40">
         </div>
 
