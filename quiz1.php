@@ -63,7 +63,8 @@
            $d = 1;
             while ($row = mysqli_fetch_array($result)) {
               $filepath = $row['filepath'];
-              echo "<img src='$filepath'>";
+              //echo "<img src='$filepath'>";
+              echo "<object data='$filepath' type='image/svg+xml'></object>";
               echo "<input type=input name='answer$d'>";
               echo "<hr>";
               $d++;
