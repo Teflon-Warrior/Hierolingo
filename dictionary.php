@@ -85,51 +85,52 @@ $les = $result['userlevel'];
 	
 	
 	
-	// Function for displaying query results easy
-	// Parameter $queryResultIn takes a query result 
-	// Uniq is to separate the ids by which tab they are in
-	function displayQueryResults($queryResultIn, $tabNames, $uniq){	
-		if ($queryResultIn->num_rows > 0) {
-				mysqli_data_seek($queryResultIn, 0);
-				echo "<table class='table table-hover' border = '1'>
-				<thead>
-				<tr>
-					<th scope='col'>Heiroglyph</th>
-					<th scope='col'>Definition </th>
-					<th scope='col'>Part of Speech</th>
-					<th scope='col'>Add to Study Set </th>
-				</tr>
-				</thead>";
-				while ($row = mysqli_fetch_array($queryResultIn)) {  
-					echo "<tbody>					
-					<tr>
-						<td><img src = ".$row[3]." width='200' height='200' /> </td> 
-						<td>".$row[2]."</td> 					
-						<td>".$row[1]."</td>
-						<script type = 'text/javascript' src = 'js/displaySubmissionFields.js'></script>
-						<td>
-							<button type='button' class='btn btn-primary' onclick = 'displaySubmit(event, ".$row[0]."l".$uniq.");' id = 'submit".$row[0]."' class = 'addButton'>Add</button>
-							<form action = 'writeToFile.php' method = 'post' class = 'submissionForm' id = 'submissionForm".$row[0]."l".$uniq."'>
-							<div class='form-group'>
-								<label for = 'studyset'> Choose a study set or make a new one! </label>
-									<select class='form-control form-control-sm' name = 'studyset' id = 'studyset'>";
-										while ($tab = mysqli_fetch_array($tabNames)){
-											echo "<option value = ".$tab[0].">".$tab[0]."</option>";
-										}
-										mysqli_data_seek($tabNames, 0);										
-								echo "</select>
-								<input type = 'text' name = 'newStudyset' id = 'newStudyset'>
-								<input type = 'hidden' name = 'word' value = ".$row[0].">
-								<button type = 'submit' value='submit' class='btn btn-primary'>Submit</button>
-								</div>";
-							echo "</form>
-						</td>
-					</tr>
-					</tbody>";
-				}					
-				echo "</table>";
-			}
-	} ?>
+	 // Function for displaying query results easy
+        // Parameter $queryResultIn takes a query result
+        // Uniq is to separate the ids by which tab they are in
+        function displayQueryResults($queryResultIn, $tabNames, $uniq){
+                if ($queryResultIn->num_rows > 0) {
+                                mysqli_data_seek($queryResultIn, 0);
+                                echo "<table class='table table-hover' border = '1'>
+                                <thead>
+                                <tr>
+                                        <th scope='col'>Heiroglyph</th>
+                                        <th scope='col'>Definition </th>
+                                        <th scope='col'>Part of Speech</th>
+                                        <th scope='col'>Add to Study Set </th>
+                                </tr>
+                                </thead>";
+                                while ($row = mysqli_fetch_array($queryResultIn)) {
+                                        echo "<tbody>
+                                        <tr>
+                                                <td><img src = ".$row[3]." width='200' height='200' /> </td>
+                                                <td>".$row[2]."</td>
+                                                <td>".$row[1]."</td>
+                                                <script src = 'js/displaySubmissionFields.js'></script>
+                                                <td>
+                                                        <button type='button' class='btn btn-primary' onclick = 'displaySubmit(event, \"".$row[0]."l".strval($uniq)."\");' id = 'submit".$row[0]."l".strval($uniq)."' class = 'addButton'>Add</button>
+                                                        <form action = 'writeToFile.php' method = 'post' class = 'submissionForm' id = 'submissionForm".$row[0]."l".strval($uniq)."'>
+                                                        <div class='form-group'>
+                                                                <label for = 'studyset'> Choose a study set or make a new one! </label>
+                                                                        <select class='form-control form-control-sm' name = 'studyset' id = 'studyset'>";
+                                                                                while ($tab = mysqli_fetch_array($tabNames)){
+                                                                                        echo "<option value = ".$tab[0].">".$tab[0]."</option>";
+                                                                                }
+                                                                                mysqli_data_seek($tabNames, 0);
+                                                                echo "</select>
+                                                                <input type = 'text' name = 'newStudyset' id = 'newStudyset'>
+                                                                <input type = 'hidden' name = 'word' value = ".$row[0].">
+                                                                <button type = 'submit' value='submit' class='btn btn-primary'>Submit</button>
+                                                                </div>";
+                                                        echo "</form>
+                                                </td>
+                                        </tr>
+                                        </tbody>";
+                                }
+                                echo "</table>";
+                        }
+        } ?>
+
 	
 	<script src="js/nav.js"></script>
 	
