@@ -85,7 +85,7 @@
 
                 <div class="settings-form">
                         <h3> Notifications </h3>
-                        Would you like to receive sms notifications?
+                        Would you like to receive SMS notifications?
                         <br>
 
                         <?php
@@ -95,16 +95,18 @@
                         $result = mysqli_fetch_array($result);
                         $status = $result['stat'];
                         ?>
-
-                        <input type="radio" id="yes" name="notif" value="yes" <?php if ($status == 1) {
-                                echo "checked";
-                        } ?>>
-                        <label for="yes">yes</label>
+                        <div class='form-check'>
+                                <input class="form-check-input" type="radio" id="yes" name="notif" value="yes" <?php if ($status == 1) {
+                                        echo "checked";
+                                } ?>>
+                   <label for="yes">yes</label>
+                        </div>
                         <input type="radio" id="no" name="notif" value="no" <?php if ($status == 0) {
                                 echo "checked";
                         } ?>>
                         <label for="no">no</label>
                         <br>
+                </div>
 
 
                         <?php
@@ -121,11 +123,9 @@
                         <br>
                         <input type="tel" name="phone" value="<?php if ($phone != null) {
                                 echo $phone;
-                        } ?>"
-                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                placeholder="<?php if ($phone == null) {
-                                        echo "ex. 012-345-6789";
-                                } ?>">
+                        } ?>" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="<?php if ($phone == null) {
+                                 echo "ex. 012-345-6789";
+                         } ?>">
                         <br>
 
                         <?php
