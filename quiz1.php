@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <!-- bootstrap css-->
-  <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
   <link href="./css/lessoncss.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/normalize.css">
@@ -36,10 +36,44 @@
   <?php
   session_start();
   ?>
-  <nav class="navbar navbar-expand-sm bg-dark">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" style="color:white;" href="profile.php">Profile</a>
-      </li>
+
+
+<?php
+  //
+  $host = "db.luddy.indiana.edu";
+  $username = "i494f23_team11";
+  $password = "my+sql=i494f23_team11";
+  $database = "i494f23_team11";
+
+  $con = mysqli_connect($host, $username, $password, $database);
+
+  if (!$con) {
+    die("Failed to connect to MySQL: " . mysqli_connect_error());
+  }
+
+  $query = "SELECT filepath FROM dictionary WHERE pos='Question' AND filepath LIKE '%Quiz-1%'";
+
+  $result = mysqli_query($con, $query) or die("Query Failed!");
+
+  if (mysqli_num_rows($result) > 0) {
+    echo "<div class='container'>";
+      echo "<div class='row justify-content-center'>";
+        echo "<div class='col-md-6'>";
+          echo "<form action='Lesson_result.php' method='POST'>";
+            while ($row = mysqli_fetch_array($result)) {
+              $filepath = $row['filepath'];
+              echo "<img src='$filepath'>";
+              echo "<input type=input name='answer' id ='answer'>";
+              echo "<hr>";
+            }
+            echo "<input type='submit' class='btn btn-Dark'>";
+          echo "</form>";
+        echo "</div>";
+      echo "</div>";
+    echo "</div>";
+  }
+  
+
+?>
 </body>
 </html>
