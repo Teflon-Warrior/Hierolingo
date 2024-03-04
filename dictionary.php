@@ -85,51 +85,52 @@ $les = $result['userlevel'];
 	
 	
 	
-	// Function for displaying query results easy
-	// Parameter $queryResultIn takes a query result 
-	function displayQueryResults($queryResultIn, $tabNames){	
-		if ($queryResultIn->num_rows > 0) {
-				mysqli_data_seek($queryResultIn, 0);
-				echo "<table class='table table-hover' border = '1'>
-				<thead>
-				<tr>
-					<th scope='col'>Heiroglyph</th>
-					<th scope='col'>Definition </th>
-					<th scope='col'>Part of Speech</th>
-					<th scope='col'>Add to Study Set </th>
-				</tr>
-				</thead>";
-				while ($row = mysqli_fetch_array($queryResultIn)) {  
-					echo "<tbody>					
-					<tr>
-						<td><img src = ".$row[3]." width='200' height='200' /> </td> 
-						<td>".$row[2]."</td> 					
-						<td>".$row[1]."</td>
-						<script type = 'text/javascript' src = 'js/displaySubmissionFields.js'></script>
-						<td>
-							<button type='button' class='btn btn-primary' onclick = 'displaySubmit(event, ".$row[0].");' id = 'submit".$row[0]."' class = 'addButton'>Add to Vocab List?</button>
-							<form action = 'writeToFile.php' method = 'post' class = 'submissionForm' id = 'submissionForm".$row[0]."'>
-							<div class='form-group'>
-								<label for = 'studyset'> Choose a study set </label>
-									<select class='form-control form-control-sm' name = 'studyset' id = 'studyset'>";
-										while ($tab = mysqli_fetch_array($tabNames)){
-											echo "<option value = ".$tab[0].">".$tab[0]."</option>";
-										}
-										mysqli_data_seek($tabNames, 0);										
-								echo "</select>";
-							echo "<input type = 'hidden' name = 'word' value = ".$row[0].">";
-							//Change once sessions are integrated
-							echo "<input type = 'hidden' name = 'username' value = 'Andy' >";
-							echo "<button type = 'submit' value='submit' class='btn btn-primary'>Submit</button>";
-							echo "</div>
-							</form>
-						</td>
-					</tr>
-					</tbody>";
-				}					
-				echo "</table>";
-			}
-	} ?>
+	 // Function for displaying query results easy
+        // Parameter $queryResultIn takes a query result
+        // Uniq is to separate the ids by which tab they are in
+        function displayQueryResults($queryResultIn, $tabNames, $uniq){
+                if ($queryResultIn->num_rows > 0) {
+                                mysqli_data_seek($queryResultIn, 0);
+                                echo "<table class='table table-hover' border = '1'>
+                                <thead>
+                                <tr>
+                                        <th scope='col'>Heiroglyph</th>
+                                        <th scope='col'>Definition </th>
+                                        <th scope='col'>Part of Speech</th>
+                                        <th scope='col'>Add to Study Set </th>
+                                </tr>
+                                </thead>";
+                                while ($row = mysqli_fetch_array($queryResultIn)) {
+                                        echo "<tbody>
+                                        <tr>
+                                                <td><img src = ".$row[3]." width='200' height='200' /> </td>
+                                                <td>".$row[2]."</td>
+                                                <td>".$row[1]."</td>
+                                                <script src = 'js/displaySubmissionFields.js'></script>
+                                                <td>
+                                                        <button type='button' class='btn btn-primary' onclick = 'displaySubmit(event, \"".$row[0]."l".strval($uniq)."\");' id = 'submit".$row[0]."l".strval($uniq)."' class = 'addButton'>Add</button>
+                                                        <form action = 'writeToFile.php' method = 'post' class = 'submissionForm' id = 'submissionForm".$row[0]."l".strval($uniq)."'>
+                                                        <div class='form-group'>
+                                                                <label for = 'studyset'> Choose a study set or make a new one! </label>
+                                                                        <select class='form-control form-control-sm' name = 'studyset' id = 'studyset'>";
+                                                                                while ($tab = mysqli_fetch_array($tabNames)){
+                                                                                        echo "<option value = ".$tab[0].">".$tab[0]."</option>";
+                                                                                }
+                                                                                mysqli_data_seek($tabNames, 0);
+                                                                echo "</select>
+                                                                <input type = 'text' name = 'newStudyset' id = 'newStudyset'>
+                                                                <input type = 'hidden' name = 'word' value = ".$row[0].">
+                                                                <button type = 'submit' value='submit' class='btn btn-primary'>Submit</button>
+                                                                </div>";
+                                                        echo "</form>
+                                                </td>
+                                        </tr>
+                                        </tbody>";
+                                }
+                                echo "</table>";
+                        }
+        } ?>
+
 	
 	<script src="js/nav.js"></script>
 	
@@ -159,31 +160,31 @@ $les = $result['userlevel'];
 			switch ($userAccessLevelQueryResult){
 				case 4:
 					echo "<h3> Lesson 1 </h3>";
-					displayQueryResults($lesson1WordsQueryResult, $setTabsResult);
+					displayQueryResults($lesson1WordsQueryResult, $setTabsResult, 0);
 					echo "<h3> Lesson 2 </h3>";
-					displayQueryResults($lesson2WordsQueryResult, $setTabsResult);
+					displayQueryResults($lesson2WordsQueryResult, $setTabsResult, 0);
 					echo "<h3> Lesson 3 </h3>";
-					displayQueryResults($lesson3WordsQueryResult, $setTabsResult);
+					displayQueryResults($lesson3WordsQueryResult, $setTabsResult, 0);
 					echo "<h3> Lesson 4 </h3>";
-					displayQueryResults($lesson4WordsQueryResult, $setTabsResult);
+					displayQueryResults($lesson4WordsQueryResult, $setTabsResult, 0);
 					break;
 				case 3:
 					echo "<h3> Lesson 1 </h3>";
-					displayQueryResults($lesson1WordsQueryResult, $setTabsResult);
+					displayQueryResults($lesson1WordsQueryResult, $setTabsResult, 0);
 					echo "<h3> Lesson 2 </h3>";
-					displayQueryResults($lesson2WordsQueryResult, $setTabsResult);
+					displayQueryResults($lesson2WordsQueryResult, $setTabsResult, 0);
 					echo "<h3> Lesson 3 </h3>";
-					displayQueryResults($lesson3WordsQueryResult, $setTabsResult);
+					displayQueryResults($lesson3WordsQueryResult, $setTabsResult, 0);
 					break;
 				case 2:
 					echo "<h3> Lesson 1 </h3>";
-					displayQueryResults($lesson1WordsQueryResult, $setTabsResult);
+					displayQueryResults($lesson1WordsQueryResult, $setTabsResult, 0);
 					echo "<h3> Lesson 2 </h3>";
-					displayQueryResults($lesson2WordsQueryResult, $setTabsResult);
+					displayQueryResults($lesson2WordsQueryResult, $setTabsResult, 0);
 					break;
 				case 1:		
 					echo "<h3> Lesson 1 </h3>";
-					displayQueryResults($lesson1WordsQueryResult, $setTabsResult);
+					displayQueryResults($lesson1WordsQueryResult, $setTabsResult, 0);
 					break;					
 				default: 
 					echo "<h3> No words unlocked. </h3>
@@ -196,7 +197,7 @@ $les = $result['userlevel'];
 		<h3>Lesson 1</h3>
 			<?php 
 				if ($userAccessLevelQueryResult >= 1) {	
-					displayQueryResults($lesson1WordsQueryResult, $setTabsResult);
+					displayQueryResults($lesson1WordsQueryResult, $setTabsResult, 1);
 				} else {
 					echo "<h3> No words unlocked. </h3>
 						<p> Head over to lessons and unlock new words! </p>";
@@ -209,7 +210,7 @@ $les = $result['userlevel'];
 		<h3>Lesson 2</h3>
 			<?php 
 				if ($userAccessLevelQueryResult >= 2) {	
-					displayQueryResults($lesson2WordsQueryResult, $setTabsResult);
+					displayQueryResults($lesson2WordsQueryResult, $setTabsResult, 2);
 				} else {
 					echo "<h3> No words unlocked. </h3>
 						<p> Head over to lessons and unlock new words! </p>";
@@ -221,7 +222,7 @@ $les = $result['userlevel'];
 		<h3>Lesson 3</h3>
 			<?php 
 				if ($userAccessLevelQueryResult >= 3) {	
-					displayQueryResults($lesson3WordsQueryResult, $setTabsResult);
+					displayQueryResults($lesson3WordsQueryResult, $setTabsResult, 3);
 				} else {
 					echo "<h3> No words unlocked. </h3>
 						<p> Head over to lessons and unlock new words! </p>";
@@ -233,7 +234,7 @@ $les = $result['userlevel'];
 		<h3>Lesson 4</h3>
 			<?php 
 				if ($userAccessLevelQueryResult >= 4) {	
-					displayQueryResults($lesson4WordsQueryResult, $setTabsResult);
+					displayQueryResults($lesson4WordsQueryResult, $setTabsResult, 4);
 				} else {
 					echo "<h3> No words unlocked. </h3>
 						<p> Head over to lessons and unlock new words! </p>";
