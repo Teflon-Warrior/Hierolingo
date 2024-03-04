@@ -35,70 +35,25 @@ if (!$con)
         $A4 = filter_input(INPUT_POST, 'answer4', FILTER_SANITIZE_STRING);
         $A5 = filter_input(INPUT_POST, 'answer5', FILTER_SANITIZE_STRING);
     
-        
-    
-        if (!empty($dname)) {
-            
-            $dname = trim($dname);
-            
-            $dname = $dname;
-        }
-    
-        if (!empty($dprice)) {
-            $dprice = trim($dprice);
-            $dprice = $dprice;
-        }
-    
-        if (!empty($ddescription)) {
-            $ddescription = trim($ddescription);
-            $ddescription = $ddescription;
+        //get rid of leading and trailing white space.
+        if (!empty($a1) || !empty($a2) || !empty($a3) || !empty($a4) || !empty($a5)) {
+            $A1 = trim($A1);
+            $A2 = trim($A2);
+            $A3 = trim($A3);
+            $A4 = trim($A4);
+            $A5 = trim($A5);
         }
 
-        if (empty($dname) || strlen($dname) > 20 || preg_match('/\)/', $dname)) {
-            if (empty($dname)) {
-                $errorMessages[] = "Dish Name is required.";
-            } elseif (strlen($dname) > 20) {
-                $errorMessages[] = "Dish Name must be less than 20 characters.";
-            } elseif (!is_string($dname)) {
-                $errorMessages[] = "Dish Name must be a string.";
-            }else {
-                $errorMessages[] = "Dish Name cannot contain ')'.";
-            }
-        }
-    
-        if (empty($dprice) || !preg_match('/^\d{2}\.\d{2}$/', $dprice)) {
-            if (!is_numeric($dprice)) {
-                $errorMessages[] = "Price must be a number.";
-            } elseif (empty($dprice)) {
-                $errorMessages[] = "Price is required.";
-            } else{
-                $errorMessages[] = "Price must be a float with two decimal places.";
-            }
-        }
-    
-        if (empty($ddescription) || strlen($ddescription) > 500 || preg_match('/\)/', $ddescription)) {
-            if (empty($ddescription)) {
-                $errorMessages[] = "Description is required.";
-            } elseif (strlen($ddescription) > 500) {
-                $errorMessages[] = "Description must be less than 500 characters.";
-            } elseif (!is_string($ddescription)) {
-                $errorMessages[] = "Description must be a string.";
-            }else {
-                $errorMessages[] = "Description cannot contain ')'.";
-            }
-        }
-        if (isset($_POST['diet']) && is_array($_POST['diet'])) {
-            $dtype = $_POST['diet'];
-        }
-    
-        if (!empty($errorMessages)) {
-            // set values to null to prevent them from being added to mysql database.
-            $dname = null;
-            $dprice = null;
-            $ddescription = null;
-            $dtype = null;
+        //test echo
+        echo $A1;
+        echo $A2;
+        echo $A3;
+        echo $A4;
+        echo $A5;
 
-            $_SESSION['errorMessages'] = $errorMessages;
+
+        if (!preg_match('/\b\w+\s+\w+\b/', $A1) || !preg_match('/\b\w+\s+\w+\b/', $A2) || !preg_match('/\b\w+\s+\w+\b/', $A3) || !preg_match('/\b\w+\s+\w+\b/', $A4) || !preg_match('/\b\w+\s+\w+\b/', $A5)) {
+            $errorMessages[] = "All Answers must contain at least 2 words.";
         }
     }
 
@@ -113,16 +68,22 @@ if (!$con)
 
     //sanitze description and name
 
-    $charsToReplace = ['<', '>', '{', '}', '(', ')', ';'];
-    $ddescription = str_replace($charsToReplace, '', $ddescription);
-    $dname = str_replace($charsToReplace,'',$dname);
-    echo $dname;
+    //$charsToReplace = ['<', '>', '{', '}', '(', ')', ';'];
+    //$ddescription = str_replace($charsToReplace, '', $ddescription);
+    //$dname = str_replace($charsToReplace,'',$dname);
 
 
-   $sql="INSERT INTO menu(name,price,description) 
-       VALUES ('$dname',$dprice,'$ddescription')";
-    //inerst new record into 
-    mysqli_query($con,$sql);
+    $sql="SELECT def FROM dictionary WHERE pos='Question' AND filepath LIKE '%Quiz-1%'";
+    
+
+    $result = mysqli_query($con, $sql) or die("Query Failed!");
+
+    if (mysqli_num_rows($result) > 0) {
+      while ($row = mysqli_fetch_array($result)) {
+        $def = $row['def'];
+
+    }
+}
     
     $count = mysqli_query($con,"select max(id) from menu");
     
@@ -141,8 +102,6 @@ if (!$con)
         }
     mysqli_close($con);
     //redirect back to the form page
-    header("Location:public.php");
-    exit();
+    //header("Location:public.php");
+    //exit();
  ?>
-
- //bm

@@ -66,10 +66,10 @@ $les = $result['userlevel'];
 	//Currently hardcoded to test user "andy". Once login API is developed, change this to login token and such.
 	$userAccessLevelQuery = "SELECT userlevel FROM User WHERE google_id = ".$_SESSION['login_id'].";";
 	//These queries will pull the vocabulary relevant to the specified level
-	$lesson1WordsQuery = "SELECT * FROM dictionary where dictionary.access = 1;";
-	$lesson2WordsQuery = "SELECT * FROM dictionary where dictionary.access = 2;";
-	$lesson3WordsQuery = "SELECT * FROM dictionary where dictionary.access = 3;";
-	$lesson4WordsQuery = "SELECT * FROM dictionary where dictionary.access = 4;";
+	$lesson1WordsQuery = "SELECT * FROM dictionary where dictionary.access = 1 AND filepath LIKE '%L1%'";
+	$lesson2WordsQuery = "SELECT * FROM dictionary where dictionary.access = 2 AND filepath LIKE '%L2%'";
+	$lesson3WordsQuery = "SELECT * FROM dictionary where dictionary.access = 3 AND filepath LIKE '%L3%'";
+	$lesson4WordsQuery = "SELECT * FROM dictionary where dictionary.access = 4 AND filepath LIKE '%L4%'";
 	
 	//Query Results
 	//This process makes $userAccessLevelQueryResult an integer for use in forloops and if statements
