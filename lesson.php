@@ -177,12 +177,20 @@ $color = $result['color'];
         echo "</div>";
         echo "<div class='lesson-buttons'>";
 
+        if ($level == $les) {
+                echo "<button class='btn' onclick='quizClicked($les);'> Take Quiz </button>";
+        }       
+        echo "<br>";
         if ($les == 1) {
+                if ($level > 1 ) {
                 echo "<button class='btn' onclick='nextlessonClicked($les);'> Next Lesson </button>";
+                }              
         } else {
                 echo "<button class='btn' onclick='prevlessonClicked($les);'> Previous Lesson </button>";
+                if ($level > $les) {
                 echo "<button class='btn' onclick='nextlessonClicked($les);'> Next Lesson </button>";
-        }
+                } 
+	}
         echo "</div>";
         ?>
 
