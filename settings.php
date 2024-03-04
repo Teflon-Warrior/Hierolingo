@@ -136,7 +136,7 @@
                         ?>
                         <br>
                         Select the day of the week you would like to receive notifications <br>
-                        <select name="day">
+                        <select class="form-control w-25" name="day">
                                 <option <?php if ($day == 0) {
                                         echo "selected";
                                 } ?> value="sunday">Sunday</option>
