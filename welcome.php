@@ -11,8 +11,12 @@
 </head>
 
 <body>
-
-    <h1> Welcome to DataGlyph!</h1>
+    <div class='jumbotron jumbotron-fluid'>
+        <div class='container'>
+            <h1 class='display-4'> DataGlyph</h1>
+            <h2>Heiroglyphics, easier.</h2>
+        </div>
+    </div>
 
     <div class="buttons">
         <a class="button" href="https://cgi.luddy.indiana.edu/~team11/team-11/login.php">Log In</a>
