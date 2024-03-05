@@ -1,7 +1,7 @@
 <?php
 session_start();
 //establish connection to database
-$con = mysqli_connect("db.luddy.indiana.edu", "i494f23_johaharr","my+sql=i494f23_johaharr", "i494f23_johaharr");
+$con = mysqli_connect("db.luddy.indiana.edu", "i494f23_team11","my+sql=i494f23_team11", "i494f23_team11");
 //I removed the error message we were tought to add in I308 nothing 
 if (!$con)
 { echo "connection failed";
@@ -12,16 +12,16 @@ if (!$con)
     }
     if (isset($_SESSION['login_id'])) {
         // Assuming you have already established a database connection
-        $query = "SELECT userlevel FROM User WHERE google_id = '{$_SESSION['login_id']}'";
-
-        $result = mysqli_query($con, $query) or die("Query Failed!");
+        $query = "SELECT userlevel FROM User WHERE google_id = {$_SESSION['login_id']}";
+	//echo $query;
+        $result = mysqli_query($con, $query) or die("Query level Failed!");
 
         if (mysqli_num_rows($result) > 0) {
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
         
                     $level = $row['userlevel'];
-                    echo $level.'<br>';
+                    //echo $level.'<br>';
         
                 }
             } else {
@@ -47,6 +47,9 @@ if (!$con)
         if (empty($a1) || empty($a2) || empty($a3) || empty($a4) || empty($a5)) {
             $errorMessages[] = "All Questions must be answered.";
             $_SESSION['errorMessages'] = $errorMessages;
+	    foreach ($errorMessages as $errorMessage) {
+    	    echo $errorMessage . "<br>";
+		}
             header("Location:quiz1.php");
             exit();
         }
@@ -78,6 +81,9 @@ if (!$con)
 
         if (!preg_match('/\b\w+\s+\w+\b/', $A1) || !preg_match('/\b\w+\s+\w+\b/', $A2) || !preg_match('/\b\w+\s+\w+\b/', $A3) || !preg_match('/\b\w+\s+\w+\b/', $A4) || !preg_match('/\b\w+\s+\w+\b/', $A5)) {
             $errorMessages[] = "All Answers must contain at least 2 words.";
+	    $_SESSION['errorMessages'] = $errorMessages;
+	    header("Location:quiz1.php");
+            exit();
         }
     }
 
@@ -123,7 +129,7 @@ if (!$con)
     mysqli_close($con);
     //redirect back to the form page
     mysqli_close($con);
-    header("Location:https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php?les=2");
-    exit();
+    //header("Location:https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php?les=2");
+    //exit();
 
  ?>
