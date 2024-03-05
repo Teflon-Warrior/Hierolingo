@@ -102,13 +102,13 @@ if (!$con)
     //$charsToReplace = ['<', '>', '{', '}', '(', ')', ';'];
     //$ddescription = str_replace($charsToReplace, '', $ddescription);
     //$dname = str_replace($charsToReplace,'',$dname)
-    if(!preg_match('/Another\s(?:Human|Man)/', $A1)){
+    if(!preg_match('/another\s(?:human|man)/', $A1)){
         $errorMessages[] = "Question 1 is incorrect";
     }
-    if(!preg_match('/Another\s+Thing/', $A2)){
+    if(!preg_match('/another\s+thing/', $A2)){
         $errorMessages[] = "Question 2 is incorrect";
     }
-    if(!preg_match('/(?:t\hat|this)\s+(?:human|man)/', $A3)){
+    if(!preg_match('/(?:that|this)\s+(?:human|man)/', $A3)){
         $errorMessages[] = "Question 3 is incorrect";
     }
     if(!preg_match('/another\s+thing/', $A4)){
