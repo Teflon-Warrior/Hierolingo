@@ -74,6 +74,10 @@ html {
     box-sizing: border-box;
 }
 
+.jumbotron {
+    background-image: url(../img/welcome-background.jpg);
+}
+
 /* Menu styling code from I360 */
 
 .openbtn {

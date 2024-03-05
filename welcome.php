@@ -11,10 +11,10 @@
 </head>
 
 <body>
-    <div class='jumbotron jumbotron-fluid'>
-        <div class='container'>
-            <h1 class='display-4'> DataGlyph</h1>
-            <h2>Heiroglyphics, easier.</h2>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">DataGlyph</h1>
+            <p class="lead">Heiroglyphics, easier.</p>
         </div>
     </div>
 
