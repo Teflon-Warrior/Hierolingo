@@ -196,3 +196,7 @@ article {
     background-color: #a49465 !important;
     border-color: #a49465 !important;
 }
+
+.columns-div {
+    padding-top: 1.0rem;
+}
