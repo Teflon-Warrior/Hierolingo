@@ -82,7 +82,7 @@ if (!$con)
     //check to see if the record is uplodaing.
     if ($result) {
         echo "Record updated successfully.";
-	location.replace("https://cgi.luddy.indiana.edu/~team11/team-11/profile.php");
+	header("Location:profile.php");
     } else {
         echo "Error updating record: " . mysqli_error($con);
     }
