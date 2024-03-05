@@ -20,7 +20,7 @@ html {
 }
 
 body {
-    background-color: #F4DF9C;;
+    background-color: #F4DF9C;
 }
 
 h1 {
@@ -186,23 +186,12 @@ article {
     justify-content: center;
     padding-top: 5.0rem;
 }
-.button {
-    background-color: #06023d;
-    border: 2px solid #444077;
-    border-radius: 30px;
-    color: white;
-    padding: 1.0em 5.0em;
-    margin: 0 auto;
-    display: inline-block;
-    font-size: 15px;
-    letter-spacing: 1px;
-    transition: background-color .2s ease-out, color .2s ease-out, border-color .18s ease-out;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    align-items: center;
+
+.btn-primary, .btn-primary:active, .btn-primary:visited {
+    background-color: #F4DF9C !important;
+    border-color: #F4DF9C !important;
 }
 
-.button:hover {
-    background-color: #444077;
-    color: #ffffff;
+.btn-primary:hover {
+    background-color: #a49465 !important;
 }
