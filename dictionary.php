@@ -70,6 +70,7 @@ $les = $result['userlevel'];
     }
         echo '</ul>';
         echo '</div>';
+		$_SESSION['errorMessages'] = NULL;
 		}
 	?>
 	<!--PHP Connection & Queries -->

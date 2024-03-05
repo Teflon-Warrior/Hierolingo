@@ -64,6 +64,7 @@
     }
         echo '</ul>';
         echo '</div>';
+        $_SESSION['errorMessages'] = NULL;
 		}
   
 
