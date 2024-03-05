@@ -55,6 +55,20 @@
 
   $result = mysqli_query($con, $query) or die("Query Failed!");
 
+  if (isset($_SESSION['errorMessages'])) {
+    $errorMessages = $_SESSION['errorMessages'];
+    echo '<div class="alert alert-danger">';
+    echo '<ul>';
+	  foreach ($errorMessages as $errorMessage) {
+            echo '<li>' . $errorMessage . '</li>';
+    }
+        echo '</ul>';
+        echo '</div>';
+		}
+    
+  }
+  
+
   if (mysqli_num_rows($result) > 0) {
     echo "<div class='container'>";
       echo "<div class='row justify-content-center'>";
@@ -63,8 +77,8 @@
            $d = 1;
             while ($row = mysqli_fetch_array($result)) {
               $filepath = $row['filepath'];
-              //echo "<img src='$filepath'>";
-              echo "<object data='https://cgi.luddy.indiana.edu/~team11/team-11$filepath' type='image/svg+xml'></object>";
+              echo "<img src='$filepath'>";
+              //echo "<object data='$filepath' type="image/svg+xml">";
               echo "<input type=input name='answer$d'>";
               echo "<hr>";
               $d++;
