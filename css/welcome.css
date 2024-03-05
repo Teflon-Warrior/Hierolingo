@@ -190,6 +190,7 @@ article {
 .btn-primary, .btn-primary:active, .btn-primary:visited {
     background-color: #ead695 !important;
     border-color: #ead695 !important;
+    padding-right: 1.0rem;
 }
 
 .btn-primary:hover {
