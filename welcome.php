@@ -11,11 +11,14 @@
 </head>
 
 <body>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 class="display-4">DataGlyph</h1>
-            <p class="lead">Heiroglyphics, easier.</p>
-        </div>
+    <div class="jumbotron">
+        <h1 class="display-4">DataGlyph</h1>
+        <p class="lead">Heiroglyphics, easier.</p>
+        <hr class="my-4">
+        <p>Learn ancient egyptian heiroglyphics like never before.</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="#" role="button">Log In</a>
+        </p>
     </div>
 
     <div class="buttons">
