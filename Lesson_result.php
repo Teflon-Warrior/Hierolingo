@@ -83,7 +83,7 @@ if (!$con)
             $errorMessages[] = "All Answers must contain at least 2 words.";
 	    $_SESSION['errorMessages'] = $errorMessages;
 	    header("Location:quiz1.php");
-            exit();
+        exit();
         }
     }
 
@@ -122,8 +122,8 @@ if (!$con)
         $query = "UPDATE User SET userlevel = $level WHERE google_id = '{$_SESSION['login_id']}'";
         mysqli_query($con,$sql);
         mysqli_close($con);
-        header("Location:https://cgi.luddy.indiana.edu/~team11/team-11/dictionary.php");
-        exit();
+        //header("Location:https://cgi.luddy.indiana.edu/~team11/team-11/dictionary.php");
+        //exit();
 
     }
     mysqli_close($con);
