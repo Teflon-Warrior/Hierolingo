@@ -113,9 +113,10 @@
                         $result = mysqli_query($con, $query);
                         $result = mysqli_fetch_array($result);
                         $phone = $result['phone'];
+			if ($phone != NULL) {
                         $phone = substr($phone, 0, 3) . "-" . substr($phone, 3);
                         $phone = substr($phone, 0, 7) . "-" . substr($phone, 7);
-
+			}
                         ?>
                         <p>If yes, enter or edit your phone number (format: 123-123-1234)</p>
                         <div class="form-group w-25">
@@ -214,6 +215,11 @@
 
                 //time to insert into table
 //check if user are exists, that just alter variables
+                $query="select count(1) from profile where email='$email'";
+                $result = mysqli_query($con, $query);
+                $result = mysqli_fetch_assoc($result);
+                $found = $result['count(1)'];
+                $formphone = str_replace("-", "", $formphone);
                 
                 $query = "select user from notifications where user = $id";
                 $result = mysqli_query($con, $query);
@@ -229,10 +235,15 @@
                                 $query = "Update User set color='$formcolor' where id=$id";
                                 mysqli_query($con, $query);
 
-                                $query = "Update profile set phone='$formphone' where email='$email'";
-                                mysqli_query($con, $query);
+                                if ($found > 0) {
+                                        $query = "Update profile set phone='$formphone' where email='$email'";
+                                        mysqli_query($con, $query);
+                                } else {  
+                                        $query="Insert into profile (email, birthday, phone) Values ('$email', '0000-00-00', $formphone)";
+                                        mysqli_query($con, $query);
+                                }
 
-                                header('Location: https://cgi.luddy.indiana.edu/~team11/team-11/settings.php');
+                                header('Location: https://cgi.luddy.indiana.edu/~team11/team-11/profile.php');
                         } else {
                                 //For inputing new user
                 
@@ -243,10 +254,15 @@
                                 $query = "Update User set color='$formcolor' where id=$id";
                                 mysqli_query($con, $query);
 
-                                $query = "Update profile set phone='$formphone' where email='$email'";
-                                mysqli_query($con, $query);
+                                if ($found > 0) {
+                                        $query = "Update profile set phone='$formphone' where email='$email'";
+                                        mysqli_query($con, $query);
+                                } else {  
+                                        $query="Insert into profile (email, birthday, phone) Values ('$email', '0000-00-00', $formphone)";
+                                        mysqli_query($con, $query);
+                                }
 
-                                header('Location: https://cgi.luddy.indiana.edu/~team11/team-11/settings.php');
+                                header('Location: https://cgi.luddy.indiana.edu/~team11/team-11/profile.php');
 
 
                         }
