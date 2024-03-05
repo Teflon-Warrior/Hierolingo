@@ -75,7 +75,7 @@
            $d = 1;
             while ($row = mysqli_fetch_array($result)) {
               $filepath = $row['filepath'];
-              echo "<img src='$filepath'>";
+              echo "<img src='https://cgi.luddy.indiana.edu/~team11/team-11$filepath'>";
               //echo "<object data='$filepath' type="image/svg+xml">";
               echo "<input type=input name='answer$d'>";
               echo "<hr>";
