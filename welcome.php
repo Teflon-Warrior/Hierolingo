@@ -18,9 +18,9 @@
     <div class="jumbotron">
         <div class="container">
             <h1 class="display-3">DataGlyph</h1>
-            <p>Heiroglyphics, now easier.</p>
-            <p><a class="btn btn-primary" href="https://cgi.luddy.indiana.edu/~team11/team-11/login.php"
-                    role="button">Log In &raquo;</a></p>
+            <h3>Heiroglyphics, now easier.</h3>
+            <a class="btn btn-primary" href="https://cgi.luddy.indiana.edu/~team11/team-11/login.php"
+                    role="button">Log In &raquo;</a>
         </div>
     </div>
 
