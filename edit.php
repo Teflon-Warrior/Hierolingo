@@ -36,9 +36,9 @@
 </head>
 <body>
     <form action="update.php" method="POST">
-      Username: <input type="text" name="name" value=<?php echo $username?> class=""><br>
-      Userhandle: <input type="text" name="handle" value=<?php echo $userhandle?> class=''><br>
-     profile image: <input type="text" name="image" value=<?php echo $image?> ><br>
+      Username: <input type="text" name="name" value="<?php echo $username?>" class=""><br>
+      Userhandle: <input type="text" name="handle" value="<?php if ($userhandle != NULL) {echo $userhandle; } ?>" class=''><br>
+     profile image: <input type="text" name="image" value="<?php echo $image?>" ><br>
      <br>
     <input type="submit" class="">
     </form>
