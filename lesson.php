@@ -16,13 +16,12 @@ $query = "Select userlevel,color from User where google_id = $google_id";
 $result = mysqli_query($con, $query);
 $result = mysqli_fetch_array($result);
 
-$les = $_GET["les"];
-$level = $result['userlevel'];
+$les = $result['userlevel'];
 $color = $result['color'];
 ?>
 
         <!-- bootstrap css-->
-        <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
         <script type="text/javascript" src="./js/lessonjs.js"></script>
         <meta charset="UTF-8">
@@ -65,6 +64,17 @@ $color = $result['color'];
         </header>
 
         <?php
+        if (isset($_SESSION['errorMessages'])) {
+                $errorMessages = $_SESSION['errorMessages'];
+                echo '<div class="alert alert-success">';
+                echo '<ul>';
+                      foreach ($errorMessages as $errorMessage) {
+                        echo '<li>' . $errorMessage . '</li>';
+                }
+                    echo '</ul>';
+                    echo '</div>';
+                    $_SESSION['errorMessages'] = NULL;
+                }
         //login credentials
         $host = "db.luddy.indiana.edu";
         $username = "i494f23_team11";
@@ -149,14 +159,12 @@ $color = $result['color'];
         echo "</div>";
         echo "</div>";
 
-        echo "<div class='term-buttons'>";
-        if ($curr > 1) {
-        echo "<button class='btn' onclick='prevbuttonClicked($les, $curr);'> prev term</button>";
-        }
-        if ($curr != $rowCount) {
-        echo "<button class='btn' onclick='nextbuttonClicked($les, $curr);'> next term</button>";
-        }
-        echo "</div>";
+        echo "
+        <div class='term-buttons'>
+        <button class='btn' onclick='prevbuttonClicked($les, $curr);'> prev term</button>
+        <button class='btn' onclick='nextbuttonClicked($les, $curr);'> next term</button>
+        </div>
+        ";
 
         echo "<div class='flash' onclick='termClick($id);' id='term_$id'>";
         //echo $filepath;
@@ -181,20 +189,12 @@ $color = $result['color'];
         echo "</div>";
         echo "<div class='lesson-buttons'>";
 
-        if ($level == $les) {
-                echo "<button class='btn' onclick='quizClicked($les);'> Take Quiz </button>";
-        }       
-        echo "<br>";
         if ($les == 1) {
-                if ($level > 1 ) {
                 echo "<button class='btn' onclick='nextlessonClicked($les);'> Next Lesson </button>";
-                }              
         } else {
                 echo "<button class='btn' onclick='prevlessonClicked($les);'> Previous Lesson </button>";
-                if ($level > $les) {
                 echo "<button class='btn' onclick='nextlessonClicked($les);'> Next Lesson </button>";
-                } 
-	}
+        }
         echo "</div>";
         ?>
 

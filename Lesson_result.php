@@ -102,13 +102,13 @@ if (!$con)
     //$charsToReplace = ['<', '>', '{', '}', '(', ')', ';'];
     //$ddescription = str_replace($charsToReplace, '', $ddescription);
     //$dname = str_replace($charsToReplace,'',$dname)
-    if(!preg_match('/another\s(?:human|man)/', $A1)){
+    if(!preg_match('/Another\s(?:Human|Man)/', $A1)){
         $errorMessages[] = "Question 1 is incorrect";
     }
-    if(!preg_match('/another\s+thing/', $A2)){
+    if(!preg_match('/Another\s+Thing/', $A2)){
         $errorMessages[] = "Question 2 is incorrect";
     }
-    if(!preg_match('/(?:that|this)\s+(?:human|man)/', $A3)){
+    if(!preg_match('/(?:t\hat|this)\s+(?:human|man)/', $A3)){
         $errorMessages[] = "Question 3 is incorrect";
     }
     if(!preg_match('/another\s+thing/', $A4)){
@@ -125,13 +125,17 @@ if (!$con)
          exit();
 
     }
+
+    //if nothing is found
      $level += 1;
      $query = "UPDATE User SET userlevel = $level WHERE google_id = '{$_SESSION['login_id']}'";
      mysqli_query($con,$sql);
      mysqli_close($con);
     //redirect back to the form page
     mysqli_close($con);
-    //header("Location:https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php?les=2");
-    //exit();
+    $errorMessages[] = "Congrats welcome to Lesson 2";
+    $_SESSION['errorMessages'] = $errorMessages;
+    header("Location:https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php?les=2");
+    exit();
 
  ?>
