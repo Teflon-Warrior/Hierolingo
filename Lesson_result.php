@@ -10,6 +10,27 @@ if (!$con)
     echo "connection established";
         
     }
+    if (isset($_SESSION['login_id'])) {
+        // Assuming you have already established a database connection
+        $query = "SELECT userlevel FROM User WHERE google_id = '{$_SESSION['login_id']}'";
+
+        $result = mysqli_query($con, $query) or die("Query Failed!");
+
+        if (mysqli_num_rows($result) > 0) {
+            if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+        
+                    $level = $row['userlevel'];
+                    echo $level.'<br>';
+        
+                }
+            } else {
+                echo "no results";
+            }
+        }
+    
+        // Execute your query here...
+    }
 //establish variables to store form data
     $A1 = null;
     $A2 = null;
@@ -25,7 +46,8 @@ if (!$con)
         //filter sanitize string 
         if (empty($a1) || empty($a2) || empty($a3) || empty($a4) || empty($a5)) {
             $errorMessages[] = "All Questions must be answered.";
-            header("Location:lesson.php");
+            $_SESSION['errorMessages'] = $errorMessages;
+            header("Location:quiz1.php");
             exit();
         }
 
@@ -50,6 +72,8 @@ if (!$con)
         echo $A3;
         echo $A4;
         echo $A5;
+
+        https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php?les=1
 
 
         if (!preg_match('/\b\w+\s+\w+\b/', $A1) || !preg_match('/\b\w+\s+\w+\b/', $A2) || !preg_match('/\b\w+\s+\w+\b/', $A3) || !preg_match('/\b\w+\s+\w+\b/', $A4) || !preg_match('/\b\w+\s+\w+\b/', $A5)) {
@@ -87,11 +111,19 @@ if (!$con)
         $errorMessages[] = "Question 5 is incorrect";
     }
 
-    if(!empty($errorMessages)){
-        
+    if(empty($errorMessages)){
+        $level += 1;
+        $query = "UPDATE User SET userlevel = $level WHERE google_id = '{$_SESSION['login_id']}'";
+        mysqli_query($con,$sql);
+        mysqli_close($con);
+        header("Location:https://cgi.luddy.indiana.edu/~team11/team-11/dictionary.php");
+        exit();
+
     }
     mysqli_close($con);
     //redirect back to the form page
-    //header("Location:public.php");
-    //exit();
+    mysqli_close($con);
+    header("Location:https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php?les=2");
+    exit();
+
  ?>
