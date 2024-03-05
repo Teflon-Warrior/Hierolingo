@@ -59,7 +59,19 @@ $les = $result['userlevel'];
 		<div class="all-over-bkg"></div>
 		<h1>Dictionary</h1>
 	</header>
-	
+
+	<?php
+	if (isset($_SESSION['errorMessages'])) {
+    $errorMessages = $_SESSION['errorMessages'];
+    echo '<div class="alert alert-danger">';
+    echo '<ul>';
+	  foreach ($errorMessages as $errorMessage) {
+            echo '<li>' . $errorMessage . '</li>';
+    }
+        echo '</ul>';
+        echo '</div>';
+		}
+	?>
 	<!--PHP Connection & Queries -->
 	<?php 	
 	//This query will pull the given users access level for use in a later query.

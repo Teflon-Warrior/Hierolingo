@@ -65,8 +65,6 @@
         echo '</ul>';
         echo '</div>';
 		}
-    
-  }
   
 
   if (mysqli_num_rows($result) > 0) {
