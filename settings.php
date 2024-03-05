@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="css/tabbingStyling.css" />
 
         <?php
+	ob_start();
         session_start();
 
 
@@ -243,7 +244,7 @@
                                         mysqli_query($con, $query);
                                 }
 
-                                header('Location: https://cgi.luddy.indiana.edu/~team11/team-11/profile.php');
+                                header("Location:profile.php");
                         } else {
                                 //For inputing new user
                 
@@ -262,7 +263,7 @@
                                         mysqli_query($con, $query);
                                 }
 
-                                header('Location: https://cgi.luddy.indiana.edu/~team11/team-11/profile.php');
+                                header("Location:profile.php");
 
 
                         }
