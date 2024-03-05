@@ -43,22 +43,23 @@ if (!$con)
 
     //make sure the data is being imported from post
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        //filter sanitize string 
-        if (empty($a1) || empty($a2) || empty($a3) || empty($a4) || empty($a5)) {
-            $errorMessages[] = "All Questions must be answered.";
-            $_SESSION['errorMessages'] = $errorMessages;
-	    foreach ($errorMessages as $errorMessage) {
-    	    echo $errorMessage . "<br>";
-		}
-            header("Location:quiz1.php");
-            exit();
-        }
 
+        //filter sanitize string 
         $A1 = filter_input(INPUT_POST, 'answer1', FILTER_SANITIZE_STRING);
         $A2 = filter_input(INPUT_POST, 'answer2', FILTER_SANITIZE_STRING);
         $A3 = filter_input(INPUT_POST, 'answer3', FILTER_SANITIZE_STRING);
         $A4 = filter_input(INPUT_POST, 'answer4', FILTER_SANITIZE_STRING);
         $A5 = filter_input(INPUT_POST, 'answer5', FILTER_SANITIZE_STRING);
+
+	if (empty($A1) || empty($A2) || empty($A3) || empty($A4) || empty($A5)) {
+          $errorMessages[] = "All Questions must be answered.";
+          $_SESSION['errorMessages'] = $errorMessages;
+          foreach ($errorMessages as $errorMessage) {
+            echo $errorMessage . "<br>";
+           }
+           header("Location:quiz1.php");
+           exit();
+        }
     
         //get rid of leading and trailing white space.
         if (!empty($a1) || !empty($a2) || !empty($a3) || !empty($a4) || !empty($a5)) {
@@ -83,7 +84,7 @@ if (!$con)
             $errorMessages[] = "All Answers must contain at least 2 words.";
 	    $_SESSION['errorMessages'] = $errorMessages;
 	    header("Location:quiz1.php");
-        exit();
+            exit();
         }
     }
 
@@ -117,16 +118,17 @@ if (!$con)
         $errorMessages[] = "Question 5 is incorrect";
     }
 
-    if(empty($errorMessages)){
-        $level += 1;
-        $query = "UPDATE User SET userlevel = $level WHERE google_id = '{$_SESSION['login_id']}'";
-        mysqli_query($con,$sql);
-        mysqli_close($con);
-        //header("Location:https://cgi.luddy.indiana.edu/~team11/team-11/dictionary.php");
-        //exit();
+    if(!empty($errorMessages)){
+         $errorMessages[] = "Review Words and Try Again Later!";
+         $_SESSION['errorMessages'] = $errorMessages;
+         header("Location:https://cgi.luddy.indiana.edu/~team11/team-11/dictionary.php");
+         exit();
 
     }
-    mysqli_close($con);
+     $level += 1;
+     $query = "UPDATE User SET userlevel = $level WHERE google_id = '{$_SESSION['login_id']}'";
+     mysqli_query($con,$sql);
+     mysqli_close($con);
     //redirect back to the form page
     mysqli_close($con);
     //header("Location:https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php?les=2");
