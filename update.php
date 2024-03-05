@@ -28,7 +28,7 @@ if (!$con)
         //get rid of trailing white space
         if (!empty($name)) { 
             $name = trim($name);
-            $name = $nname;
+            $name = $name;
         }
         echo $name. '<br>';
     
@@ -71,7 +71,7 @@ if (!$con)
     $image = str_replace($charsToReplace, '', $image);
 
     //update statement
-    $sql = "UPDATE User SET name='$name',userhandle='$handle',image = '$image' where google_id = $id";
+    $sql = "UPDATE User SET username='$name',userhandle='$handle',profile_image = '$image' where google_id = '$id'";
     echo $sql;
     //update diet statement
     //$msql = "UPDATE diet SET where id=$id";
@@ -82,6 +82,7 @@ if (!$con)
     //check to see if the record is uplodaing.
     if ($result) {
         echo "Record updated successfully.";
+	location.replace("https://cgi.luddy.indiana.edu/~team11/team-11/profile.php");
     } else {
         echo "Error updating record: " . mysqli_error($con);
     }
