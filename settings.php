@@ -27,7 +27,7 @@
         $google_id = $_SESSION['login_id'];
         $con = mysqli_connect("db.luddy.indiana.edu", "i494f23_team11", "my+sql=i494f23_team11", "i494f23_team11");
 
-        $query = "Select id,username,userhandle,email,color from User where google_id = $google_id";
+        $query = "Select id,username,userhandle,email,color,userlevel from User where google_id = $google_id";
         $result = mysqli_query($con, $query);
 
         $result = mysqli_fetch_array($result);
@@ -36,6 +36,7 @@
         $userhandle = $result['userhandle'];
         $email = $result['email'];
         $color = $result['color'];
+        $les = $result['userlevel'];
 
         ?>
 </head>
@@ -53,7 +54,6 @@
                         <li><a href="lesson.php<?php echo "?les=$les"; ?>">Lessons</a></li>
                         <li><a href="dictionary.php">Dictionary</a></li>
                         <li><a href="studysets.php">Study Sets</a></li>
-                        <li><a href="leaderboard.php">Leaderboard</a></li>
                         <li><a href="settings.php">Settings</a></li>
                         <li><a href="logout.php">Log Out</a></li>
                 </ul>

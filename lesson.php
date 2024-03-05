@@ -57,17 +57,17 @@ $color = $result['color'];
 <?php
 
 	//display success message
-        if (isset($_SESSION['errorMessages'])) {
-                $errorMessages = $_SESSION['errorMessages'];
-                echo '<div class="alert alert-success">';
-                echo '<ul>';
-                      foreach ($errorMessages as $errorMessage) {
-                        echo '<li>' . $errorMessage . '</li>';
-                }
-                    echo '</ul>';
-                    echo '</div>';
-                    $_SESSION['errorMessages'] = NULL;
-                }
+        //if (isset($_SESSION['errorMessages'])) {
+        //        $errorMessages = $_SESSION['errorMessages'];
+        //        echo '<div class="alert alert-success">';
+        //        echo '<ul>';
+        //              foreach ($errorMessages as $errorMessage) {
+        //                echo '<li>' . $errorMessage . '</li>';
+        //        }
+        //            echo '</ul>';
+        //            echo '</div>';
+          //          $_SESSION['errorMessages'] = NULL;
+        //        }
         //login credentials
         $host = "db.luddy.indiana.edu";
         $username = "i494f23_team11";
