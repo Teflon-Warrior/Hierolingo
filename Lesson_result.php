@@ -128,11 +128,12 @@ if (!$con)
 
     //if nothing is found
      $level += 1;
-     $query = "UPDATE User SET userlevel = $level WHERE google_id = '{$_SESSION['login_id']}'";
-     mysqli_query($con,$sql);
+     $query = "UPDATE User SET userlevel = $level WHERE google_id = {$_SESSION['login_id']}";
+
+	echo $query;
+     mysqli_query($con,$query);
      mysqli_close($con);
     //redirect back to the form page
-    mysqli_close($con);
     $errorMessages[] = "Congrats welcome to Lesson 2";
     $_SESSION['errorMessages'] = $errorMessages;
     header("Location:https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php?les=2");
