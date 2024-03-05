@@ -188,10 +188,11 @@ article {
 }
 
 .btn-primary, .btn-primary:active, .btn-primary:visited {
-    background-color: #F4DF9C !important;
-    border-color: #F4DF9C !important;
+    background-color: #ead695 !important;
+    border-color: #ead695 !important;
 }
 
 .btn-primary:hover {
     background-color: #a49465 !important;
+    border-color: #a49465 !important;
 }
