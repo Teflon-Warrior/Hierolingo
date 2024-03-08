@@ -80,7 +80,7 @@ $les = $result['userlevel'];
 	$numTabs = count($setTabsResult);
 	
 	function displayQueryResults($wordsIn, $con, $setName){	
-		$i = 0
+		$i = 0;
 		if (mysqli_connect_errno())
 			{ die("Failed to connect to MySQL: " . mysqli_connect_error()); }
 		else
@@ -171,7 +171,7 @@ $les = $result['userlevel'];
 </body>
 </html>
 
-<!---
+<!--
 <?php
 
 echo "<form action='addStudySet.php' method='post'>
@@ -182,4 +182,5 @@ echo "<form action='addStudySet.php' method='post'>
 <button type='submit' class='btn btn-primary'>Submit</button>
 </form>";
 
-?> -->
+?> 
+-->
