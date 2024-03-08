@@ -79,7 +79,7 @@ $les = $result['userlevel'];
 	//Number of tabs for forloop
 	$numTabs = count($setTabsResult);
 	
-	function displayQueryResults($wordsIn, $con, $setName){	
+	function displayQueryResults($wordsIn, $con, $setName, $userID){	
 		$i = 0;
 		if (mysqli_connect_errno())
 			{ die("Failed to connect to MySQL: " . mysqli_connect_error()); }
@@ -91,12 +91,13 @@ $les = $result['userlevel'];
 				<button type = 'edit' value='edit' onclick = 'displaySubmit(event, ".$i.");' class='btn btn-success' class = 'addButton' >Edit Name</button>
 				<form action = 'editStudySet.php' method = 'post' class = 'submissionForm' id = 'submissionForm".$i."'>
 					<div class='form-group'>
-                    <input type = 'text' name = 'newStudysetName' id = 'newStudysetName'>
-					<input type = 'hidden' name = 'userID' id = 'userID' value = ".$userID.">
-                    <button type = 'submit' value='submit' class='btn btn-primary'>Submit</button>
+						<input type = 'text' name = 'newStudysetName' id = 'newStudysetName'>
+						<input type = 'hidden' name = 'userID' id = 'userID' value = ".$userID.">
+						<input type = 'hidden' id = 'setName' name = 'setName' value = ".$setName.">
+						<button type = 'submit' value='submit' class='btn btn-primary'>Submit</button>
                     </div>
                 </form>
-				<input type = 'hidden' id = 'setName' name = 'setName' value = ".$setName.">
+
 				<button type = 'remove' value='removeSet' class='btn btn-danger'>Delete Set</button>
 				
 				<table class='table table-hover' border = '1'>
@@ -154,7 +155,7 @@ $les = $result['userlevel'];
 		$setWordsResult = mysqli_fetch_array(mysqli_query($db_connection, $setWordsQuery), MYSQLI_NUM);
 		$words = file_get_contents($setWordsResult[0]);
 		$words = json_decode($words);
-		displayQueryResults($words, $db_connection, $setTabs[0]);
+		displayQueryResults($words, $db_connection, $setTabs[0], $userID);
 		echo "</div>";
 	}
 	
