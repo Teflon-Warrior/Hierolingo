@@ -85,7 +85,6 @@ $les = $result['userlevel'];
 			{ die("Failed to connect to MySQL: " . mysqli_connect_error()); }
 		else
 			{}
-		if (count($wordsIn) > 0) {
 				echo "
 				<script src = 'js/displaySubmissionFields.js'></script>
 				<button type = 'edit' value='edit' onclick = 'displaySubmit(event, ".$i.");' class='btn btn-success' class = 'addButton' >Edit Name</button>
@@ -127,8 +126,6 @@ $les = $result['userlevel'];
 			
 				echo "</tbody>
 				</table>";
-				
-			}
 	}
 	?>
 	
