@@ -97,9 +97,12 @@ $les = $result['userlevel'];
 						<button type = 'submit' value='submit' class='btn btn-primary'>Submit</button>
                     </div>
                 </form>
+				<form action = 'removeStudySet.php' method = 'post'>
+					<input type = 'hidden' name = 'setName' id = 'setName' value = ".$setName.">
+					<input type = 'hidden' name = 'userID' id = 'userID' value = ".$userID.">
+					<button type = 'submit' value='removeSet' class='btn btn-danger'>Delete Set</button>
+				</form> 				
 
-				<button type = 'remove' value='removeSet' class='btn btn-danger'>Delete Set</button>
-				
 				<table class='table table-hover' border = '1'>
 				<thead>
 				<tr>
