@@ -120,7 +120,14 @@ $les = $result['userlevel'];
 						<td><img src = ".$results[3]." width='200' height='200' /> </td> 
 						<td>".$results[2]."</td> 					
 						<td>".$results[1]."</td>
-						<td><button type = 'remove' value='remove' class='btn btn-danger'>Remove Word</button>
+						<td>
+							<form action = 'removeWord.php' method = 'post'>
+								<input type = 'hidden' name = 'setName' id = 'setName' value = ".$setName.">
+								<input type = 'hidden' name = 'userID' id = 'userID' value = ".$userID.">
+								<input type = 'hidden' name = 'wordID' id = 'wordID' value = ".$wordsIn[$i].">
+								<button type = 'submit' value='remove' class='btn btn-danger'>Remove Word</button>
+							</form>
+						</td>
 					</tr>";
 				}		
 			
