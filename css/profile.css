@@ -76,12 +76,7 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-@media only screen and (max-device-width: 480px) {
-.profile-page .level-display {
-        width: 90%;
-        display: center;
-}
-}
+
 
 .profile-page .profile-level .level-display h2{
     color: #f4f4f4;
@@ -90,4 +85,11 @@ body {
 .edit-button img {
     border-radius: 50%;
     margin-left: 6.0rem;
+}
+
+@media only screen and (max-device-width: 480px) {
+.profile-page .level-display {
+        width: 90%;
+        display: center;
+}
 }
