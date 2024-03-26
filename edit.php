@@ -20,7 +20,7 @@
     session_start();
     if (isset($_SESSION['login_id'])) {
         // Assuming you have already established a database connection
-        $query = "SELECT username, userhandle, profile_image FROM User WHERE google_id = '{$_SESSION['login_id']}'";
+        $query = "SELECT username, userhandle, profile_image, userlevel FROM User WHERE google_id = '{$_SESSION['login_id']}'";
 
         // Execute your query here...
     } else {
@@ -37,7 +37,8 @@
                 $username = $row['username'];
                 $userhandle = $row['userhandle'];
                 $image = $row['profile_image'];
-                //echo $image;
+                $les = $row['userlevel'];
+		//echo $image;
     
             }
         } else {
@@ -52,6 +53,18 @@
 </head>
 
 <body>
+        <!-- NAVIGATION -->
+        <nav id="mySidenav" class="sidenav">
+                <ul>
+                        <li><a class="closebtn">&times;</a></li>
+                        <li><a href="profile.php">Profile</a></li>
+                        <li><a href="lesson.php<?php echo "?les=$les"; ?>">Lessons</a></li>
+                        <li><a href="dictionary.php">Review</a></li>
+                        <li><a href="studysets.php">Study Sets</a></li>
+                        <li><a href="settings.php">Settings</a></li>
+                        <li><a href="logout.php">Log Out</a></li>
+                </ul>
+        </nav>
     <header>
         <div class="openbtn">
             <span class="material-symbols-outlined menu-button">menu</span>
@@ -90,7 +103,7 @@
     </div>
 
 
-
+	<script src="js/nav.js"></script>
 </body>
 
 </html>
