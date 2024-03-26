@@ -56,7 +56,7 @@ $les = $result['userlevel'];
 			<span class="menu-text">menu</span>
 		</div>
 		<div class="all-over-bkg"></div>
-		<h1>Review</h1>
+		<div style="padding-top: 40px; position: absolute; left: 50%; transform: translate(-50%,0); font-size: 2em;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;font-weight: bold;">Review </div>
 	</header>
 
 	<?php
