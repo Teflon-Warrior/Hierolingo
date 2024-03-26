@@ -1,15 +1,14 @@
-
 html {
         box-sizing: border-box;
     }
-    
+
     *,
     *:before,
     *:after {
         box-sizing: inherit;
     }
-    
-    
+
+
     #tag {
         position: fixed;
         top: 0;
@@ -18,8 +17,8 @@ html {
         height: 25px;
         background-color: #CC0000;
     }
-    
-    
+
+
     /* 
         GENERAL
     */
@@ -27,11 +26,11 @@ html {
         margin: 0;
         background-color: #F4DF9C;
     }
-    
-    
-    
+
+
+
     h1 {
-    
+
         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         margin: 0 auto;
         display: flex;
@@ -40,49 +39,49 @@ html {
         color: white;
         padding-top: 3.0rem;
     }
-    
+
     h1 span {
         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-weight: bold;
     }
-    
+
     h2 {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-weight: bold;
     }
-    
+
     h3 {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-weight: bold;
-    
+
     }
-    
+
     p {
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         font-size: 17px;
     }
-    
+
     header h1, .container {
-    
+
         width: 800px;
         display: flex;
         justify-content: center;
-    
+
     }
-    
+
     header {
         background-color: #cebc83;
         height: 150px;
         font-size: xx-large;
-    
+
     }
-    
+
     html {
         box-sizing: border-box;
     }
-    
+
     /* Menu styling code from I360 */
-    
+
     .openbtn {
         position: absolute;
         left: 20px;
@@ -90,37 +89,37 @@ html {
         color: white;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
-    
+
     .openbtn:hover {
         color: var(--menu-color);
         cursor: pointer
     }
-    
+
     .menu-button {
         font-size: 36px !important;
         position: relative;
         top: 6px;
         left: -4px;
     }
-    
+
     .menu-text {
         font-size: 12px;
         display: block;
     }
-    
+
     ul {
         margin: 0;
         padding: 0;
     }
-    
+
     li {
         list-style-type: none;
     }
-    
+
     .all-over-bkg {
         display: none;
     }
-    
+
     .is-visible {
         background-color: rgba(0, 0, 0, 0.4);
         position: absolute;
@@ -131,11 +130,11 @@ html {
         z-index: 9999;
         display: block;
     }
-    
+
     #mySidenav {
         z-index: 10000;
     }
-    
+
     .sidenav {
         height: 100%;
         width: 0;
@@ -148,19 +147,19 @@ html {
         transition: 0.5s;
         background-color: rgb(237, 214, 177);
     }
-    
+
     main {
         transition: margin-left .5s;
         padding: 0;
     }
-    
+
     article {
         padding: 2.0rem, 2.0rem, 2.0rem, 2.0rem;
-    
+
     }
     .lesson-number-text {
         padding-bottom: 2.0rem;
-        
+
     }
     .progress-bar {
         display: flex;
@@ -168,7 +167,7 @@ html {
         align-items: center;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
-    
+
     .term-buttons {
         display: flex;
         flex-wrap: wrap row;
@@ -181,21 +180,28 @@ html {
 
     }
     .number-buttons .btn {
+        width: 70px;
+        height: 30px;
+        /*
+        justify-content: center;        
+        align-items: center;
+        */
         background-color: #cebc83;
         border: 2px solid #a09365;
         border-radius: 10px;
         color: white;
-        padding: 0.5em 1.5em;
+        padding: 0px;
+        /*padding: 0.5em 1.5em;*/
         margin: 0.5em;
         font-size: 12px;
         letter-spacing: 1px;
         transition: background-color .2s ease-out, color .2s ease-out, border-color .18s ease-out;
         font-family: Arial, Helvetica, sans-serif;
-    }
+}
     .lesson-buttons {
         display: flex;
         flex-wrap: wrap row;
-        justify-content: center; 
+        justify-content: center;
         padding-bottom: 2.0rem;
     }
     .btn {
@@ -210,7 +216,7 @@ html {
         transition: background-color .2s ease-out, color .2s ease-out, border-color .18s ease-out;
         font-family: Arial, Helvetica, sans-serif;
     }
-    
+
     .btn:hover {
         background-color: #726948;
     }
@@ -230,7 +236,7 @@ img {
         padding: 0;
 }
 
-.progress {        
+.progress { 
         border: solid 1px black;
         border-style: solid;
         display: inline-block;
@@ -260,10 +266,33 @@ img {
 
 }
 
-.progress {        
+.progress {
         border: solid 1px black;
         border-style: solid;
         display: inline-block;
         vertical-align: top;
 }
 
+.scroll {
+        margin-top: -4%;
+
+}
+
+@media only screen and (max-device-width: 480px) {
+.term-buttons .btn{
+
+        margin-left: 1%;
+        margin-right: 1%;
+        padding: 0px;
+        width: 50%;
+        height: 75px;
+
+}
+.lesson-buttons .btn {
+        margin-left: 1%;
+        margin-right: 1%;
+        padding: 0px;
+        width: 50%;
+        height: 75px;
+}
+}
