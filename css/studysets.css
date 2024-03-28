@@ -158,3 +158,29 @@ article {
     background-color: transparent;
     color: var(--iu-red);
 }
+.study {
+
+}
+
+@media only screen and (max-device-width: 480px) {
+.study {
+        padding-top: 10px;
+        font-size: 35px;
+}
+
+img {
+        width: 100px;
+        height: 100px;
+}
+
+th td{
+        padding-left: -5px;
+}
+
+table {
+        width: auto;
+        overflow-x: auto;
+        display: block;
+
+}
+}

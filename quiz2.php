@@ -20,7 +20,7 @@
   <header>
 
     <div class="all-over-bkg"></div>
-    <h1>Quiz Two</h1>
+    <h1>Quiz 2</h1>
   </header>
   <?php
   session_start();
@@ -84,4 +84,3 @@
 </body>
 
 </html>
-<!--adding back-->

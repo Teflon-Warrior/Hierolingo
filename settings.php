@@ -64,7 +64,7 @@
                         <span class="menu-text">menu</span>
                 </div>
                 <div class="all-over-bkg"></div>
-                <h1>Settings</h1>
+                <div style="padding-top: 40px; position: absolute; left: 50%; transform: translate(-50%,0); font-size: 2em;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;font-weight: bold;">Settings </div>
         </header>
 
         <?php
@@ -121,13 +121,14 @@
                         ?>
                         <p>If yes, enter or edit your phone number (format: 123-123-1234)</p>
                         <div class="form-group w-25">
-                                <label for="exampleFormControlInput1">Phone Number</label>
-                                <input type="tel" name="phone" class="form-control" id="exampleFormControlInput1"
+                                <label style="width:300px;" for="exampleFormControlInput1">Phone Number</label>
+                                <div class="textinput"> <input type="tel" name="phone" class="form-control" id="exampleFormControlInput1"
                                         placeholder="123-456-7890" value="<?php if ($phone != null) {
                                 echo $phone;
                         } ?>" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="<?php if ($phone == null) {
                                  echo "ex. 012-345-6789";
                          } ?>">
+			</div>
                         </div>
 
                         <?php
@@ -138,7 +139,7 @@
                         ?>
                         <br>
                         Select the day of the week you would like to receive notifications <br>
-                        <select class="form-control w-25" name="day">
+                        <div class="textinput"> <select class="form-control w-25" name="day"> </div>
                                 <option <?php if ($day == 0) {
                                         echo "selected";
                                 } ?> value="sunday">Sunday</option>

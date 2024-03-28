@@ -41,7 +41,7 @@ function lessonnavClicked(les, i) {
 function prevlessonClicked(les) {
         //ensures that the user can't keep going backwards
 	var les = les-1;
-	ocation.replace("https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php?les=" + les);
+	location.replace("https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php?les=" + les);
 	
 
 /* There was already an if statement in the php file where the prev button doesnt show if its lesson 1
