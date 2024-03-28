@@ -47,7 +47,7 @@
       <span class="menu-text">menu</span>
     </div>
     <div class="all-over-bkg"></div>
-    <h1>Lesson</h1>
+    <h1>Quiz 2</h1>
   </header>
   <?php
   session_start();
