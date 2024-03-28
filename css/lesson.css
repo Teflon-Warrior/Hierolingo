@@ -295,4 +295,8 @@ img {
         width: 50%;
         height: 75px;
 }
+.number-buttons .btn {
+        width: 60px;
+
+}
 }
