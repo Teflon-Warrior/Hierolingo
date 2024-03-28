@@ -17,23 +17,10 @@
 </head>
 
 <body>
-
-  <!-- NAVIGATION -->
-  <nav id="mySidenav" class="sidenav">
-    <ul>
-      <li><a class="closebtn">&times;</a></li>
-      <li><a href="profile.php">Profile</a></li>
-      <li><a href="lesson.php<?php echo "?les=$les"; ?>">Lessons</a></li>
-      <li><a href="dictionary.php">Dictionary</a></li>
-      <li><a href="studysets.php">Study Sets</a></li>
-      <li><a href="settings.php">Settings</a></li>
-      <li><a href="logout.php">Log Out</a></li>
-    </ul>
-  </nav>
   <header>
 
     <div class="all-over-bkg"></div>
-    <h1>Quiz</h1>
+    <h1>Quiz One</h1>
   </header>
   <?php
   session_start();
@@ -74,7 +61,7 @@
     echo "<div class='container'>";
     echo "<div class='row justify-content-center'>";
     echo "<div class='col-md-6'>";
-    echo "<form action='Lesson_result.php' method='POST'>";
+    echo "<form action='Lesson_result1.php' method='POST'>";
     $d = 1;
     while ($row = mysqli_fetch_array($result)) {
       $filepath = $row['filepath'];
