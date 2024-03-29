@@ -174,10 +174,21 @@ $color = $result['color'];
 
         echo "<div class='number-buttons'>";
 
+        
+	echo "<div class='scroll'>";
         for ($i = 1; $i <= $rowCount; $i++) {
-                echo "<button class='btn' onclick='lessonnavClicked($les, $i);'> $i </button>";
+                if ($i % 5 == 1 && $i != 1) {
+                        echo "<br>";
+                }
+                if ($curr == $i) {
+                        echo "<button class='btn' style='background-color:#726948;' onclick='lessonnavClicked($les, $i);'> $i </button>";
+                } else {
+                        echo "<button class='btn' onclick='lessonnavClicked($les, $i);'> $i </button>";
+                }
 
         }
+        echo "</div>";
+
         echo "<br><br>";
 
         echo "</div>";
