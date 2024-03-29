@@ -133,8 +133,10 @@ if (!$con)
     }
 
     //if nothing is found
+    if ($level < 2){
      $level += 1;
      $query = "UPDATE User SET userlevel = $level WHERE google_id = {$_SESSION['login_id']}";
+    }
 
 	echo $query;
      mysqli_query($con,$query);
