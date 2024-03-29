@@ -50,7 +50,8 @@ $color = $result['color'];
                         <span class="menu-text">menu</span>
                 </div>
                 <div class="all-over-bkg"></div>
-                <h1>Lesson</h1>
+		<div style="padding-top: 40px; position: absolute; left: 50%; transform: translate(-50%,0); font-size: 2em;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;font-weight: bold;">Lesson </div>                
+
         </header>
 
 <?php
@@ -110,6 +111,10 @@ $color = $result['color'];
         //progress bar
         
         $width = 455 / $rowCount;
+        if(preg_match("/(android|webos|avantgo|iphone|ipad|ipod|blackberry|iemobile|bolt|boost|cricket|docomo|fone|hiptop|mini|opera mini|kitkat|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"])) {
+                $width = 400/$rowCount;
+        }
+
         echo "<div class='progress-bar'>";
         echo "<div style='display:inline-block;>'";
         echo "<div style:'margin-right: 20px;padding-top: 15px;'>1    </div>";
