@@ -30,7 +30,7 @@ $color = $result['color'];
         <link rel="stylesheet" href="css/tabbingStyling.css" />
         <link rel="stylesheet" href="css/lesson.css">
         <link rel="stylesheet"
-                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
         <nav id="mySidenav" class="sidenav">
@@ -38,9 +38,9 @@ $color = $result['color'];
                         <li><a class="closebtn">&times;</a></li>
                         <li><a href="profile.php">Profile</a></li>
                         <li><a href="lesson.php<?php echo"?les=$les";?>">Lessons</a></li>
-                        <li><a href="dictionary.php">Review</a></li>
+                        <li><a href="dictionary.php">Dictionary</a></li>
                         <li><a href="studysets.php">Study Sets</a></li>
-                        <li><a href="settings.php">Settings</a></li>
+			<li><a href="settings.php">Settings</a></li>
                         <li><a href="logout.php">Log Out</a></li>
                 </ul>
         </nav>
@@ -50,23 +50,23 @@ $color = $result['color'];
                         <span class="menu-text">menu</span>
                 </div>
                 <div class="all-over-bkg"></div>
-                <div style="padding-top: 40px; position: absolute; left: 50%; transform: translate(-50%,0); font-size: 2em;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;font-weight: bold;">Lesson </div>
+                <h1>Lesson</h1>
         </header>
 
 <?php
 
-        //display success message
-        //if (isset($_SESSION['errorMessages'])) {
-        //        $errorMessages = $_SESSION['errorMessages'];
-        //        echo '<div class="alert alert-success">';
-        //        echo '<ul>';
-        //              foreach ($errorMessages as $errorMessage) {
-        //                echo '<li>' . $errorMessage . '</li>';
-        //        }
-        //            echo '</ul>';
-        //            echo '</div>';
-          //          $_SESSION['errorMessages'] = NULL;
-        //        }
+	//display success message
+        if (isset($_SESSION['errorMessages'])) {
+                $errorMessages = $_SESSION['errorMessages'];
+                echo '<div class="alert alert-success">';
+                echo '<ul>';
+                      foreach ($errorMessages as $errorMessage) {
+                        echo '<li>' . $errorMessage . '</li>';
+                }
+                    echo '</ul>';
+                    echo '</div>';
+                    $_SESSION['errorMessages'] = NULL;
+                }
         //login credentials
         $host = "db.luddy.indiana.edu";
         $username = "i494f23_team11";
@@ -88,7 +88,7 @@ $color = $result['color'];
         $rowResult = mysqli_query($con, $rowQuery);
         $rowCount = mysqli_num_rows($rowResult);
 
-
+        
         $temp = $curr - 1;
 
         $query = "select filepath,def,id from dictionary where access = $les limit $temp,1;";
@@ -108,7 +108,7 @@ $color = $result['color'];
         </div>";
 
         //progress bar
-
+        
         $width = 455 / $rowCount;
         echo "<div class='progress-bar'>";
         echo "<div style='display:inline-block;>'";
@@ -174,20 +174,10 @@ $color = $result['color'];
 
         echo "<div class='number-buttons'>";
 
-        echo "<div class='scroll'>";
         for ($i = 1; $i <= $rowCount; $i++) {
-                if ($i % 5 == 1 && $i != 1) {
-                        echo "<br>";
-                }
-                if ($curr == $i) {
-                        echo "<button class='btn' style='background-color:#726948;' onclick='lessonnavClicked($les, $i);'> $i </button>";
-                } else {
-                        echo "<button class='btn' onclick='lessonnavClicked($les, $i);'> $i </button>";
-                }
+                echo "<button class='btn' onclick='lessonnavClicked($les, $i);'> $i </button>";
 
         }
-        echo "</div>";
-
         echo "<br><br>";
 
         echo "</div>";
@@ -195,18 +185,18 @@ $color = $result['color'];
 
         if ($level == $les) {
                 echo "<button class='btn' onclick='quizClicked($les);'> Take Quiz </button>";
-        }
+        }       
         echo "<br>";
         if ($les == 1) {
                 if ($level > 1 ) {
                 echo "<button class='btn' onclick='nextlessonClicked($les);'> Next Lesson </button>";
-                }
+                }              
         } else {
                 echo "<button class='btn' onclick='prevlessonClicked($les);'> Previous Lesson </button>";
                 if ($level > $les) {
                 echo "<button class='btn' onclick='nextlessonClicked($les);'> Next Lesson </button>";
-                }
-        }
+                } 
+	}
         echo "</div>";
         ?>
 
@@ -214,4 +204,3 @@ $color = $result['color'];
 </body>
 
 </html>
-
