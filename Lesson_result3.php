@@ -134,9 +134,9 @@ if (!$con)
      mysqli_query($con,$query);
      mysqli_close($con);
     //redirect back to the form page
-    $errorMessages[] = "Congrats welcome to Lesson 2";
+    $errorMessages[] = "Congrats welcome to Lesson 4";
     $_SESSION['errorMessages'] = $errorMessages;
-    header("Location:https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php?les=2");
+    header("Location:https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php?les=4");
     exit();
 
  ?>
