@@ -1,7 +1,11 @@
-
 html {
     box-sizing: border-box;
 }
+
+html, body {
+  overflow-x: hidden;
+}
+
 
 *,
 *:before,
@@ -20,6 +24,7 @@ html {
 }
 
 body {
+    position: relative;
     background-color: #F4DF9C;
 }
 
@@ -77,6 +82,7 @@ html {
 .jumbotron {
     background-color: #cebc83;
 }
+
 
 /* Menu styling code from I360 */
 
@@ -201,4 +207,55 @@ article {
 
 .columns-div {
     padding-top: 1.0rem;
+}
+
+@media only screen and (max-device-width: 480px) {
+.jumbotron{
+        position: absolute;
+        max-width: 100%;
+        height: 25%;
+}
+.down{
+        padding-top: 17%;
+}
+.display-3 {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /*
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        */
+}
+
+.log {
+        display: inline-block;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        /*
+        position: relative;
+        */
+}
+.corner {
+        /*
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 100%;*/
+}
+.p3{ 
+        max-width: 50%;
+        left: 0;
+        font-size: 12px;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+
+}
+h2 {
+        max-width: 50%;
+}
 }
