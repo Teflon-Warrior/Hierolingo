@@ -57,7 +57,7 @@ if (!$con)
           foreach ($errorMessages as $errorMessage) {
             echo $errorMessage . "<br>";
            }
-           header("Location:quiz1.php");
+           header("Location:quiz3.php");
            exit();
         }
     
@@ -83,7 +83,7 @@ if (!$con)
         if (!preg_match('/\b\w+\s+\w+\b/', $A1) || !preg_match('/\b\w+\s+\w+\b/', $A2) || !preg_match('/\b\w+\s+\w+\b/', $A3) || !preg_match('/\b\w+\s+\w+\b/', $A4) || !preg_match('/\b\w+\s+\w+\b/', $A5)) {
             $errorMessages[] = "All Answers must contain at least 2 words.";
 	    $_SESSION['errorMessages'] = $errorMessages;
-	    header("Location:quiz1.php");
+	    header("Location:quiz3.php");
             exit();
         }
     }
@@ -102,20 +102,25 @@ if (!$con)
     //$charsToReplace = ['<', '>', '{', '}', '(', ')', ';'];
     //$ddescription = str_replace($charsToReplace, '', $ddescription);
     //$dname = str_replace($charsToReplace,'',$dname)
-    if(!preg_match('/another\s(?:human|man)/', $A1)){
+    if(!preg_match('/From another scribe/', $A1)){
         $errorMessages[] = "Question 1 is incorrect";
+        //3.1_4
     }
     if(!preg_match('/another\s+thing/', $A2)){
         $errorMessages[] = "Question 2 is incorrect";
+        //3.2_5
     }
     if(!preg_match('/(?:that|this)\s+(?:human|man)/', $A3)){
         $errorMessages[] = "Question 3 is incorrect";
+        //3.2_4
     }
     if(!preg_match('/another\s+thing/', $A4)){
         $errorMessages[] = "Question 4 is incorrect";
+        //3.3_1
     }
     if(!preg_match('/(?:with|together)\s+(?:human|people)/', $A5)){
         $errorMessages[] = "Question 5 is incorrect";
+        //3.4_1
     }
 
     if(!empty($errorMessages)){

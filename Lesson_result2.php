@@ -57,7 +57,7 @@ if (!$con)
           foreach ($errorMessages as $errorMessage) {
             echo $errorMessage . "<br>";
            }
-           header("Location:quiz1.php");
+           header("Location:quiz2.php");
            exit();
         }
     
@@ -83,7 +83,7 @@ if (!$con)
         if (!preg_match('/\b\w+\s+\w+\b/', $A1) || !preg_match('/\b\w+\s+\w+\b/', $A2) || !preg_match('/\b\w+\s+\w+\b/', $A3) || !preg_match('/\b\w+\s+\w+\b/', $A4) || !preg_match('/\b\w+\s+\w+\b/', $A5)) {
             $errorMessages[] = "All Answers must contain at least 2 words.";
 	    $_SESSION['errorMessages'] = $errorMessages;
-	    header("Location:quiz1.php");
+	    header("Location:quiz2.php");
             exit();
         }
     }
