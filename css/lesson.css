@@ -41,33 +41,6 @@ html {
         box-sizing: border-box;
     }
 
-    /* Menu styling code from I360 */
-
-    .openbtn {
-        position: absolute;
-        left: 20px;
-        top: 10px;
-        color: rgb(30, 30, 30);
-        font-family: "Exo", sans-serif;
-    }
-
-    .openbtn:hover {
-        color: var(--menu-color);
-        cursor: pointer
-    }
-
-    .menu-button {
-        font-size: 36px !important;
-        position: relative;
-        top: 6px;
-        left: -4px;
-    }
-
-    .menu-text {
-        font-size: 12px;
-        display: block;
-    }
-
     ul {
         margin: 0;
         padding: 0;

@@ -40,10 +40,10 @@ body {
 
 /* Exo Font from Google Fonts */
 .exo {
-  font-family: "Exo", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 450;
-  font-style: normal;
+    font-family: "Exo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
 }
 
 h1 {
@@ -53,32 +53,37 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: rgb(30, 30, 30);
     padding-top: 3.0rem;
 }
 
 h1 span {
     font-family: "Exo", sans-serif;
     font-weight: bold;
+    color: rgb(30, 30, 30);
 }
 
 h2 {
     font-family: "Exo", sans-serif;
     font-weight: bold;
+    color: rgb(30, 30, 30);
 }
 
 h3 {
     font-family: "Exo", sans-serif;
     font-weight: bold;
+    color: rgb(30, 30, 30);
 
 }
 
 p {
     font-family: "Exo", sans-serif;
     font-size: 17px;
+    color: rgb(30, 30, 30);
 }
 
-header h1, .container {
+header h1,
+.container {
 
     width: 800px;
     display: flex;
@@ -113,8 +118,8 @@ th {
     position: absolute;
     left: 20px;
     top: 10px;
-    color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(30, 30, 30);
+    font-family: "Exo", sans-serif;
 }
 
 .openbtn:hover {
@@ -220,25 +225,29 @@ article {
 
 }
 
-.project{
+.project {
     padding-top: 2.0rem;
     padding-bottom: 2.0rem;
     padding-right: 2.0rem;
     padding-left: 2.0rem;
 }
+
 .project h2 {
     display: flex;
     justify-content: center;
 }
+
 .project-about {
     padding-top: 2.0rem;
     padding-bottom: 2.0rem;
     padding-right: 2.0rem;
     padding-left: 2.0rem;
 }
-.project-about h2{
+
+.project-about h2 {
     color: var(--iu-red);
 }
+
 .sustain {
     padding-top: 2.0rem;
     padding-bottom: 2.0rem;
@@ -247,9 +256,11 @@ article {
     background: var(--iu-grey);
     width: 100%;
 }
-.sustain h2{
+
+.sustain h2 {
     color: var(--iu-red);
 }
+
 .aidan {
     padding-top: 2.0rem;
     padding-bottom: 2.0rem;
@@ -260,22 +271,26 @@ article {
     flex-direction: column;
 
 }
+
 .aidan img {
     height: 250px;
     width: 250px;
     margin-right: 20px;
 }
+
 .aidan h2 {
     color: var(--iu-red);
     font-size: 30px;
     padding: 0.2rem;
 }
-.aidan-p p{
+
+.aidan-p p {
     flex: 1;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 17px;
     margin-top: 0;
 }
+
 .luke {
     padding-top: 2.0rem;
     padding-bottom: 2.0rem;
@@ -286,22 +301,26 @@ article {
     flex-direction: column;
 
 }
+
 .luke img {
     height: 250px;
     width: 250px;
     margin-right: 20px;
 }
+
 .luke h2 {
     color: var(--iu-red);
     font-size: 30px;
     padding: 0.2rem;
 }
-.luke-p p{
+
+.luke-p p {
     flex: 1;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 17px;
     margin-top: 0;
 }
+
 .max {
     padding-top: 2.0rem;
     padding-bottom: 2.0rem;
@@ -312,22 +331,26 @@ article {
     flex-direction: column;
 
 }
+
 .max img {
     height: 250px;
     width: 250px;
     margin-right: 20px;
 }
+
 .max h2 {
     color: var(--iu-red);
     font-size: 30px;
     padding: 0.2rem;
 }
-.max-p p{
+
+.max-p p {
     flex: 1;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 17px;
     margin-top: 0;
 }
+
 .jeff {
     padding-top: 2.0rem;
     padding-bottom: 2.0rem;
@@ -338,17 +361,20 @@ article {
     flex-direction: column;
 
 }
+
 .jeff img {
     height: 250px;
     width: 250px;
     margin-right: 20px;
 }
+
 .jeff h2 {
     color: var(--iu-red);
     font-size: 30px;
     padding: 0.2rem;
 }
-.jeff-p p{
+
+.jeff-p p {
     flex: 1;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 17px;
@@ -360,6 +386,7 @@ article {
     flex-wrap: wrap row;
     justify-content: center;
 }
+
 .button {
     background-color: var(--iu-red);
     border: 2px solid var(--iu-red);
@@ -379,7 +406,9 @@ article {
     color: #cebc83;
 }
 
-.btn-primary, .btn-primary:active, .btn-primary:visited {
+.btn-primary,
+.btn-primary:active,
+.btn-primary:visited {
     background-color: #cebc83 !important;
     border-color: #cebc83 !important;
 }
