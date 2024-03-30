@@ -74,7 +74,7 @@ h3 {
 }
 
 p {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Exo", sans-serif;
     font-size: 17px;
 }
 
@@ -87,8 +87,8 @@ header h1, .container {
 }
 
 header {
-    background-color: var(--iu-red);
-    height: 150px;
+    background-color: #DFDFDF;
+    height: 30px;
     margin: 0;
     padding: 0;
 

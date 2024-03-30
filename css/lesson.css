@@ -37,21 +37,6 @@ html {
         padding-top: 3.0rem;
     }
 
-    header h1, .container {
-
-        width: 800px;
-        display: flex;
-        justify-content: center;
-
-    }
-
-    header {
-        background-color: #cebc83;
-        height: 150px;
-        font-size: xx-large;
-
-    }
-
     html {
         box-sizing: border-box;
     }
