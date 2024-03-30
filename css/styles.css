@@ -38,6 +38,7 @@ body {
 /* <uniquifier>: Use a unique and descriptive class name
  <weight>: Use a value from 100 to 900 */
 
+/* Exo Font from Google Fonts */
 .exo {
   font-family: "Exo", sans-serif;
   font-optical-sizing: auto;
