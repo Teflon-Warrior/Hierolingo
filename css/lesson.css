@@ -62,8 +62,8 @@ html {
         position: absolute;
         left: 20px;
         top: 10px;
-        color: white;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: rgb(30, 30, 30);
+        font-family: "Exo", sans-serif;
     }
 
     .openbtn:hover {
@@ -141,7 +141,7 @@ html {
         display: inline-block !important;
         justify-content: center;
         align-items: center;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-family: "Exo", sans-serif;
     }
 
     .term-buttons {
@@ -172,7 +172,7 @@ html {
         font-size: 12px;
         letter-spacing: 1px;
         transition: background-color .2s ease-out, color .2s ease-out, border-color .18s ease-out;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: "Exo", sans-serif;
 }
     .lesson-buttons {
         display: flex;
@@ -190,7 +190,7 @@ html {
         font-size: 18px;
         letter-spacing: 1px;
         transition: background-color .2s ease-out, color .2s ease-out, border-color .18s ease-out;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: "Exo", sans-serif;
     }
 
     .btn:hover {
