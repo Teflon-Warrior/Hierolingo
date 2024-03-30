@@ -137,7 +137,7 @@ html {
         padding-bottom: 2.0rem;
     }
     .btn {
-        box-shadow: 20px 5px #cebc83;
+        box-shadow: 5px 3px #cebc83;
         border: 2px solid #a09365;
         border-radius: 30px;
         padding: 1.0em 5.0em;
@@ -149,14 +149,7 @@ html {
     }
 
     .btn:hover {
-        border: 2px solid #cebc83;
-        border-radius: 30px;
-        padding: 1.0em 5.0em;
-        margin: 1.0em 2.0em 0 0;
-        font-size: 18px;
-        letter-spacing: 1px;
         transition: background-color .2s ease-out, color .2s ease-out, border-color .18s ease-out;
-        font-family: "Exo", sans-serif;
     }
 
 img {
