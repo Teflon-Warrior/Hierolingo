@@ -137,6 +137,7 @@ html {
         padding-bottom: 2.0rem;
     }
     .btn {
+        fill: transparent;
         box-shadow: 0px, 0px, 20px #cebc83;
         border: 2px solid #a09365;
         border-radius: 30px;
