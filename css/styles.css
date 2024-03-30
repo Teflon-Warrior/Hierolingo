@@ -93,7 +93,7 @@ header h1,
 
 header {
     background-color: #DFDFDF;
-    height: 60px;
+    height: 75px;
     margin: 0;
 
 }
@@ -181,7 +181,7 @@ li {
 
 /* Sidenav code from I360 */
 .sidenav a {
-    padding: 20px 8px 8px 32px;
+    padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
     display: block;
