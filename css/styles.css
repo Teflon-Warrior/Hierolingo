@@ -32,7 +32,7 @@ html {
 */
 body {
     margin: 0;
-    background-color: #fff;
+    background-color: #F4F4F4;
 }
 
 /* <uniquifier>: Use a unique and descriptive class name
@@ -48,7 +48,7 @@ body {
 
 h1 {
 
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Exo", sans-serif;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -58,17 +58,17 @@ h1 {
 }
 
 h1 span {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Exo", sans-serif;
     font-weight: bold;
 }
 
 h2 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Exo", sans-serif;
     font-weight: bold;
 }
 
 h3 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Exo", sans-serif;
     font-weight: bold;
 
 }
