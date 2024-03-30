@@ -75,10 +75,10 @@ if (mysqli_num_rows($result) > 0) {
                 <ul>
                     <li><a class="closebtn">&times;</a></li>
                     <li><a href="profile.php">Profile</a></li>
-                    <li><a href="lesson.php<?php echo "?les=$level"; ?>">Lessons</a></li>
-                    <li><a href="dictionary.php">Dictionary</a></li>
+                    <li><a href="lesson.php<?php echo"?les=$level";?>">Lessons</a></li>
+                    <li><a href="dictionary.php">Review</a></li>
                     <li><a href="studysets.php">Study Sets</a></li>
-                    <li><a href="settings.php">Settings</a></li>
+		    <li><a href="settings.php">Settings</a></li>
                     <li><a href="logout.php">Log Out</a></li>
                 </ul>
             </nav>
@@ -88,7 +88,7 @@ if (mysqli_num_rows($result) > 0) {
                     <span class="menu-text">menu</span>
                 </div>
                 <div class="all-over-bkg"></div>
-                <h1>Profile</h1>
+                <div style="padding-top: 40px; position: absolute; left: 50%; transform: translate(-50%,0); font-size: 2em;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;font-weight: bold;">Profile </div>
 
             </header>
 

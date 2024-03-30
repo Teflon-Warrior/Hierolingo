@@ -138,3 +138,9 @@ article {
 .settings-form {
     padding: 1.0rem;
 }
+
+@media only screen and (max-device-width: 480px) {
+.textinput{
+width: 150%;
+}
+}

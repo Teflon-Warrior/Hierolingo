@@ -20,7 +20,7 @@
   <header>
 
     <div class="all-over-bkg"></div>
-    <h1>Quiz Two</h1>
+    <h1>Quiz Four</h1>
   </header>
   <?php
   session_start();
@@ -40,7 +40,7 @@
     die("Failed to connect to MySQL: " . mysqli_connect_error());
   }
 
-  $query = "SELECT filepath FROM dictionary WHERE pos='Question' AND filepath LIKE '%Quiz-2%'";
+  $query = "SELECT filepath FROM dictionary WHERE pos='Question' AND filepath LIKE '%Quiz-4%'";
 
   $result = mysqli_query($con, $query) or die("Query Failed!");
 
@@ -61,7 +61,7 @@
     echo "<div class='container'>";
     echo "<div class='row justify-content-center'>";
     echo "<div class='col-md-6'>";
-    echo "<form action='Lesson_result2.php' method='POST'>";
+    echo "<form action='Lesson_result4.php' method='POST'>";
     $d = 1;
     while ($row = mysqli_fetch_array($result)) {
       $filepath = $row['filepath'];

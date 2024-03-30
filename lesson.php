@@ -18,7 +18,7 @@
         ?>
 
         <!-- bootstrap css-->
-        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">-->
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
         <script type="text/javascript" src="./js/lessonjs.js"></script>
         <meta charset="UTF-8">
@@ -31,11 +31,7 @@
         <link rel="stylesheet" href="css/tabbingStyling.css" />
         <link rel="stylesheet" href="css/lesson.css">
         <link rel="stylesheet"
-                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap"
-                rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
@@ -56,23 +52,24 @@
                         <span class="menu-text">menu</span>
                 </div>
                 <div class="all-over-bkg"></div>
-                <h1>Lesson</h1>
+		<div style="padding-top: 40px; position: absolute; left: 50%; transform: translate(-50%,0); font-size: 2em;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;font-weight: bold;">Lesson </div>                
+
         </header>
 
         <?php
 
-        //display success message
-        //if (isset($_SESSION['errorMessages'])) {
-        //        $errorMessages = $_SESSION['errorMessages'];
-        //        echo '<div class="alert alert-success">';
-        //        echo '<ul>';
-        //              foreach ($errorMessages as $errorMessage) {
-        //                echo '<li>' . $errorMessage . '</li>';
-        //        }
-        //            echo '</ul>';
-        //            echo '</div>';
-        //          $_SESSION['errorMessages'] = NULL;
-        //        }
+	//display success message
+        if (isset($_SESSION['errorMessages'])) {
+                $errorMessages = $_SESSION['errorMessages'];
+                echo '<div class="alert alert-success">';
+                echo '<ul>';
+                      foreach ($errorMessages as $errorMessage) {
+                        echo '<li>' . $errorMessage . '</li>';
+                }
+                    echo '</ul>';
+                    echo '</div>';
+                    $_SESSION['errorMessages'] = NULL;
+                }
         //login credentials
         $host = "db.luddy.indiana.edu";
         $username = "i494f23_team11";
@@ -116,6 +113,10 @@
         //progress bar
         
         $width = 455 / $rowCount;
+        if(preg_match("/(android|webos|avantgo|iphone|ipad|ipod|blackberry|iemobile|bolt|boost|cricket|docomo|fone|hiptop|mini|opera mini|kitkat|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"])) {
+                $width = 400/$rowCount;
+        }
+
         echo "<div class='progress-bar'>";
         echo "<div style='display:inline-block;>'";
         echo "<div style:'margin-right: 20px;padding-top: 15px;'>1    </div>";
@@ -180,10 +181,21 @@
 
         echo "<div class='number-buttons'>";
 
+        
+	echo "<div class='scroll'>";
         for ($i = 1; $i <= $rowCount; $i++) {
-                echo "<button class='btn' onclick='lessonnavClicked($les, $i);'> $i </button>";
+                if ($i % 5 == 1 && $i != 1) {
+                        echo "<br>";
+                }
+                if ($curr == $i) {
+                        echo "<button class='btn' style='background-color:#726948;' onclick='lessonnavClicked($les, $i);'> $i </button>";
+                } else {
+                        echo "<button class='btn' onclick='lessonnavClicked($les, $i);'> $i </button>";
+                }
 
         }
+        echo "</div>";
+
         echo "<br><br>";
 
         echo "</div>";

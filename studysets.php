@@ -43,7 +43,7 @@ $les = $result['userlevel'];
 			<li><a class="closebtn">&times;</a></li>
 			<li><a href="profile.php">Profile</a></li>
 			<li><a href="lesson.php<?php echo"?les=$les";?>">Lessons</a></li>			
-			<li><a href="dictionary.php">Dictionary</a></li>
+			<li><a href="dictionary.php">Review</a></li>
 			<li><a href="studysets.php">Study Sets</a></li>
 			<li><a href="settings.php">Settings</a></li>
 			<li><a href="logout.php">Log Out</a></li>			
@@ -57,7 +57,7 @@ $les = $result['userlevel'];
 			<span class="menu-text">menu</span>
 		</div>
 		<div class="all-over-bkg"></div>
-		<h1>Study Sets</h1>
+		<div style="padding-top: 40px; position: absolute; left: 50%; transform: translate(-50%,0); font-size: 2em;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;font-weight: bold;"><div class="study"> Study Sets </div></div>
 	</header>
 	
 	<!-- PHP connection & Queries -->
@@ -78,15 +78,29 @@ $les = $result['userlevel'];
 	//Number of tabs for forloop
 	$numTabs = count($setTabsResult);
 	
-	function displayQueryResults($wordsIn, $con){	
+	function displayQueryResults($wordsIn, $con, $setName, $userID){	
+		$i = 0;
 		if (mysqli_connect_errno())
 			{ die("Failed to connect to MySQL: " . mysqli_connect_error()); }
 		else
 			{}
-		if (count($wordsIn) > 0) {
-				echo "<button type = 'edit' value='edit' class='btn btn-success'>Edit Name</button>
-				<button type = 'remove' value='removeSet' class='btn btn-danger'>Delete Set</button>
-				
+				echo "
+				<script src = 'js/displaySubmissionFields.js'></script>
+				<button type = 'edit' value='edit' onclick = 'displaySubmit(event, ".$i.");' class='btn btn-success' class = 'addButton' >Edit Name</button>
+				<form action = 'editStudySet.php' method = 'post' class = 'submissionForm' id = 'submissionForm".$i."'>
+					<div class='form-group'>
+						<input type = 'text' name = 'newStudysetName' id = 'newStudysetName'>
+						<input type = 'hidden' name = 'userID' id = 'userID' value = ".$userID.">
+						<input type = 'hidden' id = 'setName' name = 'setName' value = ".$setName.">
+						<button type = 'submit' value='submit' class='btn btn-primary'>Submit</button>
+                    </div>
+                </form>
+				<form action = 'deleteStudySet.php' method = 'post'>
+					<input type = 'hidden' name = 'setName' id = 'setName' value = ".$setName.">
+					<input type = 'hidden' name = 'userID' id = 'userID' value = ".$userID.">
+					<button type = 'submit' value='removeSet' class='btn btn-danger'>Delete Set</button>
+				</form> 				
+
 				<table class='table table-hover' border = '1'>
 				<thead>
 				<tr>
@@ -96,6 +110,7 @@ $les = $result['userlevel'];
 					<th>Remove Word</th>
 				</tr>
 				</thead>";
+				$i = $i + 1;
 				for ($i = 0; $i < count($wordsIn); $i++ ){
 					$printQuery = "SELECT * FROM dictionary WHERE id = ".$wordsIn[$i].";";
 					$results = mysqli_fetch_array(mysqli_query($con, $printQuery), MYSQLI_NUM);
@@ -104,14 +119,19 @@ $les = $result['userlevel'];
 						<td><img src = ".$results[3]." width='200' height='200' /> </td> 
 						<td>".$results[2]."</td> 					
 						<td>".$results[1]."</td>
-						<td><button type = 'remove' value='remove' class='btn btn-danger'>Remove Word</button>
+						<td>
+							<form action = 'removeWord.php' method = 'post'>
+								<input type = 'hidden' name = 'setName' id = 'setName' value = ".$setName.">
+								<input type = 'hidden' name = 'userID' id = 'userID' value = ".$userID.">
+								<input type = 'hidden' name = 'wordID' id = 'wordID' value = ".$wordsIn[$i].">
+								<button type = 'submit' value='remove' class='btn btn-danger'>Remove Word</button>
+							</form>
+						</td>
 					</tr>";
 				}		
 			
 				echo "</tbody>
 				</table>";
-				
-			}
 	}
 	?>
 	
@@ -141,7 +161,7 @@ $les = $result['userlevel'];
 		$setWordsResult = mysqli_fetch_array(mysqli_query($db_connection, $setWordsQuery), MYSQLI_NUM);
 		$words = file_get_contents($setWordsResult[0]);
 		$words = json_decode($words);
-		displayQueryResults($words, $db_connection);
+		displayQueryResults($words, $db_connection, $setTabs[0], $userID);
 		echo "</div>";
 	}
 	
@@ -158,7 +178,7 @@ $les = $result['userlevel'];
 </body>
 </html>
 
-<!---
+<!--
 <?php
 
 echo "<form action='addStudySet.php' method='post'>
@@ -169,4 +189,5 @@ echo "<form action='addStudySet.php' method='post'>
 <button type='submit' class='btn btn-primary'>Submit</button>
 </form>";
 
-?> -->
+?> 
+-->

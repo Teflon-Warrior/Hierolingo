@@ -17,10 +17,11 @@
 </head>
 
 <body>
+
   <header>
 
     <div class="all-over-bkg"></div>
-    <h1>Quiz Two</h1>
+    <h1>Quiz Three</h1>
   </header>
   <?php
   session_start();
@@ -61,7 +62,7 @@
     echo "<div class='container'>";
     echo "<div class='row justify-content-center'>";
     echo "<div class='col-md-6'>";
-    echo "<form action='Lesson_result2.php' method='POST'>";
+    echo "<form action='Lesson_result3.php' method='POST'>";
     $d = 1;
     while ($row = mysqli_fetch_array($result)) {
       $filepath = $row['filepath'];

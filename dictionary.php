@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Dictionary</title>
+	<title>Review</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
 		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/normalize.css">
@@ -42,7 +42,7 @@ $les = $result['userlevel'];
 			<li><a class="closebtn">&times;</a></li>
 			<li><a href="profile.php">Profile</a></li>
 			<li><a href="lesson.php<?php echo"?les=$les";?>">Lessons</a></li>			
-			<li><a href="dictionary.php">Dictionary</a></li>
+			<li><a href="dictionary.php">Review</a></li>
 			<li><a href="studysets.php">Study Sets</a></li>
 			<li><a href="settings.php">Settings</a></li>
 			<li><a href="logout.php">Log Out</a></li>			
@@ -56,7 +56,7 @@ $les = $result['userlevel'];
 			<span class="menu-text">menu</span>
 		</div>
 		<div class="all-over-bkg"></div>
-		<h1>Dictionary</h1>
+		<div style="padding-top: 40px; position: absolute; left: 50%; transform: translate(-50%,0); font-size: 2em;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;font-weight: bold;">Review </div>
 	</header>
 
 	<?php
