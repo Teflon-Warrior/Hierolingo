@@ -1,26 +1,27 @@
 <html>
-<head>
-<?php
-session_start();
-if (isset($_SESSION['login_id']) == null) {
-        header( 'Location: https://cgi.luddy.indiana.edu/~team11/team-11/login.php');
-}
-$google_id = $_SESSION['login_id'];
-$con = mysqli_connect("db.luddy.indiana.edu" ,"i494f23_team11","my+sql=i494f23_team11","i494f23_team11");
-$query = "Select userlevel,color from User where google_id = $google_id";
-$result = mysqli_query($con, $query);
-$result = mysqli_fetch_array($result);
 
-$les = $_GET["les"];
-$level = $result['userlevel'];
-$color = $result['color'];
-?>
+<head>
+        <?php
+        session_start();
+        if (isset($_SESSION['login_id']) == null) {
+                header('Location: https://cgi.luddy.indiana.edu/~team11/team-11/login.php');
+        }
+        $google_id = $_SESSION['login_id'];
+        $con = mysqli_connect("db.luddy.indiana.edu", "i494f23_team11", "my+sql=i494f23_team11", "i494f23_team11");
+        $query = "Select userlevel,color from User where google_id = $google_id";
+        $result = mysqli_query($con, $query);
+        $result = mysqli_fetch_array($result);
+
+        $les = $_GET["les"];
+        $level = $result['userlevel'];
+        $color = $result['color'];
+        ?>
 
         <!-- bootstrap css-->
-       <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">-->
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">-->
 
         <script type="text/javascript" src="./js/lessonjs.js"></script>
-        <meta charset="UTF-8">  
+        <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Lessons</title>
@@ -31,16 +32,21 @@ $color = $result['color'];
         <link rel="stylesheet" href="css/lesson.css">
         <link rel="stylesheet"
                 href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap"
+                rel="stylesheet">
 </head>
+
 <body>
         <nav id="mySidenav" class="sidenav">
                 <ul>
                         <li><a class="closebtn">&times;</a></li>
                         <li><a href="profile.php">Profile</a></li>
-                        <li><a href="lesson.php<?php echo"?les=$les";?>">Lessons</a></li>
+                        <li><a href="lesson.php<?php echo "?les=$les"; ?>">Lessons</a></li>
                         <li><a href="dictionary.php">Dictionary</a></li>
                         <li><a href="studysets.php">Study Sets</a></li>
-			<li><a href="settings.php">Settings</a></li>
+                        <li><a href="settings.php">Settings</a></li>
                         <li><a href="logout.php">Log Out</a></li>
                 </ul>
         </nav>
@@ -53,9 +59,9 @@ $color = $result['color'];
                 <h1>Lesson</h1>
         </header>
 
-<?php
+        <?php
 
-	//display success message
+        //display success message
         //if (isset($_SESSION['errorMessages'])) {
         //        $errorMessages = $_SESSION['errorMessages'];
         //        echo '<div class="alert alert-success">';
@@ -65,7 +71,7 @@ $color = $result['color'];
         //        }
         //            echo '</ul>';
         //            echo '</div>';
-          //          $_SESSION['errorMessages'] = NULL;
+        //          $_SESSION['errorMessages'] = NULL;
         //        }
         //login credentials
         $host = "db.luddy.indiana.edu";
@@ -88,7 +94,7 @@ $color = $result['color'];
         $rowResult = mysqli_query($con, $rowQuery);
         $rowCount = mysqli_num_rows($rowResult);
 
-        
+
         $temp = $curr - 1;
 
         $query = "select filepath,def,id from dictionary where access = $les limit $temp,1;";
@@ -102,7 +108,7 @@ $color = $result['color'];
 
 
         // Set <img> tag with the filepath
-
+        
         echo "<div class='lesson-number-text'>
         <h1 align='center'> Lesson " . $les . " </h1>
         </div>";
@@ -153,10 +159,10 @@ $color = $result['color'];
 
         echo "<div class='term-buttons'>";
         if ($curr > 1) {
-        echo "<button class='btn' onclick='prevbuttonClicked($les, $curr);'> prev term</button>";
+                echo "<button class='btn' onclick='prevbuttonClicked($les, $curr);'> prev term</button>";
         }
         if ($curr != $rowCount) {
-        echo "<button class='btn' onclick='nextbuttonClicked($les, $curr);'> next term</button>";
+                echo "<button class='btn' onclick='nextbuttonClicked($les, $curr);'> next term</button>";
         }
         echo "</div>";
 
@@ -185,18 +191,18 @@ $color = $result['color'];
 
         if ($level == $les) {
                 echo "<button class='btn' onclick='quizClicked($les);'> Take Quiz </button>";
-        }       
+        }
         echo "<br>";
         if ($les == 1) {
-                if ($level > 1 ) {
-                echo "<button class='btn' onclick='nextlessonClicked($les);'> Next Lesson </button>";
-                }              
+                if ($level > 1) {
+                        echo "<button class='btn' onclick='nextlessonClicked($les);'> Next Lesson </button>";
+                }
         } else {
                 echo "<button class='btn' onclick='prevlessonClicked($les);'> Previous Lesson </button>";
                 if ($level > $les) {
-                echo "<button class='btn' onclick='nextlessonClicked($les);'> Next Lesson </button>";
-                } 
-	}
+                        echo "<button class='btn' onclick='nextlessonClicked($les);'> Next Lesson </button>";
+                }
+        }
         echo "</div>";
         ?>
 

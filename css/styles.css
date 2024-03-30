@@ -35,7 +35,15 @@ body {
     background-color: #fff;
 }
 
+/* <uniquifier>: Use a unique and descriptive class name
+ <weight>: Use a value from 100 to 900 */
 
+.exo {
+  font-family: "Exo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 450;
+  font-style: normal;
+}
 
 h1 {
 
