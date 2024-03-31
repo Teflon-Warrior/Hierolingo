@@ -124,8 +124,8 @@ html {
         justify-content: center;        
         align-items: center;
         */
-        background-color: #cebc83;
-        border: 2px solid #ebd462;;
+        background-color: transparent;
+        border: 2px solid #ebd462;
         border-radius: 10px;
         padding: 0px;
         /*padding: 0.5em 1.5em;*/
@@ -155,9 +155,6 @@ html {
     .btn:hover {
         transition: border-color .18s ease-out;
         background-color: #ebd462;
-    }
-    .number-buttons .btn :hover {
-        background-color: transparent;
     }
 
 img {
