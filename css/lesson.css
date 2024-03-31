@@ -150,7 +150,11 @@ html {
     }
 
     .btn:hover {
+        fill: #cebc83;
         transition: background-color .2s ease-out, color .2s ease-out, border-color .18s ease-out;
+    }
+    .number-buttons .btn :hover {
+        fill: transparent;
     }
 
 img {
