@@ -111,10 +111,9 @@
 
         // Set <img> tag with the filepath
         
-        echo "<div class='box-around'>
-        <div class='lesson-number-text'>
+        echo "<div class='lesson-number-text'>
         <h1 align='center'> Lesson " . $les . " </h1>
-        </div> </div>";
+        </div>";
 
         //progress bar
         
