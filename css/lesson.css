@@ -94,7 +94,8 @@ html {
         padding-bottom: 2.0rem;
 
     }
-    #box-around{
+    .box-around{
+        width: 500px;
         border: #cebc83 3px;
         border-radius: 10px;
     }
