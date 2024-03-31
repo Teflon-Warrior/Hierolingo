@@ -92,15 +92,10 @@ html {
     }
     .lesson-number-text {
         padding-bottom: 2.0rem;
+        background-color: green;
 
     }
-    
-    .box-around{
-        display: inline-block;
-        width: 600px;
-        border: 3px #cebc83;
-        border-radius: 10px;
-    }
+
     .progress-bar {
         display: inline-block !important;
         justify-content: center;
