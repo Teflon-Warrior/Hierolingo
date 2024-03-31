@@ -95,8 +95,9 @@ html {
 
     }
     .box-around{
-        width: 500px;
-        border: #cebc83 3px;
+        display: inline-block;
+        width: auto;
+        border: 3px #cebc83;
         border-radius: 10px;
     }
     .progress-bar {
