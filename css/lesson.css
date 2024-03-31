@@ -91,13 +91,15 @@ html {
 
     }
     .lesson-number-text {
-        padding-bottom: 2.0rem;
+        padding-top: 2.0rem;
         border: 2px solid red;
         margin: 0 auto;
         width: 300px;
+        border-radius: 10px;
     }
 
     .progress-bar {
+        padding-top: 3.0rem;
         display: inline-block !important;
         justify-content: center;
         align-items: center;
