@@ -96,7 +96,7 @@ html {
     }
     .box-around{
         display: inline-block;
-        width: auto;
+        width: 600px;
         border: 3px #cebc83;
         border-radius: 10px;
     }
