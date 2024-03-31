@@ -92,6 +92,8 @@ html {
     }
     .lesson-number-text {
         padding-bottom: 2.0rem;
+        border: #cebc83;
+        border-radius: 10%;
 
     }
     .progress-bar {
@@ -138,7 +140,7 @@ html {
     }
     .btn {
         fill: transparent;
-        box-shadow: 0px, 0px, 20px, 10px #1200b2;
+        box-shadow: 0px, 0px, 20px, 10px #cebc83;
         border: 2px solid #a09365;
         border-radius: 30px;
         padding: 1.0em 5.0em;
@@ -150,7 +152,6 @@ html {
     }
 
     .btn:hover {
-        fill: green;
         transition: background-color .2s ease-out, color .2s ease-out, border-color .18s ease-out;
     }
     .number-buttons .btn :hover {
