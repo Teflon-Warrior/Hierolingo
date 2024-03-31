@@ -92,8 +92,9 @@ html {
     }
     .lesson-number-text {
         padding-bottom: 2.0rem;
+        width: 100px;
         border: #cebc83;
-        border-radius: 10%;
+        border-radius: 10px;
 
     }
     .progress-bar {
