@@ -92,6 +92,7 @@ html {
     }
     .lesson-number-text {
         padding-bottom: 2.0rem;
+        border: 2px solid red;
 
     }
 
