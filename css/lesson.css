@@ -92,11 +92,11 @@ html {
     }
     .lesson-number-text {
         padding-bottom: 2.0rem;
-        border: #cebc83 3px;
-        border-radius: 10px;
+
     }
     #box-around{
-
+        border: #cebc83 3px;
+        border-radius: 10px;
     }
     .progress-bar {
         display: inline-block !important;
