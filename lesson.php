@@ -179,7 +179,7 @@
 
 
         echo "<div class='flash' hidden onclick='definitionClick($id);' id='definition_$id'>";
-        echo "<p class='flashText'>'$def'</p>";
+        echo "<p class='flashText1'>'$def'</p>";
         echo "</div>";
 
         $i = 0;

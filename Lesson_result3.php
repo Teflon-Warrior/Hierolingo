@@ -108,11 +108,11 @@ if (!$con)
     }
     if(!preg_match('/another\s+thing/', $A2)){
         $errorMessages[] = "Question 2 is incorrect";
-        //3.2_5
+        //3.2_4
     }
     if(!preg_match('/(?:that|this)\s+(?:human|man)/', $A3)){
         $errorMessages[] = "Question 3 is incorrect";
-        //3.2_4
+        //3.2_5
     }
     if(!preg_match('/another\s+thing/', $A4)){
         $errorMessages[] = "Question 4 is incorrect";
