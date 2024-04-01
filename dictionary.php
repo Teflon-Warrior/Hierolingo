@@ -115,7 +115,8 @@ $les = $result['userlevel'];
                                 while ($row = mysqli_fetch_array($queryResultIn)) {
                                         echo "<tbody>
                                         <tr>
-                                                <td><img src = ".$row[3]." width='200' height='200' /> </td>
+												<script src = 'js/audio.js'></script>
+                                                <td onclick = 'playAudio(".$row[0].");'><img src = ".$row[3]." width='200' height='200' /> </td>
                                                 <td>".$row[2]."</td>
                                                 <td>".$row[1]."</td>
                                                 <script src = 'js/displaySubmissionFields.js'></script>
@@ -155,7 +156,13 @@ $les = $result['userlevel'];
 		<button class="lessontab" onclick="displayLesson(event, '3');">Lesson 3</button>
 		<button class="lessontab" onclick="displayLesson(event, '4');">Lesson 4</button>
 	</div>
-
+	
+	<div id="Landing" style = "display: block;" class = "lessonContent">
+	<!-- landing text -->
+	<p> Welcome to the Review section! Here you will find words that you have seen from the lessons page. Here you can see a word's heiroglyph, it's definition, part of speech, and it's pronounciation if you click on its row.
+	Clicking on "Add" opens a menu where you can add words to your own study sets. Either click a name from a drop down, or type in a new name, and click "Submit" to add it to a list! </p>
+	</div>
+	
 	<!-- Tab content -->
 	<div id="All" class="lessonContent">
 		<h3>All Words</h3>
