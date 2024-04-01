@@ -115,7 +115,8 @@ $les = $result['userlevel'];
                                 while ($row = mysqli_fetch_array($queryResultIn)) {
                                         echo "<tbody>
                                         <tr>
-                                                <td><img src = ".$row[3]." width='200' height='200' /> </td>
+												<script src = 'js/audio.js'></script>
+                                                <td onclick = 'playAudio(".$row[0].")'><img src = ".$row[3]." width='200' height='200' /> </td>
                                                 <td>".$row[2]."</td>
                                                 <td>".$row[1]."</td>
                                                 <script src = 'js/displaySubmissionFields.js'></script>
