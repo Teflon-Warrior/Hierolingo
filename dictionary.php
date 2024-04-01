@@ -157,7 +157,7 @@ $les = $result['userlevel'];
 		<button class="lessontab" onclick="displayLesson(event, '4');">Lesson 4</button>
 	</div>
 	
-	<div class = 'lessonContent'>
+	<div id="Landing" style = "display: block;" class = "lessonContent">
 	<!-- landing text -->
 	<p> Welcome to the Review section! Here you will find words that you have seen from the lessons page. Here you can see a word's heiroglyph, it's definition, part of speech, and it's pronounciation if you click on its row.
 	Clicking on "Add" opens a menu where you can add words to your own study sets. Either click a name from a drop down, or type in a new name, and click "Submit" to add it to a list! </p>

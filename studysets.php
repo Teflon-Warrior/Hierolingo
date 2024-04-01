@@ -152,7 +152,7 @@ $les = $result['userlevel'];
 	</div>
 	
 	<!-- Landing text -->
-	<div class = 'lessonContent'>
+	<div id = "Landing" style = "display: block;" class = 'lessonContent'>
 	<p> Welcome to Study Sets! Here you can make custom vocabulary lists for words that you select! Here you can see a word's heiroglyph, it's definition, part of speech, and it's pronounciation if you click on its row.
 	If need be, you can remove a word from the set, edit the name of a set, or delete the set entirely. </p>
 	</div>
