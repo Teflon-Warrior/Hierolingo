@@ -1,5 +1,5 @@
 function playAudio(wordId){
-	audioURL = "audio/" + wordID;
+	audioURL = "audio/" + wordId + ".mp3";
 	var audio = new Audio(audioURL).play();
 	audio.currentTime = 0;
 	
