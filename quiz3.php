@@ -12,16 +12,32 @@
   <link rel="stylesheet" href="css/lesson.css">
   <link rel="stylesheet" type="text/css" href="css/general.css" />
   <script type="text/javascript" src="./js/lessonjs.js"></script>
-
+  <link rel="stylesheet" href="css/quiz.css">
 
 </head>
 
 <body>
-
-  <header>
-
-    <div class="all-over-bkg"></div>
-    <h1>Quiz Three</h1>
+  
+<div class="profile-header">
+            <nav id="mySidenav" class="sidenav">
+                <ul>
+                    <li><a class="closebtn">&times;</a></li>
+                    <li><a href="profile.php">Profile</a></li>
+                    <li><a href="lesson.php<?php echo"?les=3";?>">Lessons</a></li>
+                    <li><a href="dictionary.php">Review</a></li>
+                    <li><a href="studysets.php">Study Sets</a></li>
+                    <li><a href="settings.php">Settings</a></li>
+                    <li><a href="logout.php">Log Out</a></li>
+                </ul>
+            </nav>
+<header> 
+<div class="openbtn">
+                    <span class="material-symbols-outlined menu-button">menu</span>
+                    <span class="menu-text">menu</span>
+                </div>
+                <div class="all-over-bkg"></div>
+                <div style="padding-top: 40px; position: absolute; left: 50%; transform: translate(-50%,0); font-size: 2em;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: black;font-weight: bold;">Quiz 3 </div>
+</div>
   </header>
   <?php
   session_start();
