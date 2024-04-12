@@ -105,7 +105,7 @@
                 </div>
             </div>
             <br>
-            <button class="btn btn-primary" type="submit" id="edit" value="Save Changes">Save Changes</button>
+            <button class="greenButton" type="submit" id="edit" value="Save Changes">Save Changes</button>
     </div>
     </form>
     </div>
