@@ -240,6 +240,52 @@ main {
         background-color: #ebd462;
 }
 
+.redButton {
+    width: 80px;
+    height: 40px;
+    /*
+    justify-content: center;        
+    align-items: center;
+    */
+    background-color: transparent;
+    border: 2px solid #bf2323;
+    border-radius: 10px;
+    padding: 0px;
+    /*padding: 0.5em 1.5em;*/
+    margin: 0.5em;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: background-color .2s ease-out, color .2s ease-out, border-color .18s ease-out;
+    font-family: "Exo", sans-serif;
+}
+.redButton:hover {
+    transition: border-color .18s ease-out;
+    background-color: #ebd462;
+}
+
+.greenButton {
+    width: 80px;
+    height: 40px;
+    /*
+    justify-content: center;        
+    align-items: center;
+    */
+    background-color: transparent;
+    border: 2px solid #22bb1c;
+    border-radius: 10px;
+    padding: 0px;
+    /*padding: 0.5em 1.5em;*/
+    margin: 0.5em;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: background-color .2s ease-out, color .2s ease-out, border-color .18s ease-out;
+    font-family: "Exo", sans-serif;
+}
+.greenButton:hover {
+    transition: border-color .18s ease-out;
+    background-color: #ebd462;
+}
+
 .lessontab {
     font-family: "Exo", sans-serif;
 }

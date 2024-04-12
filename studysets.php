@@ -94,7 +94,7 @@ $les = $result['userlevel'];
 			{}
 				echo "
 				<script src = 'js/displaySubmissionFields.js'></script>
-				<button type = 'edit' value='edit' onclick = 'displaySubmit(event, ".$i.");' class='btn btn-success' class = 'addButton' >Edit Name</button>
+				<button type = 'edit' value='edit' onclick = 'displaySubmit(event, ".$i.");' class='greenButton' class = 'addButton' >Edit Name</button>
 				<form action = 'editStudySet.php' method = 'post' class = 'submissionForm' id = 'submissionForm".$i."'>
 					<div class='form-group'>
 						<input type = 'text' name = 'newStudysetName' id = 'newStudysetName'>
@@ -106,7 +106,7 @@ $les = $result['userlevel'];
 				<form action = 'deleteStudySet.php' method = 'post'>
 					<input type = 'hidden' name = 'setName' id = 'setName' value = ".$setName.">
 					<input type = 'hidden' name = 'userID' id = 'userID' value = ".$userID.">
-					<button type = 'submit' value='removeSet' class='btn btn-danger'>Delete Set</button>
+					<button type = 'submit' value='removeSet' class='redButton'>Delete Set</button>
 				</form> 				
 
 				<table class='table table-hover' border = '1'>
@@ -132,7 +132,7 @@ $les = $result['userlevel'];
 								<input type = 'hidden' name = 'setName' id = 'setName' value = ".$setName.">
 								<input type = 'hidden' name = 'userID' id = 'userID' value = ".$userID.">
 								<input type = 'hidden' name = 'wordID' id = 'wordID' value = ".$wordsIn[$i].">
-								<button type = 'submit' value='remove' class='btn btn-danger'>Remove Word</button>
+								<button type = 'submit' value='remove' class='redButton'>Remove Word</button>
 							</form>
 						</td>
 					</tr>";
