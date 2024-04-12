@@ -20,26 +20,11 @@ html {
 }
 
 
-
-
 html {
     box-sizing: border-box;
 }
 
 /* Menu styling code from I360 */
-
-.openbtn {
-    position: absolute;
-    left: 20px;
-    top: 10px;
-    color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.openbtn:hover {
-    color: #cebc83;
-    cursor: pointer
-}
 
 ul {
     margin: 0;
