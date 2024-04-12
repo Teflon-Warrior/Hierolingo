@@ -88,7 +88,6 @@ article {
     font-size: 18px;
     letter-spacing: 1px;
     transition: background-color .2s ease-out, color .2s ease-out, border-color .18s ease-out;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .button:hover {
