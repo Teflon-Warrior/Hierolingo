@@ -14,6 +14,12 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="css/tabbingStyling.css" />
+    <link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
 
     <?php
     require "config.php";
@@ -70,9 +76,11 @@
             <span class="material-symbols-outlined menu-button">menu</span>
             <span class="menu-text">menu</span>
         </div>
-        <div class="all-over-bkg"></div>
-        <div style="padding-top: 40px; position: absolute; left: 50%; transform: translate(-50%,0); font-size: 2em;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;font-weight: bold;">Edit </div>
     </header>
+
+    <div class='header-title'>
+		<h1> Edit </h1>
+	</div>
 
     <div class="edit-form">
         <form action="update.php" method="POST">
