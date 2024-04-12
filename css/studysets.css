@@ -26,17 +26,6 @@ html {
 
 /* Menu styling code from I360 */
 
-.menu-button {
-    font-size: 36px !important;
-    position: relative;
-    top: 6px;
-    left: -4px;
-}
-
-.menu-text {
-    font-size: 12px;
-    display: block;
-}
 
 ul {
     margin: 0;
