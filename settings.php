@@ -146,7 +146,7 @@
                         $day = $result['dayofweek'];
                         ?>
                         <br>
-                        <p>Select the day of the week you would like to receive notifications<p> <br>
+                        <p>Select the day of the week you would like to receive notifications<p>
                         <div class="textinput"> <select class="form-control w-25" name="day"> </div>
                                 <option <?php if ($day == 0) {
                                         echo "selected";
