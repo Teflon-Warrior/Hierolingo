@@ -100,7 +100,7 @@ $les = $result['userlevel'];
 						<input type = 'text' name = 'newStudysetName' id = 'newStudysetName'>
 						<input type = 'hidden' name = 'userID' id = 'userID' value = ".$userID.">
 						<input type = 'hidden' id = 'setName' name = 'setName' value = ".$setName.">
-						<button type = 'submit' value='submit' class='btn btn-primary'>Submit</button>
+						<button type = 'submit' value='submit' class='smallButton'>Submit</button>
                     </div>
                 </form>
 				<form action = 'deleteStudySet.php' method = 'post'>
@@ -182,7 +182,7 @@ $les = $result['userlevel'];
 	echo "<h3>Add a new Study Set</h3>";
 	echo "<form action = 'addStudySet.php' method = 'post'>
 		What would you like to name your study set? <input class='col-md-4 form-control-sm' type='text' name = 'studySetName'>
-		<button type = 'submit' class='btn btn-primary'>Submit</button>	
+		<button type = 'submit' class='smallButton'>Submit</button>	
 	     </form>";
 	echo "</div>";
 	?>
@@ -199,7 +199,7 @@ echo "<form action='addStudySet.php' method='post'>
   <label for='exampleInputEmail1'>What would you like to name your study set?</label>
   <input type='text' name='studySetName' class='form-control' placeholder='Type a name...'><br>
 </div>
-<button type='submit' class='btn btn-primary'>Submit</button>
+<button type='submit' class='smallButton'>Submit</button>
 </form>";
 
 ?> 
