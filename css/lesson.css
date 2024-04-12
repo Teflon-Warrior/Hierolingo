@@ -202,7 +202,10 @@ img {
 .progress-bar {
         width: 100%;
         margin-left: auto;
-        margin-right: auto;     
+        margin-right: auto;
+	position: relative;
+        transform: translate(50%, 0);
+        left: -225px;     
 
         }
 }
