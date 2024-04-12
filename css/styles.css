@@ -92,7 +92,7 @@ header h1,
 }
 
 header {
-    background-color: #DFDFDF;
+    background-color: #c5c5c5;
     height: 75px;
     margin: 0;
 
@@ -187,7 +187,7 @@ li {
     overflow-x: hidden;
     padding-top: 100px;
     transition: 0.5s;
-    background-color: rgb(237, 214, 177);
+    background-color: #c5c5c5;
 }
 
 /* Sidenav code from I360 */
@@ -197,11 +197,11 @@ li {
     font-size: 25px;
     display: block;
     transition: 0.3s;
-    color: white;
+    color: rgb(30, 30, 30);
 }
 
 .sidenav a:hover {
-    color: #9a8337;
+    color: #ebd462;
 }
 
 .sidenav .closebtn {
