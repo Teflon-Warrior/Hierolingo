@@ -100,6 +100,7 @@ header {
 
 .header-title {
     padding-bottom: 2.0rem;
+    padding-top: 2.0rem;
     border: 2px solid #ebd462;
     margin: 20px auto 0;
     width: 300px;
