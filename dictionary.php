@@ -67,7 +67,7 @@
 	</header>
 
 	<div class='header-title'>
-		<h1 > Review </h1>
+		<h1> Review </h1>
 	</div>
 
 	<?php
