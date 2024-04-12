@@ -82,6 +82,17 @@ p {
     color: rgb(30, 30, 30);
 }
 
+label {
+
+    font-family: "Exo", sans-serif;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(30, 30, 30);
+    padding-top: 3.0rem;
+}
+
 header h1,
 .container {
 
