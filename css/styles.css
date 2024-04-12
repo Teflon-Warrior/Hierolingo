@@ -241,7 +241,7 @@ main {
 }
 
 .redButton {
-    width: 80px;
+    width: 100px;
     height: 40px;
     /*
     justify-content: center;        
@@ -260,11 +260,11 @@ main {
 }
 .redButton:hover {
     transition: border-color .18s ease-out;
-    background-color: #ebd462;
+    background-color: #bf2323;
 }
 
 .greenButton {
-    width: 80px;
+    width: 100px;
     height: 40px;
     /*
     justify-content: center;        
@@ -283,7 +283,7 @@ main {
 }
 .greenButton:hover {
     transition: border-color .18s ease-out;
-    background-color: #ebd462;
+    background-color: #22bb1c;
 }
 
 .lessontab {
