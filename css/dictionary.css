@@ -128,25 +128,6 @@ article {
     color: var(--iu-red);
 }
 
-.addWord {
-    width: 70px;
-    height: 30px;
-    /*
-    justify-content: center;        
-    align-items: center;
-    */
-    background-color: transparent;
-    border: 2px solid #ebd462;
-    border-radius: 10px;
-    padding: 0px;
-    /*padding: 0.5em 1.5em;*/
-    margin: 0.5em;
-    font-size: 12px;
-    letter-spacing: 1px;
-    transition: background-color .2s ease-out, color .2s ease-out, border-color .18s ease-out;
-    font-family: "Exo", sans-serif;
-}
-
 @media only screen and (max-device-width: 480px) {
 img {
         width: 100px;

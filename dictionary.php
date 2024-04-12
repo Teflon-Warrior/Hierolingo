@@ -133,7 +133,7 @@
                                                 <td>" . $row[1] . "</td>
                                                 <script src = 'js/displaySubmissionFields.js'></script>
                                                 <td>
-                                                        <button type='button' class='btn btn-primary' onclick = 'displaySubmit(event, \"" . $row[0] . "l" . strval($uniq) . "\");' id = 'submit" . $row[0] . "l" . strval($uniq) . "' class = 'addWord'>Add</button>
+                                                        <button type='button' class='smallButton' onclick = 'displaySubmit(event, \"" . $row[0] . "l" . strval($uniq) . "\");' id = 'submit" . $row[0] . "l" . strval($uniq) . "' class = 'addButton'>Add</button>
                                                         <form action = 'writeToFile.php' method = 'post' class = 'submissionForm' id = 'submissionForm" . $row[0] . "l" . strval($uniq) . "'>
                                                         <div class='form-group'>
                                                                 <label for = 'studyset'> Choose a study set or make a new one! </label>
