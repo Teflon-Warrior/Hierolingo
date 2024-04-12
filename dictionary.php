@@ -145,7 +145,7 @@
 				echo "</select>
                                                                 <input type = 'text' name = 'newStudyset' id = 'newStudyset'>
                                                                 <input type = 'hidden' name = 'word' value = " . $row[0] . ">
-                                                                <button type = 'submit' value='submit' class='btn btn-primary'>Submit</button>
+                                                                <button type = 'submit' value='submit' class='smallButton'>Submit</button>
                                                                 </div>";
 				echo "</form>
                                                 </td>
