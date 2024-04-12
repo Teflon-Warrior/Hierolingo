@@ -248,7 +248,7 @@ main {
     align-items: center;
     */
     background-color: transparent;
-    border: 2px solid #c23737;
+    border: 2px solid #eb6262;
     border-radius: 10px;
     padding: 0px;
     /*padding: 0.5em 1.5em;*/
@@ -260,7 +260,7 @@ main {
 }
 .redButton:hover {
     transition: border-color .18s ease-out;
-    background-color: #c23737;;
+    background-color: #eb6262;
 }
 
 .greenButton {
@@ -271,7 +271,7 @@ main {
     align-items: center;
     */
     background-color: transparent;
-    border: 2px solid #22bb1c;
+    border: 2px solid #6deb62;
     border-radius: 10px;
     padding: 0px;
     /*padding: 0.5em 1.5em;*/
@@ -283,7 +283,7 @@ main {
 }
 .greenButton:hover {
     transition: border-color .18s ease-out;
-    background-color: #22bb1c;
+    background-color: #6deb62;
 }
 
 .lessontab {
