@@ -1,10 +1,10 @@
 <html>
 	<head>
-		<title>Lessons Home</title>
+		<title>Lesson 1</title>
 		 <meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Lessons Home</title>
+		<title>Lesson 1</title>
 	
 		<script type="text/javascript" src="./js/profile.js"></script>
 
@@ -25,7 +25,7 @@
                 <ul>
                     <li><a class="closebtn">&times;</a></li>
                     <li><a href="profile.php">Profile</a></li>
-                    <li><a href="lesson.php<?php echo"?les=$level";?>">Lessons</a></li>
+                    <li><a href="lessonsHome.php">Lessons</a></li>
                     <li><a href="dictionary.php">Review</a></li>
                     <li><a href="studysets.php">Study Sets</a></li>
 		    <li><a href="settings.php">Settings</a></li>
@@ -84,6 +84,6 @@ than a few words at most. </p>
 	<br>
 	<p> From here, you'll want to check out the flashcards and learn some basic vocabulary. After that, try taking the quiz. </p>
 	<button onclick="lesson.php?les=1">Flashcards</button>
-	<button onclick="quiz.php1">Quiz</button>
+	<button onclick="quiz1.php1">Quiz</button>
 	</body>
 </html>
