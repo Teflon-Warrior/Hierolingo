@@ -98,7 +98,14 @@ header {
 
 }
 
-
+.header-title {
+    padding-bottom: 2.0rem;
+    border: 2px solid #ebd462;
+    margin: 20px auto 0;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+}
 
 html {
     box-sizing: border-box;
