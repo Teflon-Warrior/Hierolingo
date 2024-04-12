@@ -159,9 +159,10 @@
 
 	<script src="js/nav.js"></script>
 
-	<!-- Here set up the tabs for lessons. All, 1, 2, 3, 4. If a lesson is blank, display a message along the lines of "No words unlocked yet... Unlock more in Lessons!" with a link to lessons. -->
+	<!-- Here set up the tabs for lessons. 
+	, 1, 2, 3, 4. If a lesson is blank, display a message along the lines of "No words unlocked yet... Unlock more in Lessons!" with a link to lessons. -->
 	<script type="text/javascript" src="js/dictionaryDisplayLesson.js"></script>
-	<div class="tabs" style='padding-top :20px; padding-bottom: 20px;'>
+	<div class="tabs" style='padding-top :30px; padding-bottom: 20px;'>
 		<button class="lessontab" onclick="displayLesson(event, 'All');">All</button>
 		<button class="lessontab" onclick="displayLesson(event, '1');">Lesson 1</button>
 		<button class="lessontab" onclick="displayLesson(event, '2');">Lesson 2</button>
