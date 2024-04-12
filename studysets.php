@@ -65,7 +65,7 @@ $les = $result['userlevel'];
 	</header>
 
 	<div class='header-title'>
-		<h1> Dictionary </h1>
+		<h1> Study Sets </h1>
 	</div>
 	
 	<!-- PHP connection & Queries -->

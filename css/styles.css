@@ -244,6 +244,12 @@ main {
     font-family: "Exo", sans-serif;
 }
 
+.tabs {
+    padding-top :20px; 
+    padding-bottom: 20px; 
+    margin-top: 25px;
+}
+
 
 /* Presentation website code */
 
