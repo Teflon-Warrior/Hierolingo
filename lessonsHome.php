@@ -50,20 +50,20 @@
 		to test yourself! </p>
 		
 		<h3>Lesson 1 </h3>
-		<a href = "l1grammar.php"><p>Learn</p></a> <p> | </p>
-		<a href = "lesson.php?les=1"><p>Flashcards</p></a> <p> | </p>
-		<a href = "quiz.php"><p>Quiz</p></a>
+		<button onclick="l1grammar.php">Lesson 1 Grammar</button>
+		<button onclick="lesson.php?les=1">Flashcards</button>
+		<button onclick="quiz1.php">Quiz</button>
 		<h3>Lesson 2 </h3>
-		<a href = "l2grammar.php"><p>Learn</p></a> <p> | </p>
-		<a href = "lesson.php?les=2"><p>Flashcards</p></a> <p> | </p>
-		<a href = "quiz.php"><p>Quiz</p></a>
+		<button onclick="l2grammar.php">Lesson 1 Grammar</button>
+		<button onclick="lesson.php?les=2">Flashcards</button>
+		<button onclick="quiz2.php">Quiz</button>
 		<h3>Lesson 3 </h3>
-		<a href = "l3grammar.php"><p>Learn</p></a> <p> | </p>
-		<a href = "lesson.php?les=3"><p>Flashcards</p></a> <p> | </p>
-		<a href = "quiz.php"><p>Quiz</p></a>
+		<button onclick="l3grammar.php">Lesson 1 Grammar</button>
+		<button onclick="lesson.php?les=3">Flashcards</button>
+		<button onclick="quiz3.php">Quiz</button>
 		<h3>Lesson 4 </h3>
-		<a href = "l4grammar.php"><p>Learn</p></a> <p> | </p>
-		<a href = "lesson.php?les=4"><p>Flashcards</p></a> <p> | </p>
-		<a href = "quiz.php"><p>Quiz</p></a>
+		<button onclick="l4grammar.php">Lesson 1 Grammar</button>
+		<button onclick="lesson.php?les=4">Flashcards</button>
+		<button onclick="quiz4.php">Quiz</button>
 	</body>
 </html>
