@@ -248,7 +248,7 @@ main {
     align-items: center;
     */
     background-color: transparent;
-    border: 2px solid #bf2323;
+    border: 2px solid #c23737;
     border-radius: 10px;
     padding: 0px;
     /*padding: 0.5em 1.5em;*/
@@ -260,7 +260,7 @@ main {
 }
 .redButton:hover {
     transition: border-color .18s ease-out;
-    background-color: #bf2323;
+    background-color: #c23737;;
 }
 
 .greenButton {
