@@ -150,10 +150,12 @@ th {
 ul {
     margin: 0;
     padding: 0;
+    font-family: "Exo", sans-serif;
 }
 
 li {
     list-style-type: none;
+    font-family: "Exo", sans-serif;
 }
 
 .all-over-bkg {
