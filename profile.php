@@ -100,7 +100,7 @@ if (mysqli_num_rows($result) > 0) {
 
         <!-- PFP, name, and username -->
         <div class="profile-info" style="display: inline-block;">
-            <img class="pfp" src="<?php echo $image ?>" width="150" height="150">
+            <img class="pfp" src="<?php echo $image ?>">
             <div class="edit-button" onclick="editClick();">
                 <img src="./img/Edit.png" width="40" height="40">
             </div>

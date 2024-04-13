@@ -1,19 +1,15 @@
 .profile-page {
     display: flex;
+}
+
+.profile-page .pfp {
+    display: flex;
+    margin: 0 auto;
     justify-content: center;
     align-items: center;
-}
-
-.profile-page .pfp {
-    display: flex;
-    margin: 0 auto;
     border-radius: 50%;
-}
-
-.profile-page .pfp {
-    display: flex;
-    margin: 0 auto;
-    border-radius: 50%;
+    width: 600px;
+    height: 600px;
 }
 
 .edit-button img {
