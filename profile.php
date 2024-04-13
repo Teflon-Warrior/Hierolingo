@@ -78,7 +78,7 @@ if (mysqli_num_rows($result) > 0) {
             <ul>
                 <li><a class="closebtn">&times;</a></li>
                 <li><a href="profile.php">Profile</a></li>
-                <li><a href="lesson.php<?php echo "?les=$level"; ?>">Lessons</a></li>
+                <li><a href="lessonsHome.php>">Lessons</a></li>
                 <li><a href="dictionary.php">Review</a></li>
                 <li><a href="studysets.php">Study Sets</a></li>
                 <li><a href="settings.php">Settings</a></li>
