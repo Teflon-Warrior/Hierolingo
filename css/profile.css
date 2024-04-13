@@ -1,7 +1,7 @@
-.profile-page .pfp {
+.profile-page {
     display: flex;
-    margin: 0 auto;
-    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
 }
 
 .profile-page .pfp {
@@ -9,28 +9,11 @@
     margin: 0 auto;
     border-radius: 50%;
 }
-.profile-page .bar-div {
+
+.profile-page .pfp {
     display: flex;
-    justify-content: space-between;
-}
-.profile-page .bar-div:hover {
-    background-color: #444077;
-    color: #ffffff;
-}
-.profile-page .level-display {
-    width: 800px;
-    height: 100px;
-    background-color: #444077;
-    border: 3px solid #06023d;
-    border-radius: 10px;
-    display: inline-block;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-
-.profile-page .profile-level .level-display h2{
-    color: #f4f4f4;
+    margin: 0 auto;
+    border-radius: 50%;
 }
 
 .edit-button img {

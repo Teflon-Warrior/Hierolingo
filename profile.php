@@ -111,7 +111,7 @@ if (mysqli_num_rows($result) > 0) {
                 <?php echo $userhandle ?>
             </h3>
             <h1>Level
-                    <?php echo $level ?>
+                    <?php echo $level ?> Out of 4
             </h1>
         </div>
 
