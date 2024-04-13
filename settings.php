@@ -14,6 +14,12 @@
         <link rel="stylesheet"
                 href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link rel="stylesheet" href="css/tabbingStyling.css" />
+        <link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
 
         <?php
 	ob_start();
@@ -63,9 +69,11 @@
                         <span class="material-symbols-outlined menu-button">menu</span>
                         <span class="menu-text">menu</span>
                 </div>
-                <div class="all-over-bkg"></div>
-                <div style="padding-top: 40px; position: absolute; left: 50%; transform: translate(-50%,0); font-size: 2em;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;font-weight: bold;">Settings </div>
         </header>
+
+        <div class='header-title'>
+		<h1> Settings </h1>
+	</div>
 
         <?php
 
@@ -138,7 +146,7 @@
                         $day = $result['dayofweek'];
                         ?>
                         <br>
-                        Select the day of the week you would like to receive notifications <br>
+                        <p>Select the day of the week you would like to receive notifications<p>
                         <div class="textinput"> <select class="form-control w-25" name="day"> </div>
                                 <option <?php if ($day == 0) {
                                         echo "selected";
@@ -169,7 +177,7 @@
                         <input type="color" name="progcolor" id="progcolor" value="<?php echo $color; ?>" />
 
                         <br><br>
-                        <button class="btn btn-primary" type="submit" id="edit" value="Save Changes">Save Changes</button>
+                        <button class="greenButton" type="submit" id="edit" value="Save Changes">Save Changes</button>
                 </div>
                 <?php
 

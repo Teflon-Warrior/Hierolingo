@@ -57,12 +57,6 @@ h1 {
     padding-top: 3.0rem;
 }
 
-h1 span {
-    font-family: "Exo", sans-serif;
-    font-weight: bold;
-    color: rgb(30, 30, 30);
-}
-
 h2 {
     font-family: "Exo", sans-serif;
     font-weight: bold;
@@ -82,6 +76,18 @@ p {
     color: rgb(30, 30, 30);
 }
 
+label {
+
+    font-family: "Exo", sans-serif;
+    color: rgb(30, 30, 30);
+}
+
+option {
+
+    font-family: "Exo", sans-serif;
+    color: rgb(30, 30, 30);
+}
+
 header h1,
 .container {
 
@@ -92,10 +98,19 @@ header h1,
 }
 
 header {
-    background-color: #DFDFDF;
+    background-color: #e2e2e2;
     height: 75px;
     margin: 0;
 
+}
+
+.header-title {
+    padding-bottom: 2.0rem;
+    border: 2px solid #ebd462;
+    margin: 20px auto 0;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
 }
 
 html {
@@ -141,10 +156,12 @@ th {
 ul {
     margin: 0;
     padding: 0;
+    font-family: "Exo", sans-serif;
 }
 
 li {
     list-style-type: none;
+    font-family: "Exo", sans-serif;
 }
 
 .all-over-bkg {
@@ -176,7 +193,7 @@ li {
     overflow-x: hidden;
     padding-top: 100px;
     transition: 0.5s;
-    background-color: rgb(237, 214, 177);
+    background-color: #c5c5c5;
 }
 
 /* Sidenav code from I360 */
@@ -186,12 +203,11 @@ li {
     font-size: 25px;
     display: block;
     transition: 0.3s;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: white;
+    color: rgb(30, 30, 30);
 }
 
 .sidenav a:hover {
-    color: #9a8337;
+    color: #ebd462;
 }
 
 .sidenav .closebtn {
@@ -207,6 +223,89 @@ main {
     transition: margin-left .5s;
     padding: 0;
 }
+
+.smallButton {
+    width: 80px;
+    height: 40px;
+    /*
+    justify-content: center;        
+    align-items: center;
+    */
+    background-color: transparent;
+    border: 2px solid #ebd462;
+    border-radius: 10px;
+    padding: 0px;
+    /*padding: 0.5em 1.5em;*/
+    margin: 0.5em;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: background-color .2s ease-out, color .2s ease-out, border-color .18s ease-out;
+    font-family: "Exo", sans-serif;
+}
+
+.smallButton:hover {
+        transition: border-color .18s ease-out;
+        background-color: #ebd462;
+}
+
+.redButton {
+    width: 120px;
+    height: 40px;
+    /*
+    justify-content: center;        
+    align-items: center;
+    */
+    background-color: transparent;
+    border: 2px solid #eb6262;
+    border-radius: 10px;
+    padding: 0px;
+    /*padding: 0.5em 1.5em;*/
+    margin: 0.5em;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: background-color .2s ease-out, color .2s ease-out, border-color .18s ease-out;
+    font-family: "Exo", sans-serif;
+}
+.redButton:hover {
+    transition: border-color .18s ease-out;
+    background-color: #eb6262;
+}
+
+.greenButton {
+    width: 120px;
+    height: 40px;
+    /*
+    justify-content: center;        
+    align-items: center;
+    */
+    background-color: transparent;
+    border: 2px solid #6deb62;
+    border-radius: 10px;
+    padding: 0px;
+    /*padding: 0.5em 1.5em;*/
+    margin: 0.5em;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: background-color .2s ease-out, color .2s ease-out, border-color .18s ease-out;
+    font-family: "Exo", sans-serif;
+}
+.greenButton:hover {
+    transition: border-color .18s ease-out;
+    background-color: #6deb62;
+}
+
+.lessontab {
+    font-family: "Exo", sans-serif;
+}
+
+.tabs {
+    padding-top :20px; 
+    padding-bottom: 20px; 
+    margin-top: 25px;
+}
+
+
+/* Presentation website code */
 
 
 .racing-stripes {
@@ -397,7 +496,7 @@ article {
     font-size: 18px;
     letter-spacing: 1px;
     transition: background-color .2s ease-out, color .2s ease-out, border-color .18s ease-out;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Exo", sans-serif;
 }
 
 .button:hover {

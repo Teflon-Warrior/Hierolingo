@@ -14,6 +14,12 @@
 	<link rel="stylesheet"
 		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 	<link rel="stylesheet" href="css/tabbingStyling.css" />
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
 
 <?php
         require 'config.php';
@@ -56,9 +62,11 @@ $les = $result['userlevel'];
 			<span class="material-symbols-outlined menu-button">menu</span>
 			<span class="menu-text">menu</span>
 		</div>
-		<div class="all-over-bkg"></div>
-		<div style="padding-top: 40px; position: absolute; left: 50%; transform: translate(-50%,0); font-size: 2em;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;font-weight: bold;"><div class="study"> Study Sets </div></div>
 	</header>
+
+	<div class='header-title'>
+		<h1> Study Sets </h1>
+	</div>
 	
 	<!-- PHP connection & Queries -->
 	<?php
@@ -86,19 +94,19 @@ $les = $result['userlevel'];
 			{}
 				echo "
 				<script src = 'js/displaySubmissionFields.js'></script>
-				<button type = 'edit' value='edit' onclick = 'displaySubmit(event, ".$i.");' class='btn btn-success' class = 'addButton' >Edit Name</button>
+				<button type = 'edit' value='edit' onclick = 'displaySubmit(event, ".$i.");' class='greenButton' class = 'addButton' >Edit Name</button>
 				<form action = 'editStudySet.php' method = 'post' class = 'submissionForm' id = 'submissionForm".$i."'>
 					<div class='form-group'>
 						<input type = 'text' name = 'newStudysetName' id = 'newStudysetName'>
 						<input type = 'hidden' name = 'userID' id = 'userID' value = ".$userID.">
 						<input type = 'hidden' id = 'setName' name = 'setName' value = ".$setName.">
-						<button type = 'submit' value='submit' class='btn btn-primary'>Submit</button>
+						<button type = 'submit' value='submit' class='smallButton'>Submit</button>
                     </div>
                 </form>
 				<form action = 'deleteStudySet.php' method = 'post'>
 					<input type = 'hidden' name = 'setName' id = 'setName' value = ".$setName.">
 					<input type = 'hidden' name = 'userID' id = 'userID' value = ".$userID.">
-					<button type = 'submit' value='removeSet' class='btn btn-danger'>Delete Set</button>
+					<button type = 'submit' value='removeSet' class='redButton'>Delete Set</button>
 				</form> 				
 
 				<table class='table table-hover' border = '1'>
@@ -124,7 +132,7 @@ $les = $result['userlevel'];
 								<input type = 'hidden' name = 'setName' id = 'setName' value = ".$setName.">
 								<input type = 'hidden' name = 'userID' id = 'userID' value = ".$userID.">
 								<input type = 'hidden' name = 'wordID' id = 'wordID' value = ".$wordsIn[$i].">
-								<button type = 'submit' value='remove' class='btn btn-danger'>Remove Word</button>
+								<button type = 'submit' value='remove' class='redButton'>Remove Word</button>
 							</form>
 						</td>
 					</tr>";
@@ -174,7 +182,7 @@ $les = $result['userlevel'];
 	echo "<h3>Add a new Study Set</h3>";
 	echo "<form action = 'addStudySet.php' method = 'post'>
 		What would you like to name your study set? <input class='col-md-4 form-control-sm' type='text' name = 'studySetName'>
-		<button type = 'submit' class='btn btn-primary'>Submit</button>	
+		<button type = 'submit' class='smallButton'>Submit</button>	
 	     </form>";
 	echo "</div>";
 	?>
@@ -191,7 +199,7 @@ echo "<form action='addStudySet.php' method='post'>
   <label for='exampleInputEmail1'>What would you like to name your study set?</label>
   <input type='text' name='studySetName' class='form-control' placeholder='Type a name...'><br>
 </div>
-<button type='submit' class='btn btn-primary'>Submit</button>
+<button type='submit' class='smallButton'>Submit</button>
 </form>";
 
 ?> 
