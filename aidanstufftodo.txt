@@ -1,7 +1,4 @@
-Notes
---If theres not a study set there, create new set should be there. Dont make user go back and look for the words again
---Add content to welcome page
---Explain points
+Bugs:
 
--- Add content to welcome landing page (gotta do)
--- Style Settings and Edit php, fix edit button on profile
+-Random bolding on some titles
+-Edit Name does not work for study sets after the first one

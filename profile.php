@@ -110,17 +110,10 @@ if (mysqli_num_rows($result) > 0) {
             <h3>@
                 <?php echo $userhandle ?>
             </h3>
-        </div>
-
-        <!-- Level -->
-        <div class="profile-level">
-            <div class="level-display">
-                <h2>Level
+            <h1>Level
                     <?php echo $level ?>
-                </h2>
-            </div>
+            </h1>
         </div>
-    </div>
 
     <script src="js/nav.js"></script>
 </body>
