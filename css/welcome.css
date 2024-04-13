@@ -25,7 +25,7 @@ html, body {
 
 body {
     position: relative;
-    background-color: #F4DF9C;
+    background-color: #ffffff;
 }
 
 h1 {
@@ -35,7 +35,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: black;
     padding-top: 3.0rem;
     font-size: xx-large;
 }
@@ -80,7 +80,8 @@ html {
 }
 
 .jumbotron {
-    background-color: #cebc83;
+    background-color: #e2e2e2;
+    border-bottom: 2px solid #5015B5;
 }
 
 
@@ -201,12 +202,21 @@ article {
 }
 
 .btn-primary:hover {
-    background-color: #a49465 !important;
-    border-color: #a49465 !important;
+    background-color: #ebd462 !important;
+    border-color: #ebd462 !important;
 }
 
 .columns-div {
     padding-top: 1.0rem;
+}
+
+.column-border {
+    padding-bottom: 1.0rem;
+    border: 2px solid #ebd462;
+    margin: 20px auto 0;
+    width: 250px;
+    border-radius: 10px;
+    text-align: center;
 }
 
 @media only screen and (max-device-width: 480px) {

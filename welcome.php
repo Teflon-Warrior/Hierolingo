@@ -30,21 +30,27 @@
             <!-- Example row of columns -->
             <div class="row">
                 <div class="col-md-4">
+                  <div class='column-border'>
                     <h2 class="down">Advanced Learning</h2>
                     <p class="p3">DataGlyph uses advanced learning modules to enhance the learning experience of the user.
                         Registered users can utilize a dictionary of words, customizable study sets, and flashcard-based
                         lessons to assist them in learning the ancient writing. </p>
+                  </div>
                 </div>
                 <div class="col-md-4">
+                  <div class='column-border'>
                     <h2>Quizzes</h2>
                     <p class="p3">Users of DataGlyph can partake in quizzes that if passed, advances them to a new level. With new
                         levels come new words to learn!</p>
+                  </div>
                 </div>
                 <div class="col-md-4">
+                  <div class='column-border'>
                     <h2>Notifications</h2>
                     <p class="p3">DataGlyph utilizes the Twilio API to notify users (permission granted) when to practice their
                         heiroglyphics. This way, you can stay on track to learning egyptian heiroglyphics without
                         forgetting!</p>
+                  </div>
                 </div>
             </div>
 
