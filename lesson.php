@@ -171,8 +171,8 @@
                 echo "<button class='btn' onclick='nextbuttonClicked($les, $curr);'> next term</button>";
         }
         echo "</div>";
-
-        echo "<div class='flash1' onclick='termClick($id);' id='term_$id'>";
+		echo "<script src = 'js/audio.js'></script>";
+        echo "<div class='flash1' onclick='termClick($id); playAudio($id);' id='term_$id'>";
         //echo $filepath;
         echo "<img src='$filepath'>";
         echo "</div>";
