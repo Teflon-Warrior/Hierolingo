@@ -1,5 +1,6 @@
 .profile-page {
     display: flex;
+    margin-bottom: 25px;
 }
 
 .profile-page .pfp {
@@ -7,6 +8,7 @@
     margin: 0 auto;
     justify-content: center;
     align-items: center;
+    margin-right: 100px;
     border-radius: 50%;
     width: 300px;
     height: 300px;
