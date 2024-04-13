@@ -48,21 +48,22 @@
 		<p>The learn button will take you to our grammar resources, while flashcards will take you to a place 
 		where you can learn vocabulary. When you feel comfortable with both sections in a lesson, take the quiz 
 		to test yourself! </p>
+		<p> If you don't know where to start, we recommend clicking on the Lesson 1 Grammar button.
 		
 		<h3>Lesson 1 </h3>
 		<button onclick="l1grammar.php">Lesson 1 Grammar</button>
 		<button onclick="lesson.php?les=1">Flashcards</button>
 		<button onclick="quiz1.php">Quiz</button>
 		<h3>Lesson 2 </h3>
-		<button onclick="l2grammar.php">Lesson 1 Grammar</button>
+		<button onclick="l2grammar.php">Lesson 2 Grammar</button>
 		<button onclick="lesson.php?les=2">Flashcards</button>
 		<button onclick="quiz2.php">Quiz</button>
 		<h3>Lesson 3 </h3>
-		<button onclick="l3grammar.php">Lesson 1 Grammar</button>
+		<button onclick="l3grammar.php">Lesson 3 Grammar</button>
 		<button onclick="lesson.php?les=3">Flashcards</button>
 		<button onclick="quiz3.php">Quiz</button>
 		<h3>Lesson 4 </h3>
-		<button onclick="l4grammar.php">Lesson 1 Grammar</button>
+		<button onclick="l4grammar.php">Lesson 4 Grammar</button>
 		<button onclick="lesson.php?les=4">Flashcards</button>
 		<button onclick="quiz4.php">Quiz</button>
 	</body>
