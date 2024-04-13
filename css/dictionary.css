@@ -9,7 +9,6 @@ html {
     box-sizing: inherit;
 }
 
-
 #tag {
     position: fixed;
     top: 0;
@@ -23,89 +22,9 @@ html {
 /* 
     GENERAL
 */
-body {
-    margin: 0;
-    background-color: #F4DF9C;
-}
-
-
-
-h1 {
-
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    padding-top: 3.0rem;
-}
-
-h1 span {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
-}
-
-h2 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
-}
-
-h3 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
-
-}
-
-p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 17px;
-}
-
-header h1, .container {
-
-    width: 800px;
-    display: flex;
-    justify-content: center;
-
-}
-
-header {
-    background-color: #cebc83;
-    height: 150px;
-    font-size: xx-large;
-
-}
 
 html {
     box-sizing: border-box;
-}
-
-/* Menu styling code from I360 */
-
-.openbtn {
-    position: absolute;
-    left: 20px;
-    top: 10px;
-    color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.openbtn:hover {
-    color: var(--menu-color);
-    cursor: pointer
-}
-
-.menu-button {
-    font-size: 36px !important;
-    position: relative;
-    top: 6px;
-    left: -4px;
-}
-
-.menu-text {
-    font-size: 12px;
-    display: block;
 }
 
 ul {
@@ -132,22 +51,6 @@ li {
     display: block;
 }
 
-#mySidenav {
-    z-index: 10000;
-}
-
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
-    padding-top: 60px;
-    transition: 0.5s;
-    background-color: rgb(237, 214, 177);
-}
 
 main {
     transition: margin-left .5s;
@@ -175,12 +78,16 @@ article {
     font-size: 18px;
     letter-spacing: 1px;
     transition: background-color .2s ease-out, color .2s ease-out, border-color .18s ease-out;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Exo", sans-serif;
 }
 
 .button:hover {
     background-color: transparent;
     color: var(--iu-red);
+}
+
+.lessontab {
+    font-family: "Exo", sans-serif;
 }
 
 @media only screen and (max-device-width: 480px) {

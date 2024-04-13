@@ -11,7 +11,7 @@ $TWILIO_AUTH_TOKEN = '55335639af3f96cc2d2a925ad3477efc';
 //$auth_token = '55335639af3f96cc2d2a925ad3477efc';
 
 
-$twilio_number = "+18667478301"; // Twilio number you own
+$twilio_number = "+18333244047"; // Twilio number you own
 $client = new Client($TWILIO_ACCOUNT_SID, $TWILIO_AUTH_TOKEN);
 
 $con=mysqli_connect("db.luddy.indiana.edu","i494f23_team11","my+sql=i494f23_team11","i494f23_team11");
@@ -48,9 +48,10 @@ $sql = "Select user from notifications where stat = 1 AND dayofweek = $day";
 
 $result = mysqli_query($con, $sql);
 //looping through returned id's
-while ($row = mysqli_fetch_assoc($result)) {
+while ($row = mysqli_fetch_array($result)) {
   //getting emails from that id
-  $query2 = "select email from User where id = $row";
+  $user = $row['user'];
+  $query2 = "select email from User where id = $user";
   $result2 = mysqli_query($con, $query2);
   $result2 = mysqli_fetch_array($result2);
   $email = $result2['email'];
