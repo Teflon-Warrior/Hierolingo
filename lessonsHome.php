@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<title>Lessons Home</title>
-		 <meta charset="UTF-8">
+		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Lessons Home</title>
@@ -20,6 +20,16 @@
 			p{
 				margin-left: 5%;
 				margin-right: 5%;
+			}
+			
+			li{
+				margin-left: 5%;
+				margin-right: 5%;
+			}
+			
+			h3{
+				margin-left: 1%;
+				margin-right: 1%;
 			}
 			
 			a { 
@@ -65,7 +75,7 @@
                     <span class="menu-text">menu</span>
                 </div>
                 <div class="all-over-bkg"></div>
-                <div style="padding-top: 40px; position: absolute; left: 50%; transform: translate(-50%,0); font-size: 2em;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;font-weight: bold;">Lessons Home </div>
+                <div style="padding-top: 40px; position: absolute; left: 50%; transform: translate(-50%,0); font-size: 2em;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;font-weight: bold;"></div>
 
             </header>
     </div>	
@@ -81,14 +91,17 @@
 		<a href = "l1grammar.php"><p> Lesson 1 Grammar </p></a>
 		<a href ="lesson.php?les=1"><p> Flashcards</p></a>
 		<a href ="quiz1.php"><p> Quiz</p></a>
+		<hr>
 		<h3>Lesson 2 </h3>
 		<a href = "l2grammar.php"><p> Lesson 2 Grammar </p></a>
 		<a href ="lesson.php?les=2"><p> Flashcards</p></a>
 		<a href ="quiz2.php"><p> Quiz</p></a>
+		<hr>
 		<h3>Lesson 3 </h3>
 		<a href = "l3grammar.php"><p> Lesson 3 Grammar </p></a>
 		<a href ="lesson.php?les=3"><p> Flashcards</p></a>
 		<a href ="quiz3.php"><p> Quiz</p></a>
+		<hr>
 		<h3>Lesson 4 </h3>
 		<a href = "l4grammar.php"><p> Lesson 4 Grammar </p></a>
 		<a href ="lesson.php?les=4"><p> Flashcards</p></a>

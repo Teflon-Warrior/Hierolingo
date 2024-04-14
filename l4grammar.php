@@ -22,6 +22,16 @@
 				margin-right: 5%;
 			}
 			
+			li{
+				margin-left: 5%;
+				margin-right: 5%;
+			}
+			
+			h3{
+				margin-left: 5%;
+				margin-right: 5%;
+			}
+			
 			a { 
 			padding: 5px; 
 			text-decoration: underline;
@@ -65,12 +75,13 @@
                     <span class="menu-text">menu</span>
                 </div>
                 <div class="all-over-bkg"></div>
-                <div style="padding-top: 40px; position: absolute; left: 50%; transform: translate(-50%,0); font-size: 2em;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;font-weight: bold;">Lesson 4 </div>
+                <div style="padding-top: 40px; position: absolute; left: 50%; transform: translate(-50%,0); font-size: 2em;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;font-weight: bold;"></div>
 
             </header>
     </div>	
 	
 	<h1> Lesson 4 </h1>
+	<hr>
 	<p> Lucky you! There's no new grammar this time, just new vocabulary. Review older grammar lessons if you're looking for some grammar to work with. Like always, there's some new vocabulary to pick up below, and a quiz to follow it. Good luck! </p>
 	
 	

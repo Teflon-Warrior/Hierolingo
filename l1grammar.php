@@ -22,6 +22,16 @@
 				margin-right: 5%;
 			}
 			
+			li{
+				margin-left: 5%;
+				margin-right: 5%;
+			}
+			
+			h3{
+				margin-left: 5%;
+				margin-right: 5%;
+			}
+			
 			a { 
 			padding: 5px; 
 			text-decoration: underline;
@@ -65,17 +75,19 @@
                     <span class="menu-text">menu</span>
                 </div>
                 <div class="all-over-bkg"></div>
-                <div style="padding-top: 40px; position: absolute; left: 50%; transform: translate(-50%,0); font-size: 2em;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;font-weight: bold;"> Lesson 1 </div>
+                <div style="padding-top: 40px; position: absolute; left: 50%; transform: translate(-50%,0); font-size: 2em;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;font-weight: bold;"></div>
 
             </header>
     </div>	
 	
 	<h1> Lesson 1 </h1>
+	<hr>
 	<p>Hello and welcome to Heirolingo! If you’re here, you must have an interest in learning about Ancient Egypt 
 	and their language. This first lesson will contain some history about the language and its development. 
 	You’ll also be given some words to recognize and recall. In the next lessons however, you’ll learn more grammar topics 
 	and how to use the words that you’ll learn. </p>
 	<h3>History</h3>
+	<hr>
 	<p>Ancient Egyptian was once thought to be an isolated language, distinct from all others around it. 
 	However, it’s actually part of the large Afro-Asiatic language family, which today there are many languages from. 
 	There are many cognates, or related words, between Egyptian and languages such as Hebrew, Arabic, and many more. 
@@ -91,6 +103,7 @@
 	There was also the priestly Hieratic, and the later Demotic and Coptic scripts, which correspond to the ages of the same
 	name.  We’ll now start learning more about hieroglyphs, and how to read them. </p>
 	<h3>Writing</h3>
+	<hr>
 	<p>First it is important to describe what a hieroglyph is. Hieroglyphs were the formal writing system used in Ancient Egypt thousands of years ago. 
 	They combined logographic, syllabic, and alphabetic elements. “What do those words even mean?”, you may ask. Let me help you out. </p>
 	<p>An alphabetic system is what you (if you are reading this site) are likely most familiar with. Each character, or letter, has a sound associated with it, and it is through the combination of these letters that allow one to create words. English is a great example of this type of writing, and other languages such as French, German, or Spanish are also alphabetical. 

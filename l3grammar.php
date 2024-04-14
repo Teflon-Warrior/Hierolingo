@@ -22,6 +22,16 @@
 				margin-right: 5%;
 			}
 			
+			li{
+				margin-left: 5%;
+				margin-right: 5%;
+			}
+			
+			h3{
+				margin-left: 5%;
+				margin-right: 5%;
+			}
+			
 			a { 
 			padding: 5px; 
 			text-decoration: underline;
@@ -65,7 +75,7 @@
                     <span class="menu-text">menu</span>
                 </div>
                 <div class="all-over-bkg"></div>
-                <div style="padding-top: 40px; position: absolute; left: 50%; transform: translate(-50%,0); font-size: 2em;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;font-weight: bold;">Lesson 3 </div>
+                <div style="padding-top: 40px; position: absolute; left: 50%; transform: translate(-50%,0); font-size: 2em;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;font-weight: bold;"></div>
 
             </header>
     </div>	
@@ -77,6 +87,7 @@
 	</p>
 	
 	<h3> Declension </h3>
+	<hr>
 	<p>Our first topic is declension. Declension might be completely new to you as an English speaker, 
 	through many other languages show heavy declension. Declension is the process of changing a word to show grammatical distinctions, 
 	such as case, tense, number, and many other things. In English, only our pronouns really decline. 
@@ -92,12 +103,14 @@
 	</p>
 	
 	<h3> Adjectives </h3>
+	<hr>
 	<p> Adjectives also have declension in Egyptian. Luckily for you, they follow the exact same pattern as nouns. 
 	When using adjectives they follow the noun they modify. Think of it as “a ball blue” rather than “a blue ball”
 	You can also use adjectives as nouns. This is like saying “A good one” from the adjective “good”. To do this, take your adjective, and attach the feminine singular ending to it. This turns the adjective into a noun. 
 	</p>
 	
 	<h3>Possession</h3>
+	<hr>
 	<p>Showing possession of something is incredibly important in expressing ideas. 
 	“My friend’s dog” or “The boat’s interior” or even “The President of the United States” all require some sort of possession, also known the genitive, 
 	to work. Egyptian has three ways of making this work. The first is known as the bound construction. You can place one noun directly after another to show that the first possesses the second. 
