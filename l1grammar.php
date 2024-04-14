@@ -42,7 +42,7 @@
 			
 			a:hover {
 				text-decoration:none;
-				text-shadow: 0 0 2px #999;
+				text-shadow: 0 0 4px #999;
 			}
 			
 			a:focus {

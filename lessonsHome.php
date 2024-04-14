@@ -36,7 +36,7 @@
 			padding: 5px; 
 			text-decoration: underline;
 			font-weight: bold;
-			border-bottom: 2px solid #FFFFFF;
+			border-bottom: 4px solid #FFFFFF;
 			display:block;
 			}
 			
