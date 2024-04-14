@@ -85,7 +85,7 @@
   if (mysqli_num_rows($result) > 0) {
     echo "<div class='container'>";
     echo "<div class='row justify-content-center'>";
-    echo "<div class='col-md-6'>";
+    echo "<div class='col-md-8'>";
     echo "<form action='Lesson_result1.php' method='POST'>";
     $d = 1;
     while ($row = mysqli_fetch_array($result)) {
