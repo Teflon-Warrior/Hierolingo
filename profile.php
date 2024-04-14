@@ -117,12 +117,12 @@ if (mysqli_num_rows($result) > 0) {
         <script src="js/nav.js"></script>
     </div>
 <div class="firstButtons">
-        <a href="https://cgi.luddy.indiana.edu/~team11/team-11/settings.php"><button class="smallButton" role="button">Settings</button></a>
-        <a href="https://cgi.luddy.indiana.edu/~team11/team-11/edit.php"><button class="smallButton" role="button">Appearance</button></a>
+        <a href="https://cgi.luddy.indiana.edu/~team11/team-11/settings.php"><button class="profileButtons" role="button">Settings</button></a>
+        <a href="https://cgi.luddy.indiana.edu/~team11/team-11/edit.php"><button class="profileButtons" role="button">Appearance</button></a>
 </div>
 
 <div class="secondButton">
-        <a href="https://cgi.luddy.indiana.edu/~team11/team-11/logout.php"><button class="smallButton" role="button">Logout</button></a>
+        <a href="https://cgi.luddy.indiana.edu/~team11/team-11/logout.php"><button class="profileButtons" role="button">Logout</button></a>
 </div>
 </body>
 
