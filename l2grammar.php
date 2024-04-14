@@ -56,7 +56,7 @@
 	</head>
 	<body>
 	 <div class="profile-header">
-
+		<script src="js/nav.js"></script>
         <header>
             <nav id="mySidenav" class="sidenav">
                 <ul>
