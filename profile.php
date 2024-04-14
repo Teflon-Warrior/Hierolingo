@@ -89,7 +89,7 @@ if (mysqli_num_rows($result) > 0) {
             <span class="material-symbols-outlined menu-button">menu</span>
             <span class="menu-text">menu</span>
         </div>
-    </header>
+      </header>
 
     <div class='header-title'>
         <h1> Profile </h1>
@@ -99,21 +99,32 @@ if (mysqli_num_rows($result) > 0) {
     <div class="profile-page">
 
         <!-- PFP, name, and username -->
-        <div class="profile-info" style="display: inline-block;">
-            <div class='column'>
+        <div class="profile-info">
+
                     <img class="pfp" src="<?php echo $image ?>">
-            
-            <h1>
+           <div class="profile-text">
+            <h1 style="text-align: left;">
                 <?php echo $username ?>
             </h1>
             <h1>Level
                 <?php echo $level ?> Out of 4
             </h1>
-            </div>
         </div>
+
+        </div>
+
 
         <script src="js/nav.js"></script>
     </div>
+<div class="firstButtons">
+        <a href="https://cgi.luddy.indiana.edu/~team11/team-11/settings.php"><button class="smallButton" role="button">Settings</button></a>
+        <a href="https://cgi.luddy.indiana.edu/~team11/team-11/edit.php"><button class="smallButton" role="button">Appearance</button></a>
+</div>
+
+<div class="secondButton">
+        <a href="https://cgi.luddy.indiana.edu/~team11/team-11/logout.php"><button class="smallButton" role="button">Logout</button></a>
+</div>
 </body>
 
 </html>
+          
