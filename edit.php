@@ -91,14 +91,6 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label for="inputHandle" class="col-sm-2 col-form-label">Handle:</label>
-                <div class="col-sm-10">
-                    <input type="text" name="handle" value="<?php if ($userhandle != NULL) {
-                        echo $userhandle;
-                    } ?>" class=''><br>
-                </div>
-            </div>
-            <div class="form-group row">
                 <label for="inputImage" class="col-sm-2 col-form-label">Profile Image:</label>
                 <div class="col-sm-10">
                     <input type="text" name="image" value="<?php echo $image ?>"><br>
