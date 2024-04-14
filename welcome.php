@@ -27,7 +27,7 @@
             <div class="log">
                 <p class="corner">Heiroglyphics, now easier.</p>
                 <a href="https://cgi.luddy.indiana.edu/~team11/team-11/login.php"><button class="loginButton"
-                        role="button">Log In &raquo;</button></a>
+                        role="button">Log In &raquo;</button></a></p>
             </div>
         </div>
     </div>
