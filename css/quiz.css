@@ -10,6 +10,7 @@ header {
 }
 
 img{
-        border: 1px solid #5015B5;
+        border: 2px solid #5015B5;
+        border-radius: 10px;
         margin-bottom: 5px;
 }
