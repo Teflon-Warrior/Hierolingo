@@ -1,7 +1,9 @@
 .profile-page {
     display: flex;
+    justify-content: center;
     margin-bottom: 25px;
-    background: red;
+    border: 2px solid #ebd462;
+    width: 800px;
 }
 
 .profile-page  .pfp {
@@ -13,6 +15,7 @@
     border-radius: 50%;
     width: 300px;
     height: 300px;
+    margin-top: 2px;
 }
 
 .profile-info {
