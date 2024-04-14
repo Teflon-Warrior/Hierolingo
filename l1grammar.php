@@ -16,6 +16,27 @@
 
 		<link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<style>
+			a { 
+			padding: 5px; 
+			text-decoration: underline;
+			font-weight: bold;
+			border-bottom: 2px solid #a959c3;
+			}
+			
+			a:hover {
+				text-decoration:none;
+				text-shadow: 0 0 2px #999;
+			}
+			
+			a:focus {
+				
+			}
+			
+			a:active {
+				padding-top: 2px;
+			}
+		</style>
 	</head>
 	<body>
 	 <div class="profile-header">
