@@ -80,7 +80,7 @@
             </header>
     </div>	
 		
-		<h1>Lesson Home</h1>
+		<h1>Lessons Home</h1>
 		<p>Here you'll find our lesson content, flashcards, and quizzes. Click on one to get started!</p>
 		<p>The learn button will take you to our grammar resources, while flashcards will take you to a place 
 		where you can learn vocabulary. When you feel comfortable with both sections in a lesson, take the quiz 
@@ -88,21 +88,25 @@
 		<p> If you don't know where to start, we recommend clicking on the Lesson 1 Grammar button.
 		
 		<h3>Lesson 1 </h3>
+		<hr>
 		<a href = "l1grammar.php"><p> Lesson 1 Grammar </p></a>
 		<a href ="lesson.php?les=1"><p> Flashcards</p></a>
 		<a href ="quiz1.php"><p> Quiz</p></a>
 		<hr>
 		<h3>Lesson 2 </h3>
+		<hr>
 		<a href = "l2grammar.php"><p> Lesson 2 Grammar </p></a>
 		<a href ="lesson.php?les=2"><p> Flashcards</p></a>
 		<a href ="quiz2.php"><p> Quiz</p></a>
 		<hr>
 		<h3>Lesson 3 </h3>
+		<hr>
 		<a href = "l3grammar.php"><p> Lesson 3 Grammar </p></a>
 		<a href ="lesson.php?les=3"><p> Flashcards</p></a>
 		<a href ="quiz3.php"><p> Quiz</p></a>
 		<hr>
 		<h3>Lesson 4 </h3>
+		<hr>
 		<a href = "l4grammar.php"><p> Lesson 4 Grammar </p></a>
 		<a href ="lesson.php?les=4"><p> Flashcards</p></a>
 		<a href ="quiz4.php"><p> Quiz</p></a>
