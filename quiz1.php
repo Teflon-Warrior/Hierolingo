@@ -90,10 +90,11 @@
     $d = 1;
     while ($row = mysqli_fetch_array($result)) {
       $filepath = $row['filepath'];
+      echo "<div class='Question'>";
       echo "<img src='https://cgi.luddy.indiana.edu/~team11/team-11$filepath'>";
       //echo "<object data='$filepath' type="image/svg+xml">";
-      echo "<input type=input name='answer$d'>";
-      echo "<hr>";
+      echo "<input type=input class='form-control' name='answer$d'>";
+      echo "</div>";
       $d++;
     }
     echo "<input type='submit' class='btn btn-Dark'>";

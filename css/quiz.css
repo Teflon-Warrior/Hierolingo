@@ -1,3 +1,15 @@
 header {
         height: 100px;
 }
+
+.Question{
+        border: 2px solid #ebd462;
+        margin: 20px;
+        padding: 5px;
+        border-radius: 10px;
+}
+
+img{
+        border: 1px solid #5015B5;
+        margin-bottom: 5px;
+}
