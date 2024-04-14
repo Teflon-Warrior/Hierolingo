@@ -48,11 +48,12 @@
 .firstButtons {
         display: flex;
         justify-content: center;
-        margin-top: 5%;
+        margin-top: 8%;
 }
 .secondButton {
         display: flex;
         justify-content: center;
+        margin-top: 8%;
 }
 @media only screen and (max-device-width: 480px) {
 .profile-page .level-display {
