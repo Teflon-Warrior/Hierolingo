@@ -16,7 +16,7 @@ $userID = $userIDResult[0];
 
 //setname from post
 $setname = $_POST['studySetName'];
-if (str_contains($setname," "){
+if (strpos($setname," ") != false){
 	$setname = str_replace(" ","_", $setname);
 }
     

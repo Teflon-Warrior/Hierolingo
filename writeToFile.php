@@ -23,7 +23,7 @@
     if ($_POST['newStudyset']){
 		$setName = $_POST['newStudyset'];
 	   	//If there's a space in the name, replace it with an underscore.
-	    	if (str_contains($setName," "){
+	    	if (strpos($setName," ") != false){
 			$setName = str_replace(" ","_", $setName);
 		}
 		     
