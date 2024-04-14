@@ -54,6 +54,9 @@
         display: flex;
         justify-content: center;
 }
+.firstButtons, .secondButton button{
+    width: 150px;
+}
 @media only screen and (max-device-width: 480px) {
 .profile-page .level-display {
         width: 90%;
