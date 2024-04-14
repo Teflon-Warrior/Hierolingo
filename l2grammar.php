@@ -60,13 +60,13 @@
         <header>
             <nav id="mySidenav" class="sidenav">
                 <ul>
-                    <li><a class="closebtn">&times;</a></li>
-                    <li><a href="profile.php">Profile</a></li>
-                    <li><a href="lessonsHome.php">Lessons</a></li>
-                    <li><a href="dictionary.php">Review</a></li>
-                    <li><a href="studysets.php">Study Sets</a></li>
-					<li><a href="settings.php">Settings</a></li>
-                    <li><a href="logout.php">Log Out</a></li>
+                    <li><a style="border-bottom: none;" class="closebtn">&times;</a></li>
+                    <li><a style="border-bottom: none;"href="profile.php">Profile</a></li>
+                    <li><a style="border-bottom: none;" href="lessonsHome.php">Lessons</a></li>
+                    <li><a style="border-bottom: none;" href="dictionary.php">Review</a></li>
+                    <li><a style="border-bottom: none;" href="studysets.php">Study Sets</a></li>
+		    <li><a style="border-bottom: none;" href="settings.php">Settings</a></li>
+                    <li><a style="border-bottom: none;" href="logout.php">Log Out</a></li>
                 </ul>
             </nav>
             <header>
@@ -110,4 +110,5 @@ the quiz should be easy.</p>
 		<a href ="lesson.php?les=2"><p> Flashcards</p></a>
 		<a href ="quiz2.php"><p> Quiz</p></a>
 	</body>
+<script src="js/nav.js"></script>
 </html>
