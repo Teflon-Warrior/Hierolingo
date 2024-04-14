@@ -22,6 +22,11 @@
 		//Check to see if the user wanted to make a new studyset, if so use that instead of the selected one
     if ($_POST['newStudyset']){
 		$setName = $_POST['newStudyset'];
+	   	//If there's a space in the name, replace it with an underscore.
+	    	if (str_contains($setName," "){
+			$setName = str_replace(" ","_", $setName);
+		}
+		     
 		$filePath = "json/".$userID.$setName.".json";
 		//creating new studyset in database
 		$preparedQuery = $db_connection->prepare("INSERT INTO vocablist (ID, filePath, listname) VALUES (? , ?, ?)");
