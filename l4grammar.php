@@ -81,9 +81,8 @@
     </div>	
 	
 	<h1> Lesson 4 </h1>
-	<hr>
 	<p> Lucky you! There's no new grammar this time, just new vocabulary. Review older grammar lessons if you're looking for some grammar to work with. Like always, there's some new vocabulary to pick up below, and a quiz to follow it. Good luck! </p>
-	
+	<hr>
 	
 	<a href ="lesson.php?les=4"><p> Flashcards</p></a>
 	<a href ="quiz4.php"><p> Quiz</p></a>

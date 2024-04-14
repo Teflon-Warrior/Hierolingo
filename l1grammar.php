@@ -81,13 +81,13 @@
     </div>	
 	
 	<h1> Lesson 1 </h1>
-	<hr>
 	<p>Hello and welcome to Heirolingo! If you’re here, you must have an interest in learning about Ancient Egypt 
 	and their language. This first lesson will contain some history about the language and its development. 
 	You’ll also be given some words to recognize and recall. In the next lessons however, you’ll learn more grammar topics 
 	and how to use the words that you’ll learn. </p>
-	<h3>History</h3>
 	<hr>
+	
+	<h3>History</h3>
 	<p>Ancient Egyptian was once thought to be an isolated language, distinct from all others around it. 
 	However, it’s actually part of the large Afro-Asiatic language family, which today there are many languages from. 
 	There are many cognates, or related words, between Egyptian and languages such as Hebrew, Arabic, and many more. 
@@ -102,25 +102,27 @@
 	There were also multiple writing systems developed, including Hieroglyphics, which is what we are interested in. 
 	There was also the priestly Hieratic, and the later Demotic and Coptic scripts, which correspond to the ages of the same
 	name.  We’ll now start learning more about hieroglyphs, and how to read them. </p>
-	<h3>Writing</h3>
 	<hr>
+	
+	<h3>Writing</h3>
 	<p>First it is important to describe what a hieroglyph is. Hieroglyphs were the formal writing system used in Ancient Egypt thousands of years ago. 
 	They combined logographic, syllabic, and alphabetic elements. “What do those words even mean?”, you may ask. Let me help you out. </p>
-	<p>An alphabetic system is what you (if you are reading this site) are likely most familiar with. Each character, or letter, has a sound associated with it, and it is through the combination of these letters that allow one to create words. English is a great example of this type of writing, and other languages such as French, German, or Spanish are also alphabetical. 
-A syllabic system is similar, but each symbol represents an entire syllable. Take the word “water”. It has two syllables, “wa” and “ter”. 
-Imagine writing “wa” as one symbol, and “ter” as another, and putting those two together to make a word. 
-Japanese is a language that has syllabic elements.
-Finally, in a logographic system, each character generally represents one idea. Imagine our water example being expressed in
- just one character, rather than 2 or 5. </p>
+	<p>An alphabetic system is what you (if you are reading this site) are likely most familiar with. Each character, or letter, has a sound associated with it, and it is through the combination of these letters that allow one to create words. English is a great example of this type of writing, and other languages such as French, German, or Spanish are also alphabetical.  
+	A syllabic system is similar, but each symbol represents an entire syllable. Take the word “water”. It has two syllables, “wa” and “ter”. 
+	Imagine writing “wa” as one symbol, and “ter” as another, and putting those two together to make a word. 
+	Japanese is a language that has syllabic elements.
+	Finally, in a logographic system, each character generally represents one idea. Imagine our water example being expressed in
+	just one character, rather than 2 or 5. </p>
 	<p>Egyptian Hieroglyphs use all of these systems within it’s writing. To make matters worse, sometimes the same symbol may be used in multiple systems. 
-While you eventually will learn each of these, it is important to recognize this may happen before you start learning. 
-Egyptian was generally written horizontally right to left, though it can be written left to right, or vertically. 
-To determine how to read it horizontally, just start in the direction the people or birds are facing. 
-Vertical writing always start from the top. Perhaps difficult to adjust to, Ancient Egyptian has no punctuation or spaces! 
-You’ll have to use grammar clues to divide sentences. For the beginning however, you won’t have to worry about anything more 
-than a few words at most. </p>
-</p>
-
+	While you eventually will learn each of these, it is important to recognize this may happen before you start learning. 
+	Egyptian was generally written horizontally right to left, though it can be written left to right, or vertically. 
+	To determine how to read it horizontally, just start in the direction the people or birds are facing. 
+	Vertical writing always start from the top. Perhaps difficult to adjust to, Ancient Egyptian has no punctuation or spaces! 
+	You’ll have to use grammar clues to divide sentences. For the beginning however, you won’t have to worry about anything more 
+	than a few words at most. </p>
+	
+	</p>
+	<hr>
 	<br>
 	<p> From here, you'll want to check out the flashcards and learn some basic vocabulary. After that, try taking the quiz. </p>
 		<a href ="lesson.php?les=1"><p> Flashcards</p></a>

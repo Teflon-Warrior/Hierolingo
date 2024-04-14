@@ -85,9 +85,9 @@
 	We’ll talk declension, adjectives, suffixes, and verb tenses. Don’t worry quite yet if these words are nonsense to you, 
 	we’ll go through and define them. 
 	</p>
-	
-	<h3> Declension </h3>
 	<hr>
+	<h3> Declension </h3>
+	
 	<p>Our first topic is declension. Declension might be completely new to you as an English speaker, 
 	through many other languages show heavy declension. Declension is the process of changing a word to show grammatical distinctions, 
 	such as case, tense, number, and many other things. In English, only our pronouns really decline. 
@@ -101,16 +101,18 @@
 	Head back to Lesson 2 if you need a refresher), where if you need to use the dual to indicate you have 2 of something, 
 	you can just write the logogram twice.  
 	</p>
+	<hr>
 	
 	<h3> Adjectives </h3>
-	<hr>
+	
 	<p> Adjectives also have declension in Egyptian. Luckily for you, they follow the exact same pattern as nouns. 
 	When using adjectives they follow the noun they modify. Think of it as “a ball blue” rather than “a blue ball”
 	You can also use adjectives as nouns. This is like saying “A good one” from the adjective “good”. To do this, take your adjective, and attach the feminine singular ending to it. This turns the adjective into a noun. 
 	</p>
+	<hr>
 	
 	<h3>Possession</h3>
-	<hr>
+	
 	<p>Showing possession of something is incredibly important in expressing ideas. 
 	“My friend’s dog” or “The boat’s interior” or even “The President of the United States” all require some sort of possession, also known the genitive, 
 	to work. Egyptian has three ways of making this work. The first is known as the bound construction. You can place one noun directly after another to show that the first possesses the second. 
@@ -127,6 +129,7 @@
 	<p>	
 	There a lot of different ways you’ll see these suffixes used, and while it would be possible to go over each one, it would be much more beneficial to keep your eyes open and learn the contexts for yourself.
 	</p>
+	<hr>
 	
 	<br>
 	<p> As always, theres new vocabulary below. After looking at that, move onto the quiz.</p>
