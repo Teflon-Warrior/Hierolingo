@@ -194,8 +194,8 @@ article {
 
 .column-border {
     padding-bottom: 1.0rem;
+    padding-top: 3.0rem;
     border: 2px solid #ebd462;
-    margin: 20px auto 0;
     width: 250px;
     display: flex;
     justify-content: center;
