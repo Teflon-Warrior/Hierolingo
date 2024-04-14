@@ -173,7 +173,7 @@ article {
 .column-border {
     /*padding-bottom: 1.0rem;*/
     border: 2px solid #ebd462;
-
+    padding: 20px;
     margin: 10px;
     width: 250px;
     justify-content: center;
