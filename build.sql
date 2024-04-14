@@ -170,38 +170,38 @@ INSERT INTO dictionary (pos, def, filepath, access) VALUES ('Verb','To open.','i
 
 
 --lesson 4
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("Bilateral", "valley between two hills", "/img/L4/dw2.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("determitive", "eating", "/img/L4/eating.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("determinative", "a piece of land or flat objects", "/img/L4/flat.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("Bilateral", "lotus flower", "/img/L4/h3.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("n.m", "Majesty", "/img/L4/hm.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("special", "indicates well full of water", "/img/L4/hm2.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("n.m", "Servant", "/img/L4/hm3.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("n.m", "Heart", "/img/L4/ib.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("prep", "by,through", "/img/L4/in.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("adj", "Excellent", "/img/L4/iqr.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("special", "(indicates a jar)", "/img/L4/jar.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("prep", "Like, similar to", "/img/L4/mi.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("bilateral", "Hoe (farm equipment)", "/img/L4/mr.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("v", "To love, like, desire, prefer", "/img/L4/mri.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("adj", "any", "/img/L4/nb.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("verb", "Save,rescue,take,rob", "/img/L4/nhm.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("n.m.", "King", "/img/L4/nsw.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("n.m", "God, goddess", "/img/L4/ntr.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("Trilatteral", "god", "/img/L4/ntr2.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("special", "lion's thigh, rear leg, and tale", "/img/L4/ph.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("n.m", "Strength, power", "/img/L4/phty.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("Masculine Noun", "Pool, Basin", "/img/L4/S.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("adj", "Numerous, rich", "/img/L4/'s3.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("Bilateral", "heart", "/img/L4/sw.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("n.f", "road,path,way", "/img/L4/wet.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("n.f.", "Honey", "/img/L4/bit.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("n.f.", "bee", "/img/L4/bit2.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("adj", "Sweet,pleasant", "/img/L4/bnri.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("determinative", "bread", "/img/L4/bread.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("verb", "to give, place, put", "/img/L4/di.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("special", "signifies a hand sign", "/img/L4/di2.svg", 4);
-INSERT INTO dictionary (pos, def, filepath, access) VALUES ("Feminine Noun", "Taste", "/img/L4/dpt.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("Bilateral", "valley between two hills", "img/L4/dw2.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("determitive", "eating", "img/L4/eating.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("determinative", "a piece of land or flat objects", "img/L4/flat.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("Bilateral", "lotus flower", "img/L4/h3.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("n.m", "Majesty", "img/L4/hm.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("special", "indicates well full of water", "img/L4/hm2.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("n.m", "Servant", "img/L4/hm3.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("n.m", "Heart", "img/L4/ib.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("prep", "by,through", "img/L4/in.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("adj", "Excellent", "img/L4/iqr.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("special", "(indicates a jar)", "img/L4/jar.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("prep", "Like, similar to", "img/L4/mi.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("bilateral", "Hoe (farm equipment)", "img/L4/mr.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("v", "To love, like, desire, prefer", "img/L4/mri.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("adj", "any", "img/L4/nb.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("verb", "Save,rescue,take,rob", "img/L4/nhm.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("n.m.", "King", "img/L4/nsw.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("n.m", "God, goddess", "img/L4/ntr.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("Trilatteral", "god", "img/L4/ntr2.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("special", "lion's thigh, rear leg, and tale", "img/L4/ph.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("n.m", "Strength, power", "img/L4/phty.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("Masculine Noun", "Pool, Basin", "img/L4/S.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("adj", "Numerous, rich", "img/L4/'s3.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("Bilateral", "heart", "img/L4/sw.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("n.f", "road,path,way", "img/L4/wet.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("n.f.", "Honey", "img/L4/bit.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("n.f.", "bee", "img/L4/bit2.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("adj", "Sweet,pleasant", "img/L4/bnri.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("determinative", "bread", "img/L4/bread.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("verb", "to give, place, put", "img/L4/di.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("special", "signifies a hand sign", "img/L4/di2.svg", 4);
+INSERT INTO dictionary (pos, def, filepath, access) VALUES ("Feminine Noun", "Taste", "img/L4/dpt.svg", 4);
 
 
 
