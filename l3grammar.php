@@ -90,7 +90,8 @@
 	
 	<br>
 	<p> As always, theres new vocabulary below. After looking at that, move onto the quiz.</p>
-	<button onclick="lesson.php?les=3">Flashcards</button>
-	<button onclick="quiz3.php">Quiz</button>
+	
+	<a href ="lesson.php?les=3"><p> Flashcards</p></a>
+	<a href ="quiz3.php"><p> Quiz</p></a>
 	</body>
 </html>

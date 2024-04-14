@@ -83,7 +83,7 @@ than a few words at most. </p>
 
 	<br>
 	<p> From here, you'll want to check out the flashcards and learn some basic vocabulary. After that, try taking the quiz. </p>
-	<button onclick="lesson.php?les=1">Flashcards</button>
-	<button onclick="quiz1.php1">Quiz</button>
+		<a href ="lesson.php?les=1"><p> Flashcards</p></a>
+		<a href ="quiz1.php"><p> Quiz</p></a>
 	</body>
 </html>

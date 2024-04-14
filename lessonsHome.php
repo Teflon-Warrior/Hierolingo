@@ -51,20 +51,20 @@
 		<p> If you don't know where to start, we recommend clicking on the Lesson 1 Grammar button.
 		
 		<h3>Lesson 1 </h3>
-		<button onclick="l1grammar.php">Lesson 1 Grammar</button>
-		<button onclick="lesson.php?les=1">Flashcards</button>
-		<button onclick="quiz1.php">Quiz</button>
+		<a href = "l1grammar.php"><p> Lesson 1 Grammar </p></a>
+		<a href ="lesson.php?les=1"><p> Flashcards</p></a>
+		<a href ="quiz1.php"><p> Quiz</p></a>
 		<h3>Lesson 2 </h3>
-		<button onclick="l2grammar.php">Lesson 2 Grammar</button>
-		<button onclick="lesson.php?les=2">Flashcards</button>
-		<button onclick="quiz2.php">Quiz</button>
+		<a href = "l2grammar.php"><p> Lesson 2 Grammar </p></a>
+		<a href ="lesson.php?les=2"><p> Flashcards</p></a>
+		<a href ="quiz2.php"><p> Quiz</p></a>
 		<h3>Lesson 3 </h3>
-		<button onclick="l3grammar.php">Lesson 3 Grammar</button>
-		<button onclick="lesson.php?les=3">Flashcards</button>
-		<button onclick="quiz3.php">Quiz</button>
+		<a href = "l3grammar.php"><p> Lesson 3 Grammar </p></a>
+		<a href ="lesson.php?les=3"><p> Flashcards</p></a>
+		<a href ="quiz3.php"><p> Quiz</p></a>
 		<h3>Lesson 4 </h3>
-		<button onclick="l4grammar.php">Lesson 4 Grammar</button>
-		<button onclick="lesson.php?les=4">Flashcards</button>
-		<button onclick="quiz4.php">Quiz</button>
+		<a href = "l4grammar.php"><p> Lesson 4 Grammar </p></a>
+		<a href ="lesson.php?les=4"><p> Flashcards</p></a>
+		<a href ="quiz4.php"><p> Quiz</p></a>
 	</body>
 </html>

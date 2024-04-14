@@ -62,7 +62,8 @@ Try making your own!
 	<br>
 	<p> Check out the new vocabulary by clicking flashcards. After that, try taking the quiz. If all went well,
 the quiz should be easy.</p>
-	<button onclick="lesson.php?les=2">Flashcards</button>
-	<button onclick="quiz2.php">Quiz</button>
+	
+		<a href ="lesson.php?les=2"><p> Flashcards</p></a>
+		<a href ="quiz2.php"><p> Quiz</p></a>
 	</body>
 </html>

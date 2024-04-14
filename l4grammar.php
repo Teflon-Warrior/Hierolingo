@@ -47,7 +47,7 @@
 	<p> Lucky you! There's no new grammar this time, just new vocabulary. Review older grammar lessons if you're looking for some grammar to work with. Like always, there's some new vocabulary to pick up below, and a quiz to follow it. Good luck! </p>
 	
 	
-	<button onclick="lesson.php?les=4">Flashcards</button>
-	<button onclick="quiz4.php">Quiz</button>
+	<a href ="lesson.php?les=4"><p> Flashcards</p></a>
+	<a href ="quiz4.php"><p> Quiz</p></a>
 	</body>
 </html>
