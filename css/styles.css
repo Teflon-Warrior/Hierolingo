@@ -294,6 +294,30 @@ main {
     background-color: #6deb62;
 }
 
+.loginButton {
+    width: 120px;
+    height: 40px;
+    /*
+    justify-content: center;        
+    align-items: center;
+    */
+    background-color: #ebd462;
+    border: 2px solid #ebd462;
+    border-radius: 10px;
+    padding: 0px;
+    /*padding: 0.5em 1.5em;*/
+    margin: 0.5em;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: background-color .2s ease-out, color .2s ease-out, border-color .18s ease-out;
+    font-family: "Exo", sans-serif;
+}
+
+.loginButton:hover {
+    transition: border-color .18s ease-out;
+    background-color: transparent;
+}
+
 .lessontab {
     font-family: "Exo", sans-serif;
 }
