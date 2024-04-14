@@ -2,8 +2,6 @@
     display: flex;
     justify-content: center;
     margin-bottom: 25px;
-    border: 2px solid #ebd462;
-    width: 800px;
 }
 
 .profile-page  .pfp {
@@ -26,7 +24,7 @@
     border-radius: 50%;
     width: 300px;
     height: 300px;
-    border: #ead695;
+    border: 2px solid #ebd462;
 }
 
 .edit-button img {
