@@ -101,19 +101,15 @@ if (mysqli_num_rows($result) > 0) {
         <!-- PFP, name, and username -->
         <div class="profile-info" style="display: inline-block;">
             <div class='column'>
-                <div class='pfp-div'>
                     <img class="pfp" src="<?php echo $image ?>">
-                </div>
-            </div>
+            
             <h1>
                 <?php echo $username ?>
             </h1>
-            <h3>@
-                <?php echo $userhandle ?>
-            </h3>
             <h1>Level
                 <?php echo $level ?> Out of 4
             </h1>
+            </div>
         </div>
 
         <script src="js/nav.js"></script>
