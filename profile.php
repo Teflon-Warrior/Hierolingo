@@ -117,6 +117,7 @@ if (mysqli_num_rows($result) > 0) {
         </div>
 
         <script src="js/nav.js"></script>
+    </div>
 </body>
 
 </html>

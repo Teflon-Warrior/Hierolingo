@@ -198,6 +198,7 @@ article {
 .column-border {
     /*padding-bottom: 1.0rem;*/
     border: 2px solid #ebd462;
+
     margin: 10px;
     width: 250px;
     justify-content: center;
@@ -209,7 +210,6 @@ article {
 .jumbotron{
         position: absolute;
         max-width: 100%;
-        height: 25%;
 }
 .row{
         padding-top: 59%;

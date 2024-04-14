@@ -1,6 +1,7 @@
 .profile-page {
     display: flex;
     margin-bottom: 25px;
+    background: red;
 }
 
 .profile-page  .pfp {
