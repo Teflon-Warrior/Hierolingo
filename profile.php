@@ -122,7 +122,7 @@ if (mysqli_num_rows($result) > 0) {
 </div>
 
 <div class="secondButton">
-        <a href="https://cgi.luddy.indiana.edu/~team11/team-11/logout.php"><button class="profileButtons">Logout</button></a>
+        <a href="https://cgi.luddy.indiana.edu/~team11/team-11/logout.php"><button class="profileButton-logout">Logout</button></a>
 </div>
 </body>
 

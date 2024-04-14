@@ -272,6 +272,30 @@ main {
     background-color: #ebd462;
 }
 
+.profileButton-logout{
+    width: 150px;
+    height: 50px;
+    /*
+    justify-content: center;        
+    align-items: center;
+    */
+    background-color: transparent;
+    border: 2px solid #eb6262;
+    border-radius: 10px;
+    padding: 0px;
+    /*padding: 0.5em 1.5em;*/
+    margin: 0.5em;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: background-color .2s ease-out, color .2s ease-out, border-color .18s ease-out;
+    font-family: "Exo", sans-serif;
+}
+
+.profileButton-logout:hover {
+    transition: border-color .18s ease-out;
+    background-color: #eb6262;
+}
+
 .redButton {
     width: 120px;
     height: 40px;
