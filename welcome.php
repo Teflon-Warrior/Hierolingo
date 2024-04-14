@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/welcome.css">
     <link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap"
-		rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <!-- Homepage layout from Bootstrap (https://getbootstrap.com/docs/4.3/examples/jumbotron/) -->
@@ -25,9 +25,10 @@
         <div class="container">
             <h1 class="display-3">Hierolingo</h1>
             <div class="log">
-            <p class="corner">Heiroglyphics, now easier.
-            <button class="loginButton" href="https://cgi.luddy.indiana.edu/~team11/team-11/login.php"
-                    role="button">Log In &raquo;</button></p> </div>
+                <p class="corner">Heiroglyphics, now easier.</p>
+                <a href="https://cgi.luddy.indiana.edu/~team11/team-11/login.php"><button class="loginButton"
+                        role="button">Log In &raquo;</button></a>
+            </div>
         </div>
     </div>
 
@@ -36,27 +37,31 @@
             <!-- Example row of columns -->
             <div class="row">
                 <div class="col-md-4">
-                  <div class='column-border'>
-                    <h2 class="down">Advanced Learning</h2>
-                    <p class="p3">Hierolingo uses advanced learning modules to enhance the learning experience of the user.
-                        Registered users can utilize a dictionary of words, customizable study sets, and flashcard-based
-                        lessons to assist them in learning the ancient writing. </p>
-                  </div>
+                    <div class='column-border'>
+                        <h2 class="down">Advanced Learning</h2>
+                        <p class="p3">Hierolingo uses advanced learning modules to enhance the learning experience of
+                            the user.
+                            Registered users can utilize a dictionary of words, customizable study sets, and
+                            flashcard-based
+                            lessons to assist them in learning the ancient writing. </p>
+                    </div>
                 </div>
                 <div class="col-md-4">
-                  <div class='column-border'>
-                    <h2>Quizzes</h2>
-                    <p class="p3">Users of Hierolingo can partake in quizzes that if passed, advances them to a new level. With new
-                        levels come new words to learn!</p>
-                  </div>
+                    <div class='column-border'>
+                        <h2>Quizzes</h2>
+                        <p class="p3">Users of Hierolingo can partake in quizzes that if passed, advances them to a new
+                            level. With new
+                            levels come new words to learn!</p>
+                    </div>
                 </div>
                 <div class="col-md-4">
-                  <div class='column-border'>
-                    <h2>Notifications</h2>
-                    <p class="p3">Hierolingo utilizes the Twilio API to notify users (permission granted) when to practice their
-                        heiroglyphics. This way, you can stay on track to learning egyptian heiroglyphics without
-                        forgetting!</p>
-                  </div>
+                    <div class='column-border'>
+                        <h2>Notifications</h2>
+                        <p class="p3">Hierolingo utilizes the Twilio API to notify users (permission granted) when to
+                            practice their
+                            heiroglyphics. This way, you can stay on track to learning egyptian heiroglyphics without
+                            forgetting!</p>
+                    </div>
                 </div>
             </div>
 

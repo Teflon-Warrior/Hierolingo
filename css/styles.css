@@ -313,7 +313,7 @@ main {
     font-family: "Exo", sans-serif;
 }
 
-.greenButton:hover {
+.loginButton:hover {
     transition: border-color .18s ease-out;
     background-color: transparent;
 }
