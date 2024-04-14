@@ -190,8 +190,6 @@ article {
 
 .columns-div {
     padding-top: 1.0rem;
-    display: flex;
-    justify-content: center;
 }
 
 .column-border {
@@ -199,6 +197,8 @@ article {
     border: 2px solid #ebd462;
     margin: 20px auto 0;
     width: 250px;
+    display: flex;
+    justify-content: center;
     border-radius: 10px;
     text-align: center;
 }
