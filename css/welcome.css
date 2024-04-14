@@ -62,6 +62,7 @@ html {
 .jumbotron {
     background-color: #e2e2e2;
     display: flex;
+    position: absolute;
     justify-content: center;
     border-bottom: 2px solid #5015B5;
 }
@@ -193,11 +194,10 @@ article {
 }
 
 .column-border {
-    padding-bottom: 1.0rem;
-    padding-top: 3.0rem;
+    /*padding-bottom: 1.0rem;*/
     border: 2px solid #ebd462;
+    margin: 10px;
     width: 250px;
-    display: flex;
     justify-content: center;
     border-radius: 10px;
     text-align: center;
@@ -241,15 +241,14 @@ article {
         width: 100%;*/
 }
 .p3{ 
-        max-width: 50%;
-        left: 0;
-        font-size: 12px;
+        max-width: 100%;
+        font-size: 14px;
         margin: 0;
         padding: 0;
         overflow-x: hidden;
 
 }
 h2 {
-        max-width: 50%;
+        max-width: 100%;
 }
 }
