@@ -190,6 +190,8 @@ article {
 }
 
 .columns-div {
+    position: absolute;
+    display: flex;
     padding-top: 1.0rem;
 }
 
