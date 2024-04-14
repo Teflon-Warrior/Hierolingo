@@ -46,7 +46,7 @@
                 <ul>
                         <li><a class="closebtn">&times;</a></li>
                         <li><a href="profile.php">Profile</a></li>
-                        <li><a href="lesson.php<?php echo "?les=$les"; ?>">Lessons</a></li>
+                        <li><a href="lessonsHome.php">Lessons</a></li>
                         <li><a href="dictionary.php">Review</a></li>
                         <li><a href="studysets.php">Study Sets</a></li>
                         <li><a href="settings.php">Settings</a></li>
@@ -172,8 +172,8 @@
                 echo "<button class='btn' onclick='nextbuttonClicked($les, $curr);'> next term</button>";
         }
         echo "</div>";
-
-        echo "<div class='flash1' onclick='termClick($id);' id='term_$id'>";
+		echo "<script src = 'js/audio.js'></script>";
+        echo "<div class='flash1' onclick='termClick($id); playAudio($id);' id='term_$id'>";
         //echo $filepath;
         echo "<img src='$filepath'>";
         echo "</div>";
