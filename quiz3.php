@@ -85,7 +85,7 @@
     echo "<div class='container'>";
     echo "<div class='row justify-content-center'>";
     echo "<div class='col-md-6'>";
-    echo "<form action='Lesson_result1.php' method='POST'>";
+    echo "<form action='Lesson_result3.php' method='POST'>";
     $d = 1;
     while ($row = mysqli_fetch_array($result)) {
       $filepath = $row['filepath'];

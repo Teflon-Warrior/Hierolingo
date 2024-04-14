@@ -77,8 +77,6 @@ if (!$con)
         echo $A4;
         echo $A5;
 
-        https://cgi.luddy.indiana.edu/~team11/team-11/lesson.php?les=1
-
 
         if (!preg_match('/\b\w+\s+\w+\b/', $A1) || !preg_match('/\b\w+\s+\w+\b/', $A2) || !preg_match('/\b\w+\s+\w+\b/', $A3) || !preg_match('/\b\w+\s+\w+\b/', $A4) || !preg_match('/\b\w+\s+\w+\b/', $A5)) {
             $errorMessages[] = "All Answers must contain at least 2 words.";
