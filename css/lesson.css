@@ -212,6 +212,9 @@ img {
         transform: translate(50%, 0);
         left: -225px;     
     }
+    .flash1 {
+        margin-top: 2%;
+    }
 }
 
 @media only screen and (max-device-width: 480px) {
