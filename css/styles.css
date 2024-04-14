@@ -549,3 +549,12 @@ a:visited {
     display: flex;
     justify-content: center;
 }
+
+@media only screen and (max-device-width: 480px) {
+.greenButton {
+font-weight: bold;
+}
+.redButton, .greenButton, .smallButton, .loginButton{
+color: black;
+}
+}
