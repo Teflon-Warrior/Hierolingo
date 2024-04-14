@@ -62,7 +62,7 @@ html {
 .jumbotron {
     background-color: #e2e2e2;
     display: flex;
-    position: absolute;
+    /*position:relative;*/
     justify-content: center;
     border-bottom: 2px solid #5015B5;
 }
@@ -190,9 +190,9 @@ article {
 }
 
 .columns-div {
-    position: absolute;
     display: flex;
     padding-top: 1.0rem;
+    justify-content: center;
 }
 
 .column-border {
@@ -211,8 +211,9 @@ article {
         max-width: 100%;
         height: 25%;
 }
-.down{
-        padding-top: 17%;
+.row{
+        padding-top: 59%;
+	padding-left: 9%;
 }
 .display-3 {
         position: absolute;
