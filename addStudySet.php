@@ -16,7 +16,10 @@ $userID = $userIDResult[0];
 
 //setname from post
 $setname = $_POST['studySetName'];
-
+if (str_contains($setname," "){
+	$setname = str_replace(" ","_", $setname);
+}
+    
 //Build filepath for insert
 $filePath = "json/".$userID.$setname.".json";
 
