@@ -95,7 +95,7 @@
 	Using he insteam of him or him instead of he is due to declension.
 	Egyptian, as talked about last lesson, has declensions for gender and number for nouns. 
 	To show how words decline, we’ll be putting them in a cool table for you. </p>
-	<img src = "img/EMES6.jpg">
+	<img src = "img/EMES6.JPG">
 	<p>I’m sure you may recognize some of these symbols from the previous lesson and some of the words you have learned. 
 	These are obligatory to add. However, there does exist a case with logograms(Remember those? 
 	Head back to Lesson 2 if you need a refresher), where if you need to use the dual to indicate you have 2 of something, 
@@ -118,13 +118,13 @@
 	to work. Egyptian has three ways of making this work. The first is known as the bound construction. You can place one noun directly after another to show that the first possesses the second. 
 	You can think of the English word “Homeowner” to see a similar example, though in Egyptian you’d want to say “ownerhome”. You can think of the second noun in Egyptian as a modifier for the first noun. 
 	The second form is called the Indirect Genitive, which makes use of a preposition, which translates as of. This preposition sort of acts like an adjective, in that it declines the same ways. Here’s a table showing the forms:
-    <img src = "img/EMES15.jpg">
+    <img src = "img/EMES15.JPG">
 	
 	<p>You should watch out that the masculine singular has the same appearance as the preposition “as/for”. Normally the context will determine which preposition is being used. 
 	The third way is through possessive pronouns, which are like suffixes in Egyptian. Nothing can come between these suffixes and the noun, they must be together! Once again they decline. Note the common column.
 	For these, you only have to remember one, and are used regardless of the gender of what it is attached to. The closest way of translating this would be like “My house” or “His boat”, instead of two words, you add on to the base noun.
 	</p>
-	<img src = "img/EMES18.jpg">
+	<img src = "img/EMES18.JPG">
 	
 	<p>	
 	There a lot of different ways you’ll see these suffixes used, and while it would be possible to go over each one, it would be much more beneficial to keep your eyes open and learn the contexts for yourself.
