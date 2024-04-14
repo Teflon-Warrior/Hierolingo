@@ -17,11 +17,17 @@
 		<link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 		<style>
+			p{
+				margin-left: 5%;
+				margin-right: 5%;
+			}
+			
 			a { 
 			padding: 5px; 
 			text-decoration: underline;
 			font-weight: bold;
-			border-bottom: 2px solid #a959c3;
+			border-bottom: 2px solid #FFFFFF;
+			display:block;
 			}
 			
 			a:hover {
@@ -49,7 +55,7 @@
                     <li><a href="lessonsHome.php">Lessons</a></li>
                     <li><a href="dictionary.php">Review</a></li>
                     <li><a href="studysets.php">Study Sets</a></li>
-		    <li><a href="settings.php">Settings</a></li>
+					<li><a href="settings.php">Settings</a></li>
                     <li><a href="logout.php">Log Out</a></li>
                 </ul>
             </nav>
@@ -59,7 +65,7 @@
                     <span class="menu-text">menu</span>
                 </div>
                 <div class="all-over-bkg"></div>
-                <div style="padding-top: 40px; position: absolute; left: 50%; transform: translate(-50%,0); font-size: 2em;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;font-weight: bold;">Profile </div>
+                <div style="padding-top: 40px; position: absolute; left: 50%; transform: translate(-50%,0); font-size: 2em;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;font-weight: bold;"> Lesson 1 </div>
 
             </header>
     </div>	

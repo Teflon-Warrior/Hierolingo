@@ -16,6 +16,33 @@
 
 		<link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<style>
+			p{
+				margin-left: 5%;
+				margin-right: 5%;
+			}
+			
+			a { 
+			padding: 5px; 
+			text-decoration: underline;
+			font-weight: bold;
+			border-bottom: 2px solid #FFFFFF;
+			display:block;
+			}
+			
+			a:hover {
+				text-decoration:none;
+				text-shadow: 0 0 2px #999;
+			}
+			
+			a:focus {
+				
+			}
+			
+			a:active {
+				padding-top: 2px;
+			}
+		</style>
 	</head>
 	<body>
 	 <div class="profile-header">
@@ -38,7 +65,7 @@
                     <span class="menu-text">menu</span>
                 </div>
                 <div class="all-over-bkg"></div>
-                <div style="padding-top: 40px; position: absolute; left: 50%; transform: translate(-50%,0); font-size: 2em;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;font-weight: bold;">Profile </div>
+                <div style="padding-top: 40px; position: absolute; left: 50%; transform: translate(-50%,0); font-size: 2em;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;font-weight: bold;">Lessons Home </div>
 
             </header>
     </div>	
