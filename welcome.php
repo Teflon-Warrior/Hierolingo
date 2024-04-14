@@ -26,7 +26,7 @@
             <h1 class="display-3">Hierolingo</h1>
             <div class="log">
             <p class="corner">Heiroglyphics, now easier.
-            <a class="btn btn-primary corner" href="https://cgi.luddy.indiana.edu/~team11/team-11/login.php"
+            <a class="loginButton" href="https://cgi.luddy.indiana.edu/~team11/team-11/login.php"
                     role="button">Log In &raquo;</a></p> </div>
         </div>
     </div>
