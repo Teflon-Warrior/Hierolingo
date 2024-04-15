@@ -5,7 +5,6 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Lessons Home</title>
 
 	<script src="js/nav.js"></script>
 
@@ -88,7 +87,10 @@
 			</header>
 	</div>
 
-	<h1>Lessons Home</h1>
+	<div class='header-title'>
+        <h1> Lessons Home </h1>
+    </div>
+
 	<p>Here you'll find our lesson content, flashcards, and quizzes. Click on one to get started!</p>
 	<p>The learn button will take you to our grammar resources, while flashcards will take you to a place
 		where you can learn vocabulary. When you feel comfortable with both sections in a lesson, take the quiz
